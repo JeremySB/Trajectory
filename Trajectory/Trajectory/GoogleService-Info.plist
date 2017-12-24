@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>25869122766-mhjbfbs2ea8dlnvq5ddnhh7fqqk32crl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.25869122766-mhjbfbs2ea8dlnvq5ddnhh7fqqk32crl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDOJKDCg4NfXDQMQLDeaM6He0RAwtXMhhk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>25869122766</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>RecHaz.Trajectory</string>
+	<key>PROJECT_ID</key>
+	<string>trajectory-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>trajectory-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:25869122766:ios:a7a1c092d6d4a010</string>
+	<key>DATABASE_URL</key>
+	<string>https://trajectory-app.firebaseio.com</string>
+</dict>
+</plist>

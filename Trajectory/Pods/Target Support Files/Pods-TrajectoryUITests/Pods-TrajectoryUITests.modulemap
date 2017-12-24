@@ -1,0 +1,6 @@
+framework module Pods_TrajectoryUITests {
+  umbrella header "Pods-TrajectoryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
