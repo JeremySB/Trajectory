@@ -7,6 +7,10 @@ target 'Trajectory' do
 
   # Pods for Trajectory
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseUI'
+
 
   target 'TrajectoryTests' do
     inherit! :search_paths
