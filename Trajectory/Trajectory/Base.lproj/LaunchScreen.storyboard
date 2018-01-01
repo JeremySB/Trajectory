@@ -14,16 +14,23 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-cz-Vc7">
-                                <rect key="frame" x="67" y="213" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-cz-Vc7">
+                                <rect key="frame" x="87.5" y="234" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="IwS-ra-lSQ"/>
+                                    <constraint firstAttribute="height" constant="200" id="qLo-JH-e8N"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Ko-cz-Vc7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="biE-MF-8I7"/>
+                            <constraint firstItem="1Ko-cz-Vc7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fZl-Ie-VFu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
