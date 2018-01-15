@@ -7,13 +7,9 @@
 //
 
 import UIKit
-import FirebaseAuthUI
-import FirebaseGoogleAuthUI
+import FirebaseAuth
 
-class FirstViewController: UIViewController, FUIAuthDelegate {
-    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
-        
-    }
+class FirstViewController: UIViewController {
     
 
     override func viewDidLoad() {
@@ -23,16 +19,7 @@ class FirstViewController: UIViewController, FUIAuthDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let authUI = FUIAuth.defaultAuthUI()
-        authUI?.delegate = self
-        let providers: [FUIAuthProvider] =  [
-            FUIGoogleAuth()
-        ]
-        authUI?.providers = providers
         
-        let authViewController = authUI!.authViewController()
-        
-        self.present(authViewController, animated: false, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +27,18 @@ class FirstViewController: UIViewController, FUIAuthDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func logoutDidTouch() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            
+            self.performSegue(withIdentifier: "FirstToLogin", sender: nil)
+        }
+        catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+    }
 
 }
 
