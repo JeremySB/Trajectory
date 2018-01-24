@@ -14,6 +14,7 @@ class PhoneEmailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationItem.title = "Profile Setup"
     }
 
     override func didReceiveMemoryWarning() {
