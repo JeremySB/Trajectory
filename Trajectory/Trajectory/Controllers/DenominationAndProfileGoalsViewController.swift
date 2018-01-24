@@ -18,7 +18,6 @@ class DenominationAndProfileGoalsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
-        print(userData[0])
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +26,6 @@ class DenominationAndProfileGoalsViewController: UIViewController {
     }
     
     @IBOutlet weak var denomination: UITextField!
-    
     @IBOutlet weak var objectivesStatement: UITextView!
     
     // MARK: - Navigation
@@ -36,6 +34,9 @@ class DenominationAndProfileGoalsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        //Copy validated user input into user profile array
+        userData[5] = denomination.text!
+        userData[6] = objectivesStatement.text!
     }
 
 }

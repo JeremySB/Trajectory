@@ -26,7 +26,6 @@ class PhoneEmailViewController: UIViewController {
     }
 
     @IBOutlet weak var phoneNumber: UITextField!
-    
      @IBOutlet weak var emailAddress: UITextField!
     
      // MARK: - Navigation
@@ -37,6 +36,10 @@ class PhoneEmailViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.destination is HobbiesInterestsViewController
         {
+            //Copy validated user input into user profile array
+            userData[1] = phoneNumber.text!
+            userData[2] = emailAddress.text!
+            //Pass user profile array
             let vc = segue.destination as? HobbiesInterestsViewController
             vc?.userData = userData
         }

@@ -31,6 +31,9 @@ class UserNameViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.destination is PhoneEmailViewController {
+            //Copy validated user input into user profile array
+            userData[0] = userName.text!
+            //Pass user profile array
             let vc = segue.destination as? PhoneEmailViewController
             vc?.userData = userData
         }
