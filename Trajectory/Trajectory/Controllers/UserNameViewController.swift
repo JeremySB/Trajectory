@@ -1,14 +1,14 @@
 //
-//  NameViewController.swift
+//  UserNameViewController.swift
 //  Trajectory
 //
-//  Created by Andrew Vogel on 1/23/18.
+//  Created by Andrew Vogel on 1/24/18.
 //  Copyright © 2018 Recreational Hazard. All rights reserved.
 //
 
 import UIKit
 
-class NameViewController: UINavigationController {
+class UserNameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class NameViewController: UINavigationController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
     /*
     // MARK: - Navigation

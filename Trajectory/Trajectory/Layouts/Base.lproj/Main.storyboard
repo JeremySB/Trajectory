@@ -60,43 +60,6 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Name View Controller-->
-        <scene sceneID="H8b-ad-WtW">
-            <objects>
-                <viewController title="Name View Controller" id="OCB-PR-Wdh" customClass="NameViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FGy-iH-dSK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Please enter your name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="As7-Gu-Tgl">
-                                <rect key="frame" x="90" y="318" width="195" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aI0-8j-2TV">
-                                <rect key="frame" x="171" y="370" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOl-Xt-Vqa">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Profile Setup" id="sAU-KL-vcz"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="nZF-Pg-Dj7"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="gE1-1B-K4k"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vrD-bZ-T2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-62" y="1115"/>
-        </scene>
         <!--Phone/Email View Controller-->
         <scene sceneID="liI-Ac-3wb">
             <objects>
@@ -123,6 +86,9 @@
                                 <rect key="frame" x="171" y="386" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="76D-hc-zOu" kind="showDetail" id="OIF-9V-Bpw"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shH-mM-Yof">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -166,6 +132,9 @@
                                 <rect key="frame" x="171" y="381" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="1Yf-YM-Dwh" kind="showDetail" id="Qwd-y1-PqV"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btj-vb-04S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -308,11 +277,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb7-d7-ccg">
-                                <rect key="frame" x="119" y="393" width="136" height="30"/>
+                                <rect key="frame" x="119" y="393" width="136" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Manual Registration"/>
                                 <connections>
-                                    <segue destination="OCB-PR-Wdh" kind="showDetail" id="Pxb-sp-ckf"/>
+                                    <segue destination="h2F-Wf-6Rn" kind="showDetail" id="3d7-ny-blD"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMZ-f8-jtM">
@@ -330,7 +299,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgp-6U-ogQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-758" y="1115"/>
+            <point key="canvasLocation" x="-759.20000000000005" y="1114.992503748126"/>
+        </scene>
+        <!--User Name View Controller-->
+        <scene sceneID="gEK-wF-SNg">
+            <objects>
+                <viewController title="User Name View Controller" id="h2F-Wf-6Rn" customClass="UserNameViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MIE-uc-VNj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Please enter your name." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OF6-DN-P6D">
+                                <rect key="frame" x="99" y="266" width="177" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgF-wo-Tdr">
+                                <rect key="frame" x="155" y="370" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="UZA-Ox-kFv" kind="showDetail" id="jQ0-Al-BcD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Rn-5g-Rnw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x00-Vd-dA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-69.599999999999994" y="1115.8920539730136"/>
         </scene>
     </scenes>
     <resources>
