@@ -9,10 +9,12 @@
 import UIKit
 
 class UserNameViewController: UIViewController {
+    
+    //Array of user profile information to be collected
+    var userData : [String] = ["name", "phoneNumber", "emailAddress", "hobbies", "professionalInterests", "denomination", "objectiveStatement"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
     }
@@ -22,15 +24,15 @@ class UserNameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
+    @IBOutlet weak var userName: UITextField!
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.destination is PhoneEmailViewController {
+            let vc = segue.destination as? PhoneEmailViewController
+            vc?.userData = userData
+        }
     }
-    */
-
 }

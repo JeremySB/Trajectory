@@ -10,11 +10,15 @@ import UIKit
 
 class DenominationAndProfileGoalsViewController: UIViewController {
 
+    //Array of user's profile information, which is based on information from previous screen
+    var userData: [String] = ["empty"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
+        print(userData[0])
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,8 +26,10 @@ class DenominationAndProfileGoalsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    @IBOutlet weak var denomination: UITextField!
+    
+    @IBOutlet weak var objectivesStatement: UITextView!
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -31,6 +37,5 @@ class DenominationAndProfileGoalsViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
