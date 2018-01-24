@@ -1,5 +1,5 @@
 //
-//  ProfileSetupViewController.swift
+//  DenominationAndProfileGoalsViewController.swift
 //  Trajectory
 //
 //  Created by Andrew Vogel on 1/23/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileSetupViewController: UINavigationController {
+class DenominationAndProfileGoalsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

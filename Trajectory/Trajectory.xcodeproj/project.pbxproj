@@ -22,10 +22,11 @@
 		7AB79A80D00405C1264F6B97 /* Pods_TrajectoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE9121C0BE9D8BDBEB16A20 /* Pods_TrajectoryUITests.framework */; };
 		A731CA61A301CFE5B6D6A4D2 /* Pods_TrajectoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A3AECE3CE27BD8248EE9D2 /* Pods_TrajectoryTests.framework */; };
 		B052ADD7E47BD4471E3EBB01 /* Pods_Trajectory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC2C7655FDA8CEB7664263 /* Pods_Trajectory.framework */; };
-		D6A1D7202018112A00D38F08 /* ProfileSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D71F2018112A00D38F08 /* ProfileSetupViewController.swift */; };
 		D6A1D722201811DE00D38F08 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D721201811DE00D38F08 /* NameViewController.swift */; };
 		D6A1D7262018193600D38F08 /* InitialLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialLaunchViewController.swift */; };
 		D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */; };
+		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
+		D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,10 +74,11 @@
 		AB7694F3EEAA7C5A1849340C /* Pods-TrajectoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryTests/Pods-TrajectoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADCD8DAC3C30A832B0706EE9 /* Pods-TrajectoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryUITests/Pods-TrajectoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D2C9DD428EAECAC03074EF47 /* Pods-TrajectoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryUITests/Pods-TrajectoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D6A1D71F2018112A00D38F08 /* ProfileSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupViewController.swift; sourceTree = "<group>"; };
 		D6A1D721201811DE00D38F08 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLaunchViewController.swift; sourceTree = "<group>"; };
 		D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEmailViewController.swift; sourceTree = "<group>"; };
+		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
+		D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominationAndProfileGoalsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,8 @@
 				D6A1D721201811DE00D38F08 /* NameViewController.swift */,
 				D6A1D7252018193600D38F08 /* InitialLaunchViewController.swift */,
 				D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */,
+				D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */,
+				D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -126,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				3FC53D8F1FF03BA7000B82E3 /* Main.storyboard */,
-				D6A1D71F2018112A00D38F08 /* ProfileSetupViewController.swift */,
 				3FC53D941FF03BA7000B82E3 /* LaunchScreen.storyboard */,
 			);
 			path = Layouts;
@@ -538,11 +541,12 @@
 			files = (
 				3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */,
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
+				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */,
 				3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */,
 				D6A1D7262018193600D38F08 /* InitialLaunchViewController.swift in Sources */,
 				3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */,
-				D6A1D7202018112A00D38F08 /* ProfileSetupViewController.swift in Sources */,
+				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,
 				D6A1D722201811DE00D38F08 /* NameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
