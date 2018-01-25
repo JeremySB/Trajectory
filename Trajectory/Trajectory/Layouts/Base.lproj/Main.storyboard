@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Goal View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="110" y="312" width="155" height="43"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Goals" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="143" y="312" width="89" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -246,6 +246,88 @@
             <point key="canvasLocation" x="2420" y="1114.992503748126"/>
         </scene>
         <!--Comunity View Controller-->
+        <!--Goals List-->
+        <scene sceneID="S2d-46-phs">
+            <objects>
+                <viewController storyboardIdentifier="GoalsList" title="Goals List" id="ZlZ-2i-4LG" customClass="GoalsViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0dE-EW-u8i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qa2-mR-PqY">
+                                <rect key="frame" x="6" y="16" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IIw-NS-gz9">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IIw-NS-gz9" id="ZrE-T0-Gva">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aU7-Qz-3i8">
+                                                    <rect key="frame" x="15" y="0.0" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="piT-Bi-iNR">
+                                                    <rect key="frame" x="15" y="26" width="345" height="2.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="contentStretch" x="0.0" y="1" width="1" height="0.0"/>
+                                                </progressView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaP-jC-3zQ">
+                                                    <rect key="frame" x="331" y="-4" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="..." backgroundImage="elipsis.png"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qa2-mR-PqY" firstAttribute="top" secondItem="8ty-LG-C5d" secondAttribute="top" id="OcW-uG-RJT"/>
+                            <constraint firstItem="8ty-LG-C5d" firstAttribute="bottom" secondItem="qa2-mR-PqY" secondAttribute="bottom" id="eL2-TR-dL3"/>
+                            <constraint firstItem="qa2-mR-PqY" firstAttribute="leading" secondItem="8ty-LG-C5d" secondAttribute="leading" id="oON-hL-PH6"/>
+                            <constraint firstItem="8ty-LG-C5d" firstAttribute="trailing" secondItem="qa2-mR-PqY" secondAttribute="trailing" id="v2B-Ef-W64"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8ty-LG-C5d"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hA9-SD-Hzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="-2124"/>
+        </scene>
+        <!--Goals-->
+        <scene sceneID="Szi-NY-58D">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="Goals" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="FGS-07-tIq" customClass="GoalsPageViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="jVO-cK-QUo"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQb-SG-w2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-1013"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="Q3t-a0-G6i">
+            <objects>
+                <viewController storyboardIdentifier="History" title="History" id="FsJ-b5-pRQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oaV-gH-T96">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9CX-zX-Rtp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZN-EZ-zRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="-2124"/>
+        </scene>
+        <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController title="Comunity View Controller" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
@@ -312,11 +394,12 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="FGS-07-tIq" kind="relationship" relationship="viewControllers" id="INs-vx-fpU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="62" y="-11"/>
         </scene>
         <!--InitialLaunchViewController-->
         <scene sceneID="rQH-HQ-hX5">
@@ -407,6 +490,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="elipsis.png" width="1600" height="1600"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
