@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import FirebaseAuth
 
-class InitialLaunchViewController: UIViewController {
+class InitialAuthenticationViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBAction func continueButtonPrimaryActionTriggered(_ sender: Any) {
+        Auth.auth().fetchProviders(forEmail: (emailField?.text)!) { (providers, error) in
+            print(providers)
+            self.performSegue(withIdentifier: "Register", sender: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
