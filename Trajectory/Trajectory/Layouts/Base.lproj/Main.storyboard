@@ -200,6 +200,9 @@
                                 <rect key="frame" x="178" y="511" width="41" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="register:" destination="1Yf-YM-Dwh" eventType="touchUpInside" id="XJv-hX-JX6"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YzE-GS-mU8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -408,6 +411,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9l8-Gm-tHe"/>
+        <segue reference="u7Y-xg-7CH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class DenominationAndProfileGoalsViewController: UIViewController {
 
@@ -23,6 +24,14 @@ class DenominationAndProfileGoalsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func register(_ sender: Any) {
+        Auth.auth().signInAnonymously { (_, _) in
+            let user = Auth.auth().currentUser
+            user?.updateEmail(to: self.userData[2], completion: nil)
+            
+        }
     }
     
     @IBOutlet weak var denomination: UITextField!
