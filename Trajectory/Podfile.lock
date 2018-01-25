@@ -107,6 +107,7 @@ DEPENDENCIES:
   - FirebaseUI/Auth (~> 4.0)
   - FirebaseUI/Facebook
   - FirebaseUI/Google
+  - GoogleSignIn
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -132,6 +133,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 
-PODFILE CHECKSUM: 399f7639e2e93daef97f0b00bd9b668e7f1e6adc
+PODFILE CHECKSUM: 936a0eeef57f8fba5b9a7779de0da8f39165f469
 
 COCOAPODS: 1.3.1

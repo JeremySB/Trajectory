@@ -12,6 +12,8 @@ target 'Trajectory' do
   pod 'FirebaseUI/Google'
   pod 'FirebaseUI/Facebook'
 
+  pod 'GoogleSignIn'
+
 
   target 'TrajectoryTests' do
     inherit! :search_paths
