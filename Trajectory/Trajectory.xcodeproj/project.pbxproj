@@ -30,6 +30,7 @@
 		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
 		D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */; };
 		D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */; };
+		D6A1D735201AAB4E00D38F08 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D734201AAB4D00D38F08 /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
 		D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominationAndProfileGoalsViewController.swift; sourceTree = "<group>"; };
 		D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
+		D6A1D734201AAB4D00D38F08 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */,
 				3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */,
 				3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */,
+				D6A1D734201AAB4D00D38F08 /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */,
+				D6A1D735201AAB4E00D38F08 /* SettingsTableViewController.swift in Sources */,
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
