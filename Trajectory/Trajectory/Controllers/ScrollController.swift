@@ -81,5 +81,19 @@ class ScrollController: UIPageViewController, UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
+    
+    func presentationCount(for: UIPageViewController) -> Int {
+        return orderedViewControllers.count
+    }
+    
+    func presentationIndex(for: UIPageViewController) -> Int {
+        guard let firstViewController = viewControllers?.first, let
+            firstViewControllerIndex = orderedViewControllers.index(of: firstViewController)
+        else {
+                return 0
+        }
+        
+        return firstViewControllerIndex
+    }
 
 }
