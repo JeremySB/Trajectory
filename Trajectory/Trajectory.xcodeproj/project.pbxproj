@@ -28,6 +28,10 @@
 		D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */; };
 		D60C7CC2201AC5A200184F8A /* UpdateEmailAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */; };
 		D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */; };
+		D60C7CC8201AD4BF00184F8A /* UpdateMyBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */; };
+		D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */; };
+		D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */; };
+		D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */; };
 		D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */; };
 		D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */; };
 		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
@@ -87,6 +91,10 @@
 		D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNameViewController.swift; sourceTree = "<group>"; };
 		D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmailAddressViewController.swift; sourceTree = "<group>"; };
 		D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePhoneNumberViewController.swift; sourceTree = "<group>"; };
+		D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMyBioViewController.swift; sourceTree = "<group>"; };
+		D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrganizationViewController.swift; sourceTree = "<group>"; };
+		D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrganizationsTableViewController.swift; sourceTree = "<group>"; };
+		D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestListTableViewController.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewController.swift; sourceTree = "<group>"; };
 		D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEmailViewController.swift; sourceTree = "<group>"; };
 		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +151,10 @@
 				D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */,
 				D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */,
 				D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */,
+				D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */,
+				D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */,
+				D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */,
+				D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -570,8 +582,11 @@
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
 				D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */,
+				D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */,
 				D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */,
+				D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */,
 				3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */,
+				D60C7CC8201AD4BF00184F8A /* UpdateMyBioViewController.swift in Sources */,
 				D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */,
 				3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */,
 				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
@@ -579,6 +594,7 @@
 				D60C7CC2201AC5A200184F8A /* UpdateEmailAddressViewController.swift in Sources */,
 				3FA16B00201A304000D142E5 /* HistoryViewController.swift in Sources */,
 				3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */,
+				D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
