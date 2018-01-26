@@ -20,6 +20,7 @@
 		3FC53DA11FF03BA7000B82E3 /* TrajectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DA01FF03BA7000B82E3 /* TrajectoryTests.swift */; };
 		3FC53DAC1FF03BA7000B82E3 /* TrajectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */; };
 		3FC53DBA1FF03CBA000B82E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */; };
+		3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0F472201A434500F3CD18 /* ScrollController.swift */; };
 		3FE1450A1FF9778B00F3CF18 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE145091FF9778B00F3CF18 /* Social.framework */; };
 		3FE1450C1FF9779200F3CF18 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1450B1FF9779200F3CF18 /* Accounts.framework */; };
 		7AB79A80D00405C1264F6B97 /* Pods_TrajectoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE9121C0BE9D8BDBEB16A20 /* Pods_TrajectoryUITests.framework */; };
@@ -81,6 +82,7 @@
 		3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryUITests.swift; sourceTree = "<group>"; };
 		3FC53DAD1FF03BA7000B82E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FE0F472201A434500F3CD18 /* ScrollController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollController.swift; sourceTree = "<group>"; };
 		3FE145091FF9778B00F3CF18 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3FE1450B1FF9779200F3CF18 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		59A3AECE3CE27BD8248EE9D2 /* Pods_TrajectoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrajectoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 				D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */,
 				D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */,
 				D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */,
+				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */,
 				3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */,
 				D6A1D735201AAB4E00D38F08 /* SettingsTableViewController.swift in Sources */,
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
