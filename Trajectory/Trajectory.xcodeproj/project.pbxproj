@@ -25,6 +25,9 @@
 		7AB79A80D00405C1264F6B97 /* Pods_TrajectoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE9121C0BE9D8BDBEB16A20 /* Pods_TrajectoryUITests.framework */; };
 		A731CA61A301CFE5B6D6A4D2 /* Pods_TrajectoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A3AECE3CE27BD8248EE9D2 /* Pods_TrajectoryTests.framework */; };
 		B052ADD7E47BD4471E3EBB01 /* Pods_Trajectory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC2C7655FDA8CEB7664263 /* Pods_Trajectory.framework */; };
+		D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */; };
+		D60C7CC2201AC5A200184F8A /* UpdateEmailAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */; };
+		D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */; };
 		D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */; };
 		D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */; };
 		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
@@ -81,6 +84,9 @@
 		AB7694F3EEAA7C5A1849340C /* Pods-TrajectoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryTests/Pods-TrajectoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADCD8DAC3C30A832B0706EE9 /* Pods-TrajectoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryUITests/Pods-TrajectoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D2C9DD428EAECAC03074EF47 /* Pods-TrajectoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryUITests/Pods-TrajectoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNameViewController.swift; sourceTree = "<group>"; };
+		D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmailAddressViewController.swift; sourceTree = "<group>"; };
+		D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePhoneNumberViewController.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewController.swift; sourceTree = "<group>"; };
 		D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEmailViewController.swift; sourceTree = "<group>"; };
 		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,9 @@
 				3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */,
 				3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */,
 				D6A1D734201AAB4D00D38F08 /* SettingsTableViewController.swift */,
+				D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */,
+				D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */,
+				D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -559,12 +568,15 @@
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
+				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
 				D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */,
 				D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */,
 				3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */,
 				D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */,
 				3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */,
+				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
 				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,
+				D60C7CC2201AC5A200184F8A /* UpdateEmailAddressViewController.swift in Sources */,
 				3FA16B00201A304000D142E5 /* HistoryViewController.swift in Sources */,
 				3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */,
 			);
