@@ -1,38 +1,33 @@
 //
-//  GoalsPageViewController.swift
+//  ScrollController.swift
 //  Trajectory
 //
-//  Created by student on 1/23/18.
+//  Created by student on 1/25/18.
 //  Copyright © 2018 Recreational Hazard. All rights reserved.
 //
 
-// Tutorial used for this class
-
-//https://spin.atomicobject.com/2015/12/23/swift-uipageviewcontroller-tutorial/
-
 import UIKit
-import Foundation
 
-class GoalsPageViewController: ScrollController{
-    required init?(coder: NSCoder){
-        super.init(coder: coder)
-    }
-    init(){
-        super.init(viewID1: "GoalsList", viewID2: "History")
-    }
-    
-}
-
-/*UIPageViewController, UIPageViewControllerDataSource {
-    private(set) lazy var orderedViewControllers: [UIViewController] = {
+class ScrollController: UIPageViewController, UIPageViewControllerDataSource {
+    private(set) lazy var orderedViewControllers: [UIViewController] //= [UIViewController]()
+    = {
         return [self.newViewController(storyboardID: "GoalsList"),
                 self.newViewController(storyboardID: "History")]
     }()
+    required init?(coder: NSCoder){
+        super.init(coder: coder)
+    }
+    
+    init(viewID1: String, viewID2: String){
+        super.init(transitionStyle: UIPageViewControllerTransitionStyle.scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal)
+        orderedViewControllers.append(newViewController(storyboardID: viewID1))
+        orderedViewControllers.append(newViewController(storyboardID: viewID2))
+    }
     
     private func newViewController(storyboardID: String) -> UIViewController {
         
         return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewController(withIdentifier: "\(storyboardID)")//ViewController")
+            instantiateViewController(withIdentifier: "\(storyboardID)")
     }
     
     override func viewDidLoad() {
@@ -86,4 +81,19 @@ class GoalsPageViewController: ScrollController{
         
         return orderedViewControllers[nextIndex]
     }
-}*/
+    
+    func presentationCount(for: UIPageViewController) -> Int {
+        return orderedViewControllers.count
+    }
+    
+    func presentationIndex(for: UIPageViewController) -> Int {
+        guard let firstViewController = viewControllers?.first, let
+            firstViewControllerIndex = orderedViewControllers.index(of: firstViewController)
+        else {
+                return 0
+        }
+        
+        return firstViewControllerIndex
+    }
+
+}
