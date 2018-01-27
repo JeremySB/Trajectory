@@ -6,9 +6,7 @@
 //  Copyright © 2018 Recreational Hazard. All rights reserved.
 //
 
-// Tutorial used for this class
 
-//https://spin.atomicobject.com/2015/12/23/swift-uipageviewcontroller-tutorial/
 
 import UIKit
 import Foundation
@@ -16,9 +14,11 @@ import Foundation
 class GoalsPageViewController: ScrollController{
     required init?(coder: NSCoder){
         super.init(coder: coder)
+        addViewControllers(views: "GoalsList", "History")
     }
-    init(){
-        super.init(viewID1: "GoalsList", viewID2: "History")
+    override init(){
+        super.init()
+        addViewControllers(views: "GoalsList", "History")
     }
     
 }

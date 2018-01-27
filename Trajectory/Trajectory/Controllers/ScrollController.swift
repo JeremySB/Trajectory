@@ -6,22 +6,28 @@
 //  Copyright © 2018 Recreational Hazard. All rights reserved.
 //
 
+// Tutorial used to create this class
+// Had to update a large amount of the code base but it works well!
+
+//https://spin.atomicobject.com/2015/12/23/swift-uipageviewcontroller-tutorial/
+
 import UIKit
 
 class ScrollController: UIPageViewController, UIPageViewControllerDataSource {
-    private(set) lazy var orderedViewControllers: [UIViewController] //= [UIViewController]()
-    = {
-        return [self.newViewController(storyboardID: "GoalsList"),
-                self.newViewController(storyboardID: "History")]
-    }()
+    private(set) lazy var orderedViewControllers: [UIViewController] = [UIViewController]()
+    
     required init?(coder: NSCoder){
         super.init(coder: coder)
     }
     
-    init(viewID1: String, viewID2: String){
+    init(){
         super.init(transitionStyle: UIPageViewControllerTransitionStyle.scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal)
-        orderedViewControllers.append(newViewController(storyboardID: viewID1))
-        orderedViewControllers.append(newViewController(storyboardID: viewID2))
+    }
+    
+    internal func addViewControllers(views: String...){
+        for view in views{
+            orderedViewControllers.append(newViewController(storyboardID: view))
+        }
     }
     
     private func newViewController(storyboardID: String) -> UIViewController {
