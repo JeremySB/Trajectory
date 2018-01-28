@@ -248,6 +248,22 @@
             </objects>
             <point key="canvasLocation" x="3662" y="723"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="iwk-ub-tkU">
+            <objects>
+                <viewController storyboardIdentifier="steve" id="8p9-5k-jOi" sceneMemberID="viewController">
+                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="je1-Wv-cRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AGy-rD-36x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5844" y="-1406"/>
+        </scene>
         <!--Goals List-->
         <scene sceneID="S2d-46-phs">
             <objects>
