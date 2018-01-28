@@ -22,8 +22,13 @@ class UpdateMyBioViewController: UIViewController {
     }
     
 
+    @IBOutlet weak var userHobbies: UITextView!
+     @IBOutlet weak var userProfessionalInterests: UITextView!
+    @IBOutlet weak var userDenomination: UITextField!
+    @IBOutlet weak var userObjectiveStatement: UITextView!
+    
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

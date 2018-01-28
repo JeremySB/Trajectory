@@ -39,6 +39,7 @@
 		D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */; };
 		D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */; };
 		D6A1D735201AAB4E00D38F08 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D734201AAB4D00D38F08 /* SettingsTableViewController.swift */; };
+		D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominationAndProfileGoalsViewController.swift; sourceTree = "<group>"; };
 		D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		D6A1D734201AAB4D00D38F08 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */,
 				D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */,
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
+				D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */,
 				3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */,
 				D60C7CC8201AD4BF00184F8A /* UpdateMyBioViewController.swift in Sources */,
+				D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */,
 				D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */,
 				3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */,
 				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,

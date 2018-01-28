@@ -22,6 +22,7 @@ class UpdatePhoneNumberViewController: UIViewController {
     }
     
 
+    @IBOutlet weak var userPhoneNumber: UITextField!
     /*
     // MARK: - Navigation
 

@@ -1,14 +1,14 @@
 //
-//  UpdateEmailAddressViewController.swift
+//  SetDurationViewController.swift
 //  Trajectory
 //
-//  Created by Andrew Vogel on 1/25/18.
+//  Created by Andrew Vogel on 1/27/18.
 //  Copyright © 2018 Recreational Hazard. All rights reserved.
 //
 
 import UIKit
 
-class UpdateEmailAddressViewController: UIViewController {
+class SetDurationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class UpdateEmailAddressViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var userEmail: UITextField!
+
     /*
     // MARK: - Navigation
 
