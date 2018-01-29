@@ -55,7 +55,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <segue destination="b2D-ON-GJ7" kind="presentation" identifier="FirstToLogin" id="9l8-Gm-tHe"/>
+                        <segue destination="ncC-dd-dqf" kind="presentation" identifier="FirstToLogin" id="5pA-Sg-I1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -204,7 +204,7 @@
                                 <state key="normal" title="Finish"/>
                                 <connections>
                                     <action selector="register:" destination="1Yf-YM-Dwh" eventType="touchUpInside" id="XJv-hX-JX6"/>
-                                    <segue destination="b2D-ON-GJ7" kind="show" id="Vce-u4-hn9"/>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" id="Hcp-Bb-ep0"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YzE-GS-mU8">
@@ -382,24 +382,6 @@
             </objects>
             <point key="canvasLocation" x="7366" y="724"/>
         </scene>
-        <!--Login View Controller-->
-        <scene sceneID="RbZ-Aa-G5p">
-            <objects>
-                <viewController title="Login View Controller" id="b2D-ON-GJ7" customClass="LoginViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2pp-CH-DVg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="RrI-gb-wsq"/>
-                    </view>
-                    <connections>
-                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="LoginToMain" animates="NO" id="8g3-YV-k3d"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ucd-BE-eVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5766" y="724"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -536,7 +518,7 @@
         <!--Password Authentication View Controller-->
         <scene sceneID="nX8-Fb-43w">
             <objects>
-                <viewController title="Password Authentication View Controller" id="fzW-Gq-VMi" sceneMemberID="viewController">
+                <viewController title="Password Authentication View Controller" id="fzW-Gq-VMi" customClass="PasswordAuthenticationViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IUv-ee-V1S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -545,11 +527,14 @@
                                 <rect key="frame" x="50" y="319" width="275" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMD-f7-eRV">
                                 <rect key="frame" x="164" y="379" width="46" height="30"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapNext:" destination="fzW-Gq-VMi" eventType="primaryActionTriggered" id="mIU-Mt-Uvf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -565,6 +550,10 @@
                         <viewLayoutGuide key="safeArea" id="Tdq-pn-sda"/>
                     </view>
                     <navigationItem key="navigationItem" title="Enter Your Password" id="kbX-Za-qgb"/>
+                    <connections>
+                        <outlet property="passwordField" destination="h4Z-Yg-Nug" id="EJw-Dz-oZU"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="PasswordToMain" id="Yyc-aK-VXS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkI-wd-Pvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1283,6 +1272,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vce-u4-hn9"/>
+        <segue reference="5pA-Sg-I1N"/>
+        <segue reference="Hcp-Bb-ep0"/>
     </inferredMetricsTieBreakers>
 </document>
