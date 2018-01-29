@@ -39,6 +39,7 @@
 		D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */; };
 		D6AAA301201EB90100789BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6AAA300201EB90100789BB6 /* Assets.xcassets */; };
 		D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */; };
+		D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */; };
 		D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		D6AAA300201EB90100789BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestDetailsViewController.swift; sourceTree = "<group>"; };
 		D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
 				D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */,
 				D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */,
+				D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
 				D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */,
+				D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */,
 				D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */,
 				D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */,
 				D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */,

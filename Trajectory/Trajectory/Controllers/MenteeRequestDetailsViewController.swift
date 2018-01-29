@@ -1,14 +1,14 @@
 //
-//  SetDurationViewController.swift
+//  MenteeRequestDetailsViewController.swift
 //  Trajectory
 //
-//  Created by Andrew Vogel on 1/27/18.
+//  Created by Andrew Vogel on 1/28/18.
 //  Copyright © 2018 Recreational Hazard. All rights reserved.
 //
 
 import UIKit
 
-class SetDurationViewController: UIViewController {
+class MenteeRequestDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,13 @@ class SetDurationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func setDateandAccept(_ sender: Any) {
+    @IBAction func setEndDate(_ sender: Any) {
     }
+    
+    @IBAction func decline(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     /*
     // MARK: - Navigation
