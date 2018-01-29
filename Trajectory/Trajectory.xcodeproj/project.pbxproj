@@ -142,15 +142,11 @@
 		3F6B1612200C47E600A7A11E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FBC3C58201EF83A006FA1AB /* Authentication */,
 				3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */,
 				3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */,
 				3FA16AFF201A304000D142E5 /* HistoryViewController.swift */,
 				3F6B1614200C4AE400A7A11E /* LoginViewController.swift */,
-				D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */,
-				D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */,
-				D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */,
-				D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */,
-				D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */,
 				3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */,
 				3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */,
 				D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */,
@@ -175,6 +171,18 @@
 				3FC53D941FF03BA7000B82E3 /* LaunchScreen.storyboard */,
 			);
 			path = Layouts;
+			sourceTree = "<group>";
+		};
+		3FBC3C58201EF83A006FA1AB /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */,
+				D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */,
+				D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */,
+				D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */,
+				D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		3FC53D7D1FF03BA6000B82E3 = {
