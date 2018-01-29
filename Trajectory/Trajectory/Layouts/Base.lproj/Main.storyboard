@@ -468,6 +468,7 @@
                         <outlet property="emailField" destination="hUE-Xq-N2B" id="x8F-HM-6T9"/>
                         <segue destination="fzW-Gq-VMi" kind="show" identifier="passwordLogin" id="0Md-1z-WoS"/>
                         <segue destination="x7s-Te-gea" kind="show" identifier="passwordRegister" id="okt-Cn-Jvu"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="initialToMain" id="hqZ-Gz-fSI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgp-6U-ogQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1318,6 +1319,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yyc-aK-VXS"/>
+        <segue reference="hqZ-Gz-fSI"/>
     </inferredMetricsTieBreakers>
 </document>
