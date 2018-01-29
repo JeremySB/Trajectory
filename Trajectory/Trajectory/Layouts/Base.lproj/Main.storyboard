@@ -731,32 +731,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eN-C7-swd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8423.2000000000007" y="5417.5412293853078"/>
+            <point key="canvasLocation" x="8426" y="5418"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My Organizations Table View Controller-->
         <scene sceneID="Oki-OF-Uqs">
             <objects>
-                <tableViewController id="oHu-gH-auW" sceneMemberID="viewController">
+                <tableViewController id="oHu-gH-auW" customClass="MyOrganizationsTableViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="k3W-Gv-LWW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="KbW-PD-x62" style="IBUITableViewCellStyleDefault" id="tr7-ca-ZQ6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="organizationCell" id="tr7-ca-ZQ6">
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tr7-ca-ZQ6" id="bQe-ba-hRc">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Add Organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KbW-PD-x62">
-                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="EQ2-zQ-582" kind="show" id="Jic-qP-lxf"/>
@@ -1253,7 +1244,7 @@
                             <outlet property="delegate" destination="CaC-dF-lIC" id="eP9-Vo-pwy"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="qQX-Os-KlQ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="qQX-Os-KlQ"/>
                     <navigationItem key="navigationItem" title="Settings" id="Q8Z-k7-lHi"/>
                     <connections>
                         <outlet property="profileImage" destination="4gV-Ir-rAd" id="A20-6n-7cn"/>
