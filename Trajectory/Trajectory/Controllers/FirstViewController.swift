@@ -32,7 +32,7 @@ class FirstViewController: UIViewController {
         do {
             try firebaseAuth.signOut()
             
-            self.performSegue(withIdentifier: "FirstToLogin", sender: nil)
+            self.performSegue(withIdentifier: "firstToLogin", sender: nil)
         }
         catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)

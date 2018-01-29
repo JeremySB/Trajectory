@@ -1,5 +1,5 @@
 //
-//  PasswordAuthenticationViewController.swift
+//  NewPasswordViewController.swift
 //  Trajectory
 //
 //  Created by Jeremy Bost on 1/29/18.
@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class PasswordAuthenticationViewController: UIViewController {
+class NewPasswordViewController: UIViewController {
     
     var userEmail: String?
 
@@ -26,23 +26,25 @@ class PasswordAuthenticationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func didTapNext(_ sender: Any) {
+    @IBAction func didTapCreateAccount(_ sender: Any) {
         guard userEmail != nil else {
             self.navigationController?.popViewController(animated: false)
             return
         }
-        Auth.auth().signIn(withEmail: userEmail!, password: passwordField.text!) { (user, error) in
+        guard passwordField?.text != nil else {
+            return
+        }
+        Auth.auth().createUser(withEmail: userEmail!, password: (passwordField?.text)!) { (user, error) in
             if let error = error {
                 print(error.localizedDescription)
                 return
             }
             
-            // logged in
-            self.performSegue(withIdentifier: "passwordToMain", sender: self)
+            // created account
+            self.performSegue(withIdentifier: "newPasswordToName", sender: self)
         }
     }
     
-
     /*
     // MARK: - Navigation
 

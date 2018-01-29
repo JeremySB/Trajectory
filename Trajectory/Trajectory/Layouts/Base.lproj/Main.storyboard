@@ -55,7 +55,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <segue destination="ncC-dd-dqf" kind="presentation" identifier="FirstToLogin" id="5pA-Sg-I1N"/>
+                        <segue destination="Ntw-Bi-YoB" kind="presentation" identifier="firstToLogin" id="ro1-83-CuU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HQ-XO-ZRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="724"/>
+            <point key="canvasLocation" x="2978" y="713"/>
         </scene>
         <!--Hobbies/Interests View Controller-->
         <scene sceneID="kfM-w6-Lqn">
@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ta-KL-rYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2958" y="723"/>
+            <point key="canvasLocation" x="3674" y="712"/>
         </scene>
         <!--Denomination and Profile Goals View Controller-->
         <scene sceneID="X82-1s-y12">
@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqA-N7-Cbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3662" y="723"/>
+            <point key="canvasLocation" x="4378" y="712"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iwk-ub-tkU">
@@ -464,8 +464,8 @@
                     <navigationItem key="navigationItem" title="Trajectory" id="BXc-05-n7u"/>
                     <connections>
                         <outlet property="emailField" destination="hUE-Xq-N2B" id="x8F-HM-6T9"/>
-                        <segue destination="h2F-Wf-6Rn" kind="show" identifier="Register" id="QHJ-f0-Rqo"/>
-                        <segue destination="fzW-Gq-VMi" kind="show" identifier="PasswordLogin" id="0Md-1z-WoS"/>
+                        <segue destination="fzW-Gq-VMi" kind="show" identifier="passwordLogin" id="0Md-1z-WoS"/>
+                        <segue destination="x7s-Te-gea" kind="show" identifier="passwordRegister" id="okt-Cn-Jvu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgp-6U-ogQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -513,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x00-Vd-dA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1514" y="722"/>
+            <point key="canvasLocation" x="2230" y="711"/>
         </scene>
         <!--Password Authentication View Controller-->
         <scene sceneID="nX8-Fb-43w">
@@ -552,7 +552,7 @@
                     <navigationItem key="navigationItem" title="Enter Your Password" id="kbX-Za-qgb"/>
                     <connections>
                         <outlet property="passwordField" destination="h4Z-Yg-Nug" id="EJw-Dz-oZU"/>
-                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="PasswordToMain" id="Yyc-aK-VXS"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="passwordToMain" id="Yyc-aK-VXS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkI-wd-Pvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1263,6 +1263,50 @@
             </objects>
             <point key="canvasLocation" x="7365.6000000000004" y="5417.5412293853078"/>
         </scene>
+        <!--New Password View Controller-->
+        <scene sceneID="2DQ-bW-Cd7">
+            <objects>
+                <viewController title="New Password View Controller" id="x7s-Te-gea" customClass="NewPasswordViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mHj-bO-tup">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpH-ZA-lvm">
+                                <rect key="frame" x="50" y="319" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niA-vP-odH">
+                                <rect key="frame" x="134" y="379" width="107" height="30"/>
+                                <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="didTapCreateAccount:" destination="x7s-Te-gea" eventType="primaryActionTriggered" id="x0y-0e-4LV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qpH-ZA-lvm" firstAttribute="leading" secondItem="eIj-iZ-zSl" secondAttribute="leading" constant="50" id="3q9-p6-HOZ"/>
+                            <constraint firstItem="eIj-iZ-zSl" firstAttribute="trailing" secondItem="qpH-ZA-lvm" secondAttribute="trailing" constant="50" id="Dc9-BL-vJp"/>
+                            <constraint firstItem="niA-vP-odH" firstAttribute="centerX" secondItem="mHj-bO-tup" secondAttribute="centerX" id="Odc-6a-fdw"/>
+                            <constraint firstItem="niA-vP-odH" firstAttribute="centerX" secondItem="qpH-ZA-lvm" secondAttribute="centerX" id="WFq-dg-fao"/>
+                            <constraint firstItem="qpH-ZA-lvm" firstAttribute="centerX" secondItem="mHj-bO-tup" secondAttribute="centerX" id="WJF-qc-hq1"/>
+                            <constraint firstItem="qpH-ZA-lvm" firstAttribute="centerY" secondItem="mHj-bO-tup" secondAttribute="centerY" id="lso-R9-y8c"/>
+                            <constraint firstItem="niA-vP-odH" firstAttribute="top" secondItem="qpH-ZA-lvm" secondAttribute="bottom" constant="30" id="y7m-hC-hTF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eIj-iZ-zSl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create A Password" id="I8K-xa-oIo"/>
+                    <connections>
+                        <outlet property="passwordField" destination="qpH-ZA-lvm" id="3MS-In-yto"/>
+                        <segue destination="h2F-Wf-6Rn" kind="show" identifier="newPasswordToName" id="YUy-zR-9x2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3xG-lL-Xq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1479" y="710"/>
+        </scene>
     </scenes>
     <resources>
         <image name="elipsis.png" width="1600" height="1600"/>
@@ -1272,7 +1316,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5pA-Sg-I1N"/>
-        <segue reference="Hcp-Bb-ep0"/>
+        <segue reference="Yyc-aK-VXS"/>
     </inferredMetricsTieBreakers>
 </document>

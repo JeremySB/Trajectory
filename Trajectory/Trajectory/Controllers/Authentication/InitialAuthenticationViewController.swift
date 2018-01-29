@@ -27,10 +27,10 @@ class InitialAuthenticationViewController: UIViewController {
                 //let errorCode = AuthErrorCode(rawValue: error.code)
             }
             else if providers?.contains("password") ?? false {
-                self.performSegue(withIdentifier: "PasswordLogin", sender: self)
+                self.performSegue(withIdentifier: "passwordLogin", sender: self)
             }
             else {
-                self.performSegue(withIdentifier: "Register", sender: self)
+                self.performSegue(withIdentifier: "passwordRegister", sender: self)
             }
         }
     }
@@ -62,6 +62,9 @@ class InitialAuthenticationViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let dest = segue.destination as? PasswordAuthenticationViewController {
+            dest.userEmail = emailField?.text
+        }
+        else if let dest = segue.destination as? NewPasswordViewController {
             dest.userEmail = emailField?.text
         }
     }

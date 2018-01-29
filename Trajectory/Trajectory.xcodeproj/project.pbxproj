@@ -12,6 +12,7 @@
 		3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */; };
 		3FA16B00201A304000D142E5 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFF201A304000D142E5 /* HistoryViewController.swift */; };
 		3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */; };
+		3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */; };
 		3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */; };
 		3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */; };
 		3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */; };
@@ -71,6 +72,7 @@
 		3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		3FA16AFF201A304000D142E5 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticationViewController.swift; sourceTree = "<group>"; };
+		3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3FC53D861FF03BA6000B82E3 /* Trajectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trajectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */,
 				3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */,
+				3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */,
 				D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */,
 				D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */,
 				D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */,
@@ -618,6 +621,7 @@
 				3FA16B00201A304000D142E5 /* HistoryViewController.swift in Sources */,
 				3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */,
 				D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */,
+				3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */,
 				3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
