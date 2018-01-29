@@ -23,8 +23,15 @@ class UpdateNameViewController: UIViewController {
     
     @IBOutlet weak var usersName: UITextField!
     
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+     @IBAction func doneButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+     }
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

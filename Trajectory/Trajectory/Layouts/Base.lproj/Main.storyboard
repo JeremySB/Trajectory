@@ -413,7 +413,7 @@
                         <segue destination="FGS-07-tIq" kind="relationship" relationship="viewControllers" id="INs-vx-fpU"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="VL8-Ka-cNk" kind="relationship" relationship="viewControllers" id="39P-02-Yxz"/>
+                        <segue destination="CaC-dF-lIC" kind="relationship" relationship="viewControllers" id="mQV-3f-ltB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -610,6 +610,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJY-HJ-P2H">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Update Name" id="TcB-lv-6QU">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SPg-bR-BV0">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="e0n-xi-Ecn" id="xNv-0d-3Rg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="jCE-S9-UL9">
+                                            <connections>
+                                                <action selector="doneButton:" destination="e0n-xi-Ecn" id="8Xh-3U-sAQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="d0w-go-Nwc"/>
@@ -644,6 +662,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30u-jR-RoL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Update Email Address" id="RFD-wJ-Kl9">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PlO-88-MAc">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="joK-g7-bp9" id="P4h-j7-mbw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="A5h-hT-Wos">
+                                            <connections>
+                                                <action selector="doneButton:" destination="joK-g7-bp9" id="yUB-Ll-D6V"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KPR-dW-Kxs"/>
@@ -678,6 +714,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cjM-4r-nwa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Update Phone Number" id="rgw-3M-lHb">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="u3y-rL-Q7m">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="uAe-jR-mDy" id="Xq7-b9-QFh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="vfY-ES-dDa">
+                                            <connections>
+                                                <action selector="doneButton:" destination="uAe-jR-mDy" id="Jd6-wb-BvK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="txy-yZ-fWK"/>
@@ -826,6 +880,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-qY-IKg">
+                                <rect key="frame" x="-1" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="My Bio" id="1aJ-QP-ILe">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tOm-B0-3s4">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="btk-7j-EBC" id="hnW-sl-3hG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="afL-tG-CIz">
+                                            <connections>
+                                                <action selector="doneButton:" destination="btk-7j-EBC" id="ttA-NE-y5H"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7zT-XC-IJS"/>
@@ -1008,7 +1080,7 @@
         <!--Settings-->
         <scene sceneID="LO3-fv-x8Z">
             <objects>
-                <tableViewController id="CaC-dF-lIC" sceneMemberID="viewController">
+                <tableViewController id="CaC-dF-lIC" customClass="SettingsTableViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="my4-6d-4YY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1027,29 +1099,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gV-Ir-rAd">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="4gV-Ir-rAd">
                                                     <rect key="frame" x="16" y="7" width="100" height="100"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="ewG-UK-WtQ"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLL-7I-B3a">
-                                                    <rect key="frame" x="132" y="11" width="217" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKV-kc-jUe">
+                                                    <rect key="frame" x="140" y="19" width="45" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC4-of-cdB">
-                                                    <rect key="frame" x="132" y="31.5" width="217" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAb-ZN-Kyx">
+                                                    <rect key="frame" x="140" y="48" width="98" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YC4-of-cdB" firstAttribute="top" secondItem="vLL-7I-B3a" secondAttribute="bottom" id="2rg-i9-sGi"/>
-                                                <constraint firstItem="vLL-7I-B3a" firstAttribute="leading" secondItem="4gV-Ir-rAd" secondAttribute="trailing" constant="16" id="ETS-69-FHF"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="YC4-of-cdB" secondAttribute="bottom" constant="52" id="FVD-2k-ueM"/>
-                                                <constraint firstItem="YC4-of-cdB" firstAttribute="leading" secondItem="4gV-Ir-rAd" secondAttribute="trailing" constant="16" id="Rqe-dr-NMd"/>
-                                                <constraint firstItem="vLL-7I-B3a" firstAttribute="top" secondItem="LYT-hC-0Eg" secondAttribute="topMargin" id="b3A-N2-uBf"/>
-                                                <constraint firstItem="YC4-of-cdB" firstAttribute="top" secondItem="vLL-7I-B3a" secondAttribute="bottom" id="hFJ-3Y-gas"/>
+                                                <constraint firstItem="4gV-Ir-rAd" firstAttribute="leading" secondItem="LYT-hC-0Eg" secondAttribute="leadingMargin" constant="16" id="KLR-6B-gCz"/>
                                                 <constraint firstAttribute="bottom" secondItem="4gV-Ir-rAd" secondAttribute="bottom" constant="7.5" id="iEV-J5-s2b"/>
                                                 <constraint firstItem="4gV-Ir-rAd" firstAttribute="leading" secondItem="LYT-hC-0Eg" secondAttribute="leading" constant="16" id="oHA-nl-QGk"/>
                                                 <constraint firstItem="4gV-Ir-rAd" firstAttribute="top" secondItem="LYT-hC-0Eg" secondAttribute="top" constant="7" id="xW3-Wk-9hn"/>
@@ -1077,7 +1152,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="e0n-xi-Ecn" kind="presentation" id="VN1-sR-Vca"/>
+                                            <segue destination="e0n-xi-Ecn" kind="show" id="VN1-sR-Vca"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="LVo-Zq-LgT" style="IBUITableViewCellStyleDefault" id="dQA-Jw-thU">
@@ -1227,40 +1302,25 @@
                             <outlet property="delegate" destination="CaC-dF-lIC" id="eP9-Vo-pwy"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="qQX-Os-KlQ"/>
                     <navigationItem key="navigationItem" title="Settings" id="Q8Z-k7-lHi"/>
+                    <connections>
+                        <outlet property="profileImage" destination="4gV-Ir-rAd" id="A20-6n-7cn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvO-KI-UM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7679.1999999999998" y="5417.5412293853078"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="ilQ-mC-9aU">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VL8-Ka-cNk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LHI-p0-Vhj"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0c9-JY-DSm">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="CaC-dF-lIC" kind="relationship" relationship="rootViewController" id="iho-9B-Yms"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R61-tQ-lC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6935" y="5418"/>
+            <point key="canvasLocation" x="7365.6000000000004" y="5417.5412293853078"/>
         </scene>
     </scenes>
     <resources>
         <image name="elipsis.png" width="1600" height="1600"/>
         <image name="first" width="30" height="30"/>
         <image name="ic_email.png" width="24" height="24"/>
+        <image name="profileImg" width="748" height="748"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u7Y-xg-7CH"/>
         <segue reference="9l8-Gm-tHe"/>
     </inferredMetricsTieBreakers>
 </document>

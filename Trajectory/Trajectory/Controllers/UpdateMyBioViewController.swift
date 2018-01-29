@@ -27,6 +27,14 @@ class UpdateMyBioViewController: UIViewController {
     @IBOutlet weak var userDenomination: UITextField!
     @IBOutlet weak var userObjectiveStatement: UITextView!
     
+    @IBAction func doneButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
      // MARK: - Navigation
 

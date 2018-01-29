@@ -15,7 +15,6 @@
 		3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */; };
 		3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */; };
 		3FC53D911FF03BA7000B82E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D8F1FF03BA7000B82E3 /* Main.storyboard */; };
-		3FC53D931FF03BA7000B82E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D921FF03BA7000B82E3 /* Assets.xcassets */; };
 		3FC53D961FF03BA7000B82E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D941FF03BA7000B82E3 /* LaunchScreen.storyboard */; };
 		3FC53DA11FF03BA7000B82E3 /* TrajectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DA01FF03BA7000B82E3 /* TrajectoryTests.swift */; };
 		3FC53DAC1FF03BA7000B82E3 /* TrajectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */; };
@@ -38,7 +37,8 @@
 		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
 		D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */; };
 		D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */; };
-		D6A1D735201AAB4E00D38F08 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D734201AAB4D00D38F08 /* SettingsTableViewController.swift */; };
+		D6AAA301201EB90100789BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6AAA300201EB90100789BB6 /* Assets.xcassets */; };
+		D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */; };
 		D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +73,6 @@
 		3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3FC53D901FF03BA7000B82E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3FC53D921FF03BA7000B82E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FC53D951FF03BA7000B82E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FC53D971FF03BA7000B82E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC53D9C1FF03BA7000B82E3 /* TrajectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrajectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +102,8 @@
 		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
 		D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominationAndProfileGoalsViewController.swift; sourceTree = "<group>"; };
 		D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
-		D6A1D734201AAB4D00D38F08 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		D6AAA300201EB90100789BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +151,6 @@
 				D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */,
 				3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */,
 				3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */,
-				D6A1D734201AAB4D00D38F08 /* SettingsTableViewController.swift */,
 				D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */,
 				D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */,
 				D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */,
@@ -161,6 +160,7 @@
 				D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */,
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
 				D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */,
+				D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -202,9 +202,9 @@
 				3F6B1613200C481E00A7A11E /* Layouts */,
 				3F6B1612200C47E600A7A11E /* Controllers */,
 				3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */,
-				3FC53D921FF03BA7000B82E3 /* Assets.xcassets */,
 				3FC53D971FF03BA7000B82E3 /* Info.plist */,
 				3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */,
+				D6AAA300201EB90100789BB6 /* Assets.xcassets */,
 			);
 			path = Trajectory;
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 			files = (
 				3FC53D961FF03BA7000B82E3 /* LaunchScreen.storyboard in Resources */,
 				3FC53DBA1FF03CBA000B82E3 /* GoogleService-Info.plist in Resources */,
-				3FC53D931FF03BA7000B82E3 /* Assets.xcassets in Resources */,
+				D6AAA301201EB90100789BB6 /* Assets.xcassets in Resources */,
 				3FC53D911FF03BA7000B82E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,7 +583,6 @@
 			files = (
 				3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */,
 				3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */,
-				D6A1D735201AAB4E00D38F08 /* SettingsTableViewController.swift in Sources */,
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
@@ -596,6 +595,7 @@
 				D60C7CC8201AD4BF00184F8A /* UpdateMyBioViewController.swift in Sources */,
 				D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */,
 				D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */,
+				D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */,
 				3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */,
 				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
 				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,

@@ -23,6 +23,15 @@ class UpdatePhoneNumberViewController: UIViewController {
     
 
     @IBOutlet weak var userPhoneNumber: UITextField!
+    
+    @IBAction func doneButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
