@@ -143,27 +143,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F3B26F2201F8624009C51B2 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		3F3B26F3201F863E009C51B2 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				3FA16AFF201A304000D142E5 /* HistoryViewController.swift */,
+				3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */,
+				3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		3F3B26F4201F8645009C51B2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */,
+				D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */,
+				D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */,
+				D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */,
+				D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */,
+				D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */,
+				D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */,
+				D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */,
+				D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		3F6B1612200C47E600A7A11E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F3B26F4201F8645009C51B2 /* Settings */,
+				3F3B26F3201F863E009C51B2 /* Goals */,
+				3F3B26F2201F8624009C51B2 /* Registration */,
 				3FBC3C58201EF83A006FA1AB /* Authentication */,
 				3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */,
 				3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */,
-				3FA16AFF201A304000D142E5 /* HistoryViewController.swift */,
 				3F6B1614200C4AE400A7A11E /* LoginViewController.swift */,
-				3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */,
-				3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */,
-				D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */,
-				D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */,
-				D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */,
-				D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */,
-				D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */,
-				D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */,
-				D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */,
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
 				D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */,
-				D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */,
-				D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
