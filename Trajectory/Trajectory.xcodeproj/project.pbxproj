@@ -146,6 +146,10 @@
 		3F3B26F2201F8624009C51B2 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */,
+				D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */,
+				D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */,
+				D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -207,10 +211,6 @@
 				D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */,
 				3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */,
 				3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */,
-				D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */,
-				D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */,
-				D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */,
-				D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
