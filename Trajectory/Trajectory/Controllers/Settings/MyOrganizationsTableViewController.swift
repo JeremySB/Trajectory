@@ -42,7 +42,7 @@ class MyOrganizationsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = "Add Organization"
         
         return cell
     }
