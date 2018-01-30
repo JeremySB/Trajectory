@@ -309,7 +309,9 @@
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" title="Goals" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="FGS-07-tIq" customClass="GoalsPageViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Goals" image="ic_email.png" id="jVO-cK-QUo"/>
-                    <navigationItem key="navigationItem" title="Goals" id="zXv-Ga-z3Y"/>
+                    <navigationItem key="navigationItem" title="Goals" id="zXv-Ga-z3Y">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0oo-8P-i8v"/>
+                    </navigationItem>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQb-SG-w2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
