@@ -101,5 +101,15 @@ class ScrollController: UIPageViewController, UIPageViewControllerDataSource {
         
         return firstViewControllerIndex
     }
+    
+    override func viewDidLayoutSubviews() {
+        //corrects scrollview frame to allow for full-screen view controller pages
+        for subView in self.view.subviews {
+            if subView is UIScrollView {
+                subView.frame = self.view.bounds
+            }
+        }
+        super.viewDidLayoutSubviews()
+    }
 
 }
