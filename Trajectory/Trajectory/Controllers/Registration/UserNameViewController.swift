@@ -10,14 +10,12 @@ import UIKit
 import Firebase
 
 class UserNameViewController: UIViewController {
-    
-    //Array of user profile information to be collected
-    var userData : [String] = ["name", "phoneNumber", "emailAddress", "hobbies", "professionalInterests", "denomination", "objectiveStatement"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
+        navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,12 +39,5 @@ class UserNameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.destination is PhoneEmailViewController {
-            //Copy validated user input into user profile array
-            userData[0] = userName.text!
-            //Pass user profile array
-            let vc = segue.destination as? PhoneEmailViewController
-            vc?.userData = userData
-        }
     }
 }
