@@ -192,7 +192,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Finish"/>
                                 <connections>
-                                    <action selector="register:" destination="1Yf-YM-Dwh" eventType="touchUpInside" id="XJv-hX-JX6"/>
                                     <segue destination="49e-Tb-3d3" kind="presentation" id="Hcp-Bb-ep0"/>
                                 </connections>
                             </button>
@@ -1337,6 +1336,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hqZ-Gz-fSI"/>
+        <segue reference="Hcp-Bb-ep0"/>
     </inferredMetricsTieBreakers>
 </document>

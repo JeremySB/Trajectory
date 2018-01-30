@@ -9,9 +9,6 @@
 import UIKit
 
 class HobbiesInterestsViewController: UIViewController {
-
-    //Array of user's profile information, which is based on information from previous screen
-    var userData: [String] = ["empty"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +31,6 @@ class HobbiesInterestsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.destination is DenominationAndProfileGoalsViewController
-        {
-            //Copy validated user input into user profile array
-            userData[3] = hobbies.text!
-            userData[4] = professionalInterests.text!
-            //Pass user profile array
-            let vc = segue.destination as? DenominationAndProfileGoalsViewController
-            vc?.userData = userData
-        }
     }
     
 

@@ -11,9 +11,6 @@ import FirebaseAuth
 
 class DenominationAndProfileGoalsViewController: UIViewController {
 
-    //Array of user's profile information, which is based on information from previous screen
-    var userData: [String] = ["empty"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,14 +23,6 @@ class DenominationAndProfileGoalsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func register(_ sender: Any) {
-        Auth.auth().signInAnonymously { (_, _) in
-            let user = Auth.auth().currentUser
-            user?.updateEmail(to: self.userData[2], completion: nil)
-            
-        }
-    }
-    
     @IBOutlet weak var denomination: UITextField!
     @IBOutlet weak var objectivesStatement: UITextView!
     
@@ -43,9 +32,6 @@ class DenominationAndProfileGoalsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        //Copy validated user input into user profile array
-        userData[5] = denomination.text!
-        userData[6] = objectivesStatement.text!
     }
 
 }

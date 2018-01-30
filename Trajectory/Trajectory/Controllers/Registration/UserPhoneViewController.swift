@@ -10,9 +10,6 @@ import UIKit
 
 class UserPhoneViewController: UIViewController {
     
-    //Array of user's profile information, which is based on information from previous screen
-    var userData: [String] = ["empty"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
