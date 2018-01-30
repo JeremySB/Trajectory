@@ -485,19 +485,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="userName" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Please enter your name." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OF6-DN-P6D">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="userName" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OF6-DN-P6D">
                                 <rect key="frame" x="99" y="266" width="177" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgF-wo-Tdr">
                                 <rect key="frame" x="155" y="367" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="UZA-Ox-kFv" kind="show" id="dEb-ry-YKi"/>
+                                    <action selector="didTapNext:" destination="h2F-Wf-6Rn" eventType="primaryActionTriggered" id="n2Y-lx-phr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ5-CX-XC5">
@@ -514,6 +514,7 @@
                     <navigationItem key="navigationItem" title="Profile Setup" id="olh-0q-KWm"/>
                     <connections>
                         <outlet property="userName" destination="OF6-DN-P6D" id="Ze4-66-XIU"/>
+                        <segue destination="UZA-Ox-kFv" kind="show" identifier="nameToPhoneAndEmail" id="9Tk-4f-GE8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x00-Vd-dA0" userLabel="First Responder" sceneMemberID="firstResponder"/>

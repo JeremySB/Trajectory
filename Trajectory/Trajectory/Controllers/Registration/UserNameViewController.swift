@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UserNameViewController: UIViewController {
     
@@ -25,6 +26,16 @@ class UserNameViewController: UIViewController {
     }
     
     @IBOutlet weak var userName: UITextField!
+    
+    @IBAction func didTapNext(_ sender: Any) {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = userName.text
+        changeRequest?.commitChanges { (error) in
+            if error == nil {
+                self.performSegue(withIdentifier: "nameToPhoneAndEmail", sender: self)
+            }
+        }
+    }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
