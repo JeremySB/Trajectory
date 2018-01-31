@@ -8,10 +8,7 @@
 
 import UIKit
 
-class PhoneEmailViewController: UIViewController {
-    
-    //Array of user's profile information, which is based on information from previous screen
-    var userData: [String] = ["empty"]
+class UserPhoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +23,6 @@ class PhoneEmailViewController: UIViewController {
     }
 
     @IBOutlet weak var phoneNumber: UITextField!
-     @IBOutlet weak var emailAddress: UITextField!
     
      // MARK: - Navigation
 
@@ -34,15 +30,6 @@ class PhoneEmailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.destination is HobbiesInterestsViewController
-        {
-            //Copy validated user input into user profile array
-            userData[1] = phoneNumber.text!
-            userData[2] = emailAddress.text!
-            //Pass user profile array
-            let vc = segue.destination as? HobbiesInterestsViewController
-            vc?.userData = userData
-        }
     }
 
 }

@@ -35,7 +35,7 @@
 		D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */; };
 		D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */; };
 		D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */; };
-		D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */; };
+		D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */; };
 		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
 		D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */; };
 		D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */; };
@@ -103,7 +103,7 @@
 		D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrganizationsTableViewController.swift; sourceTree = "<group>"; };
 		D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestListTableViewController.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewController.swift; sourceTree = "<group>"; };
-		D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEmailViewController.swift; sourceTree = "<group>"; };
+		D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoneViewController.swift; sourceTree = "<group>"; };
 		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
 		D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominationAndProfileGoalsViewController.swift; sourceTree = "<group>"; };
 		D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */,
-				D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */,
+				D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */,
 				D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */,
 				D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */,
 			);
@@ -633,7 +633,7 @@
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
-				D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */,
+				D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */,
 				D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */,
 				D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */,
 				D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */,
