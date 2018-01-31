@@ -48,7 +48,7 @@ UINavigationControllerDelegate {
         profileImage.image = image
         dismiss(animated:true, completion: nil)
     }
-
+    
     /*
     // MARK: - Navigation
 
