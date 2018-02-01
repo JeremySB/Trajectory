@@ -1054,8 +1054,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wRK-mP-mDM"/>
                     </view>
+                    <connections>
+                        <segue destination="rCd-Lg-cFy" kind="unwind" identifier="unwindSeguetoSettings" unwindAction="unwindToMenteeListAfterAcceptingWithSegue:" id="6WC-ke-kXt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekK-38-viL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rCd-Lg-cFy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="10343" y="7727"/>
         </scene>

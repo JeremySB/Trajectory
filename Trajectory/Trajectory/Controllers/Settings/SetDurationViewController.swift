@@ -23,6 +23,7 @@ class SetDurationViewController: UIViewController {
     
 
     @IBAction func setDateandAccept(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSeguetoSettings", sender: self)
     }
     
     /*

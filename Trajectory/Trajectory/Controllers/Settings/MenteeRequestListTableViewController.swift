@@ -45,6 +45,8 @@ class MenteeRequestListTableViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func unwindToMenteeListAfterAccepting(segue:UIStoryboardSegue) { }
+    
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menteeListItem", for: indexPath)

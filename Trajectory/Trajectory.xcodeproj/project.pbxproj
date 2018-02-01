@@ -176,6 +176,7 @@
 				D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */,
 				D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */,
 				D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */,
+				D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -191,7 +192,6 @@
 				3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */,
 				3F6B1614200C4AE400A7A11E /* LoginViewController.swift */,
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
-				D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
