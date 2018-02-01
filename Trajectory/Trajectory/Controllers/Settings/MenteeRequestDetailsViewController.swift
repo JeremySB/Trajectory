@@ -9,6 +9,8 @@
 import UIKit
 
 class MenteeRequestDetailsViewController: UIViewController {
+    
+    var menteeRequest: MenteeRequest?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,7 @@ class MenteeRequestDetailsViewController: UIViewController {
     }
     
     @IBAction func decline(_ sender: Any) {
+        menteeRequest?.decline()
         dismiss(animated: true, completion: nil)
     }
     
