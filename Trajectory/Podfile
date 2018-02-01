@@ -14,6 +14,7 @@ target 'Trajectory' do
 
   pod 'GoogleSignIn'
 
+  pod 'JTAppleCalendar', '~> 7.0'
 
   target 'TrajectoryTests' do
     inherit! :search_paths

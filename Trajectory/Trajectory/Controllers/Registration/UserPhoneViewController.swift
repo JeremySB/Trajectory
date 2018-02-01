@@ -1,38 +1,46 @@
 //
-//  SetDurationViewController.swift
+//  PhoneEmailViewController.swift
 //  Trajectory
 //
-//  Created by Andrew Vogel on 1/27/18.
+//  Created by Andrew Vogel on 1/23/18.
 //  Copyright © 2018 Recreational Hazard. All rights reserved.
 //
 
 import UIKit
+import Firebase
 
-class SetDurationViewController: UIViewController {
-
+class UserPhoneViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationItem.title = "Profile Setup"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    @IBAction func setDateandAccept(_ sender: Any) {
-    }
+    @IBOutlet weak var phoneNumber: UITextField!
     
-    /*
-    // MARK: - Navigation
+    @IBAction func didTapNext(_ sender: Any) {
+        let db = Firestore.firestore()
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        db.collection("users").document(uid).setData(["phoneNumber" : phoneNumber.text], options: SetOptions.merge()) { (error) in
+            if error == nil {
+                self.performSegue(withIdentifier: "phoneToHobbiesAndInterests", sender: self)
+            }
+        }
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }

@@ -36,7 +36,7 @@
 		D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */; };
 		D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */; };
 		D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */; };
-		D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */; };
+		D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */; };
 		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
 		D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */; };
 		D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */; };
@@ -105,7 +105,7 @@
 		D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrganizationsTableViewController.swift; sourceTree = "<group>"; };
 		D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestListTableViewController.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewController.swift; sourceTree = "<group>"; };
-		D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEmailViewController.swift; sourceTree = "<group>"; };
+		D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoneViewController.swift; sourceTree = "<group>"; };
 		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
 		D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominationAndProfileGoalsViewController.swift; sourceTree = "<group>"; };
 		D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				D6A1D72F2018EB1E00D38F08 /* UserNameViewController.swift */,
-				D6A1D7292018197D00D38F08 /* PhoneEmailViewController.swift */,
+				D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */,
 				D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */,
 				D6A1D72D20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift */,
 			);
@@ -179,6 +179,7 @@
 				D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */,
 				D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */,
 				D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */,
+				D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -194,7 +195,6 @@
 				3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */,
 				3F6B1614200C4AE400A7A11E /* LoginViewController.swift */,
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
-				D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -453,6 +453,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -470,6 +471,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -604,14 +606,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Trajectory/Pods-Trajectory-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseFacebookAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -632,7 +637,7 @@
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
-				D6A1D72A2018197D00D38F08 /* PhoneEmailViewController.swift in Sources */,
+				D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */,
 				D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */,
 				D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */,
 				D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */,

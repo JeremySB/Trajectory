@@ -9,6 +9,9 @@
 import UIKit
 
 class MyOrganizationsTableViewController: UITableViewController {
+    
+    //An array of the user's organizations
+    let userOrganizations = ["Grove City Men's Group", "First Presbyterian Church", "Co-ed Bible Study"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,20 +37,34 @@ class MyOrganizationsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        var rows = 1
+        if section == 1 {
+            rows = userOrganizations.count
+        }
+        return rows
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath)
-
-        // Configure the cell...
-        cell.textLabel?.text = "Add Organization"
-        
-        return cell
+        //If in the first section...
+        if(indexPath == [0, 0]) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "addOrganizationCell", for: indexPath)
+            // Configure the cell...
+            cell.textLabel?.text = "Add Organization"
+            return cell
+        }
+        //If in the second section...
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath)
+            cell.textLabel?.text = userOrganizations[indexPath[1]]
+            return cell
+        }
     }
     
-
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
