@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UserPhoneViewController: UIViewController {
     
@@ -24,7 +25,17 @@ class UserPhoneViewController: UIViewController {
 
     @IBOutlet weak var phoneNumber: UITextField!
     
-     // MARK: - Navigation
+    @IBAction func didTapNext(_ sender: Any) {
+        let db = Firestore.firestore()
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        db.collection("users").document(uid).setData(["phoneNumber" : phoneNumber.text], options: SetOptions.merge()) { (error) in
+            if error == nil {
+                self.performSegue(withIdentifier: "phoneToHobbiesAndInterests", sender: self)
+            }
+        }
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

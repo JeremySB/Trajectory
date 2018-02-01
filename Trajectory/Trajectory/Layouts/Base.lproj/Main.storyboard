@@ -90,7 +90,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="76D-hc-zOu" kind="show" id="uM8-Q5-hGT"/>
+                                    <action selector="didTapNext:" destination="UZA-Ox-kFv" eventType="primaryActionTriggered" id="7g2-qF-eKP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,6 +102,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="phoneNumber" destination="dUr-Gk-ftE" id="qc2-gi-TXc"/>
+                        <segue destination="76D-hc-zOu" kind="show" identifier="phoneToHobbiesAndInterests" id="mXz-PI-H7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HQ-XO-ZRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
