@@ -10,6 +10,9 @@ import UIKit
 
 class MenteeRequestListTableViewController: UITableViewController {
 
+    //An array of the user's mentee requests
+    let menteeRequests = ["John Smith", "Billy Small", "Steve Jobs"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,23 +32,28 @@ class MenteeRequestListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let rows = menteeRequests.count
+        return rows
     }
+    
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menteeListItem", for: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel?.text = menteeRequests[indexPath[1]]
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
