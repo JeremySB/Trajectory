@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+class MenteeRequest {
+    var mentee: Mentee
+    
+    init(by mentee: Mentee) {
+        self.mentee = mentee
+    }
+    
+    func accept(until date: Date) {
+        
+    }
+    
+    func decline() {
+        
+    }
+}
