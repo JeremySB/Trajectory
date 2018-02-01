@@ -857,7 +857,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="My Organizations" id="0oU-Pu-cKP">
-                                    <barButtonItem key="leftBarButtonItem" title="Settings" id="25O-h4-jWp">
+                                    <barButtonItem key="leftBarButtonItem" title="Back" id="25O-h4-jWp">
                                         <connections>
                                             <action selector="backButton:" destination="oHu-gH-auW" id="gzC-ZH-xRY"/>
                                         </connections>
@@ -1070,7 +1070,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Mentee Requests" id="eIv-OO-rNK">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="0qP-jj-6Vm">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="0qP-jj-6Vm">
                             <connections>
                                 <action selector="backButton:" destination="oRr-6n-GaG" id="x4r-iu-ZmS"/>
                             </connections>
