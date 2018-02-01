@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0003752020DA62002BA17D /* AddGoalViewController.swift */; };
 		3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B1614200C4AE400A7A11E /* LoginViewController.swift */; };
 		3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */; };
 		3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */; };
@@ -67,6 +68,7 @@
 		1BE9121C0BE9D8BDBEB16A20 /* Pods_TrajectoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrajectoryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AA63FB01F472B1E52C1949 /* Pods-Trajectory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trajectory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trajectory/Pods-Trajectory.debug.xcconfig"; sourceTree = "<group>"; };
 		2FFC2C7655FDA8CEB7664263 /* Pods_Trajectory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trajectory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F0003752020DA62002BA17D /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		3F6B1614200C4AE400A7A11E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPageViewController.swift; sourceTree = "<group>"; };
 		3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				3FA16AFF201A304000D142E5 /* HistoryViewController.swift */,
 				3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */,
 				3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */,
+				3F0003752020DA62002BA17D /* AddGoalViewController.swift */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */,
+				3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */,
 				3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */,
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
