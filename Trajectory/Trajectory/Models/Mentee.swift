@@ -11,6 +11,12 @@ import Foundation
 class Mentee {
     var name: String
     var organization: String?
+    var hobbies: String?
+    var professionalInterests: String?
+    var denomination: String?
+    var menteeObjectives: String?
+    var phoneNumber: String?
+    var emailAddress: String?
     var uid: String
     
     init(testname: String) {

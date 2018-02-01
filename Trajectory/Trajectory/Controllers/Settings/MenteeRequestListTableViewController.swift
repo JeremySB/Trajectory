@@ -103,5 +103,16 @@ class MenteeRequestListTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    /*
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //https://stackoverflow.com/questions/26207846/pass-data-through-segue
+        let selectedMentee = menteeRequests[indexPath.row]
+        // Create an instance of destination view controller and pass the variable
+        let destinationVC = MenteeRequestDetailsViewController()
+        destinationVC.menteeRequest = selectedMentee
+        //Perform segue
+        //destinationVC.performSegue(withIdentifier: "playerSegue", sender: self)
+    }
+*/
 
 }
