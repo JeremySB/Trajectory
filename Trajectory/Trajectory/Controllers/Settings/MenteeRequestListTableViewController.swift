@@ -11,7 +11,9 @@ import UIKit
 class MenteeRequestListTableViewController: UITableViewController {
 
     //An array of the user's mentee requests
-    let menteeRequests = ["John Smith", "Billy Small", "Steve Jobs"]
+    let menteeRequests = [MenteeRequest(by: Mentee(testname: "First Person")),
+                          MenteeRequest(by: Mentee(testname: "Second Person"))]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +54,7 @@ class MenteeRequestListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menteeListItem", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = menteeRequests[indexPath[1]]
+        cell.textLabel?.text = menteeRequests[indexPath[1]].mentee.name
         
         return cell
     }
@@ -101,5 +103,19 @@ class MenteeRequestListTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //https://stackoverflow.com/questions/26207846/pass-data-through-segue
+        let selectedMentee = menteeRequests[indexPath.row]
+        // Create an instance of destination view controller and pass the variable
+        let destinationVC = MenteeRequestDetailsViewController()
+        destinationVC.menteeRequest = selectedMentee
+        //Perform segue
+        print("Test")
+        print(destinationVC.menteeRequest!.mentee.name)
+        print(selectedMentee.mentee.name)
+        //self.performSegue(withIdentifier: "menteeRequestsToMentee", sender: self)
+    }
 
 }
