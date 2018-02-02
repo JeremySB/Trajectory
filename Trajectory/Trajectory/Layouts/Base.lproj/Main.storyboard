@@ -232,7 +232,7 @@
                     <connections>
                         <outlet property="denomination" destination="dgY-Ad-HYD" id="0t7-6d-GQ0"/>
                         <outlet property="objectivesStatement" destination="bxx-Cd-on2" id="zC1-ei-rDv"/>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="denominationAndProfileToMain" id="wlO-wV-XDz"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="denominationAndProfileToMain" id="wlO-wV-XDz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqA-N7-Cbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
