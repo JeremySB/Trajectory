@@ -31,7 +31,10 @@ class UserPhoneViewController: UIViewController {
             return
         }
         db.collection("users").document(uid).setData(["phoneNumber" : phoneNumber.text], options: SetOptions.merge()) { (error) in
-            if error == nil {
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else {
                 self.performSegue(withIdentifier: "phoneToHobbiesAndInterests", sender: self)
             }
         }
