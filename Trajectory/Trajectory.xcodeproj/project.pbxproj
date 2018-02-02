@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0003752020DA62002BA17D /* AddGoalViewController.swift */; };
+		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
 		3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B1614200C4AE400A7A11E /* LoginViewController.swift */; };
 		3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */; };
 		3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */; };
 		3FA16B00201A304000D142E5 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFF201A304000D142E5 /* HistoryViewController.swift */; };
+		3FAD0DC12024F77E00DC5713 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC02024F77E00DC5713 /* UserCollectionViewCell.swift */; };
+		3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */; };
+		3FAD0DC52025156F00DC5713 /* MentorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */; };
 		3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */; };
 		3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */; };
 		3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */; };
@@ -69,10 +73,14 @@
 		24AA63FB01F472B1E52C1949 /* Pods-Trajectory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trajectory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trajectory/Pods-Trajectory.debug.xcconfig"; sourceTree = "<group>"; };
 		2FFC2C7655FDA8CEB7664263 /* Pods_Trajectory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trajectory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0003752020DA62002BA17D /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
+		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		3F6B1614200C4AE400A7A11E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPageViewController.swift; sourceTree = "<group>"; };
 		3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		3FA16AFF201A304000D142E5 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		3FAD0DC02024F77E00DC5713 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCollectionView.swift; sourceTree = "<group>"; };
+		3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorInfoViewController.swift; sourceTree = "<group>"; };
 		3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticationViewController.swift; sourceTree = "<group>"; };
 		3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3FC53D861FF03BA6000B82E3 /* Trajectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trajectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,9 +192,22 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		3F609D172024D87700E13E79 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				3F609D182024D8BC00E13E79 /* FindViewController.swift */,
+				3FAD0DC02024F77E00DC5713 /* UserCollectionViewCell.swift */,
+				3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */,
+				3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
 		3F6B1612200C47E600A7A11E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FAD0DBC2024F07200DC5713 /* Community */,
+				3F609D172024D87700E13E79 /* Find */,
 				3F3B26F4201F8645009C51B2 /* Settings */,
 				3F3B26F3201F863E009C51B2 /* Goals */,
 				3F3B26F2201F8624009C51B2 /* Registration */,
@@ -206,6 +227,13 @@
 				3FC53D941FF03BA7000B82E3 /* LaunchScreen.storyboard */,
 			);
 			path = Layouts;
+			sourceTree = "<group>";
+		};
+		3FAD0DBC2024F07200DC5713 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Community;
 			sourceTree = "<group>";
 		};
 		3FBC3C58201EF83A006FA1AB /* Authentication */ = {
@@ -632,8 +660,10 @@
 			files = (
 				3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */,
 				3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */,
+				3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */,
 				3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */,
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
+				3FAD0DC12024F77E00DC5713 /* UserCollectionViewCell.swift in Sources */,
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
@@ -655,7 +685,9 @@
 				3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */,
 				D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */,
 				3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */,
+				3FAD0DC52025156F00DC5713 /* MentorInfoViewController.swift in Sources */,
 				3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */,
+				3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
