@@ -21,8 +21,12 @@ class SetDurationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBOutlet weak var endDate: UIDatePicker!
+    
 
     @IBAction func setDateandAccept(_ sender: Any) {
+        print(endDate.date)
         performSegue(withIdentifier: "unwindSeguetoSettings", sender: self)
     }
     

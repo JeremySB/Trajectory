@@ -11,7 +11,9 @@ import UIKit
 class MenteeRequestListTableViewController: UITableViewController {
 
     //An array of the user's mentee requests
-    let menteeRequests = ["John Smith", "Billy Small", "Steve Jobs"]
+    let menteeRequests = [MenteeRequest(by: Mentee(testname: "First Person")),
+                          MenteeRequest(by: Mentee(testname: "Second Person"))]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +54,7 @@ class MenteeRequestListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menteeListItem", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = menteeRequests[indexPath[1]]
+        cell.textLabel?.text = menteeRequests[indexPath[1]].mentee.name
         
         return cell
     }
