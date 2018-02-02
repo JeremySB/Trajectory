@@ -18,19 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-cz-Vc7">
-                                <rect key="frame" x="87.5" y="234" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="IwS-ra-lSQ"/>
-                                    <constraint firstAttribute="height" constant="200" id="qLo-JH-e8N"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="z4c-5S-08E">
+                                <rect key="frame" x="0.0" y="45" width="375" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="1Ko-cz-Vc7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="biE-MF-8I7"/>
-                            <constraint firstItem="1Ko-cz-Vc7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fZl-Ie-VFu"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.016653390601277351" green="0.0012010012287646532" blue="0.00056467531248927116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -40,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="524" height="525"/>
+        <image name="SplashScreen" width="410" height="624"/>
     </resources>
 </document>

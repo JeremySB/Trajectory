@@ -519,8 +519,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TEB-nK-29B">
-                                <rect key="frame" x="50" y="247" width="275" height="222"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoginScreen" translatesAutoresizingMaskIntoConstraints="NO" id="IO9-Py-b4O">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TEB-nK-29B">
+                                <rect key="frame" x="50" y="336" width="275" height="222"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUE-Xq-N2B">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
@@ -1612,12 +1616,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LoginScreen" width="410" height="624"/>
         <image name="elipsis.png" width="1600" height="1600"/>
         <image name="first" width="30" height="30"/>
         <image name="profileImg" width="748" height="748"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hcp-Bb-ep0"/>
+        <segue reference="hqZ-Gz-fSI"/>
     </inferredMetricsTieBreakers>
 </document>
