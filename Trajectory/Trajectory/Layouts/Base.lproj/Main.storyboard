@@ -131,7 +131,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Please enter your hobbies." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fuH-m5-vhS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fuH-m5-vhS">
                                 <rect key="frame" x="67" y="234" width="240" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -145,7 +145,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Please enter your professional interests." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X1P-aA-Nwx">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X1P-aA-Nwx">
                                 <rect key="frame" x="67" y="418" width="240" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,7 +157,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="1Yf-YM-Dwh" kind="show" id="KiB-hP-ZHg"/>
+                                    <action selector="didTapNext:" destination="76D-hc-zOu" eventType="primaryActionTriggered" id="Jxh-Qf-B4K"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,6 +167,7 @@
                     <connections>
                         <outlet property="hobbies" destination="fuH-m5-vhS" id="mYY-Hs-WbY"/>
                         <outlet property="professionalInterests" destination="X1P-aA-Nwx" id="L15-KK-iJ5"/>
+                        <segue destination="1Yf-YM-Dwh" kind="show" identifier="hobbiesAndInterestsToDenominationAndGoals" id="yHo-DP-cTr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ta-KL-rYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,19 +182,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Please enter your denomination." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgY-Ad-HYD">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgY-Ad-HYD">
                                 <rect key="frame" x="73" y="246" width="229" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxp-Ti-sQ2">
                                 <rect key="frame" x="178" y="511" width="41" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Finish"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" id="Hcp-Bb-ep0"/>
+                                    <action selector="didTapNext:" destination="1Yf-YM-Dwh" eventType="primaryActionTriggered" id="OfR-BA-lGc"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YzE-GS-mU8">
@@ -217,7 +218,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What would you like to work on with a mentor?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bxx-Cd-on2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bxx-Cd-on2">
                                 <rect key="frame" x="73" y="375" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -231,6 +232,7 @@
                     <connections>
                         <outlet property="denomination" destination="dgY-Ad-HYD" id="0t7-6d-GQ0"/>
                         <outlet property="objectivesStatement" destination="bxx-Cd-on2" id="zC1-ei-rDv"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="denominationAndProfileToMain" id="wlO-wV-XDz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqA-N7-Cbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -530,7 +532,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xeh-Np-xGT">
                                         <rect key="frame" x="106.5" y="38" width="62" height="30"/>
@@ -1623,6 +1625,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hqZ-Gz-fSI"/>
+        <segue reference="wlO-wV-XDz"/>
     </inferredMetricsTieBreakers>
 </document>
