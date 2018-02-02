@@ -14,7 +14,8 @@ class MenteeRequestDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("MENTEE REQUEST")
+        print(menteeRequest?.mentee.name)
         // Do any additional setup after loading the view.
     }
 
