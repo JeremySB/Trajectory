@@ -1350,8 +1350,8 @@ Things To Work On</string>
                                 <rect key="frame" x="13" y="83" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKN-Gh-56m">
-                                <rect key="frame" x="13" y="226" width="343" height="329"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKN-Gh-56m">
+                                <rect key="frame" x="13" y="226" width="343" height="359"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Hobbies
@@ -1365,7 +1365,7 @@ Denomination
 
 Things To Work On   Contact</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1379,7 +1379,7 @@ Things To Work On   Contact</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5O-wQ-Cpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9535" y="7728"/>
+            <point key="canvasLocation" x="9533.6000000000004" y="7727.5862068965525"/>
         </scene>
         <!--Set Duration-->
         <scene sceneID="43f-CK-5Ly">
