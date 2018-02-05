@@ -9,11 +9,15 @@
 import UIKit
 
 class SetDurationViewController: UIViewController {
+    
+    var menteeRequest: MenteeRequest?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nameLabel.text = menteeRequest?.mentee.name
+        organizationLabel.text = menteeRequest?.mentee.organization
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +28,13 @@ class SetDurationViewController: UIViewController {
     
     @IBOutlet weak var endDate: UIDatePicker!
     
-
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var organizationLabel: UILabel!
+    
+    
+    @IBOutlet weak var userImage: UIImageView!
+    
     @IBAction func setDateandAccept(_ sender: Any) {
         print(endDate.date)
         performSegue(withIdentifier: "unwindSeguetoSettings", sender: self)

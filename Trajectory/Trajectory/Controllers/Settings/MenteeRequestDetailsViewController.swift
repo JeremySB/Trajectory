@@ -14,9 +14,10 @@ class MenteeRequestDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("MENTEE REQUEST")
-        print(menteeRequest?.mentee.name)
         // Do any additional setup after loading the view.
+        nameLabel.text = menteeRequest?.mentee.name
+        organizationlabel.text = menteeRequest?.mentee.organization
+        userDetails.text = "Hobbies" + "\n\n" + "Professional Interests" + "\n\n" + "Denomination" + "\n\n" + "Things to Work On" + "\n\n" + "Contact" + "\n\n"
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,16 +32,22 @@ class MenteeRequestDetailsViewController: UIViewController {
         menteeRequest?.decline()
         dismiss(animated: true, completion: nil)
     }
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var organizationlabel: UILabel!
+    
+    @IBOutlet weak var userDetails: UITextView!
     
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let destinationVC = segue.destination as! SetDurationViewController
+        destinationVC.menteeRequest = menteeRequest
     }
-    */
+    
 
 }
