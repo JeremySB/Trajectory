@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MenteeRequest {
+class MenteeRequest: Codable {
     var mentee: Mentee
     
     init(by mentee: Mentee) {

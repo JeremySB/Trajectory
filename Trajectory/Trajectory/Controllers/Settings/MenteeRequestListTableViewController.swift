@@ -7,16 +7,30 @@
 //
 
 import UIKit
+import Firebase
+import CodableFirebase
 
 class MenteeRequestListTableViewController: UITableViewController {
 
     //An array of the user's mentee requests
-    let menteeRequests = [MenteeRequest(by: Mentee(testname: "First Person")),
-                          MenteeRequest(by: Mentee(testname: "Second Person"))]
+    var menteeRequests: [MenteeRequest] = [MenteeRequest(by: Mentee(testname: "First Last"))]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).getDocument { (document, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            if let document = document {
+                let mentee = try! FirestoreDecoder().decode(Mentee.self, from: document.data())
+                self.menteeRequests.append(MenteeRequest(by: mentee))
+                self.tableView.reloadData()
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

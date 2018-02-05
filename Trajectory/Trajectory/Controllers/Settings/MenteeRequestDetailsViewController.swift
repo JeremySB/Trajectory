@@ -15,9 +15,10 @@ class MenteeRequestDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         nameLabel.text = menteeRequest?.mentee.name
         organizationlabel.text = menteeRequest?.mentee.organization
-        userDetails.text = "Hobbies" + "\n\n" + String(describing: menteeRequest?.mentee.hobbies) + "\n\n" + "Professional Interests" + "\n\n" + String(describing: menteeRequest?.mentee.professionalInterests) + "\n\n" + "Denomination" + "\n\n" + String(describing: menteeRequest?.mentee.denomination) + "\n\n" + "Things to Work On" + "\n\n" + String(describing: menteeRequest?.mentee.menteeObjectives) + "\n\n" + "Contact" + "\n\n" + String(describing: menteeRequest?.mentee.phoneNumber) + "\n" + String(describing: menteeRequest?.mentee.emailAddress)
+        userDetails.text = "Hobbies" + "\n\n" + String(describing: menteeRequest?.mentee.hobbies ?? "") + "\n\n" + "Professional Interests" + "\n\n" + String(describing: menteeRequest?.mentee.professionalInterests) + "\n\n" + "Denomination" + "\n\n" + String(describing: menteeRequest?.mentee.denomination) + "\n\n" + "Things to Work On" + "\n\n" + String(describing: menteeRequest?.mentee.menteeObjectives) + "\n\n" + "Contact" + "\n\n" + String(describing: menteeRequest?.mentee.phoneNumber) + "\n" + String(describing: menteeRequest?.mentee.emailAddress)
     }
 
     override func didReceiveMemoryWarning() {

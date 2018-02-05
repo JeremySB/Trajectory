@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Mentee {
-    var name: String
+class Mentee: Codable {
+    var name: String?
     var organization: String?
     var hobbies: String?
     var professionalInterests: String?
@@ -17,17 +17,14 @@ class Mentee {
     var menteeObjectives: String?
     var phoneNumber: String?
     var emailAddress: String?
-    var uid: String
     
     init(testname: String) {
         // init for test data
-        uid = "test"
         name = testname
     }
     
     init(uid: String) {
         // TODO: pull in from Firebase for this user
-        self.uid = uid
         name = "Testname Lastname"
     }
     
