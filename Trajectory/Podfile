@@ -3,6 +3,8 @@ platform :ios, '11.0'
 
 target 'Trajectory' do
   use_frameworks!
+  
+  
 
   # Pods for Trajectory
   pod 'Firebase/Core'
@@ -15,6 +17,8 @@ target 'Trajectory' do
   pod 'GoogleSignIn'
 
   pod 'JTAppleCalendar', '~> 7.0'
+  
+  pod 'CodableFirebase'
 
   target 'TrajectoryTests' do
     inherit! :search_paths
