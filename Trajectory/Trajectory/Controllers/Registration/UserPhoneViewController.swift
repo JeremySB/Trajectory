@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CodableFirebase
 
 class UserPhoneViewController: UIViewController {
     
@@ -30,7 +31,11 @@ class UserPhoneViewController: UIViewController {
         guard let uid = Auth.auth().currentUser?.uid else {
             return
         }
-        db.collection("users").document(uid).setData(["phoneNumber" : phoneNumber.text], options: SetOptions.merge()) { (error) in
+        
+        let user = User()
+        user.phoneNumber = phoneNumber.text
+        let userEncoded = try! FirestoreEncoder().encode(user)
+        db.collection("users").document(uid).setData(userEncoded, options: SetOptions.merge()) { (error) in
             if let error = error {
                 print(error.localizedDescription)
             }

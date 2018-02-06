@@ -27,6 +27,8 @@ class UserNameViewController: UIViewController {
     @IBOutlet weak var userName: UITextField!
     
     @IBAction func didTapNext(_ sender: Any) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = userName.text
         changeRequest?.commitChanges { (error) in
@@ -36,8 +38,9 @@ class UserNameViewController: UIViewController {
         }
         
         let user = User()
-        user.name = ""
-        let t = try! FirestoreEncoder().encode(user)
+        user.name = userName.text
+        let userEncoded = try! FirestoreEncoder().encode(user)
+        Firestore.firestore().collection("users").document(uid).setData(userEncoded, options: SetOptions.merge())
         
     }
     

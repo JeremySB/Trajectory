@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
+import CodableFirebase
 
 class DenominationAndProfileGoalsViewController: UIViewController {
 
@@ -35,9 +35,13 @@ class DenominationAndProfileGoalsViewController: UIViewController {
             return
         }
         
+        let user = User()
+        user.denomination = denomination.text
+        user.objectives = objectivesStatement.text
+        let userEncoded = try! FirestoreEncoder().encode(user)
+        
         db.collection("users").document(uid)
-            .setData(["denomination" : denomination.text,
-                      "objectivesStatement" : objectivesStatement.text],
+            .setData(userEncoded,
                      options: SetOptions.merge())
             { (error) in
                 if let error = error {

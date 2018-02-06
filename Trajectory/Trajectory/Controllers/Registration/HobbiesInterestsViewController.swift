@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CodableFirebase
 
 class HobbiesInterestsViewController: UIViewController {
     
@@ -34,9 +35,13 @@ class HobbiesInterestsViewController: UIViewController {
             return
         }
         
+        let user = User()
+        user.hobbies = hobbies.text
+        user.professionalInterests = professionalInterests.text
+        let userEncoded = try! FirestoreEncoder().encode(user)
+        
         db.collection("users").document(uid)
-            .setData(["hobbies" : hobbies.text,
-                      "professionallyInterests" : professionalInterests.text],
+            .setData(userEncoded,
                      options: SetOptions.merge()) { (error) in
             if let error = error {
                 print(error.localizedDescription)

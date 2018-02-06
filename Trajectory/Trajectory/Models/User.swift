@@ -14,7 +14,7 @@ class User: Codable {
     var hobbies: String?
     var professionalInterests: String?
     var denomination: String?
-    var menteeObjectives: String?
+    var objectives: String?
     var phoneNumber: String?
     var emailAddress: String?
     
