@@ -8,11 +8,20 @@
 
 import UIKit
 
-class GoalsViewController: UIViewController {
 
+
+class GoalsViewController: UITableViewController {
+
+    var goals: [Goal] = [Goal]()
+    var row: Int = 0
+    var section: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //var i: Int
+        for _ in 0..<5{
+            goals.append(Goal())
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +30,36 @@ class GoalsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1//0
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return goals.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // where it  breaks
+        let cell = tableView.dequeueReusableCell(withIdentifier: "goalCell", for: indexPath) as! GoalTableViewCell
+        cell.goalTitle.text = goals[indexPath.row].title
+        cell.goalProgress.progress = Float(goals[indexPath.row].currentProgress!) / Float(goals[indexPath.row].totalProgress!)
+        return cell
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        row = indexPath.row
+        section = indexPath.section
+        return indexPath
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
 
+    
     /*
     // MARK: - Navigation
 

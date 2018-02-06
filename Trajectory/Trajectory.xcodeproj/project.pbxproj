@@ -10,6 +10,7 @@
 		3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0003752020DA62002BA17D /* AddGoalViewController.swift */; };
 		3F19031320237DF10002B74B /* Mentee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031220237DF10002B74B /* Mentee.swift */; };
 		3F19031520237F060002B74B /* MenteeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031420237F060002B74B /* MenteeRequest.swift */; };
+		3F4666AB20237BC400C35818 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */; };
 		3F1903192029379F0002B74B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1903182029379F0002B74B /* User.swift */; };
 		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
 		3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */; };
@@ -78,6 +79,7 @@
 		3F0003752020DA62002BA17D /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		3F19031220237DF10002B74B /* Mentee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentee.swift; sourceTree = "<group>"; };
 		3F19031420237F060002B74B /* MenteeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequest.swift; sourceTree = "<group>"; };
+		3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		3F1903182029379F0002B74B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPageViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */,
 				3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */,
 				3F0003752020DA62002BA17D /* AddGoalViewController.swift */,
+				3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */,
+				3F4666AB20237BC400C35818 /* GoalTableViewCell.swift in Sources */,
 				3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */,
 				3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */,
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
