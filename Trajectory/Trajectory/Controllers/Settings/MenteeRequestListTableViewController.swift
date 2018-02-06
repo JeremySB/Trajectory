@@ -26,9 +26,11 @@ class MenteeRequestListTableViewController: UITableViewController {
                 return
             }
             if let document = document {
-                let mentee = try! FirestoreDecoder().decode(Mentee.self, from: document.data())
-                self.menteeRequests.append(MenteeRequest(by: mentee))
-                self.tableView.reloadData()
+                guard document.exists else { return }
+                if let mentee = try? FirestoreDecoder().decode(Mentee.self, from: document.data()) {
+                    self.menteeRequests.append(MenteeRequest(by: mentee))
+                    self.tableView.reloadData()
+                }
             }
         }
 
