@@ -28,6 +28,9 @@ UINavigationControllerDelegate {
     
     @IBOutlet weak var profileImage: UIImageView!
     
+    @IBAction func logoutButton(_ sender: Any) {
+    }
+    
     //Function to photo library to update image when tapped (https://stackoverflow.com/questions/27880607/how-to-assign-an-action-for-uiimageview-object-in-swift)
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
