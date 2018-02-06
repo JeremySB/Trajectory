@@ -8,9 +8,8 @@
 
 import Foundation
 
-class Goal{
-    var goalID: String?
-    var ownerID: String?
+class Goal: Codable {
+    var owners: [String]?
     var totalProgress: Int?
     var currentProgress: Int?
     var title: String?
@@ -20,9 +19,7 @@ class Goal{
     var startDate: String?
     var endDate: String?
     
-    init(){
-        goalID = "yesGoalID"
-        ownerID = "yesOwnerID"
+    init() {
         totalProgress = 100
         currentProgress = Int(arc4random_uniform( 100 ))
         title = "Yaaassss Goal"
