@@ -28,6 +28,7 @@
 		3FC53DA11FF03BA7000B82E3 /* TrajectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DA01FF03BA7000B82E3 /* TrajectoryTests.swift */; };
 		3FC53DAC1FF03BA7000B82E3 /* TrajectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */; };
 		3FC53DBA1FF03CBA000B82E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */; };
+		3FDF5B17202A0D670095D095 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF5B16202A0D670095D095 /* Goal.swift */; };
 		3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0F472201A434500F3CD18 /* ScrollController.swift */; };
 		3FE1450A1FF9778B00F3CF18 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE145091FF9778B00F3CF18 /* Social.framework */; };
 		3FE1450C1FF9779200F3CF18 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1450B1FF9779200F3CF18 /* Accounts.framework */; };
@@ -101,6 +102,7 @@
 		3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryUITests.swift; sourceTree = "<group>"; };
 		3FC53DAD1FF03BA7000B82E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FDF5B16202A0D670095D095 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		3FE0F472201A434500F3CD18 /* ScrollController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollController.swift; sourceTree = "<group>"; };
 		3FE145091FF9778B00F3CF18 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3FE1450B1FF9779200F3CF18 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -163,6 +165,7 @@
 				3F19031220237DF10002B74B /* Mentee.swift */,
 				3F19031420237F060002B74B /* MenteeRequest.swift */,
 				3F1903182029379F0002B74B /* User.swift */,
+				3FDF5B16202A0D670095D095 /* Goal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
+				3FDF5B17202A0D670095D095 /* Goal.swift in Sources */,
 				D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */,
 				D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */,
 				D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */,
