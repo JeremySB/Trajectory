@@ -10,8 +10,8 @@
 		3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0003752020DA62002BA17D /* AddGoalViewController.swift */; };
 		3F19031320237DF10002B74B /* Mentee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031220237DF10002B74B /* Mentee.swift */; };
 		3F19031520237F060002B74B /* MenteeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031420237F060002B74B /* MenteeRequest.swift */; };
+		3F1903192029379F0002B74B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1903182029379F0002B74B /* User.swift */; };
 		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
-		3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B1614200C4AE400A7A11E /* LoginViewController.swift */; };
 		3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */; };
 		3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */; };
 		3FA16B00201A304000D142E5 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFF201A304000D142E5 /* HistoryViewController.swift */; };
@@ -77,8 +77,8 @@
 		3F0003752020DA62002BA17D /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		3F19031220237DF10002B74B /* Mentee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentee.swift; sourceTree = "<group>"; };
 		3F19031420237F060002B74B /* MenteeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequest.swift; sourceTree = "<group>"; };
+		3F1903182029379F0002B74B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
-		3F6B1614200C4AE400A7A11E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPageViewController.swift; sourceTree = "<group>"; };
 		3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		3FA16AFF201A304000D142E5 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +162,7 @@
 			children = (
 				3F19031220237DF10002B74B /* Mentee.swift */,
 				3F19031420237F060002B74B /* MenteeRequest.swift */,
+				3F1903182029379F0002B74B /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,7 +228,6 @@
 				3FBC3C58201EF83A006FA1AB /* Authentication */,
 				3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */,
 				3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */,
-				3F6B1614200C4AE400A7A11E /* LoginViewController.swift */,
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
 			);
 			path = Controllers;
@@ -677,7 +677,6 @@
 				3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */,
 				3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */,
 				3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */,
-				3F6B1615200C4AE400A7A11E /* LoginViewController.swift in Sources */,
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
 				3FAD0DC12024F77E00DC5713 /* UserCollectionViewCell.swift in Sources */,
 				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
@@ -706,6 +705,7 @@
 				3FAD0DC52025156F00DC5713 /* MentorInfoViewController.swift in Sources */,
 				3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */,
 				3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */,
+				3F1903192029379F0002B74B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

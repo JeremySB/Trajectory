@@ -18,7 +18,7 @@ target 'Trajectory' do
 
   pod 'JTAppleCalendar', '~> 7.0'
   
-  pod 'CodableFirebase'
+  pod 'CodableFirebase', :git => 'https://github.com/alickbass/CodableFirebase.git'
 
   target 'TrajectoryTests' do
     inherit! :search_paths

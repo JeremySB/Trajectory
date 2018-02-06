@@ -26,6 +26,8 @@ class PasswordAuthenticationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // 3 basis
+    // userEmail = nil, password incorrect, password correct
     @IBAction func didTapNext(_ sender: Any) {
         guard userEmail != nil else {
             self.navigationController?.popViewController(animated: false)

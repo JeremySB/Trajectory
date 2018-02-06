@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CodableFirebase
 
 class UserNameViewController: UIViewController {
 
@@ -33,6 +34,11 @@ class UserNameViewController: UIViewController {
                 self.performSegue(withIdentifier: "nameToPhoneAndEmail", sender: self)
             }
         }
+        
+        let user = User()
+        user.name = ""
+        let t = try! FirestoreEncoder().encode(user)
+        
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -44,6 +44,8 @@ class InitialAuthenticationViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        try? Auth.auth().signOut()
+        
         if Auth.auth().currentUser != nil {
             self.performSegue(withIdentifier: "initialToMain", sender: self)
         }
