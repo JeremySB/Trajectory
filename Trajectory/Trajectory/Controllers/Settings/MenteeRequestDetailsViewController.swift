@@ -18,6 +18,12 @@ class MenteeRequestDetailsViewController: UIViewController {
         
         nameLabel.text = menteeRequest?.mentee.name
         organizationlabel.text = menteeRequest?.mentee.organization
+        userHobbies.text = menteeRequest?.mentee.hobbies
+        userProfessionalInterests.text = menteeRequest?.mentee.professionalInterests
+        userDenomination.text = menteeRequest?.mentee.denomination
+        userObjectives.text = menteeRequest?.mentee.objectives
+        userEmailAddress.text = "Email Address: " //+ String(description: menteeRequest?.mentee.userEmailAddress)
+        userPhoneNumber.text = "Phone Number: " //+ String(description: menteeRequest?.mentee.userPhoneNumber)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,10 +38,22 @@ class MenteeRequestDetailsViewController: UIViewController {
         menteeRequest?.decline()
         dismiss(animated: true, completion: nil)
     }
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var organizationlabel: UILabel!
     
+    @IBOutlet weak var userHobbies: UITextView!
+    
+    @IBOutlet weak var userProfessionalInterests: UITextView!
+    
+    @IBOutlet weak var userDenomination: UILabel!
+    
+    @IBOutlet weak var userObjectives: UITextView!
+    
+    @IBOutlet weak var userEmailAddress: UILabel!
+    
+    @IBOutlet weak var userPhoneNumber: UILabel!
     
     // MARK: - Navigation
 

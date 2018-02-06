@@ -123,7 +123,6 @@ class MenteeRequestListTableViewController: UITableViewController {
         // Create an instance of destination view controller and pass the variable
         let destinationVC = segue.destination as! MenteeRequestDetailsViewController
         destinationVC.menteeRequest = selectedMentee
-        print("READY TO GO")
     }
 
 
