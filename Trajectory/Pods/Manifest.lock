@@ -103,7 +103,7 @@ PODS:
   - Protobuf (3.5.0)
 
 DEPENDENCIES:
-  - CodableFirebase
+  - CodableFirebase (from `https://github.com/alickbass/CodableFirebase.git`)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
@@ -112,6 +112,15 @@ DEPENDENCIES:
   - FirebaseUI/Google
   - GoogleSignIn
   - JTAppleCalendar (~> 7.0)
+
+EXTERNAL SOURCES:
+  CodableFirebase:
+    :git: https://github.com/alickbass/CodableFirebase.git
+
+CHECKOUT OPTIONS:
+  CodableFirebase:
+    :commit: df9dfe1dda97a34e93563d049e2043640fc83274
+    :git: https://github.com/alickbass/CodableFirebase.git
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -139,6 +148,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 
-PODFILE CHECKSUM: 5c57fa0480e590db11a1d1bd54ddb700ec5d79d3
+PODFILE CHECKSUM: 91206585a48b2116ca2f0da5528d64beaf7f4186
 
 COCOAPODS: 1.4.0
