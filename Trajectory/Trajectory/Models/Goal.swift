@@ -24,7 +24,7 @@ class Goal{
         goalID = "yesGoalID"
         ownerID = "yesOwnerID"
         totalProgress = 100
-        currentProgress = 50
+        currentProgress = Int(arc4random_uniform( 100 ))
         title = "Yaaassss Goal"
         targetPerDay = 2
         targetPerWeek = 3
