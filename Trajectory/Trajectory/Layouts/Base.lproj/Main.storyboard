@@ -1274,7 +1274,7 @@ Things To Work On</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="IPk-DS-Qtw" kind="show" identifier="menteeRequestsToMentee" id="l9O-t8-ObG"/>
+                                    <segue destination="IPk-DS-Qtw" kind="show" id="avV-vy-rOo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1293,7 +1293,7 @@ Things To Work On</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiF-RA-ZaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8785" y="7728"/>
+            <point key="canvasLocation" x="9463.2000000000007" y="7727.5862068965525"/>
         </scene>
         <!--Mentee-->
         <scene sceneID="XqN-Ke-vgp">
@@ -1349,7 +1349,7 @@ Things To Work On</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Denomination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTK-kL-FKd">
-                                        <rect key="frame" x="8" y="172" width="106" height="21"/>
+                                        <rect key="frame" x="8" y="186" width="106" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -1357,27 +1357,6 @@ Things To Work On</string>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Things to Work On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfn-oP-1CZ">
                                         <rect key="frame" x="8" y="248" width="143" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's professional interests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCu-Aj-4z2">
-                                        <rect key="frame" x="20" y="137" width="217" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's denomination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5N-w8-iho">
-                                        <rect key="frame" x="20" y="201" width="158" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's things to work on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pG-A5-CHf">
-                                        <rect key="frame" x="20" y="277" width="186" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -1411,6 +1390,27 @@ Things To Work On</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="User's professional interests" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7sa-zz-9D2">
+                                        <rect key="frame" x="20" y="129" width="315" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's denomination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5N-w8-iho">
+                                        <rect key="frame" x="20" y="215" width="158" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="User's things to work on" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aEu-ms-ImF">
+                                        <rect key="frame" x="20" y="277" width="315" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh0-PV-ZXU">
@@ -1432,7 +1432,7 @@ Things To Work On</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5O-wQ-Cpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9533.6000000000004" y="7727.5862068965525"/>
+            <point key="canvasLocation" x="10212" y="7727.5862068965525"/>
         </scene>
         <!--Set Duration-->
         <scene sceneID="43f-CK-5Ly">
@@ -1497,7 +1497,7 @@ Things To Work On</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekK-38-viL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rCd-Lg-cFy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="10341.6" y="7726.6866566716644"/>
+            <point key="canvasLocation" x="11020" y="7726.6866566716644"/>
         </scene>
         <!--Settings-->
         <scene sceneID="LO3-fv-x8Z">
@@ -1686,7 +1686,7 @@ Things To Work On</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="cJJ-YD-QHN" kind="show" id="3Lr-gh-xAn"/>
+                                            <segue destination="56Q-rP-equ" kind="show" id="zi1-vS-Kte"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1754,7 +1754,7 @@ Things To Work On</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvO-KI-UM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7006" y="5418"/>
+            <point key="canvasLocation" x="7005.6000000000004" y="5417.5412293853078"/>
         </scene>
         <!--New Password View Controller-->
         <scene sceneID="2DQ-bW-Cd7">
@@ -1799,24 +1799,6 @@ Things To Work On</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xG-lL-Xq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1479" y="710"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="DUj-c4-qGg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cJJ-YD-QHN" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cd7-JQ-ghX">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="oRr-6n-GaG" kind="relationship" relationship="rootViewController" id="Zz1-m0-ftd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zqn-Rs-OjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8083.1999999999998" y="7727.1364317841089"/>
         </scene>
         <!--Edit Goal View Controller-->
         <scene sceneID="ZHN-e7-qfd">
@@ -2080,6 +2062,24 @@ Things To Work On</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zl2-n2-YAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8084" y="-725"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kZ3-cb-aur">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="56Q-rP-equ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oFG-Sd-TnE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oRr-6n-GaG" kind="relationship" relationship="rootViewController" id="jDx-bS-9JR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBZ-bF-R6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8658" y="7728"/>
         </scene>
     </scenes>
     <resources>
