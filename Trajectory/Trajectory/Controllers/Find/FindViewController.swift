@@ -13,10 +13,12 @@ class FindViewController: ScrollController {
     required init?(coder: NSCoder){
         super.init(coder: coder)
         addViewControllers(views: "FindPeople", "FindOrgs")
+        //addViewControllers(views: "FindOrgs")
     }
     override init(){
         super.init()
         addViewControllers(views: "FindPeople", "FindOrgs")
+        //addViewControllers(views: "FindOrgs")
     }
 
     override func viewDidLoad() {
