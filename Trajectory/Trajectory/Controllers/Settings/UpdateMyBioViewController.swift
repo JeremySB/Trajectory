@@ -12,7 +12,8 @@ class UpdateMyBioViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userHobbies.text = "test"
+        
         // Do any additional setup after loading the view.
     }
 

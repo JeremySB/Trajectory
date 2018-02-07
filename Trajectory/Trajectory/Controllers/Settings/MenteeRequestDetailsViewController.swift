@@ -22,8 +22,8 @@ class MenteeRequestDetailsViewController: UIViewController {
         userProfessionalInterests.text = menteeRequest?.mentee.professionalInterests
         userDenomination.text = menteeRequest?.mentee.denomination
         userObjectives.text = menteeRequest?.mentee.objectives
-        userEmailAddress.text = "Email Address: " //+ String(description: menteeRequest?.mentee.userEmailAddress)
-        userPhoneNumber.text = "Phone Number: " //+ String(description: menteeRequest?.mentee.userPhoneNumber)
+        userEmailAddress.text = menteeRequest?.mentee.emailAddress
+        userPhoneNumber.text = menteeRequest?.mentee.phoneNumber
     }
 
     override func didReceiveMemoryWarning() {

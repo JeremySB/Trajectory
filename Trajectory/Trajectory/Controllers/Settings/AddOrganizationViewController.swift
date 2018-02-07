@@ -29,6 +29,9 @@ class AddOrganizationViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var firstThreeCharacters: UITextField!
+    
+    @IBOutlet weak var lastThreeCharacters: UITextField!
     
     /*
     // MARK: - Navigation
