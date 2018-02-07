@@ -10,8 +10,10 @@
 		3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0003752020DA62002BA17D /* AddGoalViewController.swift */; };
 		3F19031320237DF10002B74B /* Mentee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031220237DF10002B74B /* Mentee.swift */; };
 		3F19031520237F060002B74B /* MenteeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031420237F060002B74B /* MenteeRequest.swift */; };
-		3F4666AB20237BC400C35818 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */; };
 		3F1903192029379F0002B74B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1903182029379F0002B74B /* User.swift */; };
+		3F19031C202BB1720002B74B /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031B202BB1720002B74B /* AuthenticationService.swift */; };
+		3F19031E202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031D202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift */; };
+		3F4666AB20237BC400C35818 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */; };
 		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
 		3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */; };
 		3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */; };
@@ -26,7 +28,6 @@
 		3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */; };
 		3FC53D911FF03BA7000B82E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D8F1FF03BA7000B82E3 /* Main.storyboard */; };
 		3FC53D961FF03BA7000B82E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D941FF03BA7000B82E3 /* LaunchScreen.storyboard */; };
-		3FC53DA11FF03BA7000B82E3 /* TrajectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DA01FF03BA7000B82E3 /* TrajectoryTests.swift */; };
 		3FC53DAC1FF03BA7000B82E3 /* TrajectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */; };
 		3FC53DBA1FF03CBA000B82E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */; };
 		3FDF5B17202A0D670095D095 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF5B16202A0D670095D095 /* Goal.swift */; };
@@ -79,8 +80,10 @@
 		3F0003752020DA62002BA17D /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		3F19031220237DF10002B74B /* Mentee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentee.swift; sourceTree = "<group>"; };
 		3F19031420237F060002B74B /* MenteeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequest.swift; sourceTree = "<group>"; };
-		3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		3F1903182029379F0002B74B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3F19031B202BB1720002B74B /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		3F19031D202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewControllerTests.swift; sourceTree = "<group>"; };
+		3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPageViewController.swift; sourceTree = "<group>"; };
 		3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +101,6 @@
 		3FC53D951FF03BA7000B82E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FC53D971FF03BA7000B82E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC53D9C1FF03BA7000B82E3 /* TrajectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrajectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FC53DA01FF03BA7000B82E3 /* TrajectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryTests.swift; sourceTree = "<group>"; };
 		3FC53DA21FF03BA7000B82E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC53DA71FF03BA7000B82E3 /* TrajectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrajectoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryUITests.swift; sourceTree = "<group>"; };
@@ -170,6 +172,14 @@
 				3FDF5B16202A0D670095D095 /* Goal.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3F19031A202BB1470002B74B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3F19031B202BB1720002B74B /* AuthenticationService.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		3F3B26F2201F8624009C51B2 /* Registration */ = {
@@ -290,6 +300,7 @@
 		3FC53D881FF03BA6000B82E3 /* Trajectory */ = {
 			isa = PBXGroup;
 			children = (
+				3F19031A202BB1470002B74B /* Protocols */,
 				3F19031120237DDA0002B74B /* Models */,
 				3F6B1613200C481E00A7A11E /* Layouts */,
 				3F6B1612200C47E600A7A11E /* Controllers */,
@@ -304,7 +315,7 @@
 		3FC53D9F1FF03BA7000B82E3 /* TrajectoryTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FC53DA01FF03BA7000B82E3 /* TrajectoryTests.swift */,
+				3F19031D202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift */,
 				3FC53DA21FF03BA7000B82E3 /* Info.plist */,
 			);
 			path = TrajectoryTests;
@@ -714,6 +725,7 @@
 				3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */,
 				3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */,
 				3F1903192029379F0002B74B /* User.swift in Sources */,
+				3F19031C202BB1720002B74B /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,7 +733,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FC53DA11FF03BA7000B82E3 /* TrajectoryTests.swift in Sources */,
+				3F19031E202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
