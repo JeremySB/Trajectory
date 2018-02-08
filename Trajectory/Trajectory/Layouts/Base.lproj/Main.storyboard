@@ -1125,7 +1125,11 @@ Things To Work On</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <connections>
+                                    <action selector="checkFirstCodeLength:" destination="EQ2-zQ-582" eventType="editingChanged" id="L7Y-aa-uvA"/>
+                                    <action selector="dismissKeyboardFirstThreeCharacters:" destination="EQ2-zQ-582" eventType="touchUpOutside" id="IqG-vZ-UIN"/>
+                                </connections>
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMg-7X-nkQ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1151,6 +1155,10 @@ Things To Work On</string>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="checkLastCodeLength:" destination="EQ2-zQ-582" eventType="editingChanged" id="hL2-Yr-6hO"/>
+                                    <action selector="dismissKeyboardLastThreeCharacters:" destination="EQ2-zQ-582" eventType="touchUpOutside" id="dW4-OG-sGj"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-Fh-txx">
                                 <rect key="frame" x="180" y="323" width="8" height="21"/>
@@ -1159,18 +1167,26 @@ Things To Work On</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter a valid code." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maS-Aa-F9r">
+                                <rect key="frame" x="71" y="284" width="232" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.2163856312391127" blue="0.20314732384046397" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PTB-DS-NLs"/>
                     </view>
                     <connections>
                         <outlet property="firstThreeCharacters" destination="GzB-dM-uHt" id="RJg-NC-tLd"/>
+                        <outlet property="invalidCodeErrorMessage" destination="maS-Aa-F9r" id="T0p-ad-OIU"/>
                         <outlet property="lastThreeCharacters" destination="FWN-fi-9kr" id="WMi-3b-odq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYZ-u2-JFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9812" y="6152"/>
+            <point key="canvasLocation" x="9812" y="6151.5742128935535"/>
         </scene>
         <!--Update My Bio View Controller-->
         <scene sceneID="ytu-5V-obz">

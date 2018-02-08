@@ -9,7 +9,7 @@
 import UIKit
 
 class AddOrganizationViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +22,14 @@ class AddOrganizationViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if firstThreeCharacters.text?.count == 3 && lastThreeCharacters.text?.count == 3 {
+            let code = firstThreeCharacters.text! + lastThreeCharacters.text!
+            print(code)
+            dismiss(animated: true, completion: nil)
+        }
+        else {
+            invalidCodeErrorMessage.isHidden = false
+        }
     }
     
     @IBAction func cancelButton(_ sender: Any) {
@@ -32,6 +39,31 @@ class AddOrganizationViewController: UIViewController {
     @IBOutlet weak var firstThreeCharacters: UITextField!
     
     @IBOutlet weak var lastThreeCharacters: UITextField!
+    
+    @IBOutlet weak var invalidCodeErrorMessage: UILabel!
+    
+    @IBAction func checkFirstCodeLength(_ sender: Any) {
+        let codeLength = firstThreeCharacters.text?.count
+        if codeLength! > 2 {
+            lastThreeCharacters.becomeFirstResponder()
+        }
+    }
+    
+    @IBAction func dismissKeyboardFirstThreeCharacters(_ sender: Any) {
+        firstThreeCharacters.resignFirstResponder()
+    }
+    
+    @IBAction func checkLastCodeLength(_ sender: Any) {
+        let codeLength = lastThreeCharacters.text?.count
+        if codeLength! > 2 {
+            lastThreeCharacters.resignFirstResponder()
+        }
+    }
+    
+    @IBAction func dismissKeyboardLastThreeCharacters(_ sender: Any) {
+        lastThreeCharacters.resignFirstResponder()
+    }
+    
     
     /*
     // MARK: - Navigation
