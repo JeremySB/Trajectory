@@ -443,23 +443,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTh-hR-J5f">
-                                <rect key="frame" x="16" y="224" width="343" height="329"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Hobbies
-
-
-Professional Interests
-
-
-Denomination
-
-
-Things To Work On</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPy-4j-o4T">
                                 <rect key="frame" x="115" y="617" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -473,7 +456,6 @@ Things To Work On</string>
                         <viewLayoutGuide key="safeArea" id="1gt-XC-fvb"/>
                     </view>
                     <connections>
-                        <outlet property="MentorDetails" destination="VTh-hR-J5f" id="s9n-KL-Eoz"/>
                         <outlet property="MentorImage" destination="j7W-On-ILa" id="4si-bl-eBO"/>
                         <outlet property="MentorName" destination="M8J-p0-OSy" id="EyJ-vX-iVz"/>
                         <outlet property="MentorOrg" destination="xoc-y7-f4n" id="5gB-4K-Zgj"/>
@@ -1778,6 +1760,8 @@ Things To Work On</string>
                     <navigationItem key="navigationItem" title="Settings" id="Q8Z-k7-lHi"/>
                     <connections>
                         <outlet property="profileImage" destination="4gV-Ir-rAd" id="A20-6n-7cn"/>
+                        <outlet property="userName" destination="bKV-kc-jUe" id="7aS-Iy-nlL"/>
+                        <outlet property="userOrganization" destination="dAb-ZN-Kyx" id="7tH-Qa-iEE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvO-KI-UM6" userLabel="First Responder" sceneMemberID="firstResponder"/>

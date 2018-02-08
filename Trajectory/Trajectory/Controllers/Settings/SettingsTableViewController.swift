@@ -10,9 +10,14 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
+    
+    var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userName.text = user?.name
+        userOrganization.text = user?.organization
        
         //Create tap gesture for profile image (https://stackoverflow.com/questions/27880607/how-to-assign-an-action-for-uiimageview-object-in-swift)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
@@ -25,6 +30,10 @@ UINavigationControllerDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    @IBOutlet weak var userName: UILabel!
+    
+    @IBOutlet weak var userOrganization: UILabel!
     
     @IBOutlet weak var profileImage: UIImageView!
     
@@ -52,14 +61,13 @@ UINavigationControllerDelegate {
         dismiss(animated:true, completion: nil)
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
     }
-    */
 
 }
