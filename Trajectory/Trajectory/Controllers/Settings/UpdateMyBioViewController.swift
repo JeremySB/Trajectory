@@ -9,10 +9,16 @@
 import UIKit
 
 class UpdateMyBioViewController: UIViewController {
+    
+    var menteeRequest: MenteeRequest?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userHobbies.text = "test"
+        
+        userHobbies.text = menteeRequest?.mentee.hobbies
+        userProfessionalInterests.text = menteeRequest?.mentee.professionalInterests
+        userDenomination.text = menteeRequest?.mentee.denomination
+        userObjectiveStatement.text = menteeRequest?.mentee.objectives
         
         // Do any additional setup after loading the view.
     }
@@ -24,7 +30,7 @@ class UpdateMyBioViewController: UIViewController {
     
 
     @IBOutlet weak var userHobbies: UITextView!
-     @IBOutlet weak var userProfessionalInterests: UITextView!
+    @IBOutlet weak var userProfessionalInterests: UITextView!
     @IBOutlet weak var userDenomination: UITextField!
     @IBOutlet weak var userObjectiveStatement: UITextView!
     
