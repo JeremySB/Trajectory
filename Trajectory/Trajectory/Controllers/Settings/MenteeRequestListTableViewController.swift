@@ -8,37 +8,36 @@
 
 import UIKit
 import Firebase
-import CodableFirebase
 
 class MenteeRequestListTableViewController: UITableViewController {
 
     //An array of the user's mentee requests
     var menteeRequests: [MenteeRequest] = [MenteeRequest(by: Mentee(testname: "First Last"))]
-    
+    var userService: UserService = FirebaseUserService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("users").document(uid).getDocument { (document, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            if let document = document {
-                guard document.exists else { return }
-                if let mentee = try? FirestoreDecoder().decode(Mentee.self, from: document.data()) {
-                    self.menteeRequests.append(MenteeRequest(by: mentee))
-                    self.tableView.reloadData()
-                }
-            }
-        }
 
+        loadMenteeRequests()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func loadMenteeRequests() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        userService.getMentee(uid: uid) { (mentee, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            if let mentee = mentee {
+                self.menteeRequests.append(MenteeRequest(by: mentee))
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

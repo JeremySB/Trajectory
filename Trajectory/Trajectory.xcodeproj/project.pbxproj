@@ -13,6 +13,8 @@
 		3F1903192029379F0002B74B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1903182029379F0002B74B /* User.swift */; };
 		3F19031C202BB1720002B74B /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031B202BB1720002B74B /* AuthenticationService.swift */; };
 		3F19031E202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031D202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift */; };
+		3F190320202CABFE0002B74B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031F202CABFE0002B74B /* UserService.swift */; };
+		3F190323202CADBB0002B74B /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F190322202CADBB0002B74B /* FirebaseUserService.swift */; };
 		3F4666AB20237BC400C35818 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */; };
 		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
 		3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */; };
@@ -83,6 +85,8 @@
 		3F1903182029379F0002B74B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F19031B202BB1720002B74B /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		3F19031D202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewControllerTests.swift; sourceTree = "<group>"; };
+		3F19031F202CABFE0002B74B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		3F190322202CADBB0002B74B /* FirebaseUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserService.swift; sourceTree = "<group>"; };
 		3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPageViewController.swift; sourceTree = "<group>"; };
@@ -178,8 +182,17 @@
 			isa = PBXGroup;
 			children = (
 				3F19031B202BB1720002B74B /* AuthenticationService.swift */,
+				3F19031F202CABFE0002B74B /* UserService.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3F190321202CAD570002B74B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F190322202CADBB0002B74B /* FirebaseUserService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3F3B26F2201F8624009C51B2 /* Registration */ = {
@@ -300,6 +313,7 @@
 		3FC53D881FF03BA6000B82E3 /* Trajectory */ = {
 			isa = PBXGroup;
 			children = (
+				3F190321202CAD570002B74B /* Services */,
 				3F19031A202BB1470002B74B /* Protocols */,
 				3F19031120237DDA0002B74B /* Models */,
 				3F6B1613200C481E00A7A11E /* Layouts */,
@@ -691,6 +705,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F190323202CADBB0002B74B /* FirebaseUserService.swift in Sources */,
 				3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */,
 				3F4666AB20237BC400C35818 /* GoalTableViewCell.swift in Sources */,
 				3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */,
@@ -711,6 +726,7 @@
 				D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */,
 				D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */,
 				D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */,
+				3F190320202CABFE0002B74B /* UserService.swift in Sources */,
 				3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */,
 				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
 				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,

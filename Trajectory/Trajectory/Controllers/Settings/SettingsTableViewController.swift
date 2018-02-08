@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsTableViewController: UITableViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
+    
+    var userService: UserService = FirebaseUserService()
     
     var user: User?
 
@@ -23,12 +26,28 @@ UINavigationControllerDelegate {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         profileImage.isUserInteractionEnabled = true
         profileImage.addGestureRecognizer(tapGestureRecognizer)
-
+        
+        loadUser()
+        
     // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func loadUser() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        self.userService.getUser(uid: uid) { (user, error) in
+            if let error = error {
+                print(error)
+            }
+            if let user = user {
+                self.user = user
+                
+                // TODO: add some sort of refresh call
+            }
+        }
     }
     
     @IBOutlet weak var userName: UILabel!

@@ -7,5 +7,5 @@
 //
 
 protocol AuthenticationService {
-    
+    var currentUID: String! { get }
 }
