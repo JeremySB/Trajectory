@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import JTAppleCalendar
 
 class HistoryViewController: UIViewController {
+    let formatter = DateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,4 +34,44 @@ class HistoryViewController: UIViewController {
     }
     */
 
+}
+
+extension HistoryViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
+
+    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+        formatter.dateFormat = "MM/dd/yyyy"
+        formatter.timeZone = Calendar.current.timeZone
+        formatter.locale = Calendar.current.locale
+        
+        let startDate = formatter.date(from: "02/18/2017")!
+        let endDate = formatter.date(from: "04/18/2018")!
+        
+        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
+        return parameters
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+        // This function should have the same code as the cellForItemAt function
+        let myCustomCell = cell as! CalendarCollectionViewCell
+        sharedFunctionToConfigureCell(myCustomCell: myCustomCell, cellState: cellState, date: date)
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+        let myCustomCell = calendar.dequeueReusableCell(withReuseIdentifier: "CalendarCollectionViewCell", for: indexPath) as! CalendarCollectionViewCell
+        sharedFunctionToConfigureCell(myCustomCell: myCustomCell, cellState: cellState, date: date)
+        return myCustomCell
+    }
+    
+    func sharedFunctionToConfigureCell(myCustomCell: CalendarCollectionViewCell, cellState: CellState, date: Date) {
+        myCustomCell.dateLabel.text = cellState.text
+        //if testCalendar.isDateInToday(date) {
+        //    myCustomCell.backgroundColor = UIColor.red
+        //} else {
+        //    myCustomCell.backgroundColor = UIColor.white
+        //}
+        // more code configurations
+        // ...
+        // ...
+        // ...
+    }
 }
