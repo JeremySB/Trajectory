@@ -247,7 +247,7 @@
         <scene sceneID="0oO-7c-a6X">
             <objects>
                 <navigationController title="Goals" id="vXn-ed-iFu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Goals" image="first" id="fOr-Ut-2yL"/>
+                    <tabBarItem key="tabBarItem" title="Goals" image="icons8-trophy-filled-50" selectedImage="icons8-trophy-filled-50" id="fOr-Ut-2yL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uLp-mN-EkG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -264,7 +264,7 @@
         <scene sceneID="aHB-xl-BM3">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="wiN-bm-46H" customClass="FindViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Find" id="c6V-pK-Stf"/>
+                    <tabBarItem key="tabBarItem" title="Find" image="icons8-find-user-male-filled-50" selectedImage="icons8-find-user-male-filled-50" id="c6V-pK-Stf"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyJ-JM-Qno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -480,18 +480,11 @@
                                     <!--2018-01-30 16:11:38 +0000-->
                                 </date>
                             </datePicker>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UHF-Nn-aHk">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="UHF-Nn-aHk">
                                 <rect key="frame" x="234" y="179" width="71" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izd-0h-4wm">
-                                <rect key="frame" x="145" y="89" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="35H-nH-TaX">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="35H-nH-TaX">
                                 <rect key="frame" x="69" y="118" width="236.00000000000091" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -652,7 +645,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController title="Goals" id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="fill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -672,7 +665,7 @@
         <scene sceneID="0IA-vG-B8n">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="UWy-uD-swY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Community" id="k04-ff-nlu"/>
+                    <tabBarItem key="tabBarItem" title="Community" image="icons8-user-groups-filled-50" selectedImage="icons8-user-groups-filled-50" id="k04-ff-nlu"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Npl-9Q-jeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1805,7 +1798,7 @@
                             <outlet property="delegate" destination="CaC-dF-lIC" id="eP9-Vo-pwy"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Settings" id="utw-mS-KuK"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-filled-50" selectedImage="icons8-settings-filled-50" id="utw-mS-KuK"/>
                     <navigationItem key="navigationItem" title="Settings" id="Q8Z-k7-lHi"/>
                     <connections>
                         <outlet property="profileImage" destination="4gV-Ir-rAd" id="A20-6n-7cn"/>
@@ -2017,7 +2010,10 @@
     <resources>
         <image name="LoginScreen" width="1080" height="1920"/>
         <image name="elipsis.png" width="1600" height="1600"/>
-        <image name="first" width="30" height="30"/>
+        <image name="icons8-find-user-male-filled-50" width="50" height="50"/>
+        <image name="icons8-settings-filled-50" width="50" height="50"/>
+        <image name="icons8-trophy-filled-50" width="50" height="50"/>
+        <image name="icons8-user-groups-filled-50" width="50" height="50"/>
         <image name="profileImg" width="748" height="748"/>
     </resources>
     <inferredMetricsTieBreakers>
