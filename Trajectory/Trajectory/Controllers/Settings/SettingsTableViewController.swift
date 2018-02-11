@@ -18,9 +18,6 @@ UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        userName.text = user?.name
-        userOrganization.text = user?.organization
        
         //Create tap gesture for profile image (https://stackoverflow.com/questions/27880607/how-to-assign-an-action-for-uiimageview-object-in-swift)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
@@ -28,6 +25,9 @@ UINavigationControllerDelegate {
         profileImage.addGestureRecognizer(tapGestureRecognizer)
         
         loadUser()
+        
+        userName.text = user?.name
+        userOrganization.text = user?.organization
         
     // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

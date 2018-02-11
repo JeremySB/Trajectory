@@ -59,6 +59,7 @@
 		D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */; };
 		D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */; };
 		D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */; };
+		D6E00081202D1C03005A4099 /* SettingsScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestDetailsViewController.swift; sourceTree = "<group>"; };
 		D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
+		D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +345,7 @@
 			children = (
 				3F19031D202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift */,
 				3FC53DA21FF03BA7000B82E3 /* Info.plist */,
+				D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */,
 			);
 			path = TrajectoryTests;
 			sourceTree = "<group>";
@@ -765,6 +768,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E00081202D1C03005A4099 /* SettingsScreenTests.swift in Sources */,
 				3F19031E202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

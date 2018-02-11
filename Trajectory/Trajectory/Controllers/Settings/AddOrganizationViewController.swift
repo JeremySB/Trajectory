@@ -29,6 +29,9 @@ class AddOrganizationViewController: UIViewController {
         }
         else {
             invalidCodeErrorMessage.isHidden = false
+            firstThreeCharacters.text = ""
+            lastThreeCharacters.text = ""
+            lastThreeCharacters.resignFirstResponder()
         }
     }
     
@@ -50,7 +53,7 @@ class AddOrganizationViewController: UIViewController {
     }
     
     @IBAction func dismissKeyboardFirstThreeCharacters(_ sender: Any) {
-        firstThreeCharacters.resignFirstResponder()
+            firstThreeCharacters.resignFirstResponder()
     }
     
     @IBAction func checkLastCodeLength(_ sender: Any) {
