@@ -742,7 +742,7 @@
         <!--Initial Authentication View Controller-->
         <scene sceneID="rQH-HQ-hX5">
             <objects>
-                <viewController title="Initial Authentication View Controller" id="ncC-dd-dqf" customClass="InitialAuthenticationViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialAuthenticationViewController" title="Initial Authentication View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ncC-dd-dqf" customClass="InitialAuthenticationViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sar-JE-GX3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2017,6 +2017,6 @@
         <image name="profileImg" width="748" height="748"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wlO-wV-XDz"/>
+        <segue reference="hqZ-Gz-fSI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,14 +7,14 @@
 //
 
 protocol UserService {
-    func getUser(uid: String, completion: @escaping (User?, UserError?) -> Void)
+    func getUser(uid: String, completion: @escaping (User?, UserServiceError?) -> Void)
     
-    func getMentee(uid: String, completion: @escaping (Mentee?, UserError?) -> Void)
+    func getMentee(uid: String, completion: @escaping (Mentee?, UserServiceError?) -> Void)
     
     
 }
 
-enum UserError: Error {
+enum UserServiceError: Error {
     case NoUserData
     case InvalidUserData
     case Misc(String)

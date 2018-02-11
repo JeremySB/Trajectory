@@ -9,7 +9,7 @@
 import Foundation
 
 class Goal: Codable {
-    var owners: [String]?
+    var owner: String?
     var totalProgress: Int?
     var currentProgress: Int?
     var title: String?

@@ -12,6 +12,8 @@ import FirebaseAuth
 class PasswordAuthenticationViewController: UIViewController {
     
     var userEmail: String?
+    
+    var authService: AuthenticationService = FirebaseAuthenticationService()
 
     @IBOutlet weak var passwordField: UITextField!
     

@@ -27,7 +27,7 @@ class AddGoalViewController: UIViewController {
     @IBAction func doneButton(_ sender: Any) {
         let goal = Goal()
         if let uid = Auth.auth().currentUser?.uid {
-            goal.owners = [uid]
+            goal.owner = uid
             goal.title = "Example...connect these to outlets"
             
             let goalEncoded = try! FirestoreEncoder().encode(goal)

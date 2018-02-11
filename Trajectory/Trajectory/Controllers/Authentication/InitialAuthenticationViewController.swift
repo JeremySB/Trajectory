@@ -7,11 +7,13 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class InitialAuthenticationViewController: UIViewController {
+    
+    var destinationVC: UIViewController?
 
     @IBOutlet weak var emailField: UITextField!
+    var authService: AuthenticationService = FirebaseAuthenticationService()
     
     @IBAction func continueButtonPrimaryActionTriggered(_ sender: Any) {
         guard emailField?.text != nil else {
@@ -21,10 +23,10 @@ class InitialAuthenticationViewController: UIViewController {
             return
         }
         
-        Auth.auth().fetchProviders(forEmail: (emailField?.text)!) { (providers, error) in
+        
+        authService.fetchProviders(forEmail: (emailField?.text)!) { (providers, error) in
             if let error = error {
                 print(error.localizedDescription)
-                //let errorCode = AuthErrorCode(rawValue: error.code)
             }
             else if providers?.contains("password") ?? false {
                 self.performSegue(withIdentifier: "passwordLogin", sender: self)
@@ -46,7 +48,7 @@ class InitialAuthenticationViewController: UIViewController {
         
         //try? Auth.auth().signOut()
         
-        if Auth.auth().currentUser != nil {
+        if authService.signedIn {
             self.performSegue(withIdentifier: "initialToMain", sender: self)
         }
     }
@@ -69,6 +71,7 @@ class InitialAuthenticationViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.destinationVC = segue.destination
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let dest = segue.destination as? PasswordAuthenticationViewController {

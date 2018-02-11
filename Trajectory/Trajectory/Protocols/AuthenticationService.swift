@@ -7,5 +7,16 @@
 //
 
 protocol AuthenticationService {
-    var currentUID: String! { get }
+    var currentUID: String? { get }
+    var signedIn: Bool { get }
+    
+    func fetchProviders(forEmail email: String, completion: @escaping ([String]?, AuthenticationError?) -> Void)
+    
+    func signOut() -> Bool
+    
+    func signIn(withEmail email: String, password: String, completion: ((Error) -> Void)?)
+}
+
+enum AuthenticationError: Error {
+    case MiscError(String)
 }
