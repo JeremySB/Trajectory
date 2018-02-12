@@ -28,6 +28,11 @@ class PasswordAuthenticationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     // 3 basis
     // userEmail = nil, password incorrect, password correct
     @IBAction func didTapNext(_ sender: Any) {

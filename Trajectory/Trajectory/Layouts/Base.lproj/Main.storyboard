@@ -579,7 +579,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6BL-yD-aox" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="316"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="316"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="316" id="qtE-Bf-eZ5"/>
@@ -623,7 +623,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6BL-yD-aox" firstAttribute="top" secondItem="oaV-gH-T96" secondAttribute="top" id="Bhf-PN-B1u"/>
+                            <constraint firstItem="6BL-yD-aox" firstAttribute="top" secondItem="9CX-zX-Rtp" secondAttribute="top" constant="68" id="04c-Ya-c9c"/>
                             <constraint firstItem="6BL-yD-aox" firstAttribute="leading" secondItem="9CX-zX-Rtp" secondAttribute="leading" id="OxF-wd-Na6"/>
                             <constraint firstItem="6BL-yD-aox" firstAttribute="trailing" secondItem="9CX-zX-Rtp" secondAttribute="trailing" id="aqq-27-qW2"/>
                         </constraints>

@@ -58,6 +58,11 @@ class InitialAuthenticationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     // Source: https://stackoverflow.com/a/35789191
     func validateEmail(enteredEmail:String) -> Bool {
         let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"

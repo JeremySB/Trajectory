@@ -21,6 +21,11 @@ class AddOrganizationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     @IBAction func doneButton(_ sender: Any) {
         if firstThreeCharacters.text?.count == 3 && lastThreeCharacters.text?.count == 3 {
             let code = firstThreeCharacters.text! + lastThreeCharacters.text!
