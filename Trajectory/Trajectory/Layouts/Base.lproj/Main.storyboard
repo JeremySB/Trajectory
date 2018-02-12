@@ -247,7 +247,7 @@
         <scene sceneID="0oO-7c-a6X">
             <objects>
                 <navigationController title="Goals" id="vXn-ed-iFu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Goals" image="icons8-trophy-filled-50" selectedImage="icons8-trophy-filled-50" id="fOr-Ut-2yL"/>
+                    <tabBarItem key="tabBarItem" title="Goals" image="trophy-48" selectedImage="trophy-48" id="fOr-Ut-2yL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uLp-mN-EkG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -260,15 +260,15 @@
             </objects>
             <point key="canvasLocation" x="7366" y="-725"/>
         </scene>
-        <!--Find-->
+        <!--Find View Controller-->
         <scene sceneID="aHB-xl-BM3">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="wiN-bm-46H" customClass="FindViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Find" image="icons8-find-user-male-filled-50" selectedImage="icons8-find-user-male-filled-50" id="c6V-pK-Stf"/>
+                    <navigationItem key="navigationItem" id="xLZ-9v-t14"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyJ-JM-Qno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7366" y="-8"/>
+            <point key="canvasLocation" x="7366" y="-9"/>
         </scene>
         <!--FindPeople-->
         <scene sceneID="8Up-lb-m1R">
@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ze-Ha-w7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8080.8000000000002" y="-9.4452773613193415"/>
+            <point key="canvasLocation" x="8420" y="-9.4452773613193415"/>
         </scene>
         <!--FindOrgs-->
         <scene sceneID="43N-Hy-1Ji">
@@ -408,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNX-8V-8tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8761" y="-9"/>
+            <point key="canvasLocation" x="9100" y="-9.4452773613193415"/>
         </scene>
         <!--Mentor Info View Controller-->
         <scene sceneID="yBE-b7-1Kx">
@@ -463,7 +463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hf0-lG-nDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9533.6000000000004" y="-9.4452773613193415"/>
+            <point key="canvasLocation" x="9872.7999999999993" y="-9.4452773613193415"/>
         </scene>
         <!--Add Goal View Controller-->
         <scene sceneID="KOy-gr-aCc">
@@ -653,7 +653,7 @@
                     <connections>
                         <segue destination="vXn-ed-iFu" kind="relationship" relationship="viewControllers" id="BrA-UU-rLm"/>
                         <segue destination="UWy-uD-swY" kind="relationship" relationship="viewControllers" id="v7u-bB-0If"/>
-                        <segue destination="wiN-bm-46H" kind="relationship" relationship="viewControllers" id="Tat-Vv-h2q"/>
+                        <segue destination="Ou8-Cl-C2A" kind="relationship" relationship="viewControllers" id="dRJ-17-7w9"/>
                         <segue destination="CaC-dF-lIC" kind="relationship" relationship="viewControllers" id="8QR-jl-DRc"/>
                     </connections>
                 </tabBarController>
@@ -665,7 +665,7 @@
         <scene sceneID="0IA-vG-B8n">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="UWy-uD-swY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Community" image="icons8-user-groups-filled-50" selectedImage="icons8-user-groups-filled-50" id="k04-ff-nlu"/>
+                    <tabBarItem key="tabBarItem" title="Community" image="Comm-48" selectedImage="Comm-48" id="k04-ff-nlu"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Npl-9Q-jeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1798,7 +1798,7 @@
                             <outlet property="delegate" destination="CaC-dF-lIC" id="eP9-Vo-pwy"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-filled-50" selectedImage="icons8-settings-filled-50" id="utw-mS-KuK"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings-48" selectedImage="settings-48" id="utw-mS-KuK"/>
                     <navigationItem key="navigationItem" title="Settings" id="Q8Z-k7-lHi"/>
                     <connections>
                         <outlet property="profileImage" destination="4gV-Ir-rAd" id="A20-6n-7cn"/>
@@ -2006,15 +2006,34 @@
             </objects>
             <point key="canvasLocation" x="8658" y="7728"/>
         </scene>
+        <!--Find-->
+        <scene sceneID="gDS-KB-K5V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ou8-Cl-C2A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Find" image="Find-48" selectedImage="Find-48" id="c6V-pK-Stf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jtj-7E-QeU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wiN-bm-46H" kind="relationship" relationship="rootViewController" id="DQH-Uy-Zyf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNM-7n-zAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6580" y="-9"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Comm-48" width="24" height="24"/>
+        <image name="Find-48" width="24" height="24"/>
         <image name="LoginScreen" width="1080" height="1920"/>
         <image name="elipsis.png" width="1600" height="1600"/>
-        <image name="icons8-find-user-male-filled-50" width="50" height="50"/>
-        <image name="icons8-settings-filled-50" width="50" height="50"/>
-        <image name="icons8-trophy-filled-50" width="50" height="50"/>
-        <image name="icons8-user-groups-filled-50" width="50" height="50"/>
         <image name="profileImg" width="748" height="748"/>
+        <image name="settings-48" width="24" height="24"/>
+        <image name="trophy-48" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hqZ-Gz-fSI"/>
