@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Trajectory_TrajectoryUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Trajectory_TrajectoryUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_TrajectoryUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_TrajectoryUITestsVersionString[];
 

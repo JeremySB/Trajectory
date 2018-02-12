@@ -21,12 +21,12 @@ target 'Trajectory' do
   pod 'Crashlytics', '~> 3.10.0'
 
   target 'TrajectoryTests' do
-    inherit! :complete
+    inherit! :search_paths
     # Pods for testing
   end
 
   target 'TrajectoryUITests' do
-    inherit! :complete
+    inherit! :search_paths
     # Pods for testing
   end
 
