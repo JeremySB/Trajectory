@@ -63,6 +63,8 @@
 		D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */; };
 		D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */; };
 		D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */; };
+		D652AD262031EAA000E0AC65 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD252031EAA000E0AC65 /* TestExtensions.swift */; };
+		D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD272031EAD800E0AC65 /* SettingsUITests.swift */; };
 		D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */; };
 		D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */; };
 		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
@@ -167,6 +169,8 @@
 		D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrganizationViewController.swift; sourceTree = "<group>"; };
 		D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrganizationsTableViewController.swift; sourceTree = "<group>"; };
 		D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestListTableViewController.swift; sourceTree = "<group>"; };
+		D652AD252031EAA000E0AC65 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		D652AD272031EAD800E0AC65 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewController.swift; sourceTree = "<group>"; };
 		D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoneViewController.swift; sourceTree = "<group>"; };
 		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
@@ -392,6 +396,7 @@
 				3F19031D202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift */,
 				3FC53DA21FF03BA7000B82E3 /* Info.plist */,
 				D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */,
+				D652AD252031EAA000E0AC65 /* TestExtensions.swift */,
 			);
 			path = TrajectoryTests;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 			children = (
 				3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */,
 				3FC53DAD1FF03BA7000B82E3 /* Info.plist */,
+				D652AD272031EAD800E0AC65 /* SettingsUITests.swift */,
 			);
 			path = TrajectoryUITests;
 			sourceTree = "<group>";
@@ -881,6 +887,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E00081202D1C03005A4099 /* SettingsScreenTests.swift in Sources */,
+				D652AD262031EAA000E0AC65 /* TestExtensions.swift in Sources */,
 				3F19031E202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -889,6 +896,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */,
 				3FC53DAC1FF03BA7000B82E3 /* TrajectoryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
