@@ -11,6 +11,15 @@ import Firebase
 import CodableFirebase
 
 class FirebaseUserService: UserService {
+    func getCurrentUser(_ completion: @escaping (User?, UserServiceError?) -> Void) {
+        if let uid = Auth.auth().currentUser?.uid {
+            getUser(uid: uid, completion: completion)
+        }
+        else {
+            completion(nil, .NotLoggedIn)
+        }
+    }
+    
     func getUser(uid: String, completion: @escaping (User?, UserServiceError?) -> Void) {
         Firestore.firestore().collection("users").document(uid).getDocument { (doc, error) in
             if let error = error {

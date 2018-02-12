@@ -11,11 +11,14 @@ protocol UserService {
     
     func getMentee(uid: String, completion: @escaping (Mentee?, UserServiceError?) -> Void)
     
+    func getCurrentUser(_ completion: @escaping (User?, UserServiceError?) -> Void)
+    
     
 }
 
 enum UserServiceError: Error {
     case NoUserData
     case InvalidUserData
+    case NotLoggedIn
     case Misc(String)
 }

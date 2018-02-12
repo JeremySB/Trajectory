@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -25,6 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        
+        MSAppCenter.start("80e082c0-ebfe-4a6e-a056-8f5b914bbcaa", withServices:[
+            MSAnalytics.self,
+            MSCrashes.self
+            ])
         
         return true
     }

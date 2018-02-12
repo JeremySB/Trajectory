@@ -1,4 +1,12 @@
 PODS:
+  - AppCenter (1.3.0):
+    - AppCenter/Analytics (= 1.3.0)
+    - AppCenter/Crashes (= 1.3.0)
+  - AppCenter/Analytics (1.3.0):
+    - AppCenter/Core
+  - AppCenter/Core (1.3.0)
+  - AppCenter/Crashes (1.3.0):
+    - AppCenter/Core
   - BoringSSL (9.2):
     - BoringSSL/Implementation (= 9.2)
     - BoringSSL/Interface (= 9.2)
@@ -6,6 +14,9 @@ PODS:
     - BoringSSL/Interface (= 9.2)
   - BoringSSL/Interface (9.2)
   - CodableFirebase (0.0.6)
+  - Crashlytics (3.10.0):
+    - Fabric (~> 1.7.3)
+  - Fabric (1.7.3)
   - Firebase/Auth (4.8.2):
     - Firebase/Core
     - FirebaseAuth (= 4.4.2)
@@ -85,7 +96,10 @@ PODS:
   - Protobuf (3.5.0)
 
 DEPENDENCIES:
+  - AppCenter
   - CodableFirebase (from `https://github.com/alickbass/CodableFirebase.git`)
+  - Crashlytics (~> 3.10.0)
+  - Fabric (~> 1.7.3)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
@@ -102,8 +116,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/alickbass/CodableFirebase.git
 
 SPEC CHECKSUMS:
+  AppCenter: 77679d75cbb6e5327cb849d2988b57d9cb864dcb
   BoringSSL: f3d6b8ce199b9c450a8cfc14895d07a2627fc232
   CodableFirebase: 5b541b593f279cc5afd9f174ecbc92bc2e72e964
+  Crashlytics: a989ef242b66605577a425733797f810bd2725eb
+  Fabric: bb495bb9a7a7677c6d03a1f8b83d95bc49b47e41
   Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseAuth: bd2738c5c1e92b108ba5f7f7335908097a4e50bb
@@ -123,6 +140,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 
-PODFILE CHECKSUM: d808022c612a277976595bbcea51468f491ed8f7
+PODFILE CHECKSUM: d6f149626503cb023cbd35b5ddd0a8ba2548b73a
 
 COCOAPODS: 1.4.0
