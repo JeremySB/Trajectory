@@ -26,7 +26,8 @@ class FirebaseGoalsService: GoalsService {
             update(nil, .NotLoggedIn)
             return
         }
-        listeners.append(db.collection("goals").whereField("owner", isEqualTo: uid).addSnapshotListener { (snapshot, error) in
+        
+        let listener = db.collection("goals").whereField("owner", isEqualTo: uid).addSnapshotListener { (snapshot, error) in
             if let error = error {
                 return update(nil, .Misc(error.localizedDescription))
             }
@@ -35,13 +36,19 @@ class FirebaseGoalsService: GoalsService {
             }
             var goals = [Goal]()
             for goal in snapshot.documents {
-                if let goalDecoded = try? FirebaseDecoder().decode(Goal.self, from: goal.data()) {
+                do {
+                    let goalDecoded = try FirestoreDecoder().decode(Goal.self, from: goal.data())
                     goals.append(goalDecoded)
+                }
+                catch let error {
+                    print("Failed to decode: ", error, goal.data())
                 }
             }
             
             update(goals, nil)
-        })
+        }
+        
+        listeners.append(listener)
     }
     
     func addGoal(_ goal: Goal, completion: ((GoalsServiceError?) -> Void)?) {
@@ -78,7 +85,7 @@ class FirebaseGoalsService: GoalsService {
             }
             var goals = [Goal]()
             for goal in snapshot.documents {
-                if let goalDecoded = try? FirebaseDecoder().decode(Goal.self, from: goal.data()) {
+                if let goalDecoded = try? FirestoreDecoder().decode(Goal.self, from: goal.data()) {
                     goals.append(goalDecoded)
                 }
             }

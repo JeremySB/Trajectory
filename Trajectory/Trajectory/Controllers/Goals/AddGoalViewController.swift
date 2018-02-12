@@ -14,6 +14,12 @@ class AddGoalViewController: UIViewController {
     
     var goalsService: GoalsService = FirebaseGoalsService()
 
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var endDatePicker: UIDatePicker!
+    @IBOutlet weak var targetProgressPerWeekField: UITextField!
+    @IBOutlet weak var targetProgressPerDayField: UITextField!
+    @IBOutlet weak var targetProgressPerMonthField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +34,12 @@ class AddGoalViewController: UIViewController {
 
     @IBAction func doneButton(_ sender: Any) {
         let goal = Goal()
-        goal.title = "Example"
+        goal.title = nameField.text
+        goal.endDate = endDatePicker.date
+        goal.targetPerDay = Int(targetProgressPerDayField.text ?? "")
+        goal.targetPerWeek = Int(targetProgressPerWeekField.text ?? "")
+        goal.targetPerMonth = Int(targetProgressPerMonthField.text ?? "")
+        
         
         goalsService.addGoal(goal) { (error) in
             if let error = error {
@@ -38,7 +49,6 @@ class AddGoalViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
             else {
-                print("Dismiss")
                 self.dismiss(animated: true, completion: nil)
             }
         }

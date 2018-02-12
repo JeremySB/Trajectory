@@ -3,16 +3,11 @@ platform :ios, '11.0'
 
 target 'Trajectory' do
   use_frameworks!
-  
-  
 
   # Pods for Trajectory
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'FirebaseUI/Auth', '~> 4.0'
-  pod 'FirebaseUI/Google'
-  pod 'FirebaseUI/Facebook'
 
   pod 'GoogleSignIn'
 
@@ -21,12 +16,12 @@ target 'Trajectory' do
   pod 'CodableFirebase', :git => 'https://github.com/alickbass/CodableFirebase.git'
 
   target 'TrajectoryTests' do
-    inherit! :search_paths
+    inherit! :complete
     # Pods for testing
   end
 
   target 'TrajectoryUITests' do
-    inherit! :search_paths
+    inherit! :complete
     # Pods for testing
   end
 
