@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="4378" y="712"/>
         </scene>
-        <!--Goals List-->
+        <!--Goals-->
         <scene sceneID="vpW-3E-61M">
             <objects>
-                <tableViewController storyboardIdentifier="GoalsList" title="Goals List" id="8Lj-K3-l3W" customClass="GoalsViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GoalsList" title="Goals" id="8Lj-K3-l3W" customClass="GoalsViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qUn-sO-VtW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="7366" y="-9"/>
         </scene>
-        <!--FindPeople-->
+        <!--Find Mentor - People-->
         <scene sceneID="8Up-lb-m1R">
             <objects>
-                <viewController storyboardIdentifier="FindPeople" title="FindPeople" id="z7N-nK-aF0" customClass="FindPeopleViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindPeople" title="Find Mentor - People" id="z7N-nK-aF0" customClass="FindPeopleViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wj6-hv-rjC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,10 +333,10 @@
             </objects>
             <point key="canvasLocation" x="8420" y="-9.4452773613193415"/>
         </scene>
-        <!--FindOrgs-->
+        <!--Find Mentor - Orgs-->
         <scene sceneID="43N-Hy-1Ji">
             <objects>
-                <viewController storyboardIdentifier="FindOrgs" title="FindOrgs" id="SaT-ML-I6v" customClass="FindOrgsViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindOrgs" title="Find Mentor - Orgs" id="SaT-ML-I6v" customClass="FindOrgsViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SJS-Uk-f1s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1071,10 +1071,10 @@
             </objects>
             <point key="canvasLocation" x="9776.7999999999993" y="1405.5472263868066"/>
         </scene>
-        <!--CommMentee-->
+        <!--My Mentees-->
         <scene sceneID="QVa-qx-dfJ">
             <objects>
-                <viewController storyboardIdentifier="CommMentee" title="CommMentee" id="NM9-48-Kon" customClass="CommMenteeViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommMentee" title="My Mentees" id="NM9-48-Kon" customClass="CommMenteeViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1pY-AZ-Q2N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1127,10 +1127,10 @@
             </objects>
             <point key="canvasLocation" x="9100" y="670.61469265367316"/>
         </scene>
-        <!--CommMentor-->
+        <!--My Mentors-->
         <scene sceneID="oV7-he-dBn">
             <objects>
-                <viewController storyboardIdentifier="CommMentor" title="CommMentor" id="Et3-zS-Hw4" customClass="CommMentorViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommMentor" title="My Mentors" id="Et3-zS-Hw4" customClass="CommMentorViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vgo-be-yTr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2419,7 +2419,7 @@
         <!--Goals-->
         <scene sceneID="tz8-Eo-SQO">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="Bqj-qX-foj" customClass="GoalsPageViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="Goals" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="Bqj-qX-foj" customClass="GoalsPageViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Goals" id="7xG-ix-cqU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="za9-UR-Y0H">
                             <connections>

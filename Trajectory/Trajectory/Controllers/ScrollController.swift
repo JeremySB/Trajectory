@@ -13,28 +13,33 @@
 
 import UIKit
 
-class ScrollController: UIPageViewController, UIPageViewControllerDataSource {
+class ScrollController: UIPageViewController {
     private(set) lazy var orderedViewControllers: [UIViewController] = [UIViewController]()
     
     required init?(coder: NSCoder){
         super.init(coder: coder)
+        self.delegate = self
+        self.dataSource = self
     }
     
     init(){
         super.init(transitionStyle: UIPageViewControllerTransitionStyle.scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal)
+        self.delegate = self
+        self.dataSource = self
     }
     
     internal func addViewControllers(views: String...){
         for view in views{
-            orderedViewControllers.append(newViewController(storyboardID: view))
+            orderedViewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(view)"))
+            //newViewController(storyboardID: view))
         }
     }
     
-    private func newViewController(storyboardID: String) -> UIViewController {
+    /*private func newViewController(storyboardID: String) -> UIViewController {
         
         return UIStoryboard(name: "Main", bundle: nil) .
             instantiateViewController(withIdentifier: "\(storyboardID)")
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,15 +51,31 @@ class ScrollController: UIPageViewController, UIPageViewControllerDataSource {
                                direction: .forward,
                                animated: true,
                                completion: nil)
+            self.title = firstViewController.title
         }
     }
     
+    
+
+    
+   /* override func viewDidLayoutSubviews() {
+        //corrects scrollview frame to allow for full-screen view controller pages
+        for subView in self.view.subviews {
+            if subView is UIScrollView {
+                subView.frame = self.view.bounds
+            }
+        }
+        super.viewDidLayoutSubviews()
+    }*/
+
+}
+
+extension ScrollController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
-        
         let previousIndex = viewControllerIndex - 1
         
         guard previousIndex >= 0 else {
@@ -64,7 +85,7 @@ class ScrollController: UIPageViewController, UIPageViewControllerDataSource {
         guard orderedViewControllers.count > previousIndex else {
             return nil
         }
-        
+
         return orderedViewControllers[previousIndex]
     }
     
@@ -93,23 +114,18 @@ class ScrollController: UIPageViewController, UIPageViewControllerDataSource {
     }
     
     func presentationIndex(for: UIPageViewController) -> Int {
-        guard let firstViewController = viewControllers?.first, let
-            firstViewControllerIndex = orderedViewControllers.index(of: firstViewController)
-        else {
+        guard let firstViewController = viewControllers?.first,
+            let firstViewControllerIndex = orderedViewControllers.index(of: firstViewController)
+            else {
                 return 0
         }
-        
         return firstViewControllerIndex
     }
-    
-   /* override func viewDidLayoutSubviews() {
-        //corrects scrollview frame to allow for full-screen view controller pages
-        for subView in self.view.subviews {
-            if subView is UIScrollView {
-                subView.frame = self.view.bounds
-            }
-        }
-        super.viewDidLayoutSubviews()
-    }*/
 
+}
+
+extension ScrollController: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        self.title = pendingViewControllers.first?.title
+    }
 }
