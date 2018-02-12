@@ -11,6 +11,28 @@ import Firebase
 import CodableFirebase
 
 class FirebaseUserService: UserService {
+    let db = Firestore.firestore()
+    
+    func saveCurrentUser(_ user: User, completion: ((UserServiceError?) -> Void)?) {
+        guard let userEncoded = try? FirestoreEncoder().encode(user) else {
+            completion?(.InvalidUserData)
+            return
+        }
+        guard let uid = Auth.auth().currentUser?.uid else {
+            completion?(.NotLoggedIn)
+            return
+        }
+        db.collection("users").document(uid).setData(userEncoded, options: SetOptions.merge()) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion?(.Misc(error.localizedDescription))
+            }
+            else {
+                completion?(nil)
+            }
+        }
+    }
+    
     func getCurrentUser(_ completion: @escaping (User?, UserServiceError?) -> Void) {
         if let uid = Auth.auth().currentUser?.uid {
             getUser(uid: uid, completion: completion)
@@ -30,6 +52,7 @@ class FirebaseUserService: UserService {
                 return
             }
             if let user = try? FirestoreDecoder().decode(User.self, from: data) {
+                // success
                 completion(user, nil)
             }
             else {

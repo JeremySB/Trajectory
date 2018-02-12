@@ -27,9 +27,6 @@ UINavigationControllerDelegate {
         
         loadUser()
         
-        userName.text = user?.name
-        userOrganization.text = user?.organization
-        
     // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,17 +34,17 @@ UINavigationControllerDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadUser()
+    }
+    
     func loadUser() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        self.userService.getUser(uid: uid) { (user, error) in
-            if let error = error {
-                print(error)
-            }
-            if let user = user {
-                self.user = user
-                
-                // TODO: add some sort of refresh call
-            }
+        userService.getCurrentUser { (user, error) in
+            guard let user = user else { return }
+            self.user = user
+            
+            self.userName.text = user.name
+            self.userOrganization.text = user.organization
         }
     }
     

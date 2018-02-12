@@ -13,6 +13,7 @@ protocol UserService {
     
     func getCurrentUser(_ completion: @escaping (User?, UserServiceError?) -> Void)
     
+    func saveCurrentUser(_: User, completion: ((UserServiceError?) -> Void)?)
     
 }
 

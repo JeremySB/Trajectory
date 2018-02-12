@@ -9,11 +9,17 @@
 import UIKit
 
 class UpdateEmailAddressViewController: UIViewController {
+    
+    var userService: UserService = FirebaseUserService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        userService.getCurrentUser { (user, error) in
+            guard let user = user else { return }
+            self.userEmail.text = user.emailAddress
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +34,10 @@ class UpdateEmailAddressViewController: UIViewController {
     
     @IBOutlet weak var userEmail: UITextField!
     
-     @IBAction func doneButton(_ sender: Any) {
+    @IBAction func doneButton(_ sender: Any) {
+        let user = User()
+        user.emailAddress = userEmail.text
+        userService.saveCurrentUser(user, completion: nil)
         dismiss(animated: true, completion: nil)
      }
     

@@ -9,11 +9,17 @@
 import UIKit
 
 class UpdateNameViewController: UIViewController {
+    
+    var userService: UserService = FirebaseUserService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        userService.getCurrentUser { (user, error) in
+            guard let user = user else { return }
+            self.usersName.text = user.name
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +39,9 @@ class UpdateNameViewController: UIViewController {
     }
     
      @IBAction func doneButton(_ sender: Any) {
+        let user = User()
+        user.name = usersName.text
+        userService.saveCurrentUser(user, completion: nil)
         dismiss(animated: true, completion: nil)
      }
     /*

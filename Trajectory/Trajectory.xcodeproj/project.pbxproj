@@ -42,8 +42,6 @@
 		3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */; };
 		3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */; };
 		3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */; };
-		3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */; };
-		3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */; };
 		3FC53D911FF03BA7000B82E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D8F1FF03BA7000B82E3 /* Main.storyboard */; };
 		3FC53D961FF03BA7000B82E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D941FF03BA7000B82E3 /* LaunchScreen.storyboard */; };
 		3FC53DAC1FF03BA7000B82E3 /* TrajectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */; };
@@ -137,8 +135,6 @@
 		3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3FC53D861FF03BA6000B82E3 /* Trajectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trajectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3FC53D901FF03BA7000B82E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FC53D951FF03BA7000B82E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FC53D971FF03BA7000B82E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -309,8 +305,6 @@
 				3F3B26F3201F863E009C51B2 /* Goals */,
 				3F3B26F2201F8624009C51B2 /* Registration */,
 				3FBC3C58201EF83A006FA1AB /* Authentication */,
-				3FC53D8B1FF03BA6000B82E3 /* FirstViewController.swift */,
-				3FC53D8D1FF03BA6000B82E3 /* SecondViewController.swift */,
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
 			);
 			path = Controllers;
@@ -847,7 +841,6 @@
 				3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */,
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
 				3FAD0DC12024F77E00DC5713 /* UserCollectionViewCell.swift in Sources */,
-				3FC53D8E1FF03BA6000B82E3 /* SecondViewController.swift in Sources */,
 				3F1858D4202E0CB4007FC818 /* FirebaseAuthenticationService.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
@@ -867,7 +860,6 @@
 				D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */,
 				D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */,
 				3F190320202CABFE0002B74B /* UserService.swift in Sources */,
-				3FC53D8C1FF03BA6000B82E3 /* FirstViewController.swift in Sources */,
 				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
 				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,
 				3F19031320237DF10002B74B /* Mentee.swift in Sources */,
