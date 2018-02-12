@@ -13,6 +13,7 @@ class SettingsTableViewController: UITableViewController, UIImagePickerControlle
 UINavigationControllerDelegate {
     
     var userService: UserService = FirebaseUserService()
+    var authService: AuthenticationService = FirebaseAuthenticationService()
     
     var user: User?
 
@@ -57,6 +58,7 @@ UINavigationControllerDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBAction func logoutButton(_ sender: Any) {
+        authService.signOut()
     }
     
     //Function to photo library to update image when tapped (https://stackoverflow.com/questions/27880607/how-to-assign-an-action-for-uiimageview-object-in-swift)

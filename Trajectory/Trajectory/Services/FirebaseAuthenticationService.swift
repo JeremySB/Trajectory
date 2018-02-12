@@ -22,6 +22,9 @@ class FirebaseAuthenticationService: AuthenticationService {
     func signOut() -> Bool {
         do {
             try Auth.auth().signOut()
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InitialAuthenticationViewController") as! InitialAuthenticationViewController
+            UIApplication.shared.keyWindow?.rootViewController = vc
+            
             return true
         } catch _ {
             return false
@@ -42,12 +45,7 @@ class FirebaseAuthenticationService: AuthenticationService {
                 completion(nil, AuthenticationError.MiscError(error.localizedDescription))
                 return
             }
-            if let providers = providers {
-                completion(providers, nil)
-                return
-            }
+            completion(providers, nil)
         }
     }
-    
-    
 }
