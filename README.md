@@ -1,1 +1,1 @@
-# Senior Project iOS
+# Trajectory iOS
