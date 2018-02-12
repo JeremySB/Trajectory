@@ -29,6 +29,16 @@
 		3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */; };
 		3FAD0DC52025156F00DC5713 /* MentorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */; };
 		3FB4374020312B0F00821A91 /* CommViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4373F20312B0F00821A91 /* CommViewController.swift */; };
+		3FB437422031376A00821A91 /* FindPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB437412031376A00821A91 /* FindPeopleViewController.swift */; };
+		3FB437442031377B00821A91 /* FindOrgsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB437432031377B00821A91 /* FindOrgsViewController.swift */; };
+		3FB43746203137C900821A91 /* CommMenteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB43745203137C900821A91 /* CommMenteeViewController.swift */; };
+		3FB43748203137D800821A91 /* CommMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB43747203137D800821A91 /* CommMentorViewController.swift */; };
+		3FB4374A203138AE00821A91 /* MyMenteeCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB43749203138AE00821A91 /* MyMenteeCalendarViewController.swift */; };
+		3FB4374C203138C300821A91 /* MyMenteeOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4374B203138C300821A91 /* MyMenteeOptionsViewController.swift */; };
+		3FB4374E203139C100821A91 /* CommSwipeMenteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4374D203139C100821A91 /* CommSwipeMenteeViewController.swift */; };
+		3FB4375020313A1D00821A91 /* CommSwipeMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4374F20313A1D00821A91 /* CommSwipeMentorViewController.swift */; };
+		3FB4375220313B7D00821A91 /* MyMentorCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4375120313B7D00821A91 /* MyMentorCheckinViewController.swift */; };
+		3FB4375420313B8C00821A91 /* MyMentorOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */; };
 		3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */; };
 		3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */; };
 		3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */; };
@@ -111,6 +121,16 @@
 		3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCollectionView.swift; sourceTree = "<group>"; };
 		3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorInfoViewController.swift; sourceTree = "<group>"; };
 		3FB4373F20312B0F00821A91 /* CommViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommViewController.swift; sourceTree = "<group>"; };
+		3FB437412031376A00821A91 /* FindPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleViewController.swift; sourceTree = "<group>"; };
+		3FB437432031377B00821A91 /* FindOrgsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrgsViewController.swift; sourceTree = "<group>"; };
+		3FB43745203137C900821A91 /* CommMenteeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommMenteeViewController.swift; sourceTree = "<group>"; };
+		3FB43747203137D800821A91 /* CommMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommMentorViewController.swift; sourceTree = "<group>"; };
+		3FB43749203138AE00821A91 /* MyMenteeCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenteeCalendarViewController.swift; sourceTree = "<group>"; };
+		3FB4374B203138C300821A91 /* MyMenteeOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenteeOptionsViewController.swift; sourceTree = "<group>"; };
+		3FB4374D203139C100821A91 /* CommSwipeMenteeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommSwipeMenteeViewController.swift; sourceTree = "<group>"; };
+		3FB4374F20313A1D00821A91 /* CommSwipeMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommSwipeMentorViewController.swift; sourceTree = "<group>"; };
+		3FB4375120313B7D00821A91 /* MyMentorCheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMentorCheckinViewController.swift; sourceTree = "<group>"; };
+		3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMentorOptionsViewController.swift; sourceTree = "<group>"; };
 		3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticationViewController.swift; sourceTree = "<group>"; };
 		3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3FC53D861FF03BA6000B82E3 /* Trajectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trajectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +290,8 @@
 				3FAD0DC02024F77E00DC5713 /* UserCollectionViewCell.swift */,
 				3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */,
 				3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */,
+				3FB437412031376A00821A91 /* FindPeopleViewController.swift */,
+				3FB437432031377B00821A91 /* FindOrgsViewController.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -303,6 +325,14 @@
 			isa = PBXGroup;
 			children = (
 				3FB4373F20312B0F00821A91 /* CommViewController.swift */,
+				3FB43745203137C900821A91 /* CommMenteeViewController.swift */,
+				3FB43747203137D800821A91 /* CommMentorViewController.swift */,
+				3FB43749203138AE00821A91 /* MyMenteeCalendarViewController.swift */,
+				3FB4374B203138C300821A91 /* MyMenteeOptionsViewController.swift */,
+				3FB4374D203139C100821A91 /* CommSwipeMenteeViewController.swift */,
+				3FB4374F20313A1D00821A91 /* CommSwipeMentorViewController.swift */,
+				3FB4375120313B7D00821A91 /* MyMentorCheckinViewController.swift */,
+				3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -803,8 +833,12 @@
 				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
 				3FDF5B17202A0D670095D095 /* Goal.swift in Sources */,
 				D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */,
+				3FB4375020313A1D00821A91 /* CommSwipeMentorViewController.swift in Sources */,
 				D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */,
+				3FB4375420313B8C00821A91 /* MyMentorOptionsViewController.swift in Sources */,
+				3FB437422031376A00821A91 /* FindPeopleViewController.swift in Sources */,
 				D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */,
+				3FB4375220313B7D00821A91 /* MyMentorCheckinViewController.swift in Sources */,
 				D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */,
 				D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */,
 				3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */,
@@ -817,15 +851,21 @@
 				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
 				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,
 				3F19031320237DF10002B74B /* Mentee.swift in Sources */,
+				3FB4374A203138AE00821A91 /* MyMenteeCalendarViewController.swift in Sources */,
+				3FB4374C203138C300821A91 /* MyMenteeOptionsViewController.swift in Sources */,
 				3F2F6B35202CB59800214772 /* CalendarCollectionViewCell.swift in Sources */,
+				3FB4374E203139C100821A91 /* CommSwipeMenteeViewController.swift in Sources */,
 				3F1858D62030FED1007FC818 /* GoalsService.swift in Sources */,
 				D60C7CC2201AC5A200184F8A /* UpdateEmailAddressViewController.swift in Sources */,
 				3FA16B00201A304000D142E5 /* HistoryViewController.swift in Sources */,
+				3FB43748203137D800821A91 /* CommMentorViewController.swift in Sources */,
 				3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */,
 				D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */,
 				3F1858D82031004F007FC818 /* FirebaseGoalsService.swift in Sources */,
 				3F19031520237F060002B74B /* MenteeRequest.swift in Sources */,
 				3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */,
+				3FB437442031377B00821A91 /* FindOrgsViewController.swift in Sources */,
+				3FB43746203137C900821A91 /* CommMenteeViewController.swift in Sources */,
 				3FAD0DC52025156F00DC5713 /* MentorInfoViewController.swift in Sources */,
 				3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */,
 				3FB4374020312B0F00821A91 /* CommViewController.swift in Sources */,
