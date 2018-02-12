@@ -28,6 +28,7 @@
 		3FAD0DC12024F77E00DC5713 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC02024F77E00DC5713 /* UserCollectionViewCell.swift */; };
 		3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */; };
 		3FAD0DC52025156F00DC5713 /* MentorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */; };
+		3FB4374020312B0F00821A91 /* CommViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4373F20312B0F00821A91 /* CommViewController.swift */; };
 		3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */; };
 		3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */; };
 		3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */; };
@@ -106,6 +107,7 @@
 		3FAD0DC02024F77E00DC5713 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCollectionView.swift; sourceTree = "<group>"; };
 		3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorInfoViewController.swift; sourceTree = "<group>"; };
+		3FB4373F20312B0F00821A91 /* CommViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommViewController.swift; sourceTree = "<group>"; };
 		3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticationViewController.swift; sourceTree = "<group>"; };
 		3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3FC53D861FF03BA6000B82E3 /* Trajectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trajectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +292,7 @@
 		3FAD0DBC2024F07200DC5713 /* Community */ = {
 			isa = PBXGroup;
 			children = (
+				3FB4373F20312B0F00821A91 /* CommViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */,
 				3FAD0DC52025156F00DC5713 /* MentorInfoViewController.swift in Sources */,
 				3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */,
+				3FB4374020312B0F00821A91 /* CommViewController.swift in Sources */,
 				3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */,
 				3F1903192029379F0002B74B /* User.swift in Sources */,
 				3F1858DA20311C09007FC818 /* CodableFirebaseCustom.swift in Sources */,
