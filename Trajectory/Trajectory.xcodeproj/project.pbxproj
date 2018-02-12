@@ -11,6 +11,7 @@
 		3F1858D4202E0CB4007FC818 /* FirebaseAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D3202E0CB4007FC818 /* FirebaseAuthenticationService.swift */; };
 		3F1858D62030FED1007FC818 /* GoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D52030FED1007FC818 /* GoalsService.swift */; };
 		3F1858D82031004F007FC818 /* FirebaseGoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D72031004F007FC818 /* FirebaseGoalsService.swift */; };
+		3F1858DA20311C09007FC818 /* CodableFirebaseCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D920311C09007FC818 /* CodableFirebaseCustom.swift */; };
 		3F19031320237DF10002B74B /* Mentee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031220237DF10002B74B /* Mentee.swift */; };
 		3F19031520237F060002B74B /* MenteeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031420237F060002B74B /* MenteeRequest.swift */; };
 		3F1903192029379F0002B74B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1903182029379F0002B74B /* User.swift */; };
@@ -88,6 +89,7 @@
 		3F1858D3202E0CB4007FC818 /* FirebaseAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationService.swift; sourceTree = "<group>"; };
 		3F1858D52030FED1007FC818 /* GoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsService.swift; sourceTree = "<group>"; };
 		3F1858D72031004F007FC818 /* FirebaseGoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseGoalsService.swift; sourceTree = "<group>"; };
+		3F1858D920311C09007FC818 /* CodableFirebaseCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFirebaseCustom.swift; sourceTree = "<group>"; };
 		3F19031220237DF10002B74B /* Mentee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentee.swift; sourceTree = "<group>"; };
 		3F19031420237F060002B74B /* MenteeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequest.swift; sourceTree = "<group>"; };
 		3F1903182029379F0002B74B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				3FC53D971FF03BA7000B82E3 /* Info.plist */,
 				3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */,
 				D6AAA300201EB90100789BB6 /* Assets.xcassets */,
+				3F1858D920311C09007FC818 /* CodableFirebaseCustom.swift */,
 			);
 			path = Trajectory;
 			sourceTree = "<group>";
@@ -760,6 +763,7 @@
 				3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */,
 				3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */,
 				3F1903192029379F0002B74B /* User.swift in Sources */,
+				3F1858DA20311C09007FC818 /* CodableFirebaseCustom.swift in Sources */,
 				3F19031C202BB1720002B74B /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

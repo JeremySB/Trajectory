@@ -7,15 +7,16 @@
 //
 
 protocol GoalsService {
-    func addGoal(_: Goal, completion: @escaping (GoalsServiceError?) -> Void)
+    func addGoal(_: Goal, completion: ((GoalsServiceError?) -> Void)?)
     
     func getGoals(completion: @escaping ([Goal]?, GoalsServiceError?) -> Void)
     
-    
+    func addGoalsListener(_: @escaping ([Goal]?, GoalsServiceError?) -> Void)
     
 }
 
 enum GoalsServiceError: Error {
     case NotLoggedIn
+    case InvalidData
     case Misc(String)
 }

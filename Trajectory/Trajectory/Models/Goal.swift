@@ -9,7 +9,10 @@
 import Foundation
 
 class Goal: Codable {
+    // internal fields
     var owner: String?
+    
+    // goal information
     var totalProgress: Int?
     var currentProgress: Int?
     var title: String?

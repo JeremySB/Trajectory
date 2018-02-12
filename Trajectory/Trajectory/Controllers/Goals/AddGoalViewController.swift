@@ -11,6 +11,8 @@ import Firebase
 import CodableFirebase
 
 class AddGoalViewController: UIViewController {
+    
+    var goalsService: GoalsService = FirebaseGoalsService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,20 +28,20 @@ class AddGoalViewController: UIViewController {
 
     @IBAction func doneButton(_ sender: Any) {
         let goal = Goal()
-        if let uid = Auth.auth().currentUser?.uid {
-            goal.owner = uid
-            goal.title = "Example...connect these to outlets"
-            
-            let goalEncoded = try! FirestoreEncoder().encode(goal)
-            Firestore.firestore().collection("goals").addDocument(data: goalEncoded)
-            dismiss(animated: true, completion: nil)
-        }
-        else {
-            let alert = UIAlertController(title: "Error", message: "Not logged in - goal not saved", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+        goal.title = "Example"
         
+        goalsService.addGoal(goal) { (error) in
+            if let error = error {
+                let alert = UIAlertController(title: "Error", message: "Not logged in - goal not saved", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+                print(error)
+                self.present(alert, animated: true, completion: nil)
+            }
+            else {
+                print("Dismiss")
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)

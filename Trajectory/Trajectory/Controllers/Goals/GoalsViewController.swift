@@ -8,20 +8,31 @@
 
 import UIKit
 
-
-
 class GoalsViewController: UITableViewController {
 
     var goals: [Goal] = [Goal]()
     var row: Int = 0
     var section: Int = 0
     
+    var goalsService: GoalsService = FirebaseGoalsService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //var i: Int
-        for _ in 0..<5{
-            goals.append(Goal())
+//        for _ in 0..<5{
+//            goals.append(Goal())
+//        }
+        
+        goalsService.addGoalsListener { (receivedGoals, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            guard let receivedGoals = receivedGoals else { return }
+            self.goals = receivedGoals
+            self.tableView.reloadData()
         }
+        
         // Do any additional setup after loading the view.
     }
 
