@@ -333,6 +333,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="SnE-BF-u2j" id="tbF-yv-P8i"/>
+                        <outlet property="searchField" destination="R5F-gw-FVZ" id="BGH-d7-3l0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ze-Ha-w7J" userLabel="First Responder" sceneMemberID="firstResponder"/>

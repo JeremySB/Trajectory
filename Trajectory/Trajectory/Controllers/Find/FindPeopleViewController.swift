@@ -10,9 +10,13 @@ import UIKit
 
 class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    let searchResults : [User] = []
+    
+    @IBOutlet weak var searchField: DelayTextFieldSearch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,14 +26,14 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 20 //searchResults.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
         
-        let name = "John Smith"
+        let name = "John Smith"  //searchResults[indexPath[1]].name
         let image = UIImage(named:"profileImg")!
         
         cell.displayContent(image: image, name: name)
