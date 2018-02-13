@@ -10,11 +10,17 @@ import UIKit
 
 class UserCollectionViewCell: UICollectionViewCell {
     
-    struct userCellInfo {
-        let name: String
-        let image: UIImage
-    }
-    
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userProfileName: UILabel!
+    
+    
+    func displayContent(image: UIImage, name: String) {
+        userImage.image = image
+        userProfileName.text = name
+    }
+    
+    /*struct userCellInfo {
+        let name: String
+        let image: UIImage
+    }*/
 }

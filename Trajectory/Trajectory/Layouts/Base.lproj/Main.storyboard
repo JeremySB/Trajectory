@@ -289,7 +289,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="Wj6-oN-mWm" customClass="UserCollectionViewCell" customModule="Trajectory" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserCollectionViewCell" id="Wj6-oN-mWm" customClass="UserCollectionViewCell" customModule="Trajectory" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="159"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -311,11 +311,13 @@
                                         </view>
                                         <connections>
                                             <outlet property="userImage" destination="4Am-cK-CyS" id="6MO-Lc-xp2"/>
-                                            <outlet property="userName" destination="69R-ea-UXH" id="g1g-md-eLx"/>
-                                            <outlet property="userProfileName" destination="69R-ea-UXH" id="vNA-TT-eVd"/>
+                                            <outlet property="userProfileName" destination="69R-ea-UXH" id="fkZ-k2-Jbn"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="z7N-nK-aF0" id="mFU-Cz-oHi"/>
+                                </connections>
                             </collectionView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5F-gw-FVZ">
                                 <rect key="frame" x="16" y="78" width="343" height="30"/>
@@ -328,6 +330,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Eto-aw-OB6"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="SnE-BF-u2j" id="tbF-yv-P8i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ze-Ha-w7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -374,7 +379,6 @@
                                         </view>
                                         <connections>
                                             <outlet property="userImage" destination="EMT-vc-DEB" id="dM0-wd-uvL"/>
-                                            <outlet property="userName" destination="xRW-5S-stx" id="cck-CZ-EY4"/>
                                             <outlet property="userProfileName" destination="xRW-5S-stx" id="2QQ-U0-acM"/>
                                         </connections>
                                     </collectionViewCell>

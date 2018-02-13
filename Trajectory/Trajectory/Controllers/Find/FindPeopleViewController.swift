@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FindPeopleViewController: UIViewController {
+class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,25 @@ class FindPeopleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
+        
+        let name = "John Smith"
+        let image = UIImage(named:"profileImg")!
+        
+        cell.displayContent(image: image, name: name)
+        
+        return cell
+    }
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     /*
     // MARK: - Navigation
 
