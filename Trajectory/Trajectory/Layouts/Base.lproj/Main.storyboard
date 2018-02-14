@@ -320,23 +320,40 @@
                                     <outlet property="dataSource" destination="z7N-nK-aF0" id="mFU-Cz-oHi"/>
                                 </connections>
                             </collectionView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5F-gw-FVZ">
-                                <rect key="frame" x="16" y="78" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search" textContentType="name"/>
-                            </textField>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search for people" translatesAutoresizingMaskIntoConstraints="NO" id="q43-hf-nq4">
+                                <rect key="frame" x="0.0" y="59" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="z7N-nK-aF0" id="F5d-tG-a2M"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Eto-aw-OB6"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="SnE-BF-u2j" id="tbF-yv-P8i"/>
-                        <outlet property="searchField" destination="R5F-gw-FVZ" id="BGH-d7-3l0"/>
+                        <outlet property="searchDisplayController" destination="Tky-JZ-lco" id="Ceb-YX-daW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ze-Ha-w7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="ed1-Ws-wxR">
+                    <connections>
+                        <outlet property="delegate" destination="z7N-nK-aF0" id="O3L-mN-0qM"/>
+                        <outlet property="searchContentsController" destination="z7N-nK-aF0" id="MJz-dW-qod"/>
+                        <outlet property="searchResultsDataSource" destination="z7N-nK-aF0" id="6dT-me-uog"/>
+                        <outlet property="searchResultsDelegate" destination="z7N-nK-aF0" id="wX1-yi-hqZ"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="Tky-JZ-lco">
+                    <connections>
+                        <outlet property="delegate" destination="z7N-nK-aF0" id="W9p-7N-bU8"/>
+                        <outlet property="searchContentsController" destination="z7N-nK-aF0" id="vMq-5C-JJd"/>
+                        <outlet property="searchResultsDataSource" destination="z7N-nK-aF0" id="d9r-1q-7Xx"/>
+                        <outlet property="searchResultsDelegate" destination="z7N-nK-aF0" id="LPs-R3-ia4"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="8420" y="-9.4452773613193415"/>
         </scene>
