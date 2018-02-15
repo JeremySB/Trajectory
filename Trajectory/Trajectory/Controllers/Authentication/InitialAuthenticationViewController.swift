@@ -13,7 +13,7 @@ class InitialAuthenticationViewController: UIViewController {
     var destinationVC: UIViewController?
 
     @IBOutlet weak var emailField: UITextField!
-    var authService: AuthenticationService = FirebaseAuthenticationService()
+    lazy var authService: AuthenticationService = FirebaseAuthenticationService()
     
     @IBAction func continueButtonPrimaryActionTriggered(_ sender: Any) {
         guard emailField?.text != nil else {

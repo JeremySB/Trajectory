@@ -11,7 +11,7 @@ import Firebase
 import CodableFirebase
 
 class FirebaseUserService: UserService {
-    let db = Firestore.firestore()
+    lazy var db = Firestore.firestore()
     
     func saveCurrentUser(_ user: User, completion: ((UserServiceError?) -> Void)?) {
         guard let userEncoded = try? FirestoreEncoder().encode(user) else {

@@ -12,8 +12,8 @@ import Firebase
 class SettingsTableViewController: UITableViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
     
-    var userService: UserService = FirebaseUserService()
-    var authService: AuthenticationService = FirebaseAuthenticationService()
+    lazy var userService: UserService = FirebaseUserService()
+    lazy var authService: AuthenticationService = FirebaseAuthenticationService()
     
     var user: User?
 

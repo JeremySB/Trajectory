@@ -12,7 +12,7 @@ import CodableFirebase
 
 class AddGoalViewController: UIViewController {
     
-    var goalsService: GoalsService = FirebaseGoalsService()
+    lazy var goalsService: GoalsService = FirebaseGoalsService()
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var endDatePicker: UIDatePicker!
