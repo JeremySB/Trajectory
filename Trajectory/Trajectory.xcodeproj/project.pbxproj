@@ -22,6 +22,7 @@
 		3F2F6B35202CB59800214772 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */; };
 		3F4666AB20237BC400C35818 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */; };
 		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
+		3F8B5CFE20350D5400D864AC /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8B5CFD20350D5400D864AC /* Authentication.storyboard */; };
 		3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */; };
 		3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */; };
 		3FA16B00201A304000D142E5 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFF201A304000D142E5 /* HistoryViewController.swift */; };
@@ -112,6 +113,7 @@
 		3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		3F8B5CFD20350D5400D864AC /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPageViewController.swift; sourceTree = "<group>"; };
 		3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		3FA16AFF201A304000D142E5 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				3FC53D8F1FF03BA7000B82E3 /* Main.storyboard */,
 				3FC53D941FF03BA7000B82E3 /* LaunchScreen.storyboard */,
+				3F8B5CFD20350D5400D864AC /* Authentication.storyboard */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				3FC53DBA1FF03CBA000B82E3 /* GoogleService-Info.plist in Resources */,
 				D6AAA301201EB90100789BB6 /* Assets.xcassets in Resources */,
 				3FC53D911FF03BA7000B82E3 /* Main.storyboard in Resources */,
+				3F8B5CFE20350D5400D864AC /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

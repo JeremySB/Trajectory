@@ -34,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             MSCrashes.self
             ])
         
+        if Auth.auth().currentUser == nil {
+            self.window?.rootViewController = UIStoryboard(name: "Authentication", bundle: nil).instantiateInitialViewController()
+        } else {
+            self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        }
+        
         return true
     }
     

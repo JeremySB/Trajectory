@@ -22,7 +22,7 @@ class FirebaseAuthenticationService: AuthenticationService {
     func signOut() -> Bool {
         do {
             try Auth.auth().signOut()
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+            let vc = UIStoryboard(name: "Authentication", bundle: nil).instantiateInitialViewController()
             UIApplication.shared.keyWindow?.rootViewController = vc
             
             return true
