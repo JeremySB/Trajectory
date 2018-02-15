@@ -10,7 +10,7 @@ import UIKit
 
 class UpdateNameViewController: UIViewController {
     
-    var userService: UserService = FirebaseUserService()
+    lazy var userService: UserService = FirebaseUserService()
 
     override func viewDidLoad() {
         super.viewDidLoad()

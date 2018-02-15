@@ -14,7 +14,7 @@ class GoalsViewController: UITableViewController {
     var row: Int = 0
     var section: Int = 0
     
-    var goalsService: GoalsService = FirebaseGoalsService()
+    lazy var goalsService: GoalsService = FirebaseGoalsService()
     
     override func viewDidLoad() {
         super.viewDidLoad()

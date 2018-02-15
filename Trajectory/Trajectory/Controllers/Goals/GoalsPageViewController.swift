@@ -14,11 +14,15 @@ import Foundation
 class GoalsPageViewController: ScrollController{
     required init?(coder: NSCoder){
         super.init(coder: coder)
-        addViewControllers(views: "GoalsList", "History")
     }
     override init(){
         super.init()
+    }
+    
+    override func viewDidLoad() {
         addViewControllers(views: "GoalsList", "History")
+        
+        super.viewDidLoad()
     }
     
 }

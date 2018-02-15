@@ -29,8 +29,9 @@ class ScrollController: UIPageViewController {
     }
     
     internal func addViewControllers(views: String...){
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         for view in views {
-            orderedViewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(view)"))
+            orderedViewControllers.append(mainStoryboard.instantiateViewController(withIdentifier: "\(view)"))
             //newViewController(storyboardID: view))
         }
     }
