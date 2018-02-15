@@ -185,7 +185,7 @@
                     <connections>
                         <outlet property="denomination" destination="7d6-g4-Yrj" id="cbx-xh-l57"/>
                         <outlet property="objectivesStatement" destination="Yv7-fd-HzM" id="aW3-Qf-Uue"/>
-                        <segue destination="3QG-I5-Lx7" kind="show" identifier="denominationAndProfileToMain" id="uZL-WI-USN"/>
+                        <segue destination="3QG-I5-Lx7" kind="presentation" identifier="denominationAndProfileToMain" id="uZL-WI-USN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbD-hX-qeq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -361,7 +361,7 @@
                     <navigationItem key="navigationItem" title="Enter Your Password" id="FiH-E1-EFh"/>
                     <connections>
                         <outlet property="passwordField" destination="j3M-KL-kvj" id="Kvw-v6-Dn5"/>
-                        <segue destination="3QG-I5-Lx7" kind="show" identifier="passwordToMain" id="en7-In-sCA"/>
+                        <segue destination="3QG-I5-Lx7" kind="presentation" identifier="passwordToMain" id="en7-In-sCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jf9-ZC-aCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -437,6 +437,6 @@
         <image name="LoginScreen" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="en7-In-sCA"/>
+        <segue reference="uZL-WI-USN"/>
     </inferredMetricsTieBreakers>
 </document>
