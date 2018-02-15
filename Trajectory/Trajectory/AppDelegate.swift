@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         FirebaseApp.configure()
         
+        
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
@@ -34,7 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             MSCrashes.self
             ])
         
-        if Auth.auth().currentUser == nil {
+        if(ProcessInfo.processInfo.arguments.contains("uiTestingLoggedOut")) {
+            try? Auth.auth().signOut()
+            self.window?.rootViewController = UIStoryboard(name: "Authentication", bundle: nil).instantiateInitialViewController()
+        } else if (ProcessInfo.processInfo.arguments.contains("uiTestingLoggedIn")) {
+            Auth.auth().signIn(withEmail: "uitest@gettrajectory.com", password: "uitestonly", completion: { (user, error) in
+                
+                self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+            })
+            
+        }
+        else if Auth.auth().currentUser == nil {
             self.window?.rootViewController = UIStoryboard(name: "Authentication", bundle: nil).instantiateInitialViewController()
         } else {
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()

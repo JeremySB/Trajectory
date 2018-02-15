@@ -40,12 +40,12 @@
 		3FB4375020313A1D00821A91 /* CommSwipeMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4374F20313A1D00821A91 /* CommSwipeMentorViewController.swift */; };
 		3FB4375220313B7D00821A91 /* MyMentorCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4375120313B7D00821A91 /* MyMentorCheckinViewController.swift */; };
 		3FB4375420313B8C00821A91 /* MyMentorOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */; };
+		3FB92CF92035F6AD00AA2893 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB92CF82035F6AD00AA2893 /* LoginTests.swift */; };
 		3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */; };
 		3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */; };
 		3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */; };
 		3FC53D911FF03BA7000B82E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D8F1FF03BA7000B82E3 /* Main.storyboard */; };
 		3FC53D961FF03BA7000B82E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D941FF03BA7000B82E3 /* LaunchScreen.storyboard */; };
-		3FC53DAC1FF03BA7000B82E3 /* TrajectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */; };
 		3FC53DBA1FF03CBA000B82E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */; };
 		3FDF5B17202A0D670095D095 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF5B16202A0D670095D095 /* Goal.swift */; };
 		3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0F472201A434500F3CD18 /* ScrollController.swift */; };
@@ -131,6 +131,7 @@
 		3FB4374F20313A1D00821A91 /* CommSwipeMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommSwipeMentorViewController.swift; sourceTree = "<group>"; };
 		3FB4375120313B7D00821A91 /* MyMentorCheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMentorCheckinViewController.swift; sourceTree = "<group>"; };
 		3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMentorOptionsViewController.swift; sourceTree = "<group>"; };
+		3FB92CF82035F6AD00AA2893 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticationViewController.swift; sourceTree = "<group>"; };
 		3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3FC53D861FF03BA6000B82E3 /* Trajectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trajectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +142,6 @@
 		3FC53D9C1FF03BA7000B82E3 /* TrajectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrajectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC53DA21FF03BA7000B82E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC53DA71FF03BA7000B82E3 /* TrajectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrajectoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryUITests.swift; sourceTree = "<group>"; };
 		3FC53DAD1FF03BA7000B82E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FDF5B16202A0D670095D095 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
@@ -407,7 +407,7 @@
 		3FC53DAA1FF03BA7000B82E3 /* TrajectoryUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3FC53DAB1FF03BA7000B82E3 /* TrajectoryUITests.swift */,
+				3FB92CF82035F6AD00AA2893 /* LoginTests.swift */,
 				3FC53DAD1FF03BA7000B82E3 /* Info.plist */,
 				D652AD272031EAD800E0AC65 /* SettingsUITests.swift */,
 			);
@@ -862,8 +862,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB92CF92035F6AD00AA2893 /* LoginTests.swift in Sources */,
 				D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */,
-				3FC53DAC1FF03BA7000B82E3 /* TrajectoryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
