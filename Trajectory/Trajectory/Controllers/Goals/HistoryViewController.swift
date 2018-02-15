@@ -16,6 +16,7 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,19 +37,7 @@ class HistoryViewController: UIViewController {
 
 }
 
-extension HistoryViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
-
-    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        formatter.dateFormat = "MM/dd/yyyy"
-        formatter.timeZone = Calendar.current.timeZone
-        formatter.locale = Calendar.current.locale
-        
-        let startDate = formatter.date(from: "02/18/2017")!
-        let endDate = formatter.date(from: "04/18/2018")!
-        
-        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
-        return parameters
-    }
+extension HistoryViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         // This function should have the same code as the cellForItemAt function
@@ -64,6 +53,11 @@ extension HistoryViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVie
     
     func sharedFunctionToConfigureCell(myCustomCell: CalendarCollectionViewCell, cellState: CellState, date: Date) {
         myCustomCell.dateLabel.text = cellState.text
+        if cellState.dateBelongsTo == .thisMonth {
+            myCustomCell.dateLabel.textColor = UIColor.white
+        } else {
+            myCustomCell.dateLabel.textColor = UIColor.gray
+        }
         //if testCalendar.isDateInToday(date) {
         //    myCustomCell.backgroundColor = UIColor.red
         //} else {
@@ -73,5 +67,19 @@ extension HistoryViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVie
         // ...
         // ...
         // ...
+    }
+}
+
+extension HistoryViewController: JTAppleCalendarViewDataSource {
+    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+        formatter.dateFormat = "MM/dd/yyyy"
+        formatter.timeZone = Calendar.current.timeZone
+        formatter.locale = Calendar.current.locale
+        
+        let startDate = formatter.date(from: "02/18/2017")!
+        let endDate = formatter.date(from: "04/18/2018")!
+        
+        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
+        return parameters
     }
 }
