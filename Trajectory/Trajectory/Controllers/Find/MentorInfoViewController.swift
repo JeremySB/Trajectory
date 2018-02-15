@@ -9,11 +9,26 @@
 import UIKit
 
 class MentorInfoViewController: UIViewController {
-
+    
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        user = User()
+        user?.name = "John Smith"
+        user?.organization = "Grove City"
+        user?.hobbies = "Coding, computers, etc."
+        user?.professionalInterests = "Computers, networking, etc."
+        user?.denomination = "Castellism"
+        
+        //Load mentor information
+        MentorName.text = user?.name
+        MentorOrg.text = user?.organization
+        MentorHobbies.text = user?.hobbies
+        MentorProfessionalInterests.text = user?.professionalInterests
+        MentorDenomination.text = user?.denomination
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +41,11 @@ class MentorInfoViewController: UIViewController {
     @IBOutlet weak var MentorImage: UIImageView!
     @IBOutlet weak var MentorName: UILabel!
     @IBOutlet weak var MentorOrg: UILabel!
-    @IBOutlet weak var MentorDetails: UITextView!
+    @IBOutlet weak var MentorHobbies: UITextView!
+    @IBOutlet weak var MentorProfessionalInterests: UITextView!
+    @IBOutlet weak var MentorDenomination: UILabel!
+    
+    
     @IBAction func ContactMentorButton(_ sender: Any) {
     }
     
