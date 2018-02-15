@@ -11,7 +11,6 @@ import UIKit
 class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
     
     var searchResults : [User] = []
-    var searchActive : Bool = false
     let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
@@ -28,8 +27,6 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         searchController.searchBar.sizeToFit()
         
         searchController.searchBar.becomeFirstResponder()
-        
-        self.navigationItem.titleView = searchController.searchBar
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,13 +35,7 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if searchActive {
-            return searchResults.count
-        }
-        else
-        {
-            return 5  //return number of rows in section
-        }
+        return 5 //searchResults.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -59,14 +50,19 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         return cell
     }
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: Search Bar
     
+    //Update search results
     func updateSearchResults(for searchController: UISearchController)
     {
-        let searchString = searchController.searchBar.text
-        print(searchString)
+        let searchString = searchBar.text
+        print(searchString!)
+        
         //Get filtered results based on search string
         //TODO
         
@@ -74,19 +70,21 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         
     }
     
+    //User begins typing in search bar
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchActive = true
         updateSearchResults(for: searchController)
     }
     
+    //User enters another character in search bar
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        updateSearchResults(for: searchController)
+    }
     
+    //User clicks search bar
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false
         updateSearchResults(for: searchController)
-        //searchController.searchBar.resignFirstResponder()
-        self.resignFirstResponder()
+        searchBar.resignFirstResponder()
     }
-    
     
     /*
     // MARK: - Navigation

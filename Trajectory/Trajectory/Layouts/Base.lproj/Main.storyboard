@@ -156,6 +156,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="SnE-BF-u2j" id="tbF-yv-P8i"/>
+                        <outlet property="searchBar" destination="q43-hf-nq4" id="RzV-jy-kKU"/>
                         <outlet property="searchDisplayController" destination="Tky-JZ-lco" id="Ceb-YX-daW"/>
                     </connections>
                 </viewController>
