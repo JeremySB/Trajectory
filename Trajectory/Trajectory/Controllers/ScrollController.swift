@@ -15,6 +15,8 @@ import UIKit
 
 class ScrollController: UIPageViewController {
     private(set) lazy var orderedViewControllers: [UIViewController] = [UIViewController]()
+
+    var startIndex: Int = 0;
     
     required init?(coder: NSCoder){
         super.init(coder: coder)
@@ -28,12 +30,13 @@ class ScrollController: UIPageViewController {
         self.dataSource = self
     }
     
-    internal func addViewControllers(views: String...){
+
+    internal func addViewControllers(views: String..., startIndex: Int = 0){
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         for view in views {
             orderedViewControllers.append(mainStoryboard.instantiateViewController(withIdentifier: "\(view)"))
-            //newViewController(storyboardID: view))
         }
+        self.startIndex = startIndex
     }
     
     /*private func newViewController(storyboardID: String) -> UIViewController {
@@ -47,13 +50,12 @@ class ScrollController: UIPageViewController {
         
         dataSource = self
         
-        if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController],
-                               direction: .forward,
-                               animated: true,
-                               completion: nil)
-            self.title = firstViewController.title
-        }
+        let firstViewController = orderedViewControllers[startIndex]
+        setViewControllers([firstViewController],
+                            direction: .forward,
+                            animated: true,
+                            completion: nil)
+        self.title = firstViewController.title
     }
     
     
