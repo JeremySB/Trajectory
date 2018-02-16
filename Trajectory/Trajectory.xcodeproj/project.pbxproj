@@ -41,6 +41,7 @@
 		3FB4375220313B7D00821A91 /* MyMentorCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4375120313B7D00821A91 /* MyMentorCheckinViewController.swift */; };
 		3FB4375420313B8C00821A91 /* MyMentorOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */; };
 		3FB92CF92035F6AD00AA2893 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB92CF82035F6AD00AA2893 /* LoginTests.swift */; };
+		3FB92CFB2036322A00AA2893 /* RegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB92CFA2036322A00AA2893 /* RegistrationTests.swift */; };
 		3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */; };
 		3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */; };
 		3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */; };
@@ -132,6 +133,7 @@
 		3FB4375120313B7D00821A91 /* MyMentorCheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMentorCheckinViewController.swift; sourceTree = "<group>"; };
 		3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMentorOptionsViewController.swift; sourceTree = "<group>"; };
 		3FB92CF82035F6AD00AA2893 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		3FB92CFA2036322A00AA2893 /* RegistrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTests.swift; sourceTree = "<group>"; };
 		3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticationViewController.swift; sourceTree = "<group>"; };
 		3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3FC53D861FF03BA6000B82E3 /* Trajectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trajectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,6 +409,7 @@
 		3FC53DAA1FF03BA7000B82E3 /* TrajectoryUITests */ = {
 			isa = PBXGroup;
 			children = (
+				3FB92CFA2036322A00AA2893 /* RegistrationTests.swift */,
 				3FB92CF82035F6AD00AA2893 /* LoginTests.swift */,
 				3FC53DAD1FF03BA7000B82E3 /* Info.plist */,
 				D652AD272031EAD800E0AC65 /* SettingsUITests.swift */,
@@ -862,6 +865,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB92CFB2036322A00AA2893 /* RegistrationTests.swift in Sources */,
 				3FB92CF92035F6AD00AA2893 /* LoginTests.swift in Sources */,
 				D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */,
 			);

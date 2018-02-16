@@ -22,10 +22,10 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDQ-Qb-mCP">
                                 <rect key="frame" x="70" y="272" width="235" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="Phone Number" label="Phone Number"/>
+                                <accessibility key="accessibilityConfiguration" hint="Phone Number" identifier="phoneNumber" label="Phone Number"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" smartDashesType="yes" textContentType="tel"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" smartDashesType="yes" textContentType="tel"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's your phone number?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eM-I4-cYc">
                                 <rect key="frame" x="77" y="243" width="216" height="21"/>
@@ -272,6 +272,7 @@
                         <segue destination="Esd-JF-kBs" kind="show" identifier="passwordRegister" id="jOy-E9-rG0">
                             <nil key="action"/>
                         </segue>
+                        <segue destination="3QG-I5-Lx7" kind="presentation" identifier="initialToMain" id="BId-QM-fKl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuR-nX-Jmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -437,6 +438,6 @@
         <image name="LoginScreen" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uZL-WI-USN"/>
+        <segue reference="BId-QM-fKl"/>
     </inferredMetricsTieBreakers>
 </document>

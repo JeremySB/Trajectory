@@ -22,11 +22,6 @@ class PasswordAuthenticationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -36,13 +31,14 @@ class PasswordAuthenticationViewController: UIViewController {
     // 3 basis
     // userEmail = nil, password incorrect, password correct
     @IBAction func didTapNext(_ sender: Any) {
-        guard userEmail != nil else {
+        guard userEmail != nil && userEmail != "" else {
             self.navigationController?.popViewController(animated: false)
             return
         }
         Auth.auth().signIn(withEmail: userEmail!, password: passwordField.text!) { (user, error) in
             if let error = error {
                 print(error.localizedDescription)
+                self.passwordField.text = ""
                 return
             }
             

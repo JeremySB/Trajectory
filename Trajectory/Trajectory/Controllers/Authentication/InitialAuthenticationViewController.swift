@@ -16,16 +16,14 @@ class InitialAuthenticationViewController: UIViewController {
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
     
     @IBAction func continueButtonPrimaryActionTriggered(_ sender: Any) {
-        guard emailField?.text != nil else {
-            return
-        }
         guard validateEmail(enteredEmail: (emailField?.text)!) else {
+            self.emailField.text = ""
             return
         }
-        
         
         authService.fetchProviders(forEmail: (emailField?.text)!) { (providers, error) in
             if let error = error {
+                self.emailField.text = ""
                 print(error.localizedDescription)
             }
             else if providers?.contains("password") ?? false {
@@ -51,11 +49,6 @@ class InitialAuthenticationViewController: UIViewController {
         if authService.signedIn {
             self.performSegue(withIdentifier: "initialToMain", sender: self)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

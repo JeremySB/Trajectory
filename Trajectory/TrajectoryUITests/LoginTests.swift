@@ -28,7 +28,7 @@ class LoginTests: XCTestCase {
         app.terminate()
     }
     
-    func testLogin() {
+    func testEmailLogin() {
         
         XCTAssertTrue(app.textFields["Email"].exists)
         
@@ -46,6 +46,43 @@ class LoginTests: XCTestCase {
                 
         XCTAssert(app.navigationBars["Goals"].otherElements["Goals"].exists)
         
+    }
+    
+    func testInvalidCredentials() {
+        
+        let emailTextField = app.textFields["Email"]
+        XCTAssertTrue(emailTextField.exists)
+        emailTextField.tap()
+        
+        let continueButton = app.buttons["Continue"]
+        continueButton.tap()
+        XCTAssertTrue(emailTextField.exists)
+        emailTextField.tap()
+        emailTextField.typeText("test")
+        app.otherElements.containing(.navigationBar, identifier:"Trajectory").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        continueButton.tap()
+        XCTAssertTrue(emailTextField.exists)
+        emailTextField.tap()
+        emailTextField.typeText("@test")
+        continueButton.tap()
+        XCTAssertTrue(emailTextField.exists)
+        emailTextField.tap()
+        emailTextField.typeText("uitest@gettrajectory.com")
+        continueButton.tap()
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        XCTAssertTrue(passwordSecureTextField.exists)
+        XCTAssertFalse(emailTextField.exists)
+        passwordSecureTextField.tap()
+        
+        let nextButton = app.buttons["Next"]
+        nextButton.tap()
+        XCTAssertTrue(passwordSecureTextField.exists)
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText("password")
+        app.otherElements.containing(.navigationBar, identifier:"Enter Your Password").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        nextButton.tap()
+        XCTAssertTrue(passwordSecureTextField.exists)
     }
     
 }

@@ -10,10 +10,15 @@ import XCTest
 
 class SettingsUITests: XCTestCase {
     
-    //var app: XCUIApplication!
+    var app: XCUIApplication!
     
     override func setUp() {
         super.setUp()
+        
+        app = XCUIApplication()
+        app.launchArguments.append("uiTestingLoggedIn")
+        app.launch()
+        
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
@@ -31,97 +36,98 @@ class SettingsUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        app.terminate()
     }
     
     func testUpdateNameDoneButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Name"]/*[[".cells.staticTexts[\"Name\"]",".staticTexts[\"Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.navigationBars["Update Name"].buttons["Done"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testUpdateNameCancelButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Name"]/*[[".cells.staticTexts[\"Name\"]",".staticTexts[\"Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.navigationBars["Update Name"].buttons["Done"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testUpdateEmailDoneButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables.staticTexts["Email Address"].tap()
         app.navigationBars["Update Email Address"].buttons["Done"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testUpdateEmailCancelButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables.staticTexts["Email Address"].tap()
         app.navigationBars["Update Email Address"].buttons["Cancel"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testUpdatePhoneNumberDoneButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables.staticTexts["Phone Number"].tap()
         app.navigationBars["Update Phone Number"].buttons["Done"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testUpdatePhoneNumberCancelButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables.staticTexts["Phone Number"].tap()
         app.navigationBars["Update Phone Number"].buttons["Cancel"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testMyOrganizationsBackButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["My Organizations"]/*[[".cells.staticTexts[\"My Organizations\"]",".staticTexts[\"My Organizations\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         tablesQuery.buttons["Back"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testAddOrganizationDoneButtonNoData() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["My Organizations"]/*[[".cells.staticTexts[\"My Organizations\"]",".staticTexts[\"My Organizations\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -129,13 +135,13 @@ class SettingsUITests: XCTestCase {
         app.navigationBars["Add Organization"].buttons["Done"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testAddOrganizationCancelButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["My Organizations"]/*[[".cells.staticTexts[\"My Organizations\"]",".staticTexts[\"My Organizations\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -143,49 +149,49 @@ class SettingsUITests: XCTestCase {
         app.navigationBars["Add Organization"].buttons["Cancel"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testUpdateMyBioDoneButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables.staticTexts["My Bio"].tap()
         app.navigationBars["My Bio"].buttons["Done"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testUpdateMyBioCancelButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables.staticTexts["My Bio"].tap()
         app.navigationBars["My Bio"].buttons["Cancel"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testMyMenteeRequestsBackButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.navigationBars["Mentee Requests"].buttons["Back"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testMyMenteeRequestsSetEndDateButtonAndSetDateAndAccept() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -195,13 +201,13 @@ class SettingsUITests: XCTestCase {
         app.buttons["Set Date and Accept"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testMyMenteeRequestsSetEndDateButtonAndGoBack() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -212,13 +218,13 @@ class SettingsUITests: XCTestCase {
         app.navigationBars["Mentee Requests"].buttons["Back"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testMyMenteeRequestsDeclineButton() {
         // Use recording to get started writing UI tests.
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -226,13 +232,13 @@ class SettingsUITests: XCTestCase {
         app.buttons["Decline"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testMyMenteeRequestsBackButtons() {
         
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -243,24 +249,24 @@ class SettingsUITests: XCTestCase {
         app.navigationBars["Mentee Requests"].buttons["Back"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testChangeImageFeatureWithCancel() {
         
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.tables/*@START_MENU_TOKEN@*/.buttons["profileImg"]/*[[".cells.buttons[\"profileImg\"]",".buttons[\"profileImg\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.navigationBars["Photos"].buttons["Cancel"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
     }
     
     func testNotificaitonsSwitch() {
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
@@ -268,19 +274,19 @@ class SettingsUITests: XCTestCase {
         notificationsSwitch.tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        app.terminate()
+        
         
     }
     
     func testLogoutButton() {
-        let app = XCUIApplication()
-        app.launch()
+        
+        
         app.tabBars.buttons["Settings"].tap()
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .table).element/*@START_MENU_TOKEN@*/.swipeRight()/*[[".swipeUp()",".swipeRight()"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         app.tables/*@START_MENU_TOKEN@*/.buttons["Logout"]/*[[".cells.buttons[\"Logout\"]",".buttons[\"Logout\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "???")
-        app.terminate()
+        
     }
 }
 
