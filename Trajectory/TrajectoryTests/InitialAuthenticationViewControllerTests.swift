@@ -49,7 +49,7 @@ class InitialAuthenticationViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        controllerUnderTest = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InitialAuthenticationViewController") as! InitialAuthenticationViewController
+        controllerUnderTest = UIStoryboard(name: "Authentication", bundle: nil).instantiateViewController(withIdentifier: "InitialAuthenticationViewController") as! InitialAuthenticationViewController
         
         mockAuth = MockAuthentication()
         controllerUnderTest.authService = mockAuth
