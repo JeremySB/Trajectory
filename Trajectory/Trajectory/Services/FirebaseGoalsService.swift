@@ -11,7 +11,7 @@ import Firebase
 import CodableFirebase
 
 class FirebaseGoalsService: GoalsService {
-    let db = Firestore.firestore()
+    lazy var db = Firestore.firestore()
     
     var listeners = [ListenerRegistration]()
     

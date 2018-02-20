@@ -42,6 +42,9 @@
 		3FB4375420313B8C00821A91 /* MyMentorOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */; };
 		3FB92CF92035F6AD00AA2893 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB92CF82035F6AD00AA2893 /* LoginTests.swift */; };
 		3FB92CFB2036322A00AA2893 /* RegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB92CFA2036322A00AA2893 /* RegistrationTests.swift */; };
+		3FB92CFD203B94E200AA2893 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB92CFC203B94E200AA2893 /* Organization.swift */; };
+		3FB92CFF203BA03700AA2893 /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB92CFE203BA03700AA2893 /* OrganizationService.swift */; };
+		3FB92D03203BA7FE00AA2893 /* FirebaseOrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB92D02203BA7FE00AA2893 /* FirebaseOrganizationService.swift */; };
 		3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */; };
 		3FBC3C5C201F045C006FA1AB /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */; };
 		3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC53D891FF03BA6000B82E3 /* AppDelegate.swift */; };
@@ -134,6 +137,9 @@
 		3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMentorOptionsViewController.swift; sourceTree = "<group>"; };
 		3FB92CF82035F6AD00AA2893 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		3FB92CFA2036322A00AA2893 /* RegistrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTests.swift; sourceTree = "<group>"; };
+		3FB92CFC203B94E200AA2893 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		3FB92CFE203BA03700AA2893 /* OrganizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationService.swift; sourceTree = "<group>"; };
+		3FB92D02203BA7FE00AA2893 /* FirebaseOrganizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOrganizationService.swift; sourceTree = "<group>"; };
 		3FBC3C59201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticationViewController.swift; sourceTree = "<group>"; };
 		3FBC3C5B201F045C006FA1AB /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3FC53D861FF03BA6000B82E3 /* Trajectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trajectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +233,7 @@
 				3F19031420237F060002B74B /* MenteeRequest.swift */,
 				3F1903182029379F0002B74B /* User.swift */,
 				3FDF5B16202A0D670095D095 /* Goal.swift */,
+				3FB92CFC203B94E200AA2893 /* Organization.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 				3F19031B202BB1720002B74B /* AuthenticationService.swift */,
 				3F19031F202CABFE0002B74B /* UserService.swift */,
 				3F1858D52030FED1007FC818 /* GoalsService.swift */,
+				3FB92CFE203BA03700AA2893 /* OrganizationService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				3F190322202CADBB0002B74B /* FirebaseUserService.swift */,
 				3F1858D3202E0CB4007FC818 /* FirebaseAuthenticationService.swift */,
 				3F1858D72031004F007FC818 /* FirebaseGoalsService.swift */,
+				3FB92D02203BA7FE00AA2893 /* FirebaseOrganizationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -804,6 +813,7 @@
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
 				3FAD0DC12024F77E00DC5713 /* UserCollectionViewCell.swift in Sources */,
 				3F1858D4202E0CB4007FC818 /* FirebaseAuthenticationService.swift in Sources */,
+				3FB92CFD203B94E200AA2893 /* Organization.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
 				3FDF5B17202A0D670095D095 /* Goal.swift in Sources */,
@@ -813,6 +823,7 @@
 				3FB4375420313B8C00821A91 /* MyMentorOptionsViewController.swift in Sources */,
 				3FB437422031376A00821A91 /* FindPeopleViewController.swift in Sources */,
 				D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */,
+				3FB92CFF203BA03700AA2893 /* OrganizationService.swift in Sources */,
 				3FB4375220313B7D00821A91 /* MyMentorCheckinViewController.swift in Sources */,
 				D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */,
 				D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */,
@@ -825,6 +836,7 @@
 				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
 				D652AD2C203337C600E0AC65 /* DelayTextFieldSearch.swift in Sources */,
 				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,
+				3FB92D03203BA7FE00AA2893 /* FirebaseOrganizationService.swift in Sources */,
 				3F19031320237DF10002B74B /* Mentee.swift in Sources */,
 				3FB4374A203138AE00821A91 /* MyMenteeCalendarViewController.swift in Sources */,
 				3FB4374C203138C300821A91 /* MyMenteeOptionsViewController.swift in Sources */,
