@@ -28,8 +28,33 @@ class UserPhoneViewController: UIViewController {
         self.view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
+    
+    
+    @IBAction func formatInput(_ sender: Any) {
+        let length = phoneNumber.text?.count
 
+        //When area code has been entered...
+        if length == 3 {
+            phoneNumber.text = "(" + phoneNumber.text! + ")-"
+        }
+        //When next three digits have been entered...
+        else if length == 9 {
+            phoneNumber.text = phoneNumber.text! + "-"
+        }
+        //When last three digits have been entered...
+        else if length == 14 {
+            phoneNumber.resignFirstResponder()
+        }
+        //If phone number is invalid
+        else if length == 15 {
+            errorMessage.isHidden = false
+            print("INVALID PHONE NUMBER ENTERED")
+        }
+    }
+    
     @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var errorMessage: UILabel!
+    
     
     @IBAction func didTapNext(_ sender: Any) {
         let db = Firestore.firestore()

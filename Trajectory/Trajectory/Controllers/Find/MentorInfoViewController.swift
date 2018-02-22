@@ -29,14 +29,13 @@ class MentorInfoViewController: UIViewController {
         MentorHobbies.text = user?.hobbies
         MentorProfessionalInterests.text = user?.professionalInterests
         MentorDenomination.text = user?.denomination
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     @IBOutlet weak var MentorImage: UIImageView!
     @IBOutlet weak var MentorName: UILabel!
@@ -47,6 +46,13 @@ class MentorInfoViewController: UIViewController {
     
     
     @IBAction func ContactMentorButton(_ sender: Any) {
+        //https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/
+        let alert = UIAlertController(title: "Please confirm that you want to send this mentee request", message: "", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     
 

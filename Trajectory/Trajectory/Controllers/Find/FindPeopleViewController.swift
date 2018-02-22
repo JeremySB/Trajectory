@@ -51,8 +51,6 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: Search Bar

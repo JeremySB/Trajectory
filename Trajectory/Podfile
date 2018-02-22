@@ -13,6 +13,8 @@ target 'Trajectory' do
 
   pod 'JTAppleCalendar', '~> 7.0'
   
+  pod 'CropViewController'
+  
   pod 'CodableFirebase', :git => 'https://github.com/alickbass/CodableFirebase.git'
   
   pod 'AppCenter'

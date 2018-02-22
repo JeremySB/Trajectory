@@ -66,7 +66,6 @@
 		D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */; };
 		D652AD262031EAA000E0AC65 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD252031EAA000E0AC65 /* TestExtensions.swift */; };
 		D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD272031EAD800E0AC65 /* SettingsUITests.swift */; };
-		D652AD2C203337C600E0AC65 /* DelayTextFieldSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD2B203337C600E0AC65 /* DelayTextFieldSearch.swift */; };
 		D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */; };
 		D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */; };
 		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
@@ -169,7 +168,6 @@
 		D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestListTableViewController.swift; sourceTree = "<group>"; };
 		D652AD252031EAA000E0AC65 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		D652AD272031EAD800E0AC65 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
-		D652AD2B203337C600E0AC65 /* DelayTextFieldSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayTextFieldSearch.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewController.swift; sourceTree = "<group>"; };
 		D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoneViewController.swift; sourceTree = "<group>"; };
 		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
@@ -310,7 +308,6 @@
 				3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */,
 				3FB437412031376A00821A91 /* FindPeopleViewController.swift */,
 				3FB437432031377B00821A91 /* FindOrgsViewController.swift */,
-				D652AD2B203337C600E0AC65 /* DelayTextFieldSearch.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -834,7 +831,6 @@
 				D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */,
 				3F190320202CABFE0002B74B /* UserService.swift in Sources */,
 				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
-				D652AD2C203337C600E0AC65 /* DelayTextFieldSearch.swift in Sources */,
 				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,
 				3FB92D03203BA7FE00AA2893 /* FirebaseOrganizationService.swift in Sources */,
 				3F19031320237DF10002B74B /* Mentee.swift in Sources */,
