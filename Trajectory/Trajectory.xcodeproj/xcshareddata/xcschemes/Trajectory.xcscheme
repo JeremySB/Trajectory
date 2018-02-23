@@ -49,6 +49,11 @@
                BlueprintName = "TrajectoryUITests"
                ReferencedContainer = "container:Trajectory.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "SettingsUITests/testChangeImageFeatureWithCancel()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

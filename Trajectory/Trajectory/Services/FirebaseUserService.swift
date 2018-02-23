@@ -11,7 +11,21 @@ import Firebase
 import CodableFirebase
 
 class FirebaseUserService: UserService {
-    lazy var db = Firestore.firestore()
+    
+    func getAllUsers(completion: @escaping ([User]?, UserServiceError?) -> Void) {
+        Firestore.firestore().collection("users").getDocuments { (docs, error) in
+            if let error = error {
+                return completion(nil, UserServiceError.Misc(error.localizedDescription))
+            }
+            var users = [User]()
+            for userSnap in docs!.documents {
+                if let user = try? FirestoreDecoder().decode(User.self, from: userSnap.data()) {
+                    users.append(user)
+                }
+            }
+            completion(users, nil)
+        }
+    }
     
     func saveCurrentUser(_ user: User, completion: ((UserServiceError?) -> Void)?) {
         guard let userEncoded = try? FirestoreEncoder().encode(user) else {
@@ -22,7 +36,7 @@ class FirebaseUserService: UserService {
             completion?(.NotLoggedIn)
             return
         }
-        db.collection("users").document(uid).setData(userEncoded, options: SetOptions.merge()) { (error) in
+        Firestore.firestore().collection("users").document(uid).setData(userEncoded, options: SetOptions.merge()) { (error) in
             if let error = error {
                 print(error.localizedDescription)
                 completion?(.Misc(error.localizedDescription))

@@ -17,8 +17,9 @@ class UpdateNameViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         userService.getCurrentUser { (user, error) in
-            guard let user = user else { return }
-            self.usersName.text = user.name
+            if let user = user {
+                self.usersName.text = user.name
+            }
         }
     }
 

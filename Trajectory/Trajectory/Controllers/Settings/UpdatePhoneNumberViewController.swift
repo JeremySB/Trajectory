@@ -9,11 +9,17 @@
 import UIKit
 
 class UpdatePhoneNumberViewController: UIViewController {
+    
+    lazy var userService: UserService = FirebaseUserService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        userService.getCurrentUser { (user, error) in
+            if let user = user {
+                self.userPhoneNumber.text = user.phoneNumber
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +35,9 @@ class UpdatePhoneNumberViewController: UIViewController {
     @IBOutlet weak var userPhoneNumber: UITextField!
     
     @IBAction func doneButton(_ sender: Any) {
+        let user = User()
+        user.phoneNumber = userPhoneNumber.text
+        userService.saveCurrentUser(user, completion: nil)
         dismiss(animated: true, completion: nil)
     }
     

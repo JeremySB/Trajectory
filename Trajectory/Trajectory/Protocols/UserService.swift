@@ -15,6 +15,7 @@ protocol UserService {
     
     func saveCurrentUser(_: User, completion: ((UserServiceError?) -> Void)?)
     
+    func getAllUsers(completion: @escaping ([User]?, UserServiceError?) -> Void)
 }
 
 enum UserServiceError: Error {

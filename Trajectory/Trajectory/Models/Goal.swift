@@ -22,13 +22,4 @@ class Goal: Codable {
     var startDate: Date?
     var endDate: Date?
     
-    init() {
-        totalProgress = 100
-        currentProgress = Int(arc4random_uniform( 100 ))
-        title = "Yaaassss Goal"
-        targetPerDay = 2
-        targetPerWeek = 3
-        targetPerMonth = 200
-    }
-    
 }

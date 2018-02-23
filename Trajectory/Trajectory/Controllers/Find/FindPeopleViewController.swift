@@ -12,6 +12,8 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     
     var searchResults : [User] = []
     let searchController = UISearchController(searchResultsController: nil)
+    
+    lazy var userService: UserService = FirebaseUserService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,17 +37,17 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5 //searchResults.count
+        return searchResults.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
         
-        let name = "John Smith"  //searchResults[indexPath[1]].name
+        let name = searchResults[indexPath.row].name
         let image = UIImage(named:"profileImg")!
         
-        cell.displayContent(image: image, name: name)
+        cell.displayContent(image: image, name: name ?? "Error")
         
         return cell
     }
@@ -62,9 +64,13 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         print(searchString!)
         
         //Get filtered results based on search string
-        //TODO
         
-        collectionView.reloadData()
+        userService.getAllUsers { (users, error) in
+            if let users = users {
+                self.searchResults = users
+                self.collectionView.reloadData()
+            }
+        }
         
     }
     

@@ -10,15 +10,21 @@ import UIKit
 
 class UpdateMyBioViewController: UIViewController {
     
+    lazy var userService: UserService = FirebaseUserService()
+    
     var menteeRequest: MenteeRequest?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userHobbies.text = menteeRequest?.mentee.hobbies
-        userProfessionalInterests.text = menteeRequest?.mentee.professionalInterests
-        userDenomination.text = menteeRequest?.mentee.denomination
-        userObjectiveStatement.text = menteeRequest?.mentee.objectives
+        userService.getCurrentUser { (user, error) in
+            if let user = user {
+                self.userHobbies.text = user.hobbies
+                self.userProfessionalInterests.text = user.professionalInterests
+                self.userDenomination.text = user.denomination
+                self.userObjectiveStatement.text = user.objectives
+            }
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -39,6 +45,12 @@ class UpdateMyBioViewController: UIViewController {
     @IBOutlet weak var userObjectiveStatement: UITextView!
     
     @IBAction func doneButton(_ sender: Any) {
+        let user = User()
+        user.hobbies = userHobbies.text
+        user.professionalInterests = userProfessionalInterests.text
+        user.denomination = userDenomination.text
+        user.objectives = userObjectiveStatement.text
+        userService.saveCurrentUser(user, completion: nil)
         dismiss(animated: true, completion: nil)
     }
     
