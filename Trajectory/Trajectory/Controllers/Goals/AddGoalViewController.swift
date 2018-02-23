@@ -16,9 +16,8 @@ class AddGoalViewController: UIViewController {
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var endDatePicker: UIDatePicker!
-    @IBOutlet weak var targetProgressPerWeekField: UITextField!
-    @IBOutlet weak var targetProgressPerDayField: UITextField!
-    @IBOutlet weak var targetProgressPerMonthField: UITextField!
+    @IBOutlet weak var progressAmount: UITextField!
+    @IBOutlet weak var segmentedControlPeriod: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +39,6 @@ class AddGoalViewController: UIViewController {
         let goal = Goal()
         goal.title = nameField.text
         goal.endDate = endDatePicker.date
-        goal.targetPerDay = Int(targetProgressPerDayField.text ?? "")
-        goal.targetPerWeek = Int(targetProgressPerWeekField.text ?? "")
-        goal.targetPerMonth = Int(targetProgressPerMonthField.text ?? "")
         
         
         goalsService.addGoal(goal) { (error) in
