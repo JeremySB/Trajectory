@@ -15,21 +15,33 @@ class MentorInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        /*user = User()
-        user?.name = "John Smith"
-        user?.organization = "Grove City"
-        user?.hobbies = "Coding, computers, etc."
-        user?.professionalInterests = "Computers, networking, etc."
-        user?.denomination = "Castellism"
- */
         //Load mentor information
-        MentorName.text = user?.name
-        MentorOrg.text = user?.organization
-        MentorHobbies.text = user?.hobbies
-        MentorProfessionalInterests.text = user?.professionalInterests
-        MentorDenomination.text = user?.denomination
-        
+        if user?.name != nil {
+            MentorName.text = user?.name
+        } else {
+            MentorName.text = "Error: Nil Name"
+        }
+        if user?.organization != nil {
+            MentorOrg.text = user?.organization
+
+        } else {
+            MentorOrg.text = "Error: Nil Organization"
+        }
+        if user?.hobbies != nil {
+            MentorHobbies.text = user?.hobbies
+        } else {
+            MentorHobbies.text = "Error: Nil Hobbies"
+        }
+        if user?.professionalInterests != nil {
+            MentorProfessionalInterests.text = user?.professionalInterests
+        } else {
+            MentorProfessionalInterests.text = "Error: Nil Professional Interests"
+        }
+        if user?.denomination != nil {
+            MentorDenomination.text = user?.denomination
+        } else {
+            MentorDenomination.text = "Error: Nil Denomination"
+        }
     }
 
     override func didReceiveMemoryWarning() {
