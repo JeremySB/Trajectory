@@ -16,13 +16,13 @@ class MentorInfoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        user = User()
+        /*user = User()
         user?.name = "John Smith"
         user?.organization = "Grove City"
         user?.hobbies = "Coding, computers, etc."
         user?.professionalInterests = "Computers, networking, etc."
         user?.denomination = "Castellism"
-        
+ */
         //Load mentor information
         MentorName.text = user?.name
         MentorOrg.text = user?.organization

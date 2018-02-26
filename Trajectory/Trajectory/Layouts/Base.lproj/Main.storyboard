@@ -134,7 +134,7 @@
                                         <connections>
                                             <outlet property="userImage" destination="4Am-cK-CyS" id="6MO-Lc-xp2"/>
                                             <outlet property="userProfileName" destination="69R-ea-UXH" id="fkZ-k2-Jbn"/>
-                                            <segue destination="Xak-rS-gi3" kind="show" id="2V5-Wq-L3B"/>
+                                            <segue destination="Xak-rS-gi3" kind="show" identifier="mentorInfo" id="2V5-Wq-L3B"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
