@@ -10,6 +10,8 @@ import UIKit
 
 class MentorInfoViewController: UIViewController {
     
+    lazy var connectionService: ConnectionService = FirebaseConnectionService()
+    
     var user: User?
     
     override func viewDidLoad() {
@@ -69,12 +71,19 @@ class MentorInfoViewController: UIViewController {
     }
     
     func sendMenteeRequest(alert: UIAlertAction!) {
-        //Send mentee request to specified mentor
-        //TODO
+        guard let uid = user?.id else { return }
         
-        //Navigate back to search screen (dismiss mentor information screen)
-        //https://stackoverflow.com/questions/28760541/programmatically-go-back-to-previous-viewcontroller-in-swift
-        navigationController?.popViewController(animated: true)
+        //Send mentee request to specified mentor
+        connectionService.sendMentorRequest(to: uid) { (error) in
+            if let _ = error {
+                
+            } else {
+                //Navigate back to search screen (dismiss mentor information screen)
+                //https://stackoverflow.com/questions/28760541/programmatically-go-back-to-previous-viewcontroller-in-swift
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        
     }
     
     /*

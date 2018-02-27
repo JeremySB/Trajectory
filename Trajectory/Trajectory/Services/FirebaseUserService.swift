@@ -20,6 +20,7 @@ class FirebaseUserService: UserService {
             var users = [User]()
             for userSnap in docs!.documents {
                 if let user = try? FirestoreDecoder().decode(User.self, from: userSnap.data()) {
+                    user.id = userSnap.documentID
                     users.append(user)
                 }
             }
@@ -67,6 +68,7 @@ class FirebaseUserService: UserService {
             }
             if let user = try? FirestoreDecoder().decode(User.self, from: data) {
                 // success
+                user.id = doc?.documentID
                 completion(user, nil)
             }
             else {
@@ -85,6 +87,7 @@ class FirebaseUserService: UserService {
                 return
             }
             if let mentee = try? FirestoreDecoder().decode(Mentee.self, from: data) {
+                mentee.id = doc?.documentID
                 completion(mentee, nil)
             }
             else {

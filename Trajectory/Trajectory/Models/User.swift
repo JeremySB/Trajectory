@@ -18,12 +18,17 @@ class User: Codable {
     var phoneNumber: String?
     var emailAddress: String?
     
+    var id: String? = nil
+    
     init(testname: String) {
         // init for test data
         name = testname
     }
     
     init() {
-        
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case name, organization, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress
     }
 }
