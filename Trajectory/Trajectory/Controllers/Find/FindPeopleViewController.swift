@@ -12,6 +12,7 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     
     var searchResults : [User] = []
     var mentors : [User] = []
+    let initialSearchTerm : String = ""
     let searchController = UISearchController(searchResultsController: nil)
     
     lazy var userService: UserService = FirebaseUserService()
