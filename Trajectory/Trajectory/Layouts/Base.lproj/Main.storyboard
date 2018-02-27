@@ -199,7 +199,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="Rvi-bZ-Zj2" customClass="UserCollectionViewCell" customModule="Trajectory" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserCollectionViewCell" id="Rvi-bZ-Zj2" customClass="UserCollectionViewCell" customModule="Trajectory" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="159"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -222,16 +222,20 @@
                                         <connections>
                                             <outlet property="userImage" destination="EMT-vc-DEB" id="dM0-wd-uvL"/>
                                             <outlet property="userProfileName" destination="xRW-5S-stx" id="2QQ-U0-acM"/>
+                                            <segue destination="Xak-rS-gi3" kind="show" identifier="mentorInfo" id="Voo-Uk-ZZd"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="SaT-ML-I6v" id="Amj-E8-wkv"/>
+                                </connections>
                             </collectionView>
                             <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Search for people by organization" translatesAutoresizingMaskIntoConstraints="NO" id="t35-Na-Lb9">
                                 <rect key="frame" x="0.0" y="58" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="z7N-nK-aF0" id="Hak-Q5-wR3"/>
+                                    <outlet property="delegate" destination="SaT-ML-I6v" id="vNt-aP-3mj"/>
                                 </connections>
                             </searchBar>
                         </subviews>
@@ -240,7 +244,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="0gu-Tj-7HW" id="dP6-vZ-Eg6"/>
-                        <outlet property="searchBar" destination="t35-Na-Lb9" id="Xgf-R5-J4a"/>
+                        <outlet property="searchBar" destination="t35-Na-Lb9" id="0yf-gs-cDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNX-8V-8tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2152,4 +2156,7 @@
         <image name="settings-48" width="24" height="24"/>
         <image name="trophy-48" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Voo-Uk-ZZd"/>
+    </inferredMetricsTieBreakers>
 </document>

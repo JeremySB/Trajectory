@@ -11,7 +11,10 @@ import UIKit
 class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
 
     var searchResults : [User] = []
+    var mentors : [User] = []
     let searchController = UISearchController(searchResultsController: nil)
+    
+    lazy var userService: UserService = FirebaseUserService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,20 +38,21 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5 //searchResults.count
+        return searchResults.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
         
-        let name = "John Smith"  //searchResults[indexPath[1]].name
+        let name = searchResults[indexPath.row].name
         let image = UIImage(named:"profileImg")!
         
-        cell.displayContent(image: image, name: name)
+        cell.displayContent(image: image, name: name ?? "Error")
         
         return cell
     }
+    
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: FindCollectionView!
@@ -57,13 +61,26 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     func updateSearchResults(for searchController: UISearchController)
     {
         let searchString = searchBar.text
-        print(searchString!)
         
         //Get filtered results based on search string
-        //TODO
         
-        collectionView.reloadData()
-        
+        userService.getAllUsers { (users, error) in
+            if let users = users {
+                self.mentors = users
+                self.searchForMatches(searchString: searchString ?? "")
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    //Client-side searching
+    func searchForMatches(searchString: String) {
+        searchResults.removeAll()
+        for item in mentors {
+            if (item.name?.contains(searchString)) ?? false {
+                searchResults.append(item)
+            }
+        }
     }
     
     //User begins typing in search bar
@@ -82,14 +99,20 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchBar.resignFirstResponder()
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "mentorInfo" {
+            if let indexPath = collectionView.indexPathsForSelectedItems {
+                let vc = segue.destination as! MentorInfoViewController
+                vc.user = self.searchResults[indexPath[0][1]]
+            }
+        }
     }
-    */
+    
 
 }

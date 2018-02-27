@@ -62,7 +62,7 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     func updateSearchResults(for searchController: UISearchController)
     {
         let searchString = searchBar.text
-        
+
         //Get filtered results based on search string
         
         userService.getAllUsers { (users, error) in
