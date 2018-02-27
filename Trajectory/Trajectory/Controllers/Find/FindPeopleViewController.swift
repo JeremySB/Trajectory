@@ -11,6 +11,7 @@ import UIKit
 class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
     
     var searchResults : [User] = []
+    var mentors : [User] = []
     let searchController = UISearchController(searchResultsController: nil)
     
     lazy var userService: UserService = FirebaseUserService()
@@ -61,17 +62,27 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     func updateSearchResults(for searchController: UISearchController)
     {
         let searchString = searchBar.text
-        print(searchString!)
         
         //Get filtered results based on search string
         
         userService.getAllUsers { (users, error) in
             if let users = users {
-                self.searchResults = users
+                self.mentors = users
+                self.searchForMatches(searchString: searchString ?? "")
                 self.collectionView.reloadData()
             }
         }
         
+    }
+    
+    //Client-side searching
+    func searchForMatches(searchString: String) {
+        searchResults.removeAll()
+        for item in mentors {
+            if (item.name?.contains(searchString)) ?? false {
+                searchResults.append(item)
+            }
+        }
     }
     
     //User begins typing in search bar
