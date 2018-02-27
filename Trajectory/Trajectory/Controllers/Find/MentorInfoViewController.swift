@@ -19,28 +19,28 @@ class MentorInfoViewController: UIViewController {
         if user?.name != nil {
             MentorName.text = user?.name
         } else {
-            MentorName.text = "Error: Nil Name"
+            MentorName.text = "Error: No Name"
         }
         if user?.organization != nil {
             MentorOrg.text = user?.organization
 
         } else {
-            MentorOrg.text = "Error: Nil Organization"
+            MentorOrg.text = "Error: No Organization"
         }
         if user?.hobbies != nil {
             MentorHobbies.text = user?.hobbies
         } else {
-            MentorHobbies.text = "Error: Nil Hobbies"
+            MentorHobbies.text = "Error: No Hobbies"
         }
         if user?.professionalInterests != nil {
             MentorProfessionalInterests.text = user?.professionalInterests
         } else {
-            MentorProfessionalInterests.text = "Error: Nil Professional Interests"
+            MentorProfessionalInterests.text = "Error: No Professional Interests"
         }
         if user?.denomination != nil {
             MentorDenomination.text = user?.denomination
         } else {
-            MentorDenomination.text = "Error: Nil Denomination"
+            MentorDenomination.text = "Error: No Denomination"
         }
     }
 
@@ -61,13 +61,22 @@ class MentorInfoViewController: UIViewController {
         //https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/
         let alert = UIAlertController(title: "Please confirm that you want to send this mentee request", message: "", preferredStyle: .actionSheet)
         
-        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
+        //https://stackoverflow.com/questions/24190277/writing-handler-for-uialertaction
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: sendMenteeRequest))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
     }
     
-
+    func sendMenteeRequest(alert: UIAlertAction!) {
+        //Send mentee request to specified mentor
+        //TODO
+        
+        //Navigate back to search screen (dismiss mentor information screen)
+        //https://stackoverflow.com/questions/28760541/programmatically-go-back-to-previous-viewcontroller-in-swift
+        navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
