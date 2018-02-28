@@ -230,7 +230,7 @@
                                     <outlet property="dataSource" destination="SaT-ML-I6v" id="Amj-E8-wkv"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Search for people by organization" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t35-Na-Lb9">
+                            <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Search for people" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t35-Na-Lb9">
                                 <rect key="frame" x="0.0" y="58" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
