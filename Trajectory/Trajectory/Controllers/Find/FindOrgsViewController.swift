@@ -100,6 +100,13 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchBar.resignFirstResponder()
     }
     
+    //User taps cancel button
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        updateSearchResults(for: searchController)
+        searchBar.resignFirstResponder()
+    }
+    
     
     // MARK: - Navigation
 

@@ -18,11 +18,11 @@ class MentorInfoViewController: UIViewController {
         super.viewDidLoad()
 
         //Load mentor information
-        MentorName.text = user?.name ?? "Error: No Name"
-        MentorOrg.text = user?.organization ?? "Error: No Organization"
-        MentorHobbies.text = user?.hobbies ?? "Error: No Hobbies"
-        MentorProfessionalInterests.text = user?.professionalInterests ?? "Error: No Professional Interests"
-        MentorDenomination.text = user?.denomination ?? "Error: No Denomination"
+        MentorName.text = user?.name ?? "No Name"
+        MentorOrg.text = user?.organization ?? "No Organization"
+        MentorHobbies.text = user?.hobbies ?? "No Hobbies"
+        MentorProfessionalInterests.text = user?.professionalInterests ?? "No Professional Interests"
+        MentorDenomination.text = user?.denomination ?? "No Denomination"
     }
 
     override func didReceiveMemoryWarning() {
