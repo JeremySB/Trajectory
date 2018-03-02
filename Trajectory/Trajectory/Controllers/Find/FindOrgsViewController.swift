@@ -15,7 +15,7 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     let initialSearchTerm : String = ""
     let searchController = UISearchController(searchResultsController: nil)
     
-    //Temporary user's organization array until actually implemented
+    //TODO - Temporary user's organization array until actually implemented
     let userOrganizations = ["Men's Bible Study", "No Organization"]
     
     lazy var userService: UserService = FirebaseUserService()
