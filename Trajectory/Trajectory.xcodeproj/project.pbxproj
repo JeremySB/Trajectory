@@ -78,6 +78,7 @@
 		D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */; };
 		D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */; };
 		D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */; };
+		D6DC06C720476CE5001CB874 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC06C620476CE5001CB874 /* SectionHeaderCollectionReusableView.swift */; };
 		D6E00081202D1C03005A4099 /* SettingsScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */; };
 		E917B0813906C4385AD8EC11 /* Pods_Trajectory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E0D814C559FB2421C88D8A /* Pods_Trajectory.framework */; };
 /* End PBXBuildFile section */
@@ -183,6 +184,7 @@
 		D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestDetailsViewController.swift; sourceTree = "<group>"; };
 		D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
+		D6DC06C620476CE5001CB874 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenTests.swift; sourceTree = "<group>"; };
 		E50D8EAA59C43689C15087D5 /* Pods-TrajectoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryUITests/Pods-TrajectoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -317,6 +319,7 @@
 				3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */,
 				3FB437412031376A00821A91 /* FindPeopleViewController.swift */,
 				3FB437432031377B00821A91 /* FindOrgsViewController.swift */,
+				D6DC06C620476CE5001CB874 /* SectionHeaderCollectionReusableView.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -835,6 +838,7 @@
 				3FB4375220313B7D00821A91 /* MyMentorCheckinViewController.swift in Sources */,
 				D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */,
 				D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */,
+				D6DC06C720476CE5001CB874 /* SectionHeaderCollectionReusableView.swift in Sources */,
 				3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */,
 				D60C7CC8201AD4BF00184F8A /* UpdateMyBioViewController.swift in Sources */,
 				D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */,

@@ -10,10 +10,13 @@ import UIKit
 
 class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
 
-    var searchResults : [User] = []
+    var searchResults = [[String : [User]]]()
     var mentors : [User] = []
     let initialSearchTerm : String = ""
     let searchController = UISearchController(searchResultsController: nil)
+    
+    //Temporary user's organization array until actually implemented
+    let userOrganizations = ["Men's Bible Study", "No Organization"]
     
     lazy var userService: UserService = FirebaseUserService()
     
@@ -38,15 +41,19 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         // Dispose of any resources that can be recreated.
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return searchResults.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Array(searchResults[section])[0].value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
-        
-        let name = searchResults[indexPath.row].name
+
+        let name = Array(searchResults[indexPath.section])[0].value[indexPath.row].name
         let image = UIImage(named:"profileImg")!
         
         cell.displayContent(image: image, name: name ?? "Error")
@@ -76,11 +83,41 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     //Client-side searching
     func searchForMatches(searchString: String) {
-        searchResults.removeAll()
+        //Create general search items array
+        var searchItems : [User] = []
+        //Filter through mentors using search string
         for item in mentors {
             if (item.name?.contains(searchString)) ?? false {
-                searchResults.append(item)
+                searchItems.append(item)
             }
+        }
+        filterMatchesByOrganization(searchItems: searchItems)
+    }
+    
+    //Client-side organization filtering
+    func filterMatchesByOrganization(searchItems : [User]) {
+        //Clear old search results
+        searchResults.removeAll()
+        //Setup searchResults array with user's organizations
+        for org in userOrganizations {
+            let myDictionary: [String: [User]] = [org : []] as! [String : [User]]
+            searchResults.append(myDictionary)
+        }
+        //Sort search items by organization into searchResults array
+        for item in searchItems {
+            //Only add mentor if he is a part of one of the user's organizations
+            if let location = userOrganizations.index(of: (item.organization ?? "No Organization")) {
+                searchResults[location][(item.organization ?? "No Organization")]!.append(item)
+            }
+        }
+        //Discard any dictionaries with no results
+        var counter = 0
+        for org in searchResults {
+            if Array(org)[0].value.count == 0 {
+                searchResults.remove(at: counter)
+                counter = counter - 1
+            }
+            counter = counter + 1
         }
     }
     
@@ -107,6 +144,16 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchBar.resignFirstResponder()
     }
     
+    //Set section title to be corresponding organization's name
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "SectionHeader", for: indexPath as IndexPath) as! SectionHeaderCollectionReusableView
+        
+        header.headerLabel.text = Array(searchResults[indexPath.section])[0].key
+        
+        return header
+        
+    }
+    
     
     // MARK: - Navigation
 
@@ -117,10 +164,8 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         if segue.identifier == "mentorInfo" {
             if let indexPath = collectionView.indexPathsForSelectedItems {
                 let vc = segue.destination as! MentorInfoViewController
-                vc.user = self.searchResults[indexPath[0][1]]
+                vc.user = Array(searchResults[indexPath[0][0]])[0].value[indexPath[0][1]] //self.searchResults[indexPath[0][1]]
             }
         }
     }
-    
-
 }
