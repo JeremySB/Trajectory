@@ -44,7 +44,7 @@ UINavigationControllerDelegate {
             self.user = user
             
             self.userName.text = user.name
-            self.userOrganization.text = user.organization ?? "No Organization"
+            //self.userOrganization.text = user.organization ?? "No Organization"
         }
     }
     

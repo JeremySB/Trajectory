@@ -10,7 +10,6 @@ import Foundation
 
 class User: Codable {
     var name: String?
-    var organization: String?
     var hobbies: String?
     var professionalInterests: String?
     var denomination: String?
@@ -29,6 +28,6 @@ class User: Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case name, organization, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress
+        case name, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress
     }
 }

@@ -17,7 +17,7 @@ class MenteeRequestDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         nameLabel.text = menteeRequest?.mentee.name
-        organizationlabel.text = menteeRequest?.mentee.organization
+        //organizationlabel.text = menteeRequest?.mentee.organization
         userHobbies.text = menteeRequest?.mentee.hobbies
         userProfessionalInterests.text = menteeRequest?.mentee.professionalInterests
         userDenomination.text = menteeRequest?.mentee.denomination

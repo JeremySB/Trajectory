@@ -17,7 +17,7 @@ class SetDurationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         nameLabel.text = menteeRequest?.mentee.name
-        organizationLabel.text = menteeRequest?.mentee.organization
+        organizationLabel.text = ""
     }
 
     override func didReceiveMemoryWarning() {

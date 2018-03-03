@@ -16,9 +16,10 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     let searchController = UISearchController(searchResultsController: nil)
     
     //TODO - Temporary user's organization array until actually implemented
-    let userOrganizations = ["Men's Bible Study", "No Organization"]
+    var userOrganizations = [Organization]()
     
     lazy var userService: UserService = FirebaseUserService()
+    lazy var orgService: OrganizationService = FirebaseOrganizationService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,16 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchController.searchBar.sizeToFit()
         
         searchController.searchBar.becomeFirstResponder()
+        
+        // TODO: remove. only for testing
+        orgService.joinOrganization("Test Org", completion: nil)
+        
+        
+        orgService.getCurrentOrganizations { (orgs, error) in
+            if let orgs = orgs {
+                self.userOrganizations = orgs
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,15 +111,15 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchResults.removeAll()
         //Setup searchResults array with user's organizations
         for org in userOrganizations {
-            let myDictionary: [String: [User]] = [org : []] as! [String : [User]]
+            let myDictionary: [String: [User]] = [org.name ?? "" : []] as! [String : [User]]
             searchResults.append(myDictionary)
         }
         //Sort search items by organization into searchResults array
         for item in searchItems {
             //Only add mentor if he is a part of one of the user's organizations
-            if let location = userOrganizations.index(of: (item.organization ?? "No Organization")) {
-                searchResults[location][(item.organization ?? "No Organization")]!.append(item)
-            }
+            //if let location = userOrganizations.index(of: (item.organization ?? "No Organization")) {
+            //    searchResults[location][("No Organization")]!.append(item)
+            //}
         }
         //Discard any dictionaries with no results
         var counter = 0

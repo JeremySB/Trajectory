@@ -19,7 +19,7 @@ class MentorInfoViewController: UIViewController {
 
         //Load mentor information
         MentorName.text = user?.name ?? "No Name"
-        MentorOrg.text = user?.organization ?? "No Organization"
+        //MentorOrg.text = user?.organization ?? "No Organization"
         MentorHobbies.text = user?.hobbies ?? "No Hobbies"
         MentorProfessionalInterests.text = user?.professionalInterests ?? "No Professional Interests"
         MentorDenomination.text = user?.denomination ?? "No Denomination"

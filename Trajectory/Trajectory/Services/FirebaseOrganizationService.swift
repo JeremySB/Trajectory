@@ -79,7 +79,9 @@ class FirebaseOrganizationService: OrganizationService {
     
     func joinOrganization(_ id: String, completion: ((OrganizationServiceError?) -> Void)?) {
         if let uid = Auth.auth().currentUser?.uid {
-            db.collection("users").document(uid).collection("organizations").addDocument(data: [organizationIdKey: id], completion: { (error) in
+            db.collection("users").document(uid).collection("organizations").document(id)
+                .setData([organizationIdKey: id, "joinDate": FieldValue.serverTimestamp()],
+                         completion: { (error) in
                 if let error = error {
                     completion?(.Misc(error.localizedDescription))
                 } else {
