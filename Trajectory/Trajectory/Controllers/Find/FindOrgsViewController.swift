@@ -111,7 +111,7 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchResults.removeAll()
         //Setup searchResults array with user's organizations
         for org in userOrganizations {
-            let myDictionary: [String: [User]] = [org.name ?? "" : []] as! [String : [User]]
+            let myDictionary: [String: [User]] = [org.name ?? "" : []]
             searchResults.append(myDictionary)
         }
         //Sort search items by organization into searchResults array

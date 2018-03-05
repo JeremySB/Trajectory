@@ -32,6 +32,7 @@
 		3FAD0DC12024F77E00DC5713 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC02024F77E00DC5713 /* UserCollectionViewCell.swift */; };
 		3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */; };
 		3FAD0DC52025156F00DC5713 /* MentorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */; };
+		3FB2746E204B7BED00251B6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2746D204B7BED00251B6D /* Constants.swift */; };
 		3FB4374020312B0F00821A91 /* CommViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4373F20312B0F00821A91 /* CommViewController.swift */; };
 		3FB437422031376A00821A91 /* FindPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB437412031376A00821A91 /* FindPeopleViewController.swift */; };
 		3FB437442031377B00821A91 /* FindOrgsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB437432031377B00821A91 /* FindOrgsViewController.swift */; };
@@ -130,6 +131,7 @@
 		3FAD0DC02024F77E00DC5713 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FAD0DC220250C5300DC5713 /* FindCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCollectionView.swift; sourceTree = "<group>"; };
 		3FAD0DC42025156F00DC5713 /* MentorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorInfoViewController.swift; sourceTree = "<group>"; };
+		3FB2746D204B7BED00251B6D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3FB4373F20312B0F00821A91 /* CommViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommViewController.swift; sourceTree = "<group>"; };
 		3FB437412031376A00821A91 /* FindPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleViewController.swift; sourceTree = "<group>"; };
 		3FB437432031377B00821A91 /* FindOrgsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrgsViewController.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */,
 				D6AAA300201EB90100789BB6 /* Assets.xcassets */,
 				3F1858D920311C09007FC818 /* CodableFirebaseCustom.swift */,
+				3FB2746D204B7BED00251B6D /* Constants.swift */,
 			);
 			path = Trajectory;
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 				D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */,
 				3FB4375420313B8C00821A91 /* MyMentorOptionsViewController.swift in Sources */,
 				3F03585D2045ED8100BECAB2 /* ConnectionService.swift in Sources */,
+				3FB2746E204B7BED00251B6D /* Constants.swift in Sources */,
 				3FB437422031376A00821A91 /* FindPeopleViewController.swift in Sources */,
 				D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */,
 				3FB92CFF203BA03700AA2893 /* OrganizationService.swift in Sources */,
