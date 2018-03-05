@@ -22,4 +22,9 @@ class Goal: Codable {
     var startDate: Date?
     var endDate: Date?
     
+    var id: String? = nil
+    
+    enum CodingKeys: String, CodingKey {
+        case owner, totalProgress, currentProgress, title, targetPerDay, targetPerWeek, targetPerMonth, startDate, endDate
+    }
 }
