@@ -38,6 +38,7 @@ class FirebaseGoalsService: GoalsService {
             for goal in snapshot.documents {
                 do {
                     let goalDecoded = try FirestoreDecoder().decode(Goal.self, from: goal.data())
+                    goalDecoded.id = goal.documentID
                     goals.append(goalDecoded)
                 }
                 catch let error {
@@ -86,6 +87,7 @@ class FirebaseGoalsService: GoalsService {
             var goals = [Goal]()
             for goal in snapshot.documents {
                 if let goalDecoded = try? FirestoreDecoder().decode(Goal.self, from: goal.data()) {
+                    goalDecoded.id = goal.documentID
                     goals.append(goalDecoded)
                 }
             }
