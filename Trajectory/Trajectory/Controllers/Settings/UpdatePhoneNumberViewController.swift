@@ -33,7 +33,6 @@ class UpdatePhoneNumberViewController: UIViewController {
     }
     
     @IBOutlet weak var userPhoneNumber: UITextField!
-    
     @IBOutlet weak var phoneNumberErrorMessage: UILabel!
     
     @IBAction func doneButton(_ sender: Any) {
