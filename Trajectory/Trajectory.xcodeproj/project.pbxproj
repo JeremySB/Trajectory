@@ -23,8 +23,10 @@
 		3F190320202CABFE0002B74B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031F202CABFE0002B74B /* UserService.swift */; };
 		3F190323202CADBB0002B74B /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F190322202CADBB0002B74B /* FirebaseUserService.swift */; };
 		3F2F6B35202CB59800214772 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */; };
-		3F4666AB20237BC400C35818 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */; };
+		3F4666AB20237BC400C35818 /* GoalTableViewCellClosed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCellClosed.swift */; };
 		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
+		3F6969412040884A004CCE5D /* GoalTableViewCellExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */; };
+		3F69694320408CCE004CCE5D /* GoalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69694220408CCE004CCE5D /* GoalsTableViewCell.swift */; };
 		3F8B5CFE20350D5400D864AC /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8B5CFD20350D5400D864AC /* Authentication.storyboard */; };
 		3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */; };
 		3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */; };
@@ -122,8 +124,10 @@
 		3F19031F202CABFE0002B74B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		3F190322202CADBB0002B74B /* FirebaseUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserService.swift; sourceTree = "<group>"; };
 		3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
-		3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
+		3F4666AA20237BC400C35818 /* GoalTableViewCellClosed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCellClosed.swift; sourceTree = "<group>"; };
 		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCellExpanded.swift; sourceTree = "<group>"; };
+		3F69694220408CCE004CCE5D /* GoalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewCell.swift; sourceTree = "<group>"; };
 		3F8B5CFD20350D5400D864AC /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPageViewController.swift; sourceTree = "<group>"; };
 		3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
@@ -289,8 +293,10 @@
 				3FA16AFB201824DB00D142E5 /* GoalsPageViewController.swift */,
 				3FA16AFD201A2F6B00D142E5 /* GoalsViewController.swift */,
 				3F0003752020DA62002BA17D /* AddGoalViewController.swift */,
-				3F4666AA20237BC400C35818 /* GoalTableViewCell.swift */,
+				3F4666AA20237BC400C35818 /* GoalTableViewCellClosed.swift */,
 				3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */,
+				3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */,
+				3F69694220408CCE004CCE5D /* GoalsTableViewCell.swift */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -822,7 +828,7 @@
 			files = (
 				3F190323202CADBB0002B74B /* FirebaseUserService.swift in Sources */,
 				3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */,
-				3F4666AB20237BC400C35818 /* GoalTableViewCell.swift in Sources */,
+				3F4666AB20237BC400C35818 /* GoalTableViewCellClosed.swift in Sources */,
 				3F0003762020DA62002BA17D /* AddGoalViewController.swift in Sources */,
 				3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */,
 				3FA16AFC201824DB00D142E5 /* GoalsPageViewController.swift in Sources */,
@@ -875,8 +881,10 @@
 				3FAD0DC52025156F00DC5713 /* MentorInfoViewController.swift in Sources */,
 				3FBC3C5A201EF9C6006FA1AB /* PasswordAuthenticationViewController.swift in Sources */,
 				3FB4374020312B0F00821A91 /* CommViewController.swift in Sources */,
+				3F69694320408CCE004CCE5D /* GoalsTableViewCell.swift in Sources */,
 				3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */,
 				3F1903192029379F0002B74B /* User.swift in Sources */,
+				3F6969412040884A004CCE5D /* GoalTableViewCellExpanded.swift in Sources */,
 				3F1858DA20311C09007FC818 /* CodableFirebaseCustom.swift in Sources */,
 				3F19031C202BB1720002B74B /* AuthenticationService.swift in Sources */,
 			);

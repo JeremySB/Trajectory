@@ -72,6 +72,23 @@ class FirebaseGoalsService: GoalsService {
         completion?(nil)
     }
     
+    func removeGoal(_ goal: Goal, completion: ((GoalsServiceError?) -> Void)?) {
+        guard let uid = Auth.auth().currentUser?.uid else{
+            completion?(.NotLoggedIn)
+            return
+        }
+        guard let id = goal.id else{
+            completion?(.NotLoggedIn)
+            return
+        }
+        db.collection("goals").document(id).delete { (error) in
+            if let error = error {
+                completion?(.Misc(error.localizedDescription))
+            }
+            completion?(nil)
+        }
+    }
+    
     func getGoals(completion: @escaping ([Goal]?, GoalsServiceError?) -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else {
             completion(nil, .NotLoggedIn)

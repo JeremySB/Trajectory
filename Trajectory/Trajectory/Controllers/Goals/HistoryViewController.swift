@@ -10,6 +10,7 @@ import UIKit
 import JTAppleCalendar
 
 class HistoryViewController: UIViewController {
+    @IBOutlet weak var Cal: JTAppleCalendarView!
     let formatter = DateFormatter()
 
     override func viewDidLoad() {
@@ -58,6 +59,7 @@ extension HistoryViewController: JTAppleCalendarViewDelegate {
         } else {
             myCustomCell.dateLabel.textColor = UIColor.gray
         }
+        
         //if testCalendar.isDateInToday(date) {
         //    myCustomCell.backgroundColor = UIColor.red
         //} else {

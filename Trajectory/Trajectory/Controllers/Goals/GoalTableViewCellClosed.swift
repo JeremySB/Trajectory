@@ -8,16 +8,19 @@
 
 import UIKit
 
-class GoalTableViewCell: UITableViewCell {
+class GoalTableViewCellClosed: UITableViewCell, GoalsTableViewCell{
+    weak var goal: Goal!
     
+    lazy var goalsService: GoalsService = FirebaseGoalsService()
     
-    @IBOutlet weak var goalTitle: UILabel!
-    
-    @IBOutlet weak var goalProgress: UIProgressView!
-    
-    @IBAction func expandGoalOptions(_ sender: Any) {
+    weak var parent: GoalsViewController!
+    var cellNum: Int = -1
+    @IBOutlet weak var Title: UILabel!
+    @IBOutlet weak var Progress: UIProgressView!
+    @IBAction func Expand(_ sender: Any) {
+        parent.setExpandedRow(row: cellNum)
     }
-    
+    /*
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,6 +30,6 @@ class GoalTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
+    }*/
 
 }

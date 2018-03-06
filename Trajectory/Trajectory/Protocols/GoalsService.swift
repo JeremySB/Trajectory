@@ -13,6 +13,8 @@ protocol GoalsService {
     
     func addGoalsListener(_: @escaping ([Goal]?, GoalsServiceError?) -> Void)
     
+    func removeGoal(_ : Goal, completion: ((GoalsServiceError?) -> Void)?)
+    
 }
 
 enum GoalsServiceError: Error {
