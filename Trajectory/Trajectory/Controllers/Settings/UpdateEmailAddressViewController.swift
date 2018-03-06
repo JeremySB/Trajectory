@@ -47,6 +47,13 @@ class UpdateEmailAddressViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    //Display invalid email error message
+    func displayErrorMessage() {
+        emailErrorMessage.isHidden = false
+        userEmail.becomeFirstResponder()
+    }
+    
      // MARK: - Navigation
 /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
