@@ -11,6 +11,7 @@ import UIKit
 class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
 
     var searchResults = [[String : [User]]]()
+    var usersPerOrganization = [Organization : [User]]()
     var mentors : [User] = []
     let initialSearchTerm : String = ""
     let searchController = UISearchController(searchResultsController: nil)
@@ -38,13 +39,10 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         // TODO: remove. only for testing
         orgService.joinOrganization("Test Org", completion: nil)
-        
-        
-        orgService.getCurrentOrganizations { (orgs, error) in
-            if let orgs = orgs {
-                self.userOrganizations = orgs
-            }
-        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        populateOrgsAndUsers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,51 +74,50 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: FindCollectionView!
     
+    func populateOrgsAndUsers() {
+        orgService.getCurrentOrganizations { (orgs, error) in
+            if let orgs = orgs {
+                self.userOrganizations = orgs
+                
+                let dispatch = DispatchGroup()
+                
+                for org in orgs {
+                    guard let orgId = org.id else { continue }
+                    dispatch.enter()
+                    self.orgService.getMembers(of: [orgId], completion: { (users, errors) in
+                        self.usersPerOrganization[org] = users
+                        dispatch.leave()
+                    })
+                }
+                dispatch.notify(queue: .main, execute: {
+                    self.collectionView.reloadData()
+                })
+            }
+        }
+    }
+    
     //Update search results
     func updateSearchResults(for searchController: UISearchController)
     {
         let searchString = searchBar.text
         
         //Get filtered results based on search string
-        
-        userService.getAllUsers { (users, error) in
-            if let users = users {
-                self.mentors = users
-                self.searchForMatches(searchString: searchString ?? "")
-                self.collectionView.reloadData()
-            }
-        }
+        self.searchForMatches(searchString: searchString ?? "")
+        self.collectionView.reloadData()
     }
     
     //Client-side searching
     func searchForMatches(searchString: String) {
-        //Create general search items array
-        var searchItems : [User] = []
-        //Filter through mentors using search string
-        for item in mentors {
-            if (item.name?.contains(searchString)) ?? false {
-                searchItems.append(item)
-            }
-        }
-        filterMatchesByOrganization(searchItems: searchItems)
-    }
-    
-    //Client-side organization filtering
-    func filterMatchesByOrganization(searchItems : [User]) {
-        //Clear old search results
         searchResults.removeAll()
         //Setup searchResults array with user's organizations
-        for org in userOrganizations {
-            let myDictionary: [String: [User]] = [org.name ?? "" : []]
-            searchResults.append(myDictionary)
+        for item in self.usersPerOrganization {
+            let userResultsInOrg: [String: [User]] = [item.key.name ?? "" : item.value.filter({ (user) -> Bool in
+                user.name?.contains(searchString) ?? false
+            })]
+            
+            searchResults.append(userResultsInOrg)
         }
-        //Sort search items by organization into searchResults array
-        for item in searchItems {
-            //Only add mentor if he is a part of one of the user's organizations
-            //if let location = userOrganizations.index(of: (item.organization ?? "No Organization")) {
-            //    searchResults[location][("No Organization")]!.append(item)
-            //}
-        }
+        
         //Discard any dictionaries with no results
         var counter = 0
         for org in searchResults {

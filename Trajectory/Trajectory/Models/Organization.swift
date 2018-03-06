@@ -10,4 +10,25 @@ import Foundation
 
 class Organization: Codable {
     var name: String?
+    
+    var id: String? = nil
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+    }
+}
+
+extension Organization: Hashable {
+    var hashValue: Int {
+        if let id = id {
+            return id.hashValue
+        }
+        return "".hashValue
+    }
+    
+    static func ==(lhs: Organization, rhs: Organization) -> Bool {
+        return lhs.name == rhs.name && lhs.id == rhs.id
+    }
+    
+    
 }

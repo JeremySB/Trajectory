@@ -55,6 +55,7 @@ class FirebaseOrganizationService: OrganizationService {
         db.collection(FirestoreValues.organizationCollection).document(id).getDocument(completion: { (orgSnapshot, error) in
             do {
                 let orgDecoded = try FirestoreDecoder().decode(Organization.self, from: orgSnapshot!.data()!)
+                orgDecoded.id = id
                 completion(orgDecoded, nil)
             } catch {
                 completion(nil, .InvalidData(error.localizedDescription))
@@ -71,6 +72,7 @@ class FirebaseOrganizationService: OrganizationService {
             var orgs = [Organization]()
             for org in snapshot.documents {
                 if let orgDecoded = try? FirestoreDecoder().decode(Organization.self, from: org.data()) {
+                    orgDecoded.id = org.documentID
                     orgs.append(orgDecoded)
                 }
             }

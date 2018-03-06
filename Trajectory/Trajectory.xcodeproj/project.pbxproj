@@ -461,9 +461,9 @@
 				3FC53D821FF03BA6000B82E3 /* Sources */,
 				3FC53D831FF03BA6000B82E3 /* Frameworks */,
 				3FC53D841FF03BA6000B82E3 /* Resources */,
-				3F8EF0E32031FCE500F7CFDF /* ShellScript */,
 				C33193E9563073711AC6B1EA /* [CP] Embed Pods Frameworks */,
 				71346B0C2AE98DE36C659754 /* [CP] Copy Pods Resources */,
+				3F8EF0E32031FCE500F7CFDF /* ShellScript */,
 			);
 			buildRules = (
 			);

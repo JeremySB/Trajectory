@@ -13,7 +13,7 @@ import CodableFirebase
 class FirebaseUserService: UserService {
     
     func getAllUsers(completion: @escaping ([User]?, UserServiceError?) -> Void) {
-        Firestore.firestore().collection("users").getDocuments { (docs, error) in
+        Firestore.firestore().collection(FirestoreValues.userCollection).getDocuments { (docs, error) in
             if let error = error {
                 return completion(nil, UserServiceError.Misc(error.localizedDescription))
             }
@@ -37,7 +37,7 @@ class FirebaseUserService: UserService {
             completion?(.NotLoggedIn)
             return
         }
-        Firestore.firestore().collection("users").document(uid).setData(userEncoded, options: SetOptions.merge()) { (error) in
+        Firestore.firestore().collection(FirestoreValues.userCollection).document(uid).setData(userEncoded, options: SetOptions.merge()) { (error) in
             if let error = error {
                 print(error.localizedDescription)
                 completion?(.Misc(error.localizedDescription))
@@ -58,7 +58,7 @@ class FirebaseUserService: UserService {
     }
     
     func getUser(uid: String, completion: @escaping (User?, UserServiceError?) -> Void) {
-        Firestore.firestore().collection("users").document(uid).getDocument { (doc, error) in
+        Firestore.firestore().collection(FirestoreValues.userCollection).document(uid).getDocument { (doc, error) in
             if let error = error {
                 return completion(nil, UserServiceError.Misc(error.localizedDescription))
             }
@@ -78,7 +78,7 @@ class FirebaseUserService: UserService {
     }
     
     func getMentee(uid: String, completion: @escaping (Mentee?, UserServiceError?) -> Void) {
-        Firestore.firestore().collection("users").document(uid).getDocument { (doc, error) in
+        Firestore.firestore().collection(FirestoreValues.userCollection).document(uid).getDocument { (doc, error) in
             if let error = error {
                 return completion(nil, UserServiceError.Misc(error.localizedDescription))
             }

@@ -81,6 +81,7 @@ class InitialAuthenticationViewControllerTests: XCTestCase {
         XCTAssertFalse(controllerUnderTest.validateEmail(enteredEmail: "@test"))
         XCTAssertFalse(controllerUnderTest.validateEmail(enteredEmail: "@test."))
         XCTAssertFalse(controllerUnderTest.validateEmail(enteredEmail: "test@test."))
+        
     }
     
     func testEmailWithPasswordProvider() {

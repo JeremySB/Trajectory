@@ -27,7 +27,7 @@ class FirebaseGoalsService: GoalsService {
             return
         }
         
-        let listener = db.collection("goals").whereField("owner", isEqualTo: uid).addSnapshotListener { (snapshot, error) in
+        let listener = db.collection(FirestoreValues.goalCollection).whereField("owner", isEqualTo: uid).addSnapshotListener { (snapshot, error) in
             if let error = error {
                 return update(nil, .Misc(error.localizedDescription))
             }
@@ -67,7 +67,7 @@ class FirebaseGoalsService: GoalsService {
         
         goalEncoded["dateCreated"] = FieldValue.serverTimestamp()
         
-        db.collection("goals").addDocument(data: goalEncoded)
+        db.collection(FirestoreValues.goalCollection).addDocument(data: goalEncoded)
         
         completion?(nil)
     }
@@ -77,7 +77,7 @@ class FirebaseGoalsService: GoalsService {
             completion(nil, .NotLoggedIn)
             return
         }
-        db.collection("goals").whereField("owner", isEqualTo: uid).getDocuments { (snapshot, error) in
+        db.collection(FirestoreValues.goalCollection).whereField("owner", isEqualTo: uid).getDocuments { (snapshot, error) in
             if let error = error {
                 return completion(nil, .Misc(error.localizedDescription))
             }
