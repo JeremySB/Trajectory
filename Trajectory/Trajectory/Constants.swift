@@ -7,6 +7,10 @@
 //
 
 struct FirestoreValues {
+    // goal document keys
+    static let goalDateCreated = "dateCreated"
+    static let goalDateUpdated = "dateUpdated"
+    
     // connection document keys
     static let connectionSentRequestDate = "sentRequestDate"
     

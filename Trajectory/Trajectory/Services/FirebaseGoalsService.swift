@@ -65,11 +65,31 @@ class FirebaseGoalsService: GoalsService {
             return
         }
         
-        goalEncoded["dateCreated"] = FieldValue.serverTimestamp()
+        goalEncoded[FirestoreValues.goalDateCreated] = FieldValue.serverTimestamp()
         
         db.collection(FirestoreValues.goalCollection).addDocument(data: goalEncoded)
         
         completion?(nil)
+    }
+    
+    func editGoal(_ goal: Goal, completion: ((GoalsServiceError?) -> Void)?) {
+        guard let _ = Auth.auth().currentUser?.uid else {
+            completion?(.NotLoggedIn)
+            return
+        }
+        guard let goalId = goal.id, var goalEncoded = try? FirestoreEncoder().encode(goal) else {
+            completion?(.InvalidData)
+            return
+        }
+        goalEncoded[FirestoreValues.goalDateUpdated] = FieldValue.serverTimestamp()
+        db.collection(FirestoreValues.goalCollection).document(goalId).setData(goalEncoded) { (error) in
+            if let error = error {
+                completion?(.Misc(error.localizedDescription))
+            }
+            else {
+                completion?(nil)
+            }
+        }
     }
     
     func removeGoal(_ goal: Goal, completion: ((GoalsServiceError?) -> Void)?) {

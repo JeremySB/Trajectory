@@ -15,6 +15,7 @@ protocol GoalsService {
     
     func removeGoal(_ : Goal, completion: ((GoalsServiceError?) -> Void)?)
     
+    func editGoal(_ goal: Goal, completion: ((GoalsServiceError?) -> Void)?)
 }
 
 enum GoalsServiceError: Error {
