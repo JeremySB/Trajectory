@@ -95,6 +95,4 @@ class FirebaseGoalsService: GoalsService {
             completion(goals, nil)
         }
     }
-    
-    
 }

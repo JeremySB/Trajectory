@@ -12,32 +12,23 @@ import Firebase
 class MenteeRequestListTableViewController: UITableViewController {
 
     //An array of the user's mentee requests
-    var menteeRequests: [MenteeRequest] = [MenteeRequest(by: Mentee(testname: "First Last"))]
-    var userService: UserService = FirebaseUserService()
+    var menteeRequests = [MenteeRequest]()
+    lazy var connectionService: ConnectionService = FirebaseConnectionService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadMenteeRequests()
+        connectionService.addOpenMenteeRequestsListener { (requests, error) in
+            if let requests = requests {
+                self.menteeRequests = requests
+                self.tableView.reloadData()
+            }
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
-    func loadMenteeRequests() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        userService.getMentee(uid: uid) { (mentee, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            if let mentee = mentee {
-                self.menteeRequests.append(MenteeRequest(by: mentee))
-                self.tableView.reloadData()
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {

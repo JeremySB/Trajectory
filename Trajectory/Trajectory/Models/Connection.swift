@@ -10,4 +10,10 @@ class Connection: Codable {
     var mentee: String?
     var mentor: String?
     var mentorAccepted: Bool?
+    
+    var id: String? = nil
+    
+    enum CodingKeys: String, CodingKey {
+        case mentee, mentor, mentorAccepted
+    }
 }

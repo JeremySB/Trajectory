@@ -8,6 +8,7 @@
 
 protocol ConnectionService {
     func sendMentorRequest(to user: String, completion: ((ConnectionServiceError?) -> Void)?)
+    func addOpenMenteeRequestsListener(_ update: @escaping ([MenteeRequest]?, ConnectionServiceError?) -> Void)
 }
 
 enum ConnectionServiceError: Error {

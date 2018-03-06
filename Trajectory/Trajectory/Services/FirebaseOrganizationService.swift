@@ -118,7 +118,7 @@ class FirebaseOrganizationService: OrganizationService {
     func joinOrganization(_ id: String, completion: ((OrganizationServiceError?) -> Void)?) {
         if let uid = Auth.auth().currentUser?.uid {
             db.collection(FirestoreValues.membershipCollection).document(uid+" "+id)
-                .setData([FirestoreValues.membershipOrgId: id, FirestoreValues.membershipUid: uid, "joinDate": FieldValue.serverTimestamp()],
+                .setData([FirestoreValues.membershipOrgId: id, FirestoreValues.membershipUid: uid, FirestoreValues.membershipJoinDate: FieldValue.serverTimestamp()],
                          completion: { (error) in
                 if let error = error {
                     completion?(.Misc(error.localizedDescription))
