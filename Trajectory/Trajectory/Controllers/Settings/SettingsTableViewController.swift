@@ -88,7 +88,7 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     
     func presentCropViewController() {
         guard let image: UIImage = profileImage.image else {return}
-        let cropViewController = CropViewController(image: image)
+        let cropViewController = CropViewController(image : image)
         cropViewController.delegate = self
         present(cropViewController, animated: true, completion: nil)
     }

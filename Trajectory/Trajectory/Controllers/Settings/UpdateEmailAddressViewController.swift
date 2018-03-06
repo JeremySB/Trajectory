@@ -33,6 +33,8 @@ class UpdateEmailAddressViewController: UIViewController {
     }
     
     @IBOutlet weak var userEmail: UITextField!
+    @IBOutlet weak var emailErrorMessage: UILabel!
+    
     
     @IBAction func doneButton(_ sender: Any) {
         let user = User()

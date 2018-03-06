@@ -34,16 +34,25 @@ class UpdateNameViewController: UIViewController {
     }
     
     @IBOutlet weak var usersName: UITextField!
+    @IBOutlet weak var nameErrorMessage: UILabel!
     
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
      @IBAction func doneButton(_ sender: Any) {
-        let user = User()
-        user.name = usersName.text
-        userService.saveCurrentUser(user, completion: nil)
-        dismiss(animated: true, completion: nil)
+        //Error check for valid first and last name before saving name
+        if usersName.text != nil && !(usersName.text?.trimmingCharacters(in: CharacterSet.whitespaces).isEmpty)! && (usersName.text?.contains(" "))! {
+            let user = User()
+            user.name = usersName.text
+            userService.saveCurrentUser(user, completion: nil)
+            dismiss(animated: true, completion: nil)
+        } else {
+            //Display error message if name is invalid
+            nameErrorMessage.isHidden = false
+            usersName.becomeFirstResponder()
+        }
+        
      }
     /*
      // MARK: - Navigation

@@ -1210,11 +1210,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter in a valid first and last name." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-do-V8K">
+                                <rect key="frame" x="35" y="171" width="324" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.13905861860361801" blue="0.10001462304933795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="d0w-go-Nwc"/>
                     </view>
                     <connections>
+                        <outlet property="nameErrorMessage" destination="lhg-do-V8K" id="RtW-tj-4EH"/>
                         <outlet property="usersName" destination="aSC-9u-2aa" id="7lX-hB-C4B"/>
                     </connections>
                 </viewController>
@@ -1262,17 +1270,25 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter in a valid email address." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1p-hs-vcF">
+                                <rect key="frame" x="43" y="208" width="288" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.13905861859999999" blue="0.100014623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KPR-dW-Kxs"/>
                     </view>
                     <connections>
+                        <outlet property="emailErrorMessage" destination="z1p-hs-vcF" id="fI1-1l-iBU"/>
                         <outlet property="userEmail" destination="kRh-fi-FDR" id="TYS-oN-6u1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWN-vl-FPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8081" y="4696"/>
+            <point key="canvasLocation" x="8080.8000000000002" y="4695.2023988006003"/>
         </scene>
         <!--Update Phone Number View Controller-->
         <scene sceneID="43B-JL-GeA">
@@ -1314,11 +1330,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter in a valid phone number." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07F-my-ihD">
+                                <rect key="frame" x="43" y="213" width="288" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.13905861859999999" blue="0.100014623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="txy-yZ-fWK"/>
                     </view>
                     <connections>
+                        <outlet property="phoneNumberErrorMessage" destination="07F-my-ihD" id="Q1U-fz-rao"/>
                         <outlet property="userPhoneNumber" destination="RtX-4T-Z2k" id="n0A-0Y-gt4"/>
                     </connections>
                 </viewController>
