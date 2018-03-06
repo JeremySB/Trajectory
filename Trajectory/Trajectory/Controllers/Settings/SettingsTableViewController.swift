@@ -8,9 +8,10 @@
 
 import UIKit
 import Firebase
+import CropViewController
 
 class SettingsTableViewController: UITableViewController, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UINavigationControllerDelegate, CropViewControllerDelegate {
     
     lazy var userService: UserService = FirebaseUserService()
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
@@ -81,8 +82,21 @@ UINavigationControllerDelegate {
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         profileImage.image = image
+        presentCropViewController()
         dismiss(animated:true, completion: nil)
     }
+    
+    func presentCropViewController() {
+        guard let image: UIImage = profileImage.image else {return}
+        let cropViewController = CropViewController(image: image)
+        cropViewController.delegate = self
+        present(cropViewController, animated: true, completion: nil)
+    }
+    
+    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        print("image' is the newly cropped version of the original image")
+    }
+
     
     // MARK: - Navigation
 

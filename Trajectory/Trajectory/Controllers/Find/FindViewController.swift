@@ -9,7 +9,7 @@
 import UIKit
 
 class FindViewController: ScrollController {
-    
+        
     required init?(coder: NSCoder){
         super.init(coder: coder)
         addViewControllers(views: "FindPeople", "FindOrgs")
@@ -30,6 +30,10 @@ class FindViewController: ScrollController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        
     }
     
 

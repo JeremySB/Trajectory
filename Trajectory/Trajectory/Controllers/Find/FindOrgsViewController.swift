@@ -10,6 +10,7 @@ import UIKit
 
 class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
 
+    weak var scrollController: FindViewController!
     var searchResults = [[String : [User]]]()
     var usersPerOrganization = [Organization : [User]]()
     var mentors : [User] = []
@@ -136,6 +137,7 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     //User enters another character in search bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         updateSearchResults(for: searchController)
     }
     
