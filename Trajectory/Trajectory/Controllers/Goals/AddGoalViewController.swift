@@ -39,7 +39,7 @@ class AddGoalViewController: UIViewController {
         let goal = Goal()
         goal.title = nameField.text
         goal.endDate = endDatePicker.date
-        
+        goal.totalProgress = Int(progressAmount.text ?? "0")
         
         goalsService.addGoal(goal) { (error) in
             if let error = error {

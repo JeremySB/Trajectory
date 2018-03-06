@@ -16,15 +16,12 @@ class Goal: Codable {
     var totalProgress: Int?
     var currentProgress: Int?
     var title: String?
-    var targetPerDay: Int?
-    var targetPerWeek: Int?
-    var targetPerMonth: Int?
     var startDate: Date?
     var endDate: Date?
     
     var id: String? = nil
     
     enum CodingKeys: String, CodingKey {
-        case owner, totalProgress, currentProgress, title, targetPerDay, targetPerWeek, targetPerMonth, startDate, endDate
+        case owner, totalProgress, currentProgress, title, startDate, endDate
     }
 }
