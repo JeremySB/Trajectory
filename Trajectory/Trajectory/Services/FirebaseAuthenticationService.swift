@@ -48,4 +48,14 @@ class FirebaseAuthenticationService: AuthenticationService {
             completion(providers, nil)
         }
     }
+    
+    func updateEmail(_ email: String, completion: @escaping (AuthenticationError?) -> Void) {
+        Auth.auth().currentUser?.updateEmail(to: email, completion: { (error) in
+            if let error = error {
+                completion(.InvalidEmail(error.localizedDescription))
+            } else {
+                completion(nil)
+            }
+        })
+    }
 }

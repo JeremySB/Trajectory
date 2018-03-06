@@ -11,6 +11,7 @@ import UIKit
 class UpdateEmailAddressViewController: UIViewController {
     
     lazy var userService: UserService = FirebaseUserService()
+    lazy var authService: AuthenticationService = FirebaseAuthenticationService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +38,18 @@ class UpdateEmailAddressViewController: UIViewController {
     
     
     @IBAction func doneButton(_ sender: Any) {
+        guard let newEmail = userEmail.text else { return }
         let user = User()
-        user.emailAddress = userEmail.text
-        userService.saveCurrentUser(user, completion: nil)
+        user.emailAddress = newEmail
+        authService.updateEmail(newEmail) { (error) in
+            if let error = error {
+                // issue with email or connectivity
+            }
+            else {
+                // also save within user document
+                self.userService.saveCurrentUser(user, completion: nil)
+            }
+        }
         dismiss(animated: true, completion: nil)
      }
     
