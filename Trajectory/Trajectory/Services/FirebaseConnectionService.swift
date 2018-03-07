@@ -50,7 +50,7 @@ class FirebaseConnectionService : ConnectionService {
             return
         }
         
-        listeners.append(Firestore.firestore().collection(FirestoreValues.connectionCollection).whereField("mentor", isEqualTo: uid).addSnapshotListener { (snapshot, error) in
+        listeners.append(Firestore.firestore().collection(FirestoreValues.connectionCollection).whereField("mentor", isEqualTo: uid).whereField("mentorAccepted", isEqualTo: false).addSnapshotListener { (snapshot, error) in
             if let error = error {
                 return update(nil, .Misc(error.localizedDescription))
             }
