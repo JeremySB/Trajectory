@@ -18,6 +18,9 @@ class AddGoalViewController: UIViewController {
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var progressAmount: UITextField!
     @IBOutlet weak var segmentedControlPeriod: UISegmentedControl!
+    @IBOutlet weak var progressAmountWarning: UILabel!
+    @IBOutlet weak var goalNameWarning: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,20 +39,32 @@ class AddGoalViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
+        goalNameWarning.isHidden = true;
+        progressAmountWarning.isHidden = true;
+        
         let goal = Goal()
         goal.title = nameField.text
         goal.endDate = endDatePicker.date
-        goal.totalProgress = Int(progressAmount.text ?? "0")
+        goal.totalProgress = Int(progressAmount.text ?? "")
         
-        goalsService.addGoal(goal) { (error) in
-            if let error = error {
-                let alert = UIAlertController(title: "Error", message: "Not logged in - goal not saved", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-                print(error)
-                self.present(alert, animated: true, completion: nil)
+        if(goal.title == "" || goal.totalProgress == nil){
+            if(goal.title == ""){
+                goalNameWarning.isHidden = false;
             }
-            else {
-                self.dismiss(animated: true, completion: nil)
+            if(goal.totalProgress == nil){
+                progressAmountWarning.isHidden = false;
+            }
+        }else{
+            goalsService.addGoal(goal) { (error) in
+                if let error = error {
+                    let alert = UIAlertController(title: "Error", message: "Not logged in - goal not saved", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+                    print(error)
+                    self.present(alert, animated: true, completion: nil)
+                }
+                else {
+                    self.dismiss(animated: true, completion: nil)
+                }
             }
         }
     }
