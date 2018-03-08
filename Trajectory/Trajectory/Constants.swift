@@ -13,6 +13,8 @@ struct FirestoreValues {
     
     // connection document keys
     static let connectionSentRequestDate = "sentRequestDate"
+    static let connectionMentee = "mentee"
+    static let connectionMentor = "mentor"
     
     // membership document keys
     static let membershipOrgId = "organizationId"

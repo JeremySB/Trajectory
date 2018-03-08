@@ -10,9 +10,11 @@ import Foundation
 
 class MenteeRequest: Codable {
     var mentee: Mentee
+    var connectionId: String
     
-    init(by mentee: Mentee) {
+    init(by mentee: Mentee, with id: String) {
         self.mentee = mentee
+        self.connectionId = id
     }
     
     func accept(until date: Date) {
