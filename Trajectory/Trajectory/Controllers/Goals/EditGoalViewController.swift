@@ -11,6 +11,8 @@ import UIKit
 class EditGoalViewController: UIViewController {
     weak var goal: Goal!
     
+    lazy var goalsService: GoalsService = FirebaseGoalsService()
+    
     @IBOutlet weak var Name: UITextField!
     
     @IBOutlet weak var RemainingProgress: UITextField!
@@ -19,7 +21,23 @@ class EditGoalViewController: UIViewController {
     @IBOutlet weak var EndDate: UIDatePicker!
     
     @IBAction func Done(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        guard let safeGoal = goal else{
+            navigationController?.popViewController(animated: true)
+            return
+        }
+        goal.title = Name.text ?? goal.title
+        goal.currentProgress = Int(RemainingProgress.text ?? "") ?? goal.currentProgress
+        goal.endDate = EndDate.date
+        
+        goalsService.editGoal(safeGoal, completion:  { (error) -> Void in
+            if (error == nil){
+                debugPrint("No Error")
+            }else{
+                debugPrint("Error")
+            }
+        })
+        //self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     
@@ -28,7 +46,8 @@ class EditGoalViewController: UIViewController {
         //self.title = "Edit"
         self.navigationItem.title = "Edit Goal"
         //self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: done, action: )
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: done, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(Done(_:)))
+        //self.navigationItem
         Name.text = goal.title ?? ""
         EndDate.date = goal.endDate ?? Date()
         

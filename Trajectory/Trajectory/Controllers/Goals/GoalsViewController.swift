@@ -37,12 +37,26 @@ class GoalsViewController: UITableViewController {
             self.tableView.reloadData()
         }
         
+        refreshControl = UIRefreshControl()
+        
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.addTarget(self, action: #selector(Refresh(_:)), for: UIControlEvents.valueChanged)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func Refresh(_ sender: Any?){
+        tableView.reloadData()
+        refreshControl?.endRefreshing()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -127,7 +141,10 @@ class GoalsViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! EditGoalViewController
         destinationVC.goal = goals[expandedRow]
+        expandedRow = -1
     }
+    
+    
     /*func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }*/
