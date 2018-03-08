@@ -15,6 +15,8 @@ class UpdateEmailAddressViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
         userService.getCurrentUser { (user, error) in
@@ -44,13 +46,14 @@ class UpdateEmailAddressViewController: UIViewController {
         authService.updateEmail(newEmail) { (error) in
             if let error = error {
                 // issue with email or connectivity
+                self.displayErrorMessage()
             }
             else {
                 // also save within user document
                 self.userService.saveCurrentUser(user, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             }
         }
-        dismiss(animated: true, completion: nil)
      }
     
     @IBAction func cancelButton(_ sender: Any) {
