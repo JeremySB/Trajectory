@@ -125,8 +125,8 @@ class GoalsViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //let destinationVC = segue.destination as! EditGoalViewController
-        //destinationVC.goal = goals[expandedRow]
+        let destinationVC = segue.destination as! EditGoalViewController
+        destinationVC.goal = goals[expandedRow]
     }
     /*func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension

@@ -61,6 +61,7 @@
 		3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0F472201A434500F3CD18 /* ScrollController.swift */; };
 		3FE1450A1FF9778B00F3CF18 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE145091FF9778B00F3CF18 /* Social.framework */; };
 		3FE1450C1FF9779200F3CF18 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1450B1FF9779200F3CF18 /* Accounts.framework */; };
+		3FEAB566204EFA2E00829E16 /* EditGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEAB565204EFA2E00829E16 /* EditGoalViewController.swift */; };
 		65022D8E26F9AFC2625E8B6F /* Pods_TrajectoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9DA7EB9BD27F812C0D5223 /* Pods_TrajectoryUITests.framework */; };
 		A25155D5F0AE9B4E670FADF7 /* Pods_TrajectoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061C7FB5B4777D6194505592 /* Pods_TrajectoryTests.framework */; };
 		D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */; };
@@ -168,6 +169,7 @@
 		3FE0F472201A434500F3CD18 /* ScrollController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollController.swift; sourceTree = "<group>"; };
 		3FE145091FF9778B00F3CF18 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3FE1450B1FF9779200F3CF18 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		3FEAB565204EFA2E00829E16 /* EditGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalViewController.swift; sourceTree = "<group>"; };
 		46E941484BBFAB7A0D1BF538 /* Pods-TrajectoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryUITests/Pods-TrajectoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4DF7FD52FC853F2F06806828 /* Pods-TrajectoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryTests/Pods-TrajectoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E6E35BB023B4C23312729CF /* Pods-TrajectoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryTests/Pods-TrajectoryTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */,
 				3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */,
 				3F69694220408CCE004CCE5D /* GoalsTableViewCell.swift */,
+				3FEAB565204EFA2E00829E16 /* EditGoalViewController.swift */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -887,6 +890,7 @@
 				3F6969412040884A004CCE5D /* GoalTableViewCellExpanded.swift in Sources */,
 				3F1858DA20311C09007FC818 /* CodableFirebaseCustom.swift in Sources */,
 				3F19031C202BB1720002B74B /* AuthenticationService.swift in Sources */,
+				3FEAB566204EFA2E00829E16 /* EditGoalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
