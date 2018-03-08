@@ -19,6 +19,7 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
     @IBOutlet weak var Title: UILabel!
     @IBOutlet weak var Progress: UIProgressView!
     
+    @IBOutlet weak var AdjustAmount: UITextField!
     @IBAction func Expand(_ sender: Any) {
         parent.setExpandedRow(row: cellNum)
     }
@@ -30,14 +31,21 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
         //}
     }
     
-    override func prepareForReuse() {
-        /*cellNum = -1
-        Title = nil
-        Progress = nil
-        parent = nil
-        goal = nil*/
+    @IBAction func Plus(_ sender: Any) {
+        goal.currentProgress = min((goal.currentProgress ?? 0) + (Int(AdjustAmount.text ?? "") ?? 0), goal.totalProgress ?? 0)
+        goalsService.editGoal(goal, completion: nil)
     }
-    
+    @IBAction func Minus(_ sender: Any) {
+        goal.currentProgress = max((goal.currentProgress ?? 0) - (Int(AdjustAmount.text ?? "") ?? 0), 0)
+        goalsService.editGoal(goal, completion: nil)
+    }
+    override func prepareForReuse() {
+        cellNum = -1
+        /*Title = nil
+        Progress = nil*/
+        parent = nil
+        goal = nil
+    }
     /*
     override func awakeFromNib() {
         super.awakeFromNib()

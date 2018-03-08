@@ -77,6 +77,9 @@
                                             <rect key="frame" x="202" y="55" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="Plus:" destination="Zjs-yN-Ude" eventType="touchUpInside" id="cbv-iL-1Tq"/>
+                                            </connections>
                                         </button>
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2RQ-lj-AQx">
                                             <rect key="frame" x="145" y="55" width="49" height="30"/>
@@ -90,13 +93,16 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Edit"/>
                                             <connections>
-                                                <segue destination="5qc-nw-ixh" kind="show" id="RgT-0V-Vz2"/>
+                                                <segue destination="5qc-nw-ixh" kind="show" id="kdF-vV-r1n"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNk-hD-GRK">
                                             <rect key="frame" x="91" y="55" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="-"/>
+                                            <connections>
+                                                <action selector="Minus:" destination="Zjs-yN-Ude" eventType="touchUpInside" id="fqX-tn-ceh"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7q-cT-Tlx">
                                             <rect key="frame" x="16" y="55" width="56" height="30"/>
@@ -117,6 +123,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="AdjustAmount" destination="2RQ-lj-AQx" id="wYp-4D-xc5"/>
                                     <outlet property="Progress" destination="KAg-UI-1ME" id="gkC-gn-rAF"/>
                                     <outlet property="Title" destination="dlL-J4-7Qf" id="Lht-ai-rSw"/>
                                 </connections>

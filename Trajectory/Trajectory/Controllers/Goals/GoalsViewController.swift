@@ -75,11 +75,12 @@ class GoalsViewController: UITableViewController {
             cell.Progress.progress = 0
             return cell as! UITableViewCell
         }
-        guard let toProgress = goals[indexPath.row].currentProgress else {
+        guard let toProgress = goals[indexPath.row].totalProgress else {
             cell.Progress.progress = 0
             return cell as! UITableViewCell
         }
-        cell.Progress.progress = Float(curProgress) / Float(toProgress)
+        let prog = Float(curProgress) / Float(toProgress);
+        cell.Progress.setProgress(prog, animated: true)
         return cell as! UITableViewCell
     }
     
@@ -121,6 +122,11 @@ class GoalsViewController: UITableViewController {
         else {
             return 50
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //let destinationVC = segue.destination as! EditGoalViewController
+        //destinationVC.goal = goals[expandedRow]
     }
     /*func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
