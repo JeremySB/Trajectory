@@ -9,11 +9,21 @@
 import UIKit
 
 class CommMenteeViewController: UIViewController {
+    
+    lazy var connService: ConnectionService = FirebaseConnectionService()
+    
+    var mentees = [User]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        connService.addMenteesListener { (mentees, error) in
+            if let mentees = mentees {
+                self.mentees = mentees
+                print(mentees)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

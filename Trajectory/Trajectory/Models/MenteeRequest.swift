@@ -16,12 +16,4 @@ class MenteeRequest: Codable {
         self.mentee = mentee
         self.connectionId = id
     }
-    
-    func accept(until date: Date) {
-        
-    }
-    
-    func decline() {
-        
-    }
 }

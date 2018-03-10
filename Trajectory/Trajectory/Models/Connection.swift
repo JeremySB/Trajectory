@@ -8,14 +8,17 @@
 import UIKit
 
 class Connection: Codable {
+    enum Status: String, Codable {
+        case accepted, pending, rejected
+    }
     var mentee: String?
     var mentor: String?
-    var mentorAccepted: Bool?
     var mentorshipEndDate: Date?
+    var mentorStatus: Status?
     
     var id: String? = nil
     
     enum CodingKeys: String, CodingKey {
-        case mentee, mentor, mentorAccepted, mentorshipEndDate
+        case mentee, mentor, mentorStatus, mentorshipEndDate
     }
 }

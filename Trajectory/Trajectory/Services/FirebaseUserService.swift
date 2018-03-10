@@ -77,6 +77,23 @@ class FirebaseUserService: UserService {
         }
     }
     
+    func getUsers(uids: [String], completion: @escaping ([User]?, UserServiceError?) -> Void) {
+        let dispatch = DispatchGroup()
+        var users = [User]()
+        for uid in uids {
+            dispatch.enter()
+            getUser(uid: uid, completion: { (user, error) in
+                if let user = user {
+                    users.append(user)
+                }
+                dispatch.leave()
+            })
+        }
+        dispatch.notify(queue: .main) {
+            completion(users, nil)
+        }
+    }
+    
     func getMentee(uid: String, completion: @escaping (Mentee?, UserServiceError?) -> Void) {
         Firestore.firestore().collection(FirestoreValues.userCollection).document(uid).getDocument { (doc, error) in
             if let error = error {

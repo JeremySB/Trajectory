@@ -10,6 +10,8 @@ import UIKit
 
 class SetDurationViewController: UIViewController {
     
+    lazy var connService: ConnectionService = FirebaseConnectionService()
+    
     var menteeRequest: MenteeRequest?
 
     override func viewDidLoad() {
@@ -41,8 +43,12 @@ class SetDurationViewController: UIViewController {
     @IBOutlet weak var userImage: UIImageView!
     
     @IBAction func setDateandAccept(_ sender: Any) {
-        print(endDate.date)
-        performSegue(withIdentifier: "unwindSeguetoSettings", sender: self)
+        if let menteeRequest = menteeRequest {
+            connService.accept(menteeRequest: menteeRequest, until: endDate.date) { (error) in
+                // no error checking for now
+            }
+            performSegue(withIdentifier: "unwindSeguetoSettings", sender: self)
+        }
     }
     
     /*

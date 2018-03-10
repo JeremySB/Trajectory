@@ -11,6 +11,7 @@ import UIKit
 class MenteeRequestDetailsViewController: UIViewController {
     
     var menteeRequest: MenteeRequest?
+    lazy var connService: ConnectionService = FirebaseConnectionService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,9 @@ class MenteeRequestDetailsViewController: UIViewController {
     }
     
     @IBAction func decline(_ sender: Any) {
-        menteeRequest?.decline()
+        if let menteeRequest = menteeRequest {
+            connService.decline(menteeRequest: menteeRequest, completion: nil)
+        }
         dismiss(animated: true, completion: nil)
     }
     
