@@ -20,6 +20,9 @@ class EditGoalViewController: UIViewController {
     @IBOutlet weak var BySeparator: UISegmentedControl!
     @IBOutlet weak var EndDate: UIDatePicker!
     
+    @IBOutlet weak var goalNameWarning: UILabel!
+    @IBOutlet weak var progressAmountWarning: UILabel!
+    
     @IBAction func Done(_ sender: Any) {
         guard let safeGoal = goal else{
             navigationController?.popViewController(animated: true)
@@ -29,15 +32,19 @@ class EditGoalViewController: UIViewController {
         goal.currentProgress = Int(RemainingProgress.text ?? "") ?? goal.currentProgress
         goal.endDate = EndDate.date
         
-        goalsService.editGoal(safeGoal, completion:  { (error) -> Void in
-            if (error == nil){
-                debugPrint("No Error")
-            }else{
-                debugPrint("Error")
-            }
-        })
-        //self.dismiss(animated: true, completion: nil)
-        navigationController?.popViewController(animated: true)
+        if(goal.title == ""){
+            goalNameWarning.isHidden = false;
+        }else{
+            goalsService.editGoal(safeGoal, completion:  { (error) -> Void in
+                if (error == nil){
+                    debugPrint("No Error")
+                }else{
+                    debugPrint("Error")
+                }
+            })
+            //self.dismiss(animated: true, completion: nil)
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     
