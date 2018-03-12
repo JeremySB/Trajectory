@@ -21,6 +21,20 @@ class MyMentorOptionsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func CancelMentorshipConfirmation(_ sender: Any) {
+        //https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/
+        let alert = UIAlertController(title: "Please confirm that you want to cancel this mentorship", message: "", preferredStyle: .actionSheet)
+        
+        //https://stackoverflow.com/questions/24190277/writing-handler-for-uialertaction
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: cancelMentorship))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func cancelMentorship(alert: UIAlertAction!) {
+        //TODO - Cancel mentorship on backend
+    }
 
     /*
     // MARK: - Navigation
