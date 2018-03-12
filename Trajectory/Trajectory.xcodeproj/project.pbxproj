@@ -83,6 +83,7 @@
 		D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */; };
 		D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */; };
 		D6DC06C720476CE5001CB874 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC06C620476CE5001CB874 /* SectionHeaderCollectionReusableView.swift */; };
+		D6DE11892055A731000F31EE /* FindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DE11882055A731000F31EE /* FindUITests.swift */; };
 		D6E00081202D1C03005A4099 /* SettingsScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */; };
 		E917B0813906C4385AD8EC11 /* Pods_Trajectory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E0D814C559FB2421C88D8A /* Pods_Trajectory.framework */; };
 /* End PBXBuildFile section */
@@ -193,6 +194,7 @@
 		D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestDetailsViewController.swift; sourceTree = "<group>"; };
 		D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
 		D6DC06C620476CE5001CB874 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		D6DE11882055A731000F31EE /* FindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUITests.swift; sourceTree = "<group>"; };
 		D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenTests.swift; sourceTree = "<group>"; };
 		E50D8EAA59C43689C15087D5 /* Pods-TrajectoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryUITests/Pods-TrajectoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -439,6 +441,7 @@
 		3FC53DAA1FF03BA7000B82E3 /* TrajectoryUITests */ = {
 			isa = PBXGroup;
 			children = (
+				D6DE11882055A731000F31EE /* FindUITests.swift */,
 				3FB92CFA2036322A00AA2893 /* RegistrationTests.swift */,
 				3FB92CF82035F6AD00AA2893 /* LoginTests.swift */,
 				3FC53DAD1FF03BA7000B82E3 /* Info.plist */,
@@ -910,6 +913,7 @@
 			files = (
 				3FB92CFB2036322A00AA2893 /* RegistrationTests.swift in Sources */,
 				3FB92CF92035F6AD00AA2893 /* LoginTests.swift in Sources */,
+				D6DE11892055A731000F31EE /* FindUITests.swift in Sources */,
 				D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,9 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     
     lazy var userService: UserService = FirebaseUserService()
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
+    private var croppingStyle = CropViewCroppingStyle.default
+    private var croppedRect = CGRect.zero
+    private var croppedAngle = 0
     
     var user: User?
 
@@ -70,31 +73,57 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         //Open photo library (https://turbofuture.com/cell-phones/Access-Photo-Camera-and-Library-in-Swift)
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
+            self.croppingStyle = .circular
+            imagePicker.modalPresentationStyle = .popover
+            //imagePicker.preferredContentSize = CGSize(width: 320, height: 568)
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary;
-            imagePicker.allowsEditing = true
+            imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
 
     //Update image (https://turbofuture.com/cell-phones/Access-Photo-Camera-and-Library-in-Swift)
-    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        profileImage.image = image
-        presentCropViewController()
-        dismiss(animated:true, completion: nil)
+   /* @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        //let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        //profileImage.image = image
+        //dismiss(animated:true, completion: nil)
+        
+
+    }*/
+    
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let image = (info[UIImagePickerControllerOriginalImage] as? UIImage) else {return}
+        let cropController = CropViewController(croppingStyle: .circular, image: image)
+        cropController.delegate = self
+        
+        self.profileImage.image = image
+        
+        picker.pushViewController(cropController, animated: true)
+        
     }
     
-    func presentCropViewController() {
-        guard let image: UIImage = profileImage.image else {return}
-        let cropViewController = CropViewController(image : image)
-        cropViewController.delegate = self
-        present(cropViewController, animated: true, completion: nil)
+    public func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        self.croppedRect = cropRect
+        self.croppedAngle = angle
+        updateImageViewWithImage(image, fromCropViewController: cropViewController)
     }
     
-    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
-        print("image' is the newly cropped version of the original image")
+    public func updateImageViewWithImage(_ image: UIImage, fromCropViewController cropViewController: CropViewController) {
+        self.profileImage.image = image
+        
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+        
+        if cropViewController.croppingStyle != .circular{
+            self.profileImage.isHidden = true
+            cropViewController.dismissAnimatedFrom(self, withCroppedImage: image, toView: profileImage, toFrame: CGRect.zero, setup: { }, completion: {self.profileImage.isHidden = false })
+        }
+        else{
+            self.profileImage.isHidden = false
+            cropViewController.dismiss(animated: true, completion: nil)
+        }
     }
 
     
