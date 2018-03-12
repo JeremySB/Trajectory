@@ -9,15 +9,16 @@
 import UIKit
 
 class CommSwipeMenteeViewController: ScrollController {
-
+    weak var user: User!
+    
     required init?(coder: NSCoder){
         super.init(coder: coder)
-        addViewControllers(views: "", "")
+        addViewControllers(views: "MyMenteeCalendar", "MyMenteeOptions")
         //addViewControllers(views: "FindOrgs")
     }
     override init(){
         super.init()
-        addViewControllers(views: "", "")
+        addViewControllers(views: "MyMenteeCalendar", "MyMenteeOptions")
         //addViewControllers(views: "FindOrgs")
     }
     

@@ -658,19 +658,12 @@
             <point key="canvasLocation" x="8420" y="671"/>
         </scene>
         <!--Comm Swipe Mentee View Controller-->
-        <scene sceneID="hUV-E7-HDI">
+        <scene sceneID="JrW-78-Y8u">
             <objects>
-                <viewController id="RkM-j0-QBE" customClass="CommSwipeMenteeViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fLH-9O-ge6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="OD6-hG-8NO"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fFV-2i-qfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="Ugk-iw-owF" customClass="CommSwipeMenteeViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbF-Oj-URZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8420" y="1407"/>
+            <point key="canvasLocation" x="8402" y="1406"/>
         </scene>
         <!--My Mentee Calendar View Controller-->
         <scene sceneID="6az-cq-VYl">
@@ -781,24 +774,17 @@
             <point key="canvasLocation" x="9100" y="1405.5472263868066"/>
         </scene>
         <!--Comm Swipe Mentor View Controller-->
-        <scene sceneID="bLy-3d-Bpw">
+        <scene sceneID="fgr-fZ-ek3">
             <objects>
-                <viewController id="hlI-Ga-smf" customClass="CommSwipeMentorViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="T3z-7c-1Sq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="KJ9-Pd-u2i"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nL7-jC-v2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="IuN-33-M3D" customClass="CommSwipeMentorViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmo-OD-sQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8420" y="2091"/>
+            <point key="canvasLocation" x="8420" y="2089"/>
         </scene>
         <!--My Mentor Checkin View Controller-->
         <scene sceneID="PJ0-S2-8vR">
             <objects>
-                <viewController id="lS1-f0-5VY" customClass="MyMentorCheckinViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyMentorCheckin" id="lS1-f0-5VY" customClass="MyMentorCheckinViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="64e-xb-ANH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -865,7 +851,7 @@
         <!--My Mentor Options View Controller-->
         <scene sceneID="Hzm-7R-bRB">
             <objects>
-                <viewController id="i4k-C4-EMa" customClass="MyMentorOptionsViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyMentorOptions" id="i4k-C4-EMa" customClass="MyMentorOptionsViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X17-4c-w1u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1089,7 +1075,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vYM-dR-TzY" customClass="FindCollectionView" customModule="Trajectory" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vYM-dR-TzY" customClass="MyMentorCollectionView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="16" y="85" width="343" height="562"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1100,7 +1086,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="Ue3-6N-A9J" customClass="UserCollectionViewCell" customModule="Trajectory" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenteeCollectionViewCell" id="Ue3-6N-A9J" customClass="CommUserCollectionViewCell" customModule="Trajectory" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="159"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1122,16 +1108,23 @@
                                         </view>
                                         <connections>
                                             <outlet property="userImage" destination="SJQ-pA-nZi" id="JuZ-i9-yvg"/>
-                                            <outlet property="userName" destination="rJD-TV-6ap" id="tTq-Og-g6a"/>
                                             <outlet property="userProfileName" destination="rJD-TV-6ap" id="MNO-pT-7uG"/>
+                                            <segue destination="Ugk-iw-owF" kind="show" id="1nq-MY-Vz0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="NM9-48-Kon" id="Z3o-ch-GxR"/>
+                                    <outlet property="delegate" destination="NM9-48-Kon" id="VeT-C4-l97"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="p9b-Jb-8Ya"/>
                     </view>
+                    <connections>
+                        <outlet property="childView" destination="vYM-dR-TzY" id="rAr-wg-3MB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTp-T6-kTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1145,7 +1138,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FZz-Xe-XSf" customClass="FindCollectionView" customModule="Trajectory" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FZz-Xe-XSf" customClass="MyMentorCollectionView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="16" y="85" width="343" height="562"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1156,7 +1149,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="9LY-sm-eu7" customClass="UserCollectionViewCell" customModule="Trajectory" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MentorCollectionViewCell" id="9LY-sm-eu7" customClass="CommUserCollectionViewCell" customModule="Trajectory" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="159"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1178,16 +1171,23 @@
                                         </view>
                                         <connections>
                                             <outlet property="userImage" destination="BUM-q6-ntv" id="CEM-WK-3pN"/>
-                                            <outlet property="userName" destination="jXj-f5-7Xf" id="e0g-E8-OeK"/>
                                             <outlet property="userProfileName" destination="jXj-f5-7Xf" id="izv-ac-gTH"/>
+                                            <segue destination="IuN-33-M3D" kind="show" id="dCn-Ra-3cf"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Et3-zS-Hw4" id="pSv-3z-AN5"/>
+                                    <outlet property="delegate" destination="Et3-zS-Hw4" id="KCV-AW-K3L"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xs7-n9-kDJ"/>
                     </view>
+                    <connections>
+                        <outlet property="childView" destination="FZz-Xe-XSf" id="EhG-ht-hgf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYc-0E-DZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

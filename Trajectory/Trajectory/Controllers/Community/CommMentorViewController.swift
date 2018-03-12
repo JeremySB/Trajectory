@@ -13,6 +13,8 @@ class CommMentorViewController: UIViewController {
     lazy var connService: ConnectionService = FirebaseConnectionService()
     
     var mentors = [User]()
+    
+    @IBOutlet weak var childView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,7 @@ class CommMentorViewController: UIViewController {
             if let mentors = mentors {
                 self.mentors = mentors
                 print(mentors)
+                self.childView.reloadData()
             }
         }
     }
@@ -31,6 +34,12 @@ class CommMentorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = childView.indexPathsForSelectedItems {
+            let vc = segue.destination as! CommSwipeMentorViewController
+            vc.user = self.mentors[indexPath[0][1]]
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -42,4 +51,29 @@ class CommMentorViewController: UIViewController {
     }
     */
 
+}
+
+
+extension CommMentorViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return mentors.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MentorCollectionViewCell", for: indexPath) as! CommUserCollectionViewCell
+        
+        let name = mentors[indexPath.row].name
+        let image = UIImage(named:"profileImg")!
+        
+        cell.displayContent(image: image, name: name ?? "Error")
+        
+        return cell
+    }
+    
+
+
+}
+
+extension CommMentorViewController: UICollectionViewDelegate {
+    
 }

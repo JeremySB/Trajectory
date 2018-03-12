@@ -10,14 +10,16 @@ import UIKit
 
 class CommSwipeMentorViewController: ScrollController {
 
+    weak var user: User!
+    
     required init?(coder: NSCoder){
         super.init(coder: coder)
-        addViewControllers(views: "", "")
+        addViewControllers(views: "MyMentorCheckin", "MyMentorOptions")
         //addViewControllers(views: "FindOrgs")
     }
     override init(){
         super.init()
-        addViewControllers(views: "", "")
+        addViewControllers(views: "MyMentorCheckin", "MyMentorOptions")
         //addViewControllers(views: "FindOrgs")
     }
     
@@ -32,7 +34,8 @@ class CommSwipeMentorViewController: ScrollController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    
     /*
     // MARK: - Navigation
 

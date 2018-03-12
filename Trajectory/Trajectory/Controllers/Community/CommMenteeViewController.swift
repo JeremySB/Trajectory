@@ -13,6 +13,8 @@ class CommMenteeViewController: UIViewController {
     lazy var connService: ConnectionService = FirebaseConnectionService()
     
     var mentees = [User]()
+    
+    @IBOutlet weak var childView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,7 @@ class CommMenteeViewController: UIViewController {
             if let mentees = mentees {
                 self.mentees = mentees
                 print(mentees)
+                self.childView.reloadData()
             }
         }
     }
@@ -41,5 +44,35 @@ class CommMenteeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = childView.indexPathsForSelectedItems {
+            let vc = segue.destination as! CommSwipeMenteeViewController
+            vc.user = self.mentees[indexPath[0][1]]
+        }
+    }
 
+}
+
+extension CommMenteeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return mentees.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenteeCollectionViewCell", for: indexPath) as! CommUserCollectionViewCell
+        
+        let name = mentees[indexPath.row].name
+        let image = UIImage(named:"profileImg")!
+        
+        cell.displayContent(image: image, name: name ?? "Error")
+        
+        return cell
+    }
+    
+    
+    
+}
+
+extension CommMenteeViewController: UICollectionViewDelegate {
+    
 }
