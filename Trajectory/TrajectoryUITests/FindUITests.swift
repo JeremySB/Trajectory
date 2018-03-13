@@ -40,17 +40,13 @@ class FindUITests: XCTestCase {
     
     // --People Find Screen Tests--
     func testPeopleSearchBarValidText() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
         app.tabBars.buttons["Find"].tap()
         let searchForPeopleSearchField = app.searchFields["Search for people"]
         searchForPeopleSearchField.tap()
-        searchForPeopleSearchField.typeText("andrew")
-        /*app.collectionViews.children(matching: .cell).element(boundBy: 0).otherElements.containing(.image, identifier:"profileImg").element.tap()
+        searchForPeopleSearchField.typeText("Andrew")
+        app.collectionViews.children(matching: .cell).element(boundBy: 0).otherElements.containing(.image, identifier:"profileImg").element.tap()
         app.buttons["Contact Mentor"].tap()
         app.sheets["Please confirm that you want to send this mentee request"].buttons["Confirm"].tap()
-        */
     }
     
     func testPeopleSearchBarInvalidText() {
@@ -98,11 +94,7 @@ class FindUITests: XCTestCase {
         
     }
     
-    // --Mentor Information Screen Tests--
-    func testContactMentorConfirmButton() {
-        
-    }
-    
+    // --Mentor Information Screen Test--
     func testContactMentorCancelButton() {
         
     }

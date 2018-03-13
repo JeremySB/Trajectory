@@ -80,7 +80,7 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     func searchForMatches(searchString: String) {
         searchResults.removeAll()
         for item in mentors {
-            if (item.name?.contains(searchString)) ?? false {
+            if (item.name?.lowercased().contains(searchString.lowercased())) ?? false {
                 searchResults.append(item)
             }
         }

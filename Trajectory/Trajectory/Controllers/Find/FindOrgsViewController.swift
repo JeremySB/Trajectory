@@ -113,7 +113,7 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         //Setup searchResults array with user's organizations
         for item in self.usersPerOrganization {
             let userResultsInOrg: [String: [User]] = [item.key.name ?? "" : item.value.filter({ (user) -> Bool in
-                user.name?.contains(searchString) ?? false
+                user.name?.lowercased().contains(searchString.lowercased()) ?? false
             })]
             
             searchResults.append(userResultsInOrg)
