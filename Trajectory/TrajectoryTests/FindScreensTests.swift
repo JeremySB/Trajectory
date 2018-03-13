@@ -22,8 +22,7 @@ class FindScreensTests: XCTestCase {
     
     // --Tests for Find People View Controller--
     func testPeopleSearchForMatches() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
     }
     
     func testPeopleUpdateSearchResults() {
