@@ -102,9 +102,9 @@ class FirebaseConnectionService : ConnectionService {
                     completion(nil, .Misc(error.localizedDescription))
                     return
                 }
-                else if let snapshot = snapshot, snapshot.documents[0].exists,
-                    let connection = try? FirestoreDecoder().decode(Connection.self, from: snapshot.documents[0].data()) {
-                    connection.id = snapshot.documents[0].documentID
+                else if let snapshot = snapshot, let doc = snapshot.documents.first,
+                    let connection = try? FirestoreDecoder().decode(Connection.self, from: doc.data()) {
+                    connection.id = doc.documentID
                     completion(connection, nil)
                 } else {
                     completion(nil, .InvalidServerData)
@@ -245,10 +245,10 @@ class FirebaseConnectionService : ConnectionService {
         var checkins = [Checkin]()
         getConnectionBetween(mentee: menteeId, mentor: mentorId) { (connection, error) in
             if let connectionId = connection?.id {
-                Firestore.firestore().collection(FirestoreValues.connectionCollection)
+                let listener = Firestore.firestore().collection(FirestoreValues.connectionCollection)
                     .document(connectionId)
                     .collection(FirestoreValues.connectionCheckinCollection)
-                    .getDocuments(completion: { (snapshot, error) in
+                    .addSnapshotListener({ (snapshot, error) in
                         guard let snapshot = snapshot else {
                             update(nil, .Misc(error?.localizedDescription ?? ""))
                             return
@@ -260,6 +260,7 @@ class FirebaseConnectionService : ConnectionService {
                         }
                         update(checkins, nil)
                     })
+                self.listeners.append(listener)
             }
             else {
                 update(nil, .InvalidServerData)

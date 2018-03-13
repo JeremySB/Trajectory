@@ -10,11 +10,12 @@ import Foundation
 
 class Organization: Codable {
     var name: String?
+    var publicCode: Int?
     
     var id: String? = nil
     
     enum CodingKeys: String, CodingKey {
-        case name
+        case name, publicCode
     }
 }
 
@@ -29,6 +30,5 @@ extension Organization: Hashable {
     static func ==(lhs: Organization, rhs: Organization) -> Bool {
         return lhs.name == rhs.name && lhs.id == rhs.id
     }
-    
     
 }

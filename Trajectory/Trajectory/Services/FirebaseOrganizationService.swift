@@ -132,8 +132,27 @@ class FirebaseOrganizationService: OrganizationService {
         }
     }
     
+    func joinOrganization(code: Int, completion: ((OrganizationServiceError?) -> Void)?) {
+        Firestore.firestore().collection(FirestoreValues.organizationCollection)
+            .whereField(Organization.CodingKeys.publicCode.rawValue, isEqualTo: code)
+            .limit(to: 1)
+            .getDocuments { (snapshot, error) in
+                if let snapshot = snapshot, let doc = snapshot.documents.first, doc.exists {
+                    self.joinOrganization(doc.documentID, completion: completion)
+                }
+                else {
+                    completion?(.InvalidData("No organization found for that code"))
+                }
+            }
+    }
+    
     func leaveOrganization(_ id: String, completion: ((OrganizationServiceError?) -> Void)?) {
-        // TODO
+        if let uid = Auth.auth().currentUser?.uid {
+            db.collection(FirestoreValues.membershipCollection).document(uid+" "+id).delete()
+        }
+        else {
+            completion?(.NotLoggedIn)
+        }
     }
     
 }

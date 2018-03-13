@@ -11,7 +11,10 @@ import UIKit
 class MyOrganizationsTableViewController: UITableViewController {
     
     //An array of the user's organizations
-    let userOrganizations = ["Grove City Men's Group", "First Presbyterian Church", "Co-ed Bible Study"]
+    var userOrganizations = [Organization]()
+    
+    lazy var orgService: OrganizationService = FirebaseOrganizationService()
+    lazy var userService: UserService = FirebaseUserService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,13 @@ class MyOrganizationsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        orgService.getCurrentOrganizations { (orgs, error) in
+            if let orgs = orgs {
+                self.userOrganizations = orgs
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,7 +71,7 @@ class MyOrganizationsTableViewController: UITableViewController {
         //If in the second section...
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath)
-            cell.textLabel?.text = userOrganizations[indexPath[1]]
+            cell.textLabel?.text = userOrganizations[indexPath[1]].name
             return cell
         }
     }

@@ -10,6 +10,8 @@ import UIKit
 
 class AddOrganizationViewController: UIViewController {
     
+    lazy var orgService: OrganizationService = FirebaseOrganizationService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,10 +29,14 @@ class AddOrganizationViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
-        if firstThreeCharacters.text?.count == 3 && lastThreeCharacters.text?.count == 3 {
-            let code = firstThreeCharacters.text! + lastThreeCharacters.text!
+        if firstThreeCharacters.text?.count == 3 && lastThreeCharacters.text?.count == 3,
+            let code = Int(firstThreeCharacters.text! + lastThreeCharacters.text!) {
             print(code)
-            dismiss(animated: true, completion: nil)
+            orgService.joinOrganization(code: code, completion: { (error) in
+                if error != nil {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
         }
         else {
             invalidCodeErrorMessage.isHidden = false

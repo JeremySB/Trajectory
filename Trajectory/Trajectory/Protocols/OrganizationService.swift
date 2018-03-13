@@ -19,6 +19,8 @@ protocol OrganizationService {
     
     func joinOrganization(_ id: String, completion: ((OrganizationServiceError?) -> Void)?)
     
+    func joinOrganization(code: Int, completion: ((OrganizationServiceError?) -> Void)?)
+    
     func leaveOrganization(_ id: String, completion: ((OrganizationServiceError?) -> Void)?)
     
 }
