@@ -83,6 +83,7 @@
 		D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */; };
 		D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */; };
 		D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */; };
+		D6DA738A20581DB800630580 /* FindScreensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA738920581DB800630580 /* FindScreensTests.swift */; };
 		D6DC06C720476CE5001CB874 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC06C620476CE5001CB874 /* SectionHeaderCollectionReusableView.swift */; };
 		D6DE11892055A731000F31EE /* FindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DE11882055A731000F31EE /* FindUITests.swift */; };
 		D6E00081202D1C03005A4099 /* SettingsScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */; };
@@ -195,6 +196,7 @@
 		D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestDetailsViewController.swift; sourceTree = "<group>"; };
 		D6B66D5F201CEF1700AF8799 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
+		D6DA738920581DB800630580 /* FindScreensTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindScreensTests.swift; sourceTree = "<group>"; };
 		D6DC06C620476CE5001CB874 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		D6DE11882055A731000F31EE /* FindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUITests.swift; sourceTree = "<group>"; };
 		D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenTests.swift; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 		3FC53D9F1FF03BA7000B82E3 /* TrajectoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				D6DA738920581DB800630580 /* FindScreensTests.swift */,
 				3F19031D202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift */,
 				3FC53DA21FF03BA7000B82E3 /* Info.plist */,
 				D6E00080202D1C03005A4099 /* SettingsScreenTests.swift */,
@@ -905,6 +908,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DA738A20581DB800630580 /* FindScreensTests.swift in Sources */,
 				D6E00081202D1C03005A4099 /* SettingsScreenTests.swift in Sources */,
 				D652AD262031EAA000E0AC65 /* TestExtensions.swift in Sources */,
 				3F19031E202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift in Sources */,
