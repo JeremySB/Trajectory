@@ -92,6 +92,26 @@ class FirebaseConnectionService : ConnectionService {
         }
     }
     
+    func getConnectionBetween(mentee menteeId: String, mentor mentorId: String, completion: @escaping (Connection?, ConnectionServiceError?) -> Void) {
+        Firestore.firestore().collection(FirestoreValues.connectionCollection)
+            .whereField(FirestoreValues.connectionMentee, isEqualTo: menteeId)
+            .whereField(FirestoreValues.connectionMentor, isEqualTo: mentorId)
+            .limit(to: 1)
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    completion(nil, .Misc(error.localizedDescription))
+                    return
+                }
+                else if let snapshot = snapshot, snapshot.documents[0].exists,
+                    let connection = try? FirestoreDecoder().decode(Connection.self, from: snapshot.documents[0].data()) {
+                    connection.id = snapshot.documents[0].documentID
+                    completion(connection, nil)
+                } else {
+                    completion(nil, .InvalidServerData)
+                }
+        }
+    }
+    
     func sendMentorRequest(to mentor: String, completion: ((ConnectionServiceError?) -> Void)?) {
         guard let uid = Auth.auth().currentUser?.uid else {
             completion?(.NotLoggedIn)
@@ -202,21 +222,48 @@ class FirebaseConnectionService : ConnectionService {
             completion?(.NotLoggedIn)
             return
         }
-        guard let mentorId = mentor.id else {
+        guard let mentorId = mentor.id,
+            var checkinEncoded = try? FirestoreEncoder().encode(checkin) else {
             completion?(.InvalidInputData)
             return
         }
-        Firestore.firestore().collection(FirestoreValues.connectionCollection)
-            .whereField(FirestoreValues.connectionMentee, isEqualTo: uid)
-            .whereField(FirestoreValues.connectionMentor, isEqualTo: mentorId)
-            .limit(to: 1)
-            .getDocuments { (snapshot, error) in
-                if let connection = snapshot?.documents[0] {
-                    connection.reference.collection(FirestoreValues.connectionCheckinCollection)
-                }
-                else if let error = error {
-                    completion?(.Misc(error.localizedDescription))
-                }
+        checkinEncoded[FirestoreValues.checkinDateCreated] = FieldValue.serverTimestamp()
+        
+        getConnectionBetween(mentee: uid, mentor: mentorId) { (connection, error) in
+            guard let connectionId = connection?.id else {
+                completion?(.Misc(error?.localizedDescription ?? ""))
+                return
             }
+            Firestore.firestore().collection(FirestoreValues.connectionCollection)
+                .document(connectionId)
+                .collection(FirestoreValues.connectionCheckinCollection)
+                .addDocument(data: checkinEncoded)
+        }
+    }
+    
+    func addCheckinsListener(from menteeId: String, to mentorId: String, update: @escaping ([Checkin]?, ConnectionServiceError?) -> Void) {
+        var checkins = [Checkin]()
+        getConnectionBetween(mentee: menteeId, mentor: mentorId) { (connection, error) in
+            if let connectionId = connection?.id {
+                Firestore.firestore().collection(FirestoreValues.connectionCollection)
+                    .document(connectionId)
+                    .collection(FirestoreValues.connectionCheckinCollection)
+                    .getDocuments(completion: { (snapshot, error) in
+                        guard let snapshot = snapshot else {
+                            update(nil, .Misc(error?.localizedDescription ?? ""))
+                            return
+                        }
+                        for doc in snapshot.documents {
+                            if let checkin = try? FirestoreDecoder().decode(Checkin.self, from: doc.data()) {
+                                checkins.append(checkin)
+                            }
+                        }
+                        update(checkins, nil)
+                    })
+            }
+            else {
+                update(nil, .InvalidServerData)
+            }
+        }
     }
 }

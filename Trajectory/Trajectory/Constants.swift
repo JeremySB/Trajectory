@@ -20,6 +20,9 @@ struct FirestoreValues {
     // connection subcollections
     static let connectionCheckinCollection = "checkins"
     
+    // checkin document keys
+    static let checkinDateCreated = "dateCreated"
+    
     // membership document keys
     static let membershipOrgId = "organizationId"
     static let membershipUid = "uid"
