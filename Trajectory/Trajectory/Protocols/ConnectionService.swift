@@ -15,6 +15,8 @@ protocol ConnectionService {
     func decline(menteeRequest: MenteeRequest, completion: ((ConnectionServiceError?) -> Void)?)
     func addMenteesListener(_ update: @escaping ([User]?, ConnectionServiceError?) -> Void)
     func addMentorsListener(_ update: @escaping ([User]?, ConnectionServiceError?) -> Void)
+    func addCheckin(_ checkin: Checkin, with mentor: User, completion: ((ConnectionServiceError?) -> Void)?)
+    func addCheckinsListener(from menteeId: String, to mentorId: String, update: @escaping ([Checkin]?, ConnectionServiceError?) -> Void)
 }
 
 enum ConnectionServiceError: Error {
