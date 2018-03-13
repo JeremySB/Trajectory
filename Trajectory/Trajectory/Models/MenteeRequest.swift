@@ -9,10 +9,10 @@
 import Foundation
 
 class MenteeRequest: Codable {
-    var mentee: Mentee
+    var mentee: User
     var connectionId: String
     
-    init(by mentee: Mentee, with id: String) {
+    init(by mentee: User, with id: String) {
         self.mentee = mentee
         self.connectionId = id
     }

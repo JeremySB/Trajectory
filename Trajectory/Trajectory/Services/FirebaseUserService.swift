@@ -93,23 +93,4 @@ class FirebaseUserService: UserService {
             completion(users, nil)
         }
     }
-    
-    func getMentee(uid: String, completion: @escaping (Mentee?, UserServiceError?) -> Void) {
-        Firestore.firestore().collection(FirestoreValues.userCollection).document(uid).getDocument { (doc, error) in
-            if let error = error {
-                return completion(nil, UserServiceError.Misc(error.localizedDescription))
-            }
-            guard let data = doc?.data() else {
-                completion(nil, UserServiceError.NoUserData)
-                return
-            }
-            if let mentee = try? FirestoreDecoder().decode(Mentee.self, from: data) {
-                mentee.id = doc?.documentID
-                completion(mentee, nil)
-            }
-            else {
-                completion(nil, UserServiceError.InvalidUserData)
-            }
-        }
-    }
 }

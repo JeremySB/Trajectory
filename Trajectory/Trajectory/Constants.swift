@@ -17,10 +17,14 @@ struct FirestoreValues {
     static let connectionMentor = "mentor"
     static let connectionMentorStatus = "mentorStatus"
     
+    // connection subcollections
+    static let connectionCheckinCollection = "checkins"
+    
     // membership document keys
     static let membershipOrgId = "organizationId"
     static let membershipUid = "uid"
     static let membershipJoinDate = "joinDate"
+    
     
     // root level collections
     static let organizationCollection = "organizations"

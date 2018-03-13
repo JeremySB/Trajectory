@@ -11,11 +11,11 @@
 		3F03585D2045ED8100BECAB2 /* ConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03585C2045ED8100BECAB2 /* ConnectionService.swift */; };
 		3F03585F2045EE9900BECAB2 /* FirebaseConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03585E2045EE9900BECAB2 /* FirebaseConnectionService.swift */; };
 		3F0358612045EFA600BECAB2 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0358602045EFA600BECAB2 /* Connection.swift */; };
+		3F17C80A2056FEE50056A09A /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17C8092056FEE50056A09A /* Checkin.swift */; };
 		3F1858D4202E0CB4007FC818 /* FirebaseAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D3202E0CB4007FC818 /* FirebaseAuthenticationService.swift */; };
 		3F1858D62030FED1007FC818 /* GoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D52030FED1007FC818 /* GoalsService.swift */; };
 		3F1858D82031004F007FC818 /* FirebaseGoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D72031004F007FC818 /* FirebaseGoalsService.swift */; };
 		3F1858DA20311C09007FC818 /* CodableFirebaseCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D920311C09007FC818 /* CodableFirebaseCustom.swift */; };
-		3F19031320237DF10002B74B /* Mentee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031220237DF10002B74B /* Mentee.swift */; };
 		3F19031520237F060002B74B /* MenteeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031420237F060002B74B /* MenteeRequest.swift */; };
 		3F1903192029379F0002B74B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1903182029379F0002B74B /* User.swift */; };
 		3F19031C202BB1720002B74B /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19031B202BB1720002B74B /* AuthenticationService.swift */; };
@@ -116,11 +116,11 @@
 		3F03585C2045ED8100BECAB2 /* ConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionService.swift; sourceTree = "<group>"; };
 		3F03585E2045EE9900BECAB2 /* FirebaseConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConnectionService.swift; sourceTree = "<group>"; };
 		3F0358602045EFA600BECAB2 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		3F17C8092056FEE50056A09A /* Checkin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin.swift; sourceTree = "<group>"; };
 		3F1858D3202E0CB4007FC818 /* FirebaseAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationService.swift; sourceTree = "<group>"; };
 		3F1858D52030FED1007FC818 /* GoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsService.swift; sourceTree = "<group>"; };
 		3F1858D72031004F007FC818 /* FirebaseGoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseGoalsService.swift; sourceTree = "<group>"; };
 		3F1858D920311C09007FC818 /* CodableFirebaseCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFirebaseCustom.swift; sourceTree = "<group>"; };
-		3F19031220237DF10002B74B /* Mentee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentee.swift; sourceTree = "<group>"; };
 		3F19031420237F060002B74B /* MenteeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequest.swift; sourceTree = "<group>"; };
 		3F1903182029379F0002B74B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F19031B202BB1720002B74B /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
@@ -249,12 +249,12 @@
 		3F19031120237DDA0002B74B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3F19031220237DF10002B74B /* Mentee.swift */,
 				3F19031420237F060002B74B /* MenteeRequest.swift */,
 				3F1903182029379F0002B74B /* User.swift */,
 				3FDF5B16202A0D670095D095 /* Goal.swift */,
 				3FB92CFC203B94E200AA2893 /* Organization.swift */,
 				3F0358602045EFA600BECAB2 /* Connection.swift */,
+				3F17C8092056FEE50056A09A /* Checkin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -867,6 +867,7 @@
 				3FC53D8A1FF03BA6000B82E3 /* AppDelegate.swift in Sources */,
 				3F1CF2D420562A4800CE9260 /* CommUserCollectionViewCell.swift in Sources */,
 				D60C7CC8201AD4BF00184F8A /* UpdateMyBioViewController.swift in Sources */,
+				3F17C80A2056FEE50056A09A /* Checkin.swift in Sources */,
 				D6B66D60201CEF1700AF8799 /* SetDurationViewController.swift in Sources */,
 				D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */,
 				D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */,
@@ -874,7 +875,6 @@
 				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
 				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,
 				3FB92D03203BA7FE00AA2893 /* FirebaseOrganizationService.swift in Sources */,
-				3F19031320237DF10002B74B /* Mentee.swift in Sources */,
 				3FB4374A203138AE00821A91 /* MyMenteeCalendarViewController.swift in Sources */,
 				3FB4374C203138C300821A91 /* MyMenteeOptionsViewController.swift in Sources */,
 				3F2F6B35202CB59800214772 /* CalendarCollectionViewCell.swift in Sources */,

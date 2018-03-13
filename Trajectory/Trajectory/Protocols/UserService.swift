@@ -9,8 +9,6 @@
 protocol UserService {
     func getUser(uid: String, completion: @escaping (User?, UserServiceError?) -> Void)
     
-    func getMentee(uid: String, completion: @escaping (Mentee?, UserServiceError?) -> Void)
-    
     func getCurrentUser(_ completion: @escaping (User?, UserServiceError?) -> Void)
     
     func saveCurrentUser(_: User, completion: ((UserServiceError?) -> Void)?)

@@ -137,9 +137,9 @@ class FirebaseConnectionService : ConnectionService {
                     if let connectionDecoded = try? FirestoreDecoder().decode(Connection.self, from: connection.data()) {
                         dispatch.enter()
                         guard let menteeUid = connectionDecoded.mentee else { continue }
-                        self.userService.getMentee(uid: menteeUid, completion: { (mentee, error) in
-                            if let mentee = mentee {
-                                requests.append(MenteeRequest(by: mentee, with: connection.documentID))
+                        self.userService.getUser(uid: menteeUid, completion: { (user, error) in
+                            if let user = user {
+                                requests.append(MenteeRequest(by: user, with: connection.documentID))
                             }
                             dispatch.leave()
                         })
@@ -195,5 +195,28 @@ class FirebaseConnectionService : ConnectionService {
                 })
             })
         listeners.append(listener)
+    }
+    
+    func addCheckin(_ checkin: Checkin, with mentor: User, completion: ((ConnectionServiceError?) -> Void)?) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            completion?(.NotLoggedIn)
+            return
+        }
+        guard let mentorId = mentor.id else {
+            completion?(.InvalidInputData)
+            return
+        }
+        Firestore.firestore().collection(FirestoreValues.connectionCollection)
+            .whereField(FirestoreValues.connectionMentee, isEqualTo: uid)
+            .whereField(FirestoreValues.connectionMentor, isEqualTo: mentorId)
+            .limit(to: 1)
+            .getDocuments { (snapshot, error) in
+                if let connection = snapshot?.documents[0] {
+                    connection.reference.collection(FirestoreValues.connectionCheckinCollection)
+                }
+                else if let error = error {
+                    completion?(.Misc(error.localizedDescription))
+                }
+            }
     }
 }
