@@ -169,7 +169,7 @@
         <!--Find Mentor - People-->
         <scene sceneID="8Up-lb-m1R">
             <objects>
-                <viewController storyboardIdentifier="FindPeople" title="Find Mentor - People" id="z7N-nK-aF0" customClass="FindPeopleViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindPeople" title="Find Mentor - People" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z7N-nK-aF0" customClass="FindPeopleViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wj6-hv-rjC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,7 +257,7 @@
         <!--Find Mentor - Orgs-->
         <scene sceneID="43N-Hy-1Ji">
             <objects>
-                <viewController storyboardIdentifier="FindOrgs" title="Find Mentor - Orgs" id="SaT-ML-I6v" customClass="FindOrgsViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindOrgs" title="Find Mentor - Orgs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SaT-ML-I6v" customClass="FindOrgsViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SJS-Uk-f1s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

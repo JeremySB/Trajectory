@@ -8,6 +8,8 @@
 
 import XCTest
 
+@testable import Trajectory
+
 class FindScreensTests: XCTestCase {
     
     override func setUp() {
@@ -21,18 +23,86 @@ class FindScreensTests: XCTestCase {
     }
     
     // --Tests for Find People View Controller--
-    func testPeopleSearchForMatches() {
-
+    func testPeopleSearchForMatchesValidInput() {
+        //Test setup
+        var controllerUnderTest : FindPeopleViewController!
+        controllerUnderTest = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FindPeople") as! FindPeopleViewController
+        controllerUnderTest.loadView()
+        //Test searchForMatches() function
+        let testUserOne = User()
+        let testUserTwo = User()
+        let testUserThree = User()
+        testUserOne.name = "Andrew V."
+        testUserTwo.name = "Jeremy B."
+        testUserThree.name = "Andy"
+        controllerUnderTest.mentors = [testUserOne, testUserTwo, testUserThree]
+        controllerUnderTest.searchForMatches(searchString: "Andrew")
+        XCTAssertFalse(controllerUnderTest.searchResults.isEmpty)
+    }
+    
+    func testPeopleSearchForMatchesInvalidInput() {
+        //Test setup
+        var controllerUnderTest : FindPeopleViewController!
+        controllerUnderTest = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FindPeople") as! FindPeopleViewController
+        controllerUnderTest.loadView()
+        //Test searchForMatches() function
+        let testUserOne = User()
+        let testUserTwo = User()
+        let testUserThree = User()
+        testUserOne.name = "Andrew V."
+        testUserTwo.name = "Jeremy B."
+        testUserThree.name = "Andy"
+        controllerUnderTest.mentors = [testUserOne, testUserTwo, testUserThree]
+        controllerUnderTest.searchForMatches(searchString: "asdfdr")
+        XCTAssert(controllerUnderTest.searchResults.isEmpty)
     }
     
     func testPeopleUpdateSearchResults() {
-        
+        //Test setup
+        var controllerUnderTest : FindPeopleViewController!
+        controllerUnderTest = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FindPeople") as! FindPeopleViewController
+        controllerUnderTest.loadView()
+        //Test updateSearchResults() function
+        controllerUnderTest.searchController.searchBar.text = "Andrew"
+        controllerUnderTest.updateSearchResults(for: controllerUnderTest.searchController)
+        XCTAssert(controllerUnderTest.collectionView.numberOfItems(inSection: 0) != 0)
     }
     
     // --Tests for Find Organizations View Controller--
-    func testOrganizationsSearchForMatches() {
-        
+    func testOrganizationsSearchForMatchesValidInput() {
+        //Test setup
+        var controllerUnderTest : FindOrgsViewController!
+        controllerUnderTest = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FindOrgs") as! FindOrgsViewController
+        controllerUnderTest.loadView()
+        //Test searchForMatches() function
+        let testUserOne = User()
+        let testUserTwo = User()
+        let testUserThree = User()
+        testUserOne.name = "Andrew V."
+        testUserTwo.name = "Jeremy B."
+        testUserThree.name = "Andy"
+       // controllerUnderTest.usersPerOrganization = [["Test 1":[testUserOne]], ["Test 2":[testUserTwo]], ["Test 3": [testUserThree]]]
+        controllerUnderTest.searchForMatches(searchString: "Andrew")
+        XCTAssertFalse(controllerUnderTest.searchResults.isEmpty)
     }
+    
+    func testOrganizationsSearchForMatchesInvalidInput() {
+        //Test setup
+        var controllerUnderTest : FindOrgsViewController!
+        controllerUnderTest = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FindOrgs") as! FindOrgsViewController
+        controllerUnderTest.loadView()
+        //Test searchForMatches() function
+        let testUserOne = User()
+        let testUserTwo = User()
+        let testUserThree = User()
+        testUserOne.name = "Andrew V."
+        testUserTwo.name = "Jeremy B."
+        testUserThree.name = "Andy"
+        controllerUnderTest.mentors = [testUserOne, testUserTwo, testUserThree]
+        controllerUnderTest.searchForMatches(searchString: "fdasfddsa")
+        XCTAssertFalse(controllerUnderTest.searchResults.isEmpty)
+    }
+    
     
     func testOrganizationsUpdateSearchResults() {
         
