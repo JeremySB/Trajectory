@@ -24,8 +24,11 @@ class CommSwipeMenteeViewController: ScrollController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        for view in orderedViewControllers {
+            var tmp = view as! UserChild
+            tmp.user = self.user
+        }
     }
 
     override func didReceiveMemoryWarning() {

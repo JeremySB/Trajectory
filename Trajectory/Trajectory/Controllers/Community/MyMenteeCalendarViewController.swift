@@ -8,12 +8,25 @@
 
 import UIKit
 
-class MyMenteeCalendarViewController: UIViewController {
-
+class MyMenteeCalendarViewController: UIViewController, UserChild {
+    weak var _user: User!
+    weak var user: User! {
+        get{return self._user}
+        set{ menteeName?.text = newValue.name; self._user = newValue; viewDidAppear(false)}
+    }
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var menteeName: UILabel!
+    @IBOutlet weak var organizations: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        menteeName?.text = user?.name ?? ""
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        menteeName?.text = user?.name ?? ""
     }
 
     override func didReceiveMemoryWarning() {

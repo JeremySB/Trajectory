@@ -32,7 +32,9 @@ class CommViewController: ScrollController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("This sucks")
+    }
     /*
     // MARK: - Navigation
 

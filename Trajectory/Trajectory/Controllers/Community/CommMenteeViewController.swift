@@ -34,6 +34,13 @@ class CommMenteeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = childView.indexPathsForSelectedItems {
+            let mentee = self.mentees[indexPath[0][1]]
+            let vc = segue.destination as! CommSwipeMenteeViewController
+            vc.user = mentee
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -44,12 +51,6 @@ class CommMenteeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = childView.indexPathsForSelectedItems {
-            let vc = segue.destination as! CommSwipeMenteeViewController
-            vc.user = self.mentees[indexPath[0][1]]
-        }
-    }
 
 }
 

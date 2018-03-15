@@ -36,8 +36,9 @@ class CommMentorViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = childView.indexPathsForSelectedItems {
+            let mentor = self.mentors[indexPath[0][1]]
             let vc = segue.destination as! CommSwipeMentorViewController
-            vc.user = self.mentors[indexPath[0][1]]
+            vc.user = mentor
         }
     }
 

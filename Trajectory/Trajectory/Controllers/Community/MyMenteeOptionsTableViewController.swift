@@ -8,11 +8,23 @@
 
 import UIKit
 
-class MyMenteeOptionsTableViewController: UITableViewController {
+class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
+    weak var _user: User!
+    weak var user: User! {
+        get{return self._user}
+        set{
+            menteeName?.text = newValue.name;
+            self._user = newValue;
+            viewDidAppear(false)}
+    }
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var menteeName: UILabel!
+    @IBOutlet weak var organizations: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        menteeName?.text = user.name
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

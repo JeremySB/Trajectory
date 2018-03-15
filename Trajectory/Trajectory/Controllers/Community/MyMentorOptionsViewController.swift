@@ -8,11 +8,16 @@
 
 import UIKit
 
-class MyMentorOptionsViewController: UIViewController {
+class MyMentorOptionsViewController: UIViewController, UserChild {
+    
+    weak var user: User!
 
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var mentorName: UILabel!
+    @IBOutlet weak var organizations: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mentorName.text = user?.name ?? "Nothing"
         // Do any additional setup after loading the view.
     }
 

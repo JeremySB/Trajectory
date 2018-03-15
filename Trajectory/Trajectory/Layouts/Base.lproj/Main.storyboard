@@ -759,6 +759,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xSX-BW-oXK"/>
                     </view>
+                    <connections>
+                        <outlet property="menteeName" destination="Yds-tC-jYV" id="Vg6-2H-ADG"/>
+                        <outlet property="organizations" destination="gfX-FH-D9a" id="GGl-j0-j1y"/>
+                        <outlet property="profileImage" destination="LfZ-vH-chB" id="A6e-o4-Mdi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjg-Ho-woI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -834,6 +839,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZaF-8K-tou"/>
                     </view>
+                    <connections>
+                        <outlet property="mentorName" destination="pH2-eO-Bwx" id="c0z-eq-dQv"/>
+                        <outlet property="organizations" destination="mNN-VJ-PUX" id="ncT-tu-tYG"/>
+                        <outlet property="profileImage" destination="RBG-1E-Fqt" id="pMi-Iz-Rcd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irh-P6-arw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -948,6 +958,11 @@
                             <outlet property="delegate" destination="Oc4-t1-Jhm" id="fyp-S1-Pzc"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="mentorName" destination="SlF-ge-TPM" id="ini-gj-fOv"/>
+                        <outlet property="organizations" destination="2M2-3q-7Hz" id="9TY-Rh-DAu"/>
+                        <outlet property="profileImage" destination="sGD-ul-Sfn" id="kco-HT-p8U"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kF4-NX-dLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Khk-fD-qSH" userLabel="Exit" sceneMemberID="exit"/>
@@ -1080,6 +1095,11 @@
                             <outlet property="delegate" destination="5PS-6y-Y6m" id="LCU-He-5FT"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="menteeName" destination="Usb-7L-Ksy" id="dEW-ol-uof"/>
+                        <outlet property="organizations" destination="dpF-Vd-fOa" id="0JY-Gl-YmP"/>
+                        <outlet property="profileImage" destination="uun-gI-Ex2" id="CK6-lb-EiM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0e4-b2-8Fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

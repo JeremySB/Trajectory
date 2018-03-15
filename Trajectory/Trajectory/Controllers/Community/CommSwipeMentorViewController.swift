@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol UserChild {
+    weak var user: User! {get set}
+}
+
 class CommSwipeMentorViewController: ScrollController {
 
     weak var user: User!
@@ -27,6 +31,10 @@ class CommSwipeMentorViewController: ScrollController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        for view in orderedViewControllers {
+            var tmp = view as! UserChild
+            tmp.user = self.user
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +42,10 @@ class CommSwipeMentorViewController: ScrollController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var vc = segue.destination as! UserChild
+        vc.user = user
+    }
     
     /*
     // MARK: - Navigation

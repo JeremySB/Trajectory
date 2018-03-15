@@ -8,12 +8,27 @@
 
 import UIKit
 
-class MyMentorCheckinViewController: UIViewController {
+class MyMentorCheckinViewController: UIViewController, UserChild {
+    
+    weak var _user: User!
+    weak var user: User! {
+        get{return self._user}
+        set{ mentorName?.text = newValue.name; self._user = newValue; viewDidAppear(false)}
+    }
 
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var mentorName: UILabel!
+    @IBOutlet weak var organizations: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mentorName.text = user?.name ?? ""
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        mentorName.text = user?.name ?? ""
     }
 
     override func didReceiveMemoryWarning() {

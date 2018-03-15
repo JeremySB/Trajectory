@@ -14,7 +14,8 @@
 import UIKit
 
 class ScrollController: UIPageViewController {
-    private(set) lazy var orderedViewControllers: [UIViewController] = [UIViewController]()
+    //private(set) lazy var orderedViewControllers: [UIViewController] = [UIViewController]()
+    internal(set) lazy var orderedViewControllers: [UIViewController] = [UIViewController]()
 
     var startIndex: Int = 0;
     
