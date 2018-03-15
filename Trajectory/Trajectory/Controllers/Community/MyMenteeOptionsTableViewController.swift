@@ -69,6 +69,12 @@ class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
         //TODO - Cancel mentorship on backend
     }
     
+    @IBAction func contactMentee(_ sender: Any) {
+        if UIApplication.shared.canOpenURL(URL(string:"sms:")!) {
+            UIApplication.shared.open(URL(string:"sms:")!, options: [:], completionHandler: nil)
+        }
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

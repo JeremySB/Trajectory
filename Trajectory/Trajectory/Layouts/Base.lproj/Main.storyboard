@@ -1044,6 +1044,9 @@
                                                     <state key="normal" title="Contact Mentee">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="contactMentee:" destination="5PS-6y-Y6m" eventType="touchUpInside" id="xVU-Aa-8nz"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
