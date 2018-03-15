@@ -58,6 +58,7 @@
 		3FC53D961FF03BA7000B82E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53D941FF03BA7000B82E3 /* LaunchScreen.storyboard */; };
 		3FC53DBA1FF03CBA000B82E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */; };
 		3FD722BF20582D8B005D6601 /* MyMenteeOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD722BE20582D8B005D6601 /* MyMenteeOptionsTableViewController.swift */; };
+		3FD722C1205AC5EA005D6601 /* MyMentorOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD722C0205AC5EA005D6601 /* MyMentorOptionsTableViewController.swift */; };
 		3FDF5B17202A0D670095D095 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF5B16202A0D670095D095 /* Goal.swift */; };
 		3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0F472201A434500F3CD18 /* ScrollController.swift */; };
 		3FE1450A1FF9778B00F3CF18 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE145091FF9778B00F3CF18 /* Social.framework */; };
@@ -169,6 +170,7 @@
 		3FC53DAD1FF03BA7000B82E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC53DB91FF03CBA000B82E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FD722BE20582D8B005D6601 /* MyMenteeOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenteeOptionsTableViewController.swift; sourceTree = "<group>"; };
+		3FD722C0205AC5EA005D6601 /* MyMentorOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMentorOptionsTableViewController.swift; sourceTree = "<group>"; };
 		3FDF5B16202A0D670095D095 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		3FE0F472201A434500F3CD18 /* ScrollController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollController.swift; sourceTree = "<group>"; };
 		3FE145091FF9778B00F3CF18 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -378,6 +380,7 @@
 				3FB4375320313B8C00821A91 /* MyMentorOptionsViewController.swift */,
 				3F1CF2D320562A4800CE9260 /* CommUserCollectionViewCell.swift */,
 				3FD722BE20582D8B005D6601 /* MyMenteeOptionsTableViewController.swift */,
+				3FD722C0205AC5EA005D6601 /* MyMentorOptionsTableViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -855,6 +858,7 @@
 				3FB4375020313A1D00821A91 /* CommSwipeMentorViewController.swift in Sources */,
 				D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */,
 				3FB4375420313B8C00821A91 /* MyMentorOptionsViewController.swift in Sources */,
+				3FD722C1205AC5EA005D6601 /* MyMentorOptionsTableViewController.swift in Sources */,
 				3F03585D2045ED8100BECAB2 /* ConnectionService.swift in Sources */,
 				3FB2746E204B7BED00251B6D /* Constants.swift in Sources */,
 				3FB437422031376A00821A91 /* FindPeopleViewController.swift in Sources */,
