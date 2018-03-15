@@ -10,31 +10,74 @@ import XCTest
 
 @testable import Trajectory
 
-class MockUserService: UserService {
-    func getUser(uid: String, completion: @escaping (User?, UserServiceError?) -> Void) {
-        
-    }
-    
-    func getCurrentUser(_ completion: @escaping (User?, UserServiceError?) -> Void) {
-        
-    }
-    
-    func saveCurrentUser(_: User, completion: ((UserServiceError?) -> Void)?) {
-        
-    }
-    
-    func getAllUsers(completion: @escaping ([User]?, UserServiceError?) -> Void) {
-        let testUserOne = User()
-        let testUserTwo = User()
-        let testUserThree = User()
-        testUserOne.name = "Andrew V."
-        testUserTwo.name = "Jeremy B."
-        testUserThree.name = "Andy"
-        completion([testUserOne, testUserTwo, testUserThree], nil)
-    }
-}
-
 class FindScreensTests: XCTestCase {
+    
+    class MockOrgService: OrganizationService {
+        func getAllOrganizations(_ completion: @escaping ([Organization]?, OrganizationServiceError?) -> Void) {
+            
+        }
+        
+        func getOrganization(with id: String, completion: @escaping (Organization?, OrganizationServiceError?) -> Void) {
+            
+        }
+        
+        func getOrganizations(for uid: String, completion: @escaping ([Organization]?, OrganizationServiceError?) -> Void) {
+            
+        }
+        
+        func getMembers(of organizationIds: [String], completion: @escaping ([User]?, OrganizationServiceError?) -> Void) {
+            let testUserOne = User()
+            let testUserTwo = User()
+            let testUserThree = User()
+            testUserOne.name = "Andrew V."
+            testUserTwo.name = "Jeremy B."
+            testUserThree.name = "Andy"
+            completion([testUserOne, testUserTwo, testUserThree], nil)
+        }
+        
+        func getCurrentOrganizations(_ completion: @escaping ([Organization]?, OrganizationServiceError?) -> Void) {
+            let org = Organization()
+            org.id = "test"
+            org.name = "Test"
+            completion([org], nil)
+        }
+        
+        func joinOrganization(_ id: String, completion: ((OrganizationServiceError?) -> Void)?) {
+            
+        }
+        
+        func joinOrganization(code: Int, completion: ((OrganizationServiceError?) -> Void)?) {
+            
+        }
+        
+        func leaveOrganization(_ id: String, completion: ((OrganizationServiceError?) -> Void)?) {
+            
+        }
+    }
+    
+    class MockUserService: UserService {
+        func getUser(uid: String, completion: @escaping (User?, UserServiceError?) -> Void) {
+            
+        }
+        
+        func getCurrentUser(_ completion: @escaping (User?, UserServiceError?) -> Void) {
+            
+        }
+        
+        func saveCurrentUser(_: User, completion: ((UserServiceError?) -> Void)?) {
+            
+        }
+        
+        func getAllUsers(completion: @escaping ([User]?, UserServiceError?) -> Void) {
+            let testUserOne = User()
+            let testUserTwo = User()
+            let testUserThree = User()
+            testUserOne.name = "Andrew V."
+            testUserTwo.name = "Jeremy B."
+            testUserThree.name = "Andy"
+            completion([testUserOne, testUserTwo, testUserThree], nil)
+        }
+    }
     
     override func setUp() {
         super.setUp()
@@ -146,9 +189,12 @@ class FindScreensTests: XCTestCase {
         controllerUnderTest.loadView()
         //Test updateSearchResults() function
         controllerUnderTest.userService = MockUserService()
+        controllerUnderTest.orgService = MockOrgService()
+        controllerUnderTest.populateOrgsAndUsers()
         controllerUnderTest.searchBar.text = "Andrew"
         controllerUnderTest.updateSearchResults(for: controllerUnderTest.searchController)
         XCTAssert(controllerUnderTest.collectionView.numberOfItems(inSection: 0) != 0)
+        XCTAssertFalse(controllerUnderTest.userOrganizations.isEmpty)
     }
     
 }
