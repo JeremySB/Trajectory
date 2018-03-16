@@ -9,7 +9,7 @@ import UIKit
 
 class Connection: Codable {
     enum Status: String, Codable {
-        case accepted, pending, rejected
+        case accepted, pending, rejected, ended
     }
     var mentee: String?
     var mentor: String?

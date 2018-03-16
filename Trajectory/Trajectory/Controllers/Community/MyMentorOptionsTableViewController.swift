@@ -15,6 +15,9 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
         set{ mentorName?.text = newValue.name; self._user = newValue; viewDidAppear(false)}
     }
     
+    lazy var connectionService: ConnectionService = FirebaseConnectionService()
+    lazy var authService: AuthenticationService = FirebaseAuthenticationService()
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var mentorName: UILabel!
     @IBOutlet weak var organizations: UILabel!
@@ -61,7 +64,15 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
     }
     
     func cancelMentorship(alert: UIAlertAction!) {
-        //TODO - Cancel mentorship on backend
+        guard let uid = authService.currentUID, let mentorId = user.id else { return }
+        connectionService.getConnectionBetween(mentee: uid, mentor: mentorId) { (conn, error) in
+            if let conn = conn {
+                conn.mentorStatus = .ended
+                self.connectionService.saveConnection(conn, completion: { (error) in
+                    
+                })
+            }
+        }
     }
     
     /*

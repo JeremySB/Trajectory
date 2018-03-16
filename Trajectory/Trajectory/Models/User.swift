@@ -19,14 +19,6 @@ class User: Codable {
     
     var id: String? = nil
     
-    init(testname: String) {
-        // init for test data
-        name = testname
-    }
-    
-    init() {
-    }
-    
     enum CodingKeys: String, CodingKey {
         case name, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress
     }
