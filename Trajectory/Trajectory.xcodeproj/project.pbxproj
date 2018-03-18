@@ -73,6 +73,8 @@
 		D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */; };
 		D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */; };
 		D60C7CD0201AD6A200184F8A /* MenteeRequestListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */; };
+		D6216AE9205EE203005626BD /* RegistrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6216AE8205EE203005626BD /* RegistrationUITests.swift */; };
+		D6216AEB205EED4B005626BD /* AddGoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6216AEA205EED4B005626BD /* AddGoalUITests.swift */; };
 		D652AD262031EAA000E0AC65 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD252031EAA000E0AC65 /* TestExtensions.swift */; };
 		D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD272031EAD800E0AC65 /* SettingsUITests.swift */; };
 		D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */; };
@@ -187,6 +189,8 @@
 		D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrganizationViewController.swift; sourceTree = "<group>"; };
 		D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrganizationsTableViewController.swift; sourceTree = "<group>"; };
 		D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeRequestListTableViewController.swift; sourceTree = "<group>"; };
+		D6216AE8205EE203005626BD /* RegistrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUITests.swift; sourceTree = "<group>"; };
+		D6216AEA205EED4B005626BD /* AddGoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalUITests.swift; sourceTree = "<group>"; };
 		D652AD252031EAA000E0AC65 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		D652AD272031EAD800E0AC65 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -438,6 +442,7 @@
 		3FC53D9F1FF03BA7000B82E3 /* TrajectoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				D6216AE8205EE203005626BD /* RegistrationUITests.swift */,
 				D6DA738920581DB800630580 /* FindScreensTests.swift */,
 				3F19031D202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift */,
 				3FC53DA21FF03BA7000B82E3 /* Info.plist */,
@@ -450,6 +455,7 @@
 		3FC53DAA1FF03BA7000B82E3 /* TrajectoryUITests */ = {
 			isa = PBXGroup;
 			children = (
+				D6216AEA205EED4B005626BD /* AddGoalUITests.swift */,
 				D6DE11882055A731000F31EE /* FindUITests.swift */,
 				3FB92CFA2036322A00AA2893 /* RegistrationTests.swift */,
 				3FB92CF82035F6AD00AA2893 /* LoginTests.swift */,
@@ -914,6 +920,7 @@
 			files = (
 				D6DA738A20581DB800630580 /* FindScreensTests.swift in Sources */,
 				D6E00081202D1C03005A4099 /* SettingsScreenTests.swift in Sources */,
+				D6216AE9205EE203005626BD /* RegistrationUITests.swift in Sources */,
 				D652AD262031EAA000E0AC65 /* TestExtensions.swift in Sources */,
 				3F19031E202BB5100002B74B /* InitialAuthenticationViewControllerTests.swift in Sources */,
 			);
@@ -923,6 +930,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6216AEB205EED4B005626BD /* AddGoalUITests.swift in Sources */,
 				3FB92CFB2036322A00AA2893 /* RegistrationTests.swift in Sources */,
 				3FB92CF92035F6AD00AA2893 /* LoginTests.swift in Sources */,
 				D6DE11892055A731000F31EE /* FindUITests.swift in Sources */,

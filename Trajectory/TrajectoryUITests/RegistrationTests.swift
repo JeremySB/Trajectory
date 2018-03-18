@@ -83,4 +83,62 @@ class RegistrationTests: XCTestCase {
         
     }
     
+    func testNextAndBackButtons() {
+        
+        let emailTextField = app.textFields["Email"]
+        emailTextField.tap()
+        emailTextField.typeText("testcase@test.com")
+        app.buttons["Continue"].tap()
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText("password")
+        app.buttons["Create Account"].tap()
+        
+        let pleaseEnterYourNameTextField = app.textFields["Please enter your name"]
+        pleaseEnterYourNameTextField.tap()
+        pleaseEnterYourNameTextField.typeText("Tester")
+        
+        let nextButton = app.buttons["Next"]
+        nextButton.tap()
+        
+        let phonenumberTextField = app/*@START_MENU_TOKEN@*/.textFields["phoneNumber"]/*[[".textFields[\"Phone Number\"]",".textFields[\"phoneNumber\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        phonenumberTextField.tap()
+        phonenumberTextField.typeText("888-888-8888")
+        nextButton.tap()
+        
+        let element2 = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        let element = element2.children(matching: .other).element
+        let textView = element.children(matching: .textView).element(boundBy: 0)
+        textView.tap()
+        textView.typeText("Test")
+        element.tap()
+        
+        let textView2 = element.children(matching: .textView).element(boundBy: 1)
+        textView2.tap()
+        textView2.typeText("Test")
+        nextButton.tap()
+        
+        let textField = element.children(matching: .textField).element
+        textField.tap()
+        textField.typeText("Test")
+        
+        let textView3 = element.children(matching: .textView).element
+        textView3.tap()
+        textView3.typeText("Test")
+        
+        let profileSetupNavigationBarsQuery = app.navigationBars.matching(identifier: "Profile Setup")
+        profileSetupNavigationBarsQuery.buttons["Profile Setup"].tap()
+        profileSetupNavigationBarsQuery.buttons["Phone"].tap()
+        app.navigationBars["Profile Setup"].buttons["Profile Setup"].tap()
+        nextButton.tap()
+        nextButton.tap()
+        nextButton.tap()
+        app.buttons["Finish"].tap()
+        
+        app.tabBars.buttons["Find"].tap()
+        let searchForPeopleSearchField = app.searchFields["Search for people"]
+        searchForPeopleSearchField.tap()
+        searchForPeopleSearchField.typeText("Andrew")
+    }
 }
