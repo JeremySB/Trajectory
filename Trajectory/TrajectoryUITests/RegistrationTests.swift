@@ -84,10 +84,12 @@ class RegistrationTests: XCTestCase {
     }
     
     func testNextAndBackButtons() {
+        let num = Int(arc4random_uniform(500000)) + 1000
+        let email: String = "uitestnumber\(num)@gettrajectory.com"
         
         let emailTextField = app.textFields["Email"]
         emailTextField.tap()
-        emailTextField.typeText("testcase@test.com")
+        emailTextField.typeText(email)
         app.buttons["Continue"].tap()
         
         let passwordSecureTextField = app.secureTextFields["Password"]
