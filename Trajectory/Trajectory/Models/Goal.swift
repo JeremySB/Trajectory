@@ -18,16 +18,18 @@ class Goal: Codable {
     var title: String?
     var startDate: Date?
     var endDate: Date?
-    enum progressPeriod {
-        case total
-        case daily
-        case weekly
-        case monthly
-    }
+    var progressPeriod: ProgPeriod?
     
     var id: String? = nil
     
     enum CodingKeys: String, CodingKey {
-        case owner, totalProgress, currentProgress, title, startDate, endDate
+        case owner, totalProgress, currentProgress, title, startDate, endDate, progressPeriod
+    }
+    
+    enum ProgPeriod: String, Codable {
+        case total
+        case daily
+        case weekly
+        case monthly
     }
 }

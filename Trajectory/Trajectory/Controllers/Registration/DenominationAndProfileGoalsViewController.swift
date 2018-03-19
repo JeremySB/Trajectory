@@ -14,6 +14,7 @@ class DenominationAndProfileGoalsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        objectivesStatement.layer.borderWidth = 1
 
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"

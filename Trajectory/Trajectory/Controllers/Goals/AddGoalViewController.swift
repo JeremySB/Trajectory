@@ -46,6 +46,7 @@ class AddGoalViewController: UIViewController {
         goal.title = nameField.text
         goal.endDate = endDatePicker.date
         goal.totalProgress = Int(progressAmount.text ?? "")
+        // goal.progressPeriod = segmentedControlPeriod.
         
         if(goal.title == "" || goal.totalProgress == nil){
             if(goal.title == ""){

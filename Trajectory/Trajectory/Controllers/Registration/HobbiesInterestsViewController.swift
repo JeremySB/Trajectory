@@ -9,12 +9,16 @@
 import UIKit
 import Firebase
 import CodableFirebase
+//import QuarzCore
 
 class HobbiesInterestsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hobbies.layer.borderWidth = 1
+        professionalInterests.layer.borderWidth = 1
+        
+        
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
     }
