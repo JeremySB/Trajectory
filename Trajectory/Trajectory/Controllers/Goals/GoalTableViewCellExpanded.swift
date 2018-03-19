@@ -26,11 +26,9 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
     
     
     @IBAction func RemoveGoal(_ sender: Any) {
-        let parent = self.parent
+        self.parent?.setExpandedRow(row: -1)
         goalsService.removeGoal(goal) { (error) in
-            //self.parent.tableView.reloadData()
             if (error == nil){
-                parent?.setExpandedRow(row: -1)
             }
         }
     }
