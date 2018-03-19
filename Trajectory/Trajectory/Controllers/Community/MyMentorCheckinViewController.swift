@@ -25,6 +25,11 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func sendToCalendar(_ sender: Any) {
+        if UIApplication.shared.canOpenURL(URL(string:"calshow://")!) {
+            UIApplication.shared.open(URL(string:"calshow://")!, options: [:], completionHandler: nil)
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

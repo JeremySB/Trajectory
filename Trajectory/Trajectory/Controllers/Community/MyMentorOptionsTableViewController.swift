@@ -75,6 +75,12 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
         }
     }
     
+    @IBAction func sendToCalendar(_ sender: Any) {
+        if UIApplication.shared.canOpenURL(URL(string:"calshow://")!) {
+            UIApplication.shared.open(URL(string:"calshow://")!, options: [:], completionHandler: nil)
+        }
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

@@ -18,6 +18,12 @@ class Goal: Codable {
     var title: String?
     var startDate: Date?
     var endDate: Date?
+    enum progressPeriod {
+        case total
+        case daily
+        case weekly
+        case monthly
+    }
     
     var id: String? = nil
     

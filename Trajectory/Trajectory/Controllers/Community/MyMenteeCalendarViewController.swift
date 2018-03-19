@@ -18,6 +18,14 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var menteeName: UILabel!
     @IBOutlet weak var organizations: UILabel!
+    
+    
+    @IBAction func sendToCalendar(_ sender: Any) {
+        if UIApplication.shared.canOpenURL(URL(string:"calshow://")!) {
+            UIApplication.shared.open(URL(string:"calshow://")!, options: [:], completionHandler: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         menteeName?.text = user?.name ?? ""

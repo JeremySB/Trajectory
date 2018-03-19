@@ -50,7 +50,7 @@ class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if(section == 0){
-            return 1;
+            return 1
         }else{
             return 4
         }
@@ -83,6 +83,13 @@ class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
     @IBAction func contactMentee(_ sender: Any) {
         if UIApplication.shared.canOpenURL(URL(string:"sms:")!) {
             UIApplication.shared.open(URL(string:"sms:")!, options: [:], completionHandler: nil)
+        }
+    }
+    
+    
+    @IBAction func sendToCalendar(_ sender: Any) {
+        if UIApplication.shared.canOpenURL(URL(string:"calshow://")!) {
+            UIApplication.shared.open(URL(string:"calshow://")!, options: [:], completionHandler: nil)
         }
     }
     
