@@ -307,6 +307,22 @@ Copyright 2018 Google
 
 Copyright 2018 Google
 
+## FirebaseMessaging
+
+Copyright 2018 Google
+
+## FirebasePerformance
+
+Copyright 2018 Google
+
+## FirebaseStorage
+
+Copyright 2018 Google
+
+## FirebaseSwizzlingUtilities
+
+Copyright 2017 Google
+
 ## GTMOAuth2
 
 
