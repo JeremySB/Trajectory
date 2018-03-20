@@ -12,6 +12,9 @@
 		3F03585F2045EE9900BECAB2 /* FirebaseConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03585E2045EE9900BECAB2 /* FirebaseConnectionService.swift */; };
 		3F0358612045EFA600BECAB2 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0358602045EFA600BECAB2 /* Connection.swift */; };
 		3F17C80A2056FEE50056A09A /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17C8092056FEE50056A09A /* Checkin.swift */; };
+		3F17C80C2061600B0056A09A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17C80B2061600B0056A09A /* Extensions.swift */; };
+		3F17C80E20616B100056A09A /* FirebaseImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17C80D20616B100056A09A /* FirebaseImageService.swift */; };
+		3F17C81020616BB10056A09A /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17C80F20616BB10056A09A /* ImageService.swift */; };
 		3F1858D4202E0CB4007FC818 /* FirebaseAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D3202E0CB4007FC818 /* FirebaseAuthenticationService.swift */; };
 		3F1858D62030FED1007FC818 /* GoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D52030FED1007FC818 /* GoalsService.swift */; };
 		3F1858D82031004F007FC818 /* FirebaseGoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1858D72031004F007FC818 /* FirebaseGoalsService.swift */; };
@@ -119,6 +122,9 @@
 		3F03585E2045EE9900BECAB2 /* FirebaseConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConnectionService.swift; sourceTree = "<group>"; };
 		3F0358602045EFA600BECAB2 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		3F17C8092056FEE50056A09A /* Checkin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin.swift; sourceTree = "<group>"; };
+		3F17C80B2061600B0056A09A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3F17C80D20616B100056A09A /* FirebaseImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImageService.swift; sourceTree = "<group>"; };
+		3F17C80F20616BB10056A09A /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		3F1858D3202E0CB4007FC818 /* FirebaseAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationService.swift; sourceTree = "<group>"; };
 		3F1858D52030FED1007FC818 /* GoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsService.swift; sourceTree = "<group>"; };
 		3F1858D72031004F007FC818 /* FirebaseGoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseGoalsService.swift; sourceTree = "<group>"; };
@@ -271,6 +277,7 @@
 				3F1858D52030FED1007FC818 /* GoalsService.swift */,
 				3FB92CFE203BA03700AA2893 /* OrganizationService.swift */,
 				3F03585C2045ED8100BECAB2 /* ConnectionService.swift */,
+				3F17C80F20616BB10056A09A /* ImageService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -283,6 +290,7 @@
 				3F1858D72031004F007FC818 /* FirebaseGoalsService.swift */,
 				3FB92D02203BA7FE00AA2893 /* FirebaseOrganizationService.swift */,
 				3F03585E2045EE9900BECAB2 /* FirebaseConnectionService.swift */,
+				3F17C80D20616B100056A09A /* FirebaseImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -433,6 +441,7 @@
 				D6AAA300201EB90100789BB6 /* Assets.xcassets */,
 				3F1858D920311C09007FC818 /* CodableFirebaseCustom.swift */,
 				3FB2746D204B7BED00251B6D /* Constants.swift */,
+				3F17C80B2061600B0056A09A /* Extensions.swift */,
 			);
 			path = Trajectory;
 			sourceTree = "<group>";
@@ -902,8 +911,11 @@
 				3FB4374020312B0F00821A91 /* CommViewController.swift in Sources */,
 				3F69694320408CCE004CCE5D /* GoalsTableViewCell.swift in Sources */,
 				3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */,
+				3F17C81020616BB10056A09A /* ImageService.swift in Sources */,
 				3FD722BF20582D8B005D6601 /* MyMenteeOptionsTableViewController.swift in Sources */,
 				3F1903192029379F0002B74B /* User.swift in Sources */,
+				3F17C80E20616B100056A09A /* FirebaseImageService.swift in Sources */,
+				3F17C80C2061600B0056A09A /* Extensions.swift in Sources */,
 				3F6969412040884A004CCE5D /* GoalTableViewCellExpanded.swift in Sources */,
 				3F1858DA20311C09007FC818 /* CodableFirebaseCustom.swift in Sources */,
 				3F19031C202BB1720002B74B /* AuthenticationService.swift in Sources */,

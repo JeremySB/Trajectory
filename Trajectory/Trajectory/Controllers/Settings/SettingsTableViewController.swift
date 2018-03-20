@@ -84,15 +84,6 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     }
     
 
-    //Update image (https://turbofuture.com/cell-phones/Access-Photo-Camera-and-Library-in-Swift)
-   /* @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-        //let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        //profileImage.image = image
-        //dismiss(animated:true, completion: nil)
-        
-
-    }*/
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let image = (info[UIImagePickerControllerOriginalImage] as? UIImage) else {return}
@@ -108,6 +99,7 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     public func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         self.croppedRect = cropRect
         self.croppedAngle = angle
+        
         updateImageViewWithImage(image, fromCropViewController: cropViewController)
     }
     
