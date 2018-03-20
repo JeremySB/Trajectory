@@ -6,10 +6,13 @@
 //  Copyright © 2018 Recreational Hazard. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ImageService {
-    
+    func getProfileImage(for uid: String, completion: @escaping (UIImage?, ImageServiceError?) -> Void)
+    func getCurrentProfileImage(_ completion: @escaping (UIImage?, ImageServiceError?) -> Void)
+    func saveProfileImage(_ image: UIImage, completion: ((ImageServiceError?) -> Void)?)
+    func bindProfileImage(for uid: String, to imageView: UIImageView)
 }
 
 enum ImageServiceError: Error {

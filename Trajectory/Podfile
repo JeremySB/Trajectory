@@ -11,6 +11,8 @@ target 'Trajectory' do
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
   pod 'Firebase/Performance'
+  
+  pod 'FirebaseUI/Storage'
 
   pod 'GoogleSignIn'
 

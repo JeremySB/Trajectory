@@ -15,6 +15,7 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     
     lazy var userService: UserService = FirebaseUserService()
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
+    lazy var imageService: ImageService = FirebaseImageService()
     private var croppingStyle = CropViewCroppingStyle.default
     private var croppedRect = CGRect.zero
     private var croppedAngle = 0
@@ -38,10 +39,6 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        loadUser()
-    }
-    
     func loadUser() {
         userService.getCurrentUser { (user, error) in
             guard let user = user else { return }
@@ -49,6 +46,9 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
             
             self.userName.text = user.name
             //self.userOrganization.text = user.organization ?? "No Organization"
+            
+            guard let uid = user.id else { return }
+            self.imageService.bindProfileImage(for: uid, to: self.profileImage)
         }
     }
     
@@ -99,6 +99,8 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     public func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         self.croppedRect = cropRect
         self.croppedAngle = angle
+        
+        imageService.saveProfileImage(image, completion: nil)
         
         updateImageViewWithImage(image, fromCropViewController: cropViewController)
     }

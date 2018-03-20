@@ -36,3 +36,8 @@ struct FirestoreValues {
     static let goalCollection = "goals"
     static let connectionCollection = "connections"
 }
+
+struct StorageValues {
+    // profile images
+    static let profileImages = "profile_images"
+}
