@@ -1181,10 +1181,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrajectoryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-i4-NMC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1366"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vYM-dR-TzY" customClass="MyMentorCollectionView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="16" y="85" width="343" height="562"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OXx-sj-tH8">
                                     <size key="itemSize" width="142" height="159"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1199,11 +1202,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="142" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJD-TV-6ap">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJD-TV-6ap">
                                                     <rect key="frame" x="6" y="126" width="130" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="SJQ-pA-nZi">
@@ -1226,6 +1229,11 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sfe-i4-NMC" firstAttribute="top" secondItem="1pY-AZ-Q2N" secondAttribute="top" id="L3P-2y-4zr"/>
+                            <constraint firstItem="Sfe-i4-NMC" firstAttribute="trailing" secondItem="p9b-Jb-8Ya" secondAttribute="trailing" id="NVL-uk-xlk"/>
+                            <constraint firstItem="Sfe-i4-NMC" firstAttribute="leading" secondItem="p9b-Jb-8Ya" secondAttribute="leading" id="aFs-A8-Nfj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="p9b-Jb-8Ya"/>
                     </view>
                     <connections>
@@ -1234,7 +1242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTp-T6-kTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9100" y="670.61469265367316"/>
+            <point key="canvasLocation" x="9100" y="669.71514242878561"/>
         </scene>
         <!--My Mentors-->
         <scene sceneID="oV7-he-dBn">
@@ -1244,10 +1252,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrajectoryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="lH8-W1-s2P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1366"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FZz-Xe-XSf" customClass="MyMentorCollectionView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="16" y="85" width="343" height="562"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N33-ce-0g2">
                                     <size key="itemSize" width="142" height="159"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1262,11 +1273,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="142" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-f5-7Xf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-f5-7Xf">
                                                     <rect key="frame" x="6" y="126" width="130" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.97534335780000003" green="0.9681191831" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="BUM-q6-ntv">
@@ -1289,6 +1300,11 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lH8-W1-s2P" firstAttribute="leading" secondItem="Xs7-n9-kDJ" secondAttribute="leading" id="7Lq-Jz-04F"/>
+                            <constraint firstItem="lH8-W1-s2P" firstAttribute="top" secondItem="vgo-be-yTr" secondAttribute="top" id="8Mm-nT-Gl7"/>
+                            <constraint firstItem="lH8-W1-s2P" firstAttribute="trailing" secondItem="Xs7-n9-kDJ" secondAttribute="trailing" id="yn0-T3-gAh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xs7-n9-kDJ"/>
                     </view>
                     <connections>
@@ -1297,7 +1313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYc-0E-DZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9777" y="671"/>
+            <point key="canvasLocation" x="9776.7999999999993" y="669.71514242878561"/>
         </scene>
         <!--Update Name View Controller-->
         <scene sceneID="icJ-3D-kC4">
