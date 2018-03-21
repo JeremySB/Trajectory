@@ -37,7 +37,16 @@ class InitialAuthenticationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        emailField.attributedPlaceholder = NSAttributedString(string: "Email Address",
+                                                              attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        
+        // https://stackoverflow.com/questions/25845855/transparent-navigation-bar-ios
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
         // Do any additional setup after loading the view.
     }
     
