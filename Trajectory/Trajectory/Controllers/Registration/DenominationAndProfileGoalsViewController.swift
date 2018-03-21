@@ -14,7 +14,8 @@ class DenominationAndProfileGoalsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        objectivesStatement.layer.borderWidth = 1
+        
+        denomination.attributedPlaceholder = NSAttributedString(string: "  Denomination", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
 
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"

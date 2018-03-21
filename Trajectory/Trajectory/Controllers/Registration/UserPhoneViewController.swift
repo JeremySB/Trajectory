@@ -14,6 +14,8 @@ class UserPhoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        phoneNumber.attributedPlaceholder = NSAttributedString(string: "Phone Number", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
 
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"

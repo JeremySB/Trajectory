@@ -18,10 +18,7 @@ class HobbiesInterestsViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hobbies.layer.borderWidth = 1
-        professionalInterests.layer.borderWidth = 1
-        
-        
+
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
     }
@@ -32,7 +29,7 @@ class HobbiesInterestsViewController: UIViewController, UITextViewDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        let currentText = textView.text ?? ""
+        let currentText = "" //textView.text ?? ""
         guard let stringRange = Range(range, in: currentText) else { return false }
         let updatedText = currentText.replacingCharacters(in: stringRange, with: text)
         return updatedText.count <= limitLength

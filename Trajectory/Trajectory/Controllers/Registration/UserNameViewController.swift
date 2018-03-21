@@ -17,6 +17,8 @@ class UserNameViewController: UIViewController {
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
         navigationItem.hidesBackButton = true
+        
+        userName.attributedPlaceholder = NSAttributedString(string: "  Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
     }
 
     override func didReceiveMemoryWarning() {

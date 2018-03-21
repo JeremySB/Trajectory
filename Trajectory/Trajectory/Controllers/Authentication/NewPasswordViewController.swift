@@ -17,6 +17,9 @@ class NewPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        passwordField.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                                 attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
 
         // Do any additional setup after loading the view.
     }
