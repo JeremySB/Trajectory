@@ -174,10 +174,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TrajectoryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="KJP-Ly-cjU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SnE-BF-u2j" customClass="FindCollectionView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="16" y="133" width="343" height="534"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Xo-C0-TuV">
                                     <size key="itemSize" width="142" height="159"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -192,11 +195,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="142" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69R-ea-UXH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69R-ea-UXH">
                                                     <rect key="frame" x="6" y="126" width="130" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="4Am-cK-CyS">
@@ -205,6 +209,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="userImage" destination="4Am-cK-CyS" id="6MO-Lc-xp2"/>
                                             <outlet property="userProfileName" destination="69R-ea-UXH" id="fkZ-k2-Jbn"/>
@@ -217,8 +222,9 @@
                                 </connections>
                             </collectionView>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search for people" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q43-hf-nq4">
-                                <rect key="frame" x="0.0" y="59" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="z7N-nK-aF0" id="F5d-tG-a2M"/>
@@ -226,6 +232,11 @@
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KJP-Ly-cjU" firstAttribute="leading" secondItem="Eto-aw-OB6" secondAttribute="leading" id="RYh-8z-uW1"/>
+                            <constraint firstItem="KJP-Ly-cjU" firstAttribute="trailing" secondItem="Eto-aw-OB6" secondAttribute="trailing" id="SWk-7U-Gwh"/>
+                            <constraint firstItem="KJP-Ly-cjU" firstAttribute="top" secondItem="wj6-hv-rjC" secondAttribute="top" id="h2N-3j-omE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Eto-aw-OB6"/>
                     </view>
                     <connections>
@@ -262,10 +273,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TrajectoryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="AaA-Ab-eHn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0gu-Tj-7HW" customClass="FindCollectionView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="16" y="133" width="343" height="534"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VpG-GH-zn8">
                                     <size key="itemSize" width="142" height="159"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -280,11 +294,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="142" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRW-5S-stx">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRW-5S-stx">
                                                     <rect key="frame" x="6" y="126" width="130" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="EMT-vc-DEB">
@@ -308,7 +322,7 @@
                                             <rect key="frame" x="8" y="15" width="327" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -321,8 +335,9 @@
                                 </connections>
                             </collectionView>
                             <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Search for people" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t35-Na-Lb9">
-                                <rect key="frame" x="0.0" y="58" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="SaT-ML-I6v" id="vNt-aP-3mj"/>
@@ -330,6 +345,11 @@
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AaA-Ab-eHn" firstAttribute="leading" secondItem="eH3-J3-Q8L" secondAttribute="leading" id="Shg-M2-Fpx"/>
+                            <constraint firstItem="AaA-Ab-eHn" firstAttribute="top" secondItem="SJS-Uk-f1s" secondAttribute="top" id="aay-3f-aFZ"/>
+                            <constraint firstItem="AaA-Ab-eHn" firstAttribute="trailing" secondItem="eH3-J3-Q8L" secondAttribute="trailing" id="fwT-Ru-VDo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eH3-J3-Q8L"/>
                     </view>
                     <connections>
@@ -2346,6 +2366,7 @@
     <resources>
         <image name="Comm-48" width="24" height="24"/>
         <image name="Find-48" width="24" height="24"/>
+        <image name="TrajectoryBackground" width="1024" height="1366"/>
         <image name="profileImg" width="748" height="748"/>
         <image name="settings-48" width="24" height="24"/>
         <image name="trophy-48" width="24" height="24"/>

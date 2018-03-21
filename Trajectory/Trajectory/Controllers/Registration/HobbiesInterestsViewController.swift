@@ -11,7 +11,10 @@ import Firebase
 import CodableFirebase
 //import QuarzCore
 
-class HobbiesInterestsViewController: UIViewController {
+class HobbiesInterestsViewController: UIViewController, UITextViewDelegate {
+    
+    //Character limit
+    let limitLength = 250
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,13 @@ class HobbiesInterestsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let currentText = textView.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: text)
+        return updatedText.count <= limitLength
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -60,6 +70,7 @@ class HobbiesInterestsViewController: UIViewController {
             }
         }
     }
+    
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
