@@ -2046,6 +2046,7 @@
                                                 <constraint firstItem="4gV-Ir-rAd" firstAttribute="top" secondItem="LYT-hC-0Eg" secondAttribute="top" constant="7" id="xW3-Wk-9hn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.3514822345890411" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -2244,6 +2245,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="Q8Z-k7-lHi"/>
                     <connections>
                         <outlet property="profileImage" destination="4gV-Ir-rAd" id="A20-6n-7cn"/>
+                        <outlet property="tableView" destination="my4-6d-4YY" id="T0W-gB-OzX"/>
                         <outlet property="userName" destination="bKV-kc-jUe" id="7aS-Iy-nlL"/>
                         <outlet property="userOrganization" destination="dAb-ZN-Kyx" id="7tH-Qa-iEE"/>
                     </connections>

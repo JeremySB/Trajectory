@@ -32,6 +32,11 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         
         loadUser()
         
+        //Set background
+        let imageView = UIImageView(image: UIImage(named: "TrajectoryBackground"))
+        imageView.frame = self.tableView.frame
+        self.tableView.backgroundView = imageView
+        
     // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -66,6 +71,7 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     @IBAction func logoutButton(_ sender: Any) {
         authService.signOut()
     }
+    
     
     //Function to photo library to update image when tapped (https://stackoverflow.com/questions/27880607/how-to-assign-an-action-for-uiimageview-object-in-swift)
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
