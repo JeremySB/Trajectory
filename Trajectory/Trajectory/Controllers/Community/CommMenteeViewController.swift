@@ -63,9 +63,9 @@ extension CommMenteeViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenteeCollectionViewCell", for: indexPath) as! CommUserCollectionViewCell
         
         let name = mentees[indexPath.row].name
-        let image = UIImage(named:"profileImg")!
+        let uid = mentees[indexPath.row].id
         
-        cell.displayContent(image: image, name: name ?? "Error")
+        cell.displayContent(uid: uid, name: name)
         
         return cell
     }

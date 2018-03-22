@@ -64,9 +64,9 @@ extension CommMentorViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MentorCollectionViewCell", for: indexPath) as! CommUserCollectionViewCell
         
         let name = mentors[indexPath.row].name
-        let image = UIImage(named:"profileImg")!
+        let uid = mentors[indexPath.row].id
         
-        cell.displayContent(image: image, name: name ?? "Error")
+        cell.displayContent(uid: uid, name: name)
         
         return cell
     }

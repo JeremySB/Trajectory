@@ -9,7 +9,7 @@
 import UIKit
 
 class MyMentorCheckinViewController: UIViewController, UserChild {
-    
+    lazy var imageService: ImageService = FirebaseImageService()
     weak var _user: User!
     weak var user: User! {
         get{return self._user}
@@ -22,6 +22,9 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
     override func viewDidLoad() {
         super.viewDidLoad()
         mentorName.text = user?.name ?? ""
+        if let uid = user?.id {
+            imageService.bindProfileImage(for: uid, to: profileImage)
+        }
         // Do any additional setup after loading the view.
     }
     

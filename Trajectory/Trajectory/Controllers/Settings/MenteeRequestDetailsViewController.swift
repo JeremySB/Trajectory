@@ -12,6 +12,7 @@ class MenteeRequestDetailsViewController: UIViewController {
     
     var menteeRequest: MenteeRequest?
     lazy var connService: ConnectionService = FirebaseConnectionService()
+    lazy var imageService: ImageService = FirebaseImageService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,10 @@ class MenteeRequestDetailsViewController: UIViewController {
         userObjectives.text = menteeRequest?.mentee.objectives
         userEmailAddress.text = menteeRequest?.mentee.emailAddress
         userPhoneNumber.text = menteeRequest?.mentee.phoneNumber
+        
+        if let uid = menteeRequest?.mentee.id {
+            imageService.bindProfileImage(for: uid, to: self.profileImage)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,6 +67,8 @@ class MenteeRequestDetailsViewController: UIViewController {
     @IBOutlet weak var userEmailAddress: UILabel!
     
     @IBOutlet weak var userPhoneNumber: UILabel!
+    
+    @IBOutlet weak var profileImage: UIImageView!
     
     // MARK: - Navigation
 

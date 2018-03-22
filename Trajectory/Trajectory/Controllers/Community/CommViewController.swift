@@ -33,7 +33,6 @@ class CommViewController: ScrollController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("This sucks")
     }
     /*
     // MARK: - Navigation

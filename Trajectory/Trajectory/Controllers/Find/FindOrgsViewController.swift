@@ -64,9 +64,10 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
 
         let name = Array(searchResults[indexPath.section])[0].value[indexPath.row].name
-        let image = UIImage(named:"profileImg")!
         
-        cell.displayContent(image: image, name: name ?? "Error")
+        let uid = Array(searchResults[indexPath.section])[0].value[indexPath.row].id
+        
+        cell.displayContent(uid: uid, name: name ?? "Error")
         
         return cell
     }

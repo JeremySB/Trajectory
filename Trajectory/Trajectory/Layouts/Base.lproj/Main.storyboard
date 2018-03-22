@@ -1920,6 +1920,7 @@
                     <connections>
                         <outlet property="nameLabel" destination="w2d-vd-Lf1" id="xaj-zd-LOd"/>
                         <outlet property="organizationlabel" destination="afS-kS-6bR" id="oZh-zf-M8c"/>
+                        <outlet property="profileImage" destination="nWz-vZ-zCg" id="jyK-mt-BX8"/>
                         <outlet property="userDenomination" destination="ALb-FE-vfa" id="uvu-lk-ArL"/>
                         <outlet property="userEmailAddress" destination="9Oe-CK-eCK" id="RgH-SZ-g81"/>
                         <outlet property="userHobbies" destination="LeH-NO-Ffx" id="A8f-Uv-Jna"/>

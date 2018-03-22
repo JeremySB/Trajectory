@@ -47,9 +47,9 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
         
         let name = searchResults[indexPath.row].name
-        let image = UIImage(named:"profileImg")!
+        let uid = searchResults[indexPath.row].id
         
-        cell.displayContent(image: image, name: name ?? "Error")
+        cell.displayContent(uid: uid, name: name ?? "Error")
         
         return cell
     }

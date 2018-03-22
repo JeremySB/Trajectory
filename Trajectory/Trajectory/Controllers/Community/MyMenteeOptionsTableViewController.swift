@@ -18,6 +18,7 @@ class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
             viewDidAppear(false)}
     }
     
+    lazy var imageService: ImageService = FirebaseImageService()
     lazy var connectionService: ConnectionService = FirebaseConnectionService()
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
     
@@ -28,6 +29,9 @@ class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
     override func viewDidLoad() {
         super.viewDidLoad()
         menteeName?.text = user.name
+        if let uid = user.id {
+            imageService.bindProfileImage(for: uid, to: self.profileImage)
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

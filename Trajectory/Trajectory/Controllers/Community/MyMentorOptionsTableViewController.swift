@@ -15,6 +15,7 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
         set{ mentorName?.text = newValue.name; self._user = newValue; viewDidAppear(false)}
     }
     
+    lazy var imageService: ImageService = FirebaseImageService()
     lazy var connectionService: ConnectionService = FirebaseConnectionService()
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
     
@@ -24,6 +25,9 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
     override func viewDidLoad() {
         super.viewDidLoad()
         mentorName?.text = user.name
+        if let uid = user.id {
+            imageService.bindProfileImage(for: uid, to: self.profileImage)
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

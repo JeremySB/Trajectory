@@ -11,6 +11,7 @@ import UIKit
 class MentorInfoViewController: UIViewController {
     
     lazy var connectionService: ConnectionService = FirebaseConnectionService()
+    lazy var imageService: ImageService = FirebaseImageService()
     
     var user: User?
     
@@ -23,6 +24,10 @@ class MentorInfoViewController: UIViewController {
         MentorHobbies.text = user?.hobbies ?? "No Hobbies"
         MentorProfessionalInterests.text = user?.professionalInterests ?? "No Professional Interests"
         MentorDenomination.text = user?.denomination ?? "No Denomination"
+        
+        if let uid = user?.id {
+            imageService.bindProfileImage(for: uid, to: self.MentorImage)
+        }
     }
 
     override func didReceiveMemoryWarning() {
