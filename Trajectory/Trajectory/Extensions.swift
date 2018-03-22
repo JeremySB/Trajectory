@@ -10,6 +10,7 @@ import UIKit
 
 extension UIImage {
     static func compress(image: UIImage, maxFileSizeInKb: Int, compression: CGFloat = 1.0, maxCompression: CGFloat = 0.4) -> Data? {
+        let i = UIImagePNGRepresentation(image)
         
         if let data = UIImageJPEGRepresentation(image, compression) {
             

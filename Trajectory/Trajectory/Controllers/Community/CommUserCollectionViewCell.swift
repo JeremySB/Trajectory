@@ -14,17 +14,19 @@ class CommUserCollectionViewCell: UICollectionViewCell {
     
     lazy var imageService: ImageService = FirebaseImageService()
     
-    func displayContent(image: UIImage, name: String) {
-        userImage.image = image
-        userProfileName.text = name
-    }
     
     func displayContent(uid: String?, name: String?) {
+        setupImageView()
         if let uid = uid {
             imageService.bindProfileImage(for: uid, to: self.userImage)
         } else {
             userImage.image = UIImage(named:"profileImg")!
         }
         userProfileName.text = name
+    }
+    
+    func setupImageView() {
+        self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2;
+        self.userImage.clipsToBounds = true;
     }
 }
