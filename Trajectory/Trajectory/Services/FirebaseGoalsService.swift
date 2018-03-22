@@ -93,7 +93,11 @@ class FirebaseGoalsService: GoalsService {
     }
     
     func removeGoal(_ goal: Goal, completion: ((GoalsServiceError?) -> Void)?) {
-        guard let uid = Auth.auth().currentUser?.uid else{
+        /*guard let uid = Auth.auth().currentUser?.uid else{
+            completion?(.NotLoggedIn)
+            return
+        }*/
+        if Auth.auth().currentUser?.uid == nil {
             completion?(.NotLoggedIn)
             return
         }

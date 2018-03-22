@@ -44,7 +44,7 @@ class UpdateEmailAddressViewController: UIViewController {
         let user = User()
         user.emailAddress = newEmail
         authService.updateEmail(newEmail) { (error) in
-            if let error = error {
+            if error != nil {
                 // issue with email or connectivity
                 self.displayErrorMessage()
             }

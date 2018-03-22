@@ -69,7 +69,9 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBAction func logoutButton(_ sender: Any) {
-        authService.signOut()
+        if (!authService.signOut()){
+            print("signOut Failed!")
+        }
     }
     
     

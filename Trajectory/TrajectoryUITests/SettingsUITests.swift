@@ -197,7 +197,13 @@ class SettingsUITests: XCTestCase {
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["First Last"]/*[[".cells.staticTexts[\"First Last\"]",".staticTexts[\"First Last\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.buttons["Set End Date"].tap()
-        app.datePickers.pickerWheels["12"].swipeUp()
+        
+        let dateFormatter = DateFormatter()
+        let today = Date()
+        dateFormatter.dateFormat = "dd"
+        let date = dateFormatter.string(from: today)
+        
+        app.datePickers.pickerWheels[date].swipeUp()
         app.buttons["Set Date and Accept"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")

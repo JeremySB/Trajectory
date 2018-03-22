@@ -27,6 +27,7 @@
 		3F190323202CADBB0002B74B /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F190322202CADBB0002B74B /* FirebaseUserService.swift */; };
 		3F1CF2D420562A4800CE9260 /* CommUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CF2D320562A4800CE9260 /* CommUserCollectionViewCell.swift */; };
 		3F2F6B35202CB59800214772 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */; };
+		3F39A1AD20615C6E004ACB76 /* GoalsTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39A1AC20615C6E004ACB76 /* GoalsTableViewTests.swift */; };
 		3F4666AB20237BC400C35818 /* GoalTableViewCellClosed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCellClosed.swift */; };
 		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
 		3F6969412040884A004CCE5D /* GoalTableViewCellExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */; };
@@ -137,6 +138,7 @@
 		3F190322202CADBB0002B74B /* FirebaseUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserService.swift; sourceTree = "<group>"; };
 		3F1CF2D320562A4800CE9260 /* CommUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommUserCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F39A1AC20615C6E004ACB76 /* GoalsTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewTests.swift; sourceTree = "<group>"; };
 		3F4666AA20237BC400C35818 /* GoalTableViewCellClosed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCellClosed.swift; sourceTree = "<group>"; };
 		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCellExpanded.swift; sourceTree = "<group>"; };
@@ -461,6 +463,7 @@
 		3FC53DAA1FF03BA7000B82E3 /* TrajectoryUITests */ = {
 			isa = PBXGroup;
 			children = (
+				3F39A1AC20615C6E004ACB76 /* GoalsTableViewTests.swift */,
 				D6216AEA205EED4B005626BD /* AddGoalUITests.swift */,
 				D6DE11882055A731000F31EE /* FindUITests.swift */,
 				3FB92CFA2036322A00AA2893 /* RegistrationTests.swift */,
@@ -940,6 +943,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F39A1AD20615C6E004ACB76 /* GoalsTableViewTests.swift in Sources */,
 				D6216AEB205EED4B005626BD /* AddGoalUITests.swift in Sources */,
 				3FB92CFB2036322A00AA2893 /* RegistrationTests.swift in Sources */,
 				3FB92CF92035F6AD00AA2893 /* LoginTests.swift in Sources */,

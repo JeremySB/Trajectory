@@ -54,10 +54,19 @@ class AddGoalUITests: XCTestCase {
         textField.tap()
         textField.typeText("5")
         
+        let dateFormatter = DateFormatter()
+        let today = Date()
+        dateFormatter.dateFormat = "yyyy"
+        let year = dateFormatter.string(from: today)
+        dateFormatter.dateFormat = "dd"
+        let date = dateFormatter.string(from: today)
+        dateFormatter.dateFormat = "MMMM"
+        let month = dateFormatter.string(from: today)
+        
         let datePickersQuery = app/*@START_MENU_TOKEN@*/.datePickers/*[[".otherElements.matching(identifier: \"Add Goal\").datePickers",".datePickers"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        datePickersQuery.pickerWheels["March"].swipeUp()
-        datePickersQuery.pickerWheels["18"].swipeUp()
-        datePickersQuery.pickerWheels["2018"].swipeUp()
+        datePickersQuery.pickerWheels[month].swipeUp()
+        datePickersQuery.pickerWheels[date].swipeUp()
+        datePickersQuery.pickerWheels[year].swipeUp()
         
         app/*@START_MENU_TOKEN@*/.buttons["Daily"]/*[[".otherElements.matching(identifier: \"Add Goal\")",".segmentedControls.buttons[\"Daily\"]",".buttons[\"Daily\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
         app/*@START_MENU_TOKEN@*/.buttons["Weekly"]/*[[".otherElements.matching(identifier: \"Add Goal\")",".segmentedControls.buttons[\"Weekly\"]",".buttons[\"Weekly\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
