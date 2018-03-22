@@ -71,6 +71,7 @@ class MenteeRequestListTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.textLabel?.text = menteeRequests[indexPath[1]].mentee.name
+        cell.textLabel?.textColor = UIColor.white
         
         return cell
     }

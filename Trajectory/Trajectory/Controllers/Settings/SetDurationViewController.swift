@@ -20,6 +20,7 @@ class SetDurationViewController: UIViewController {
         // Do any additional setup after loading the view.
         nameLabel.text = menteeRequest?.mentee.name
         organizationLabel.text = ""
+        endDate.minimumDate = Date()
     }
 
     override func didReceiveMemoryWarning() {
