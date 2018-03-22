@@ -72,12 +72,14 @@ class MyOrganizationsTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "addOrganizationCell", for: indexPath)
             // Configure the cell...
             cell.textLabel?.text = "Add Organization"
+            cell.textLabel?.textColor = UIColor.white
             return cell
         }
         //If in the second section...
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath)
             cell.textLabel?.text = userOrganizations[indexPath[1]].name
+            cell.textLabel?.textColor = UIColor.white
             return cell
         }
     }
