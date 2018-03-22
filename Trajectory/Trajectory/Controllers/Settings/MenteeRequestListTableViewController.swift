@@ -29,6 +29,11 @@ class MenteeRequestListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        //Set background
+        let imageView = UIImageView(image: UIImage(named: "TrajectoryBackground"))
+        imageView.frame = self.tableView.frame
+        self.tableView.backgroundView = imageView
     }
 
     override func didReceiveMemoryWarning() {
