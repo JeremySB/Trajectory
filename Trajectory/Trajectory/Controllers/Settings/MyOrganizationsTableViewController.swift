@@ -31,6 +31,12 @@ class MyOrganizationsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        //Set background
+        let imageView = UIImageView(image: UIImage(named: "TrajectoryBackground"))
+        imageView.frame = self.tableView.frame
+        self.tableView.backgroundView = imageView
+
     }
 
     override func didReceiveMemoryWarning() {
