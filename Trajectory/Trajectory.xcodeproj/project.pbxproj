@@ -70,9 +70,6 @@
 		3FEAB566204EFA2E00829E16 /* EditGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEAB565204EFA2E00829E16 /* EditGoalViewController.swift */; };
 		65022D8E26F9AFC2625E8B6F /* Pods_TrajectoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9DA7EB9BD27F812C0D5223 /* Pods_TrajectoryUITests.framework */; };
 		A25155D5F0AE9B4E670FADF7 /* Pods_TrajectoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061C7FB5B4777D6194505592 /* Pods_TrajectoryTests.framework */; };
-		D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */; };
-		D60C7CC2201AC5A200184F8A /* UpdateEmailAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */; };
-		D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */; };
 		D60C7CC8201AD4BF00184F8A /* UpdateMyBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */; };
 		D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */; };
 		D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */; };
@@ -80,6 +77,7 @@
 		D6216AEB205EED4B005626BD /* AddGoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6216AEA205EED4B005626BD /* AddGoalUITests.swift */; };
 		D652AD262031EAA000E0AC65 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD252031EAA000E0AC65 /* TestExtensions.swift */; };
 		D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD272031EAD800E0AC65 /* SettingsUITests.swift */; };
+		D68FB11420645FAB00E73F5D /* UpdatePersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68FB11320645FAB00E73F5D /* UpdatePersonalInfoViewController.swift */; };
 		D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */; };
 		D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */; };
 		D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */; };
@@ -189,9 +187,6 @@
 		4DF7FD52FC853F2F06806828 /* Pods-TrajectoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryTests/Pods-TrajectoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E6E35BB023B4C23312729CF /* Pods-TrajectoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryTests/Pods-TrajectoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5701D969FC845B93A56B7DE /* Pods-Trajectory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trajectory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trajectory/Pods-Trajectory.release.xcconfig"; sourceTree = "<group>"; };
-		D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNameViewController.swift; sourceTree = "<group>"; };
-		D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmailAddressViewController.swift; sourceTree = "<group>"; };
-		D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePhoneNumberViewController.swift; sourceTree = "<group>"; };
 		D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMyBioViewController.swift; sourceTree = "<group>"; };
 		D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrganizationViewController.swift; sourceTree = "<group>"; };
 		D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrganizationsTableViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +194,7 @@
 		D6216AEA205EED4B005626BD /* AddGoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalUITests.swift; sourceTree = "<group>"; };
 		D652AD252031EAA000E0AC65 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		D652AD272031EAD800E0AC65 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
+		D68FB11320645FAB00E73F5D /* UpdatePersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePersonalInfoViewController.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewController.swift; sourceTree = "<group>"; };
 		D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoneViewController.swift; sourceTree = "<group>"; };
 		D6A1D72B20181C3900D38F08 /* HobbiesInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesInterestsViewController.swift; sourceTree = "<group>"; };
@@ -330,9 +326,7 @@
 				D6AAA304201EC2A700789BB6 /* SettingsTableViewController.swift */,
 				D6AAA306201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift */,
 				D60C7CCF201AD6A200184F8A /* MenteeRequestListTableViewController.swift */,
-				D60C7CC1201AC5A200184F8A /* UpdateEmailAddressViewController.swift */,
-				D60C7CBF201AC58F00184F8A /* UpdateNameViewController.swift */,
-				D60C7CC3201AC5C000184F8A /* UpdatePhoneNumberViewController.swift */,
+				D68FB11320645FAB00E73F5D /* UpdatePersonalInfoViewController.swift */,
 				D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */,
 				D60C7CCD201AD64800184F8A /* MyOrganizationsTableViewController.swift */,
 				D60C7CC9201AD52300184F8A /* AddOrganizationViewController.swift */,
@@ -868,7 +862,6 @@
 				3F1858D4202E0CB4007FC818 /* FirebaseAuthenticationService.swift in Sources */,
 				3FB92CFD203B94E200AA2893 /* Organization.swift in Sources */,
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
-				D60C7CC4201AC5C000184F8A /* UpdatePhoneNumberViewController.swift in Sources */,
 				3FDF5B17202A0D670095D095 /* Goal.swift in Sources */,
 				3F03585F2045EE9900BECAB2 /* FirebaseConnectionService.swift in Sources */,
 				D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */,
@@ -893,14 +886,12 @@
 				D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */,
 				D6AAA305201EC2A700789BB6 /* SettingsTableViewController.swift in Sources */,
 				3F190320202CABFE0002B74B /* UserService.swift in Sources */,
-				D60C7CC0201AC58F00184F8A /* UpdateNameViewController.swift in Sources */,
 				D6A1D72E20181C8000D38F08 /* DenominationAndProfileGoalsViewController.swift in Sources */,
 				3FB92D03203BA7FE00AA2893 /* FirebaseOrganizationService.swift in Sources */,
 				3FB4374A203138AE00821A91 /* MyMenteeCalendarViewController.swift in Sources */,
 				3F2F6B35202CB59800214772 /* CalendarCollectionViewCell.swift in Sources */,
 				3FB4374E203139C100821A91 /* CommSwipeMenteeViewController.swift in Sources */,
 				3F1858D62030FED1007FC818 /* GoalsService.swift in Sources */,
-				D60C7CC2201AC5A200184F8A /* UpdateEmailAddressViewController.swift in Sources */,
 				3FA16B00201A304000D142E5 /* HistoryViewController.swift in Sources */,
 				3FB43748203137D800821A91 /* CommMentorViewController.swift in Sources */,
 				3FA16AFE201A2F6B00D142E5 /* GoalsViewController.swift in Sources */,
@@ -917,6 +908,7 @@
 				3F69694320408CCE004CCE5D /* GoalsTableViewCell.swift in Sources */,
 				3FAD0DC320250C5300DC5713 /* FindCollectionView.swift in Sources */,
 				3F17C81020616BB10056A09A /* ImageService.swift in Sources */,
+				D68FB11420645FAB00E73F5D /* UpdatePersonalInfoViewController.swift in Sources */,
 				3FD722BF20582D8B005D6601 /* MyMenteeOptionsTableViewController.swift in Sources */,
 				3F1903192029379F0002B74B /* User.swift in Sources */,
 				3F17C80E20616B100056A09A /* FirebaseImageService.swift in Sources */,
