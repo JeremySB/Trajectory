@@ -28,6 +28,8 @@ class MentorInfoViewController: UIViewController {
         if let uid = user?.id {
             imageService.bindProfileImage(for: uid, to: self.MentorImage)
         }
+        
+        setupImageView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,6 +70,11 @@ class MentorInfoViewController: UIViewController {
             }
         }
         
+    }
+    
+    func setupImageView() {
+        self.MentorImage.layer.cornerRadius = self.MentorImage.frame.size.width / 2;
+        self.MentorImage.clipsToBounds = true;
     }
     
     /*
