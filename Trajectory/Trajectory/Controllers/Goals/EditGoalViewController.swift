@@ -60,6 +60,9 @@ class EditGoalViewController: UIViewController {
         
         RemainingProgress.text = "\(goal.currentProgress ?? 0)"
         // Do any additional setup after loading the view.
+        
+        //Set end date minimum to today's date
+        EndDate.minimumDate = Date()
     }
 
     override func didReceiveMemoryWarning() {
