@@ -46,6 +46,7 @@ class UpdatePersonalInfoViewController: UIViewController {
     
     @IBAction func doneButton(_ sender: Any) {
         let user = User()
+        let dispatch = DispatchGroup()
         //Variable that indicates whether screen should dismiss or not after running error checks
         var toDismiss = true
         //Error check for valid first and last name
@@ -62,6 +63,7 @@ class UpdatePersonalInfoViewController: UIViewController {
         //Error check for valid email address
         guard let newEmail = usersEmailAddress.text else { return }
         user.emailAddress = newEmail
+        dispatch.enter()
         authService.updateEmail(newEmail) { (error) in
             if error != nil {
                 // issue with email or connectivity
@@ -77,16 +79,21 @@ class UpdatePersonalInfoViewController: UIViewController {
                 // also save within user document
                 user.emailAddress = self.usersEmailAddress.text
             }
+            dispatch.leave()
+            
         }
         
         //TODO: error check phone number
         user.phoneNumber = usersPhoneNumber.text
         
         //Save data and dismiss if all checks passed
-        if toDismiss == true {
-            userService.saveCurrentUser(user, completion: nil)
-            dismiss(animated: true, completion: nil)
+        dispatch.notify(queue: .main) {
+            if toDismiss == true {
+                self.userService.saveCurrentUser(user, completion: nil)
+                self.dismiss(animated: true, completion: nil)
+            }
         }
+        
         
     }
     
