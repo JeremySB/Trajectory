@@ -49,6 +49,14 @@ class MyOrganizationsTableViewController: UITableViewController {
         super.touchesBegan(touches, with: event)
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .delete {
+            let orgToDelete = [indexPath.row]
+            print("DELETING ORG AT")
+            print(orgToDelete)
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

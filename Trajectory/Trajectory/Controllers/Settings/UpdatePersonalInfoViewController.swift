@@ -84,7 +84,6 @@ class UpdatePersonalInfoViewController: UIViewController {
         
         //Save data and dismiss if all checks passed
         if toDismiss == true {
-            print("SHOULD DISMISS")
             userService.saveCurrentUser(user, completion: nil)
             dismiss(animated: true, completion: nil)
         }
