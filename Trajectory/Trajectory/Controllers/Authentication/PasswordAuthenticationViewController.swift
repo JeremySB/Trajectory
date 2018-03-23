@@ -17,6 +17,8 @@ class PasswordAuthenticationViewController: UIViewController {
 
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var incorrectPasswordMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +44,8 @@ class PasswordAuthenticationViewController: UIViewController {
             if let error = error {
                 print(error.localizedDescription)
                 self.passwordField.text = ""
+                self.incorrectPasswordMessage.isHidden = false
+                self.passwordField.becomeFirstResponder()
                 return
             }
             

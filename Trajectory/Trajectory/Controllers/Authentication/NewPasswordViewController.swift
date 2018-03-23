@@ -34,6 +34,9 @@ class NewPasswordViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
     
+    @IBOutlet weak var invalidPasswordMessage: UILabel!
+    
+    
     @IBAction func didTapCreateAccount(_ sender: Any) {
         guard userEmail != nil else {
             self.navigationController?.popViewController(animated: false)
@@ -45,6 +48,8 @@ class NewPasswordViewController: UIViewController {
         Auth.auth().createUser(withEmail: userEmail!, password: (passwordField?.text)!) { (user, error) in
             if let error = error {
                 print(error.localizedDescription)
+                self.invalidPasswordMessage.isHidden = false
+                self.passwordField.becomeFirstResponder()
                 return
             }
             

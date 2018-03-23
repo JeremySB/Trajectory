@@ -513,13 +513,21 @@
                                     <constraint firstAttribute="height" constant="25" id="Nbi-DO-sQm"/>
                                 </constraints>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect password. Please try again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-la-X0I">
+                                <rect key="frame" x="47" y="275" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sJe-17-dmo" firstAttribute="leading" secondItem="Pmn-r8-SFI" secondAttribute="leading" id="0KD-TH-GTI"/>
                             <constraint firstItem="j3M-KL-kvj" firstAttribute="leading" secondItem="DSt-yX-qCy" secondAttribute="trailing" id="6mz-U9-SXp"/>
+                            <constraint firstItem="j3M-KL-kvj" firstAttribute="top" secondItem="1Qd-la-X0I" secondAttribute="bottom" constant="20" id="GWk-El-4zX"/>
                             <constraint firstItem="DSt-yX-qCy" firstAttribute="centerX" secondItem="dW9-zY-4RH" secondAttribute="centerX" id="GfD-wB-7Gv"/>
                             <constraint firstItem="6Iz-PJ-DBS" firstAttribute="top" secondItem="DSt-yX-qCy" secondAttribute="bottom" constant="8" symbolic="YES" id="KQh-d1-avF"/>
+                            <constraint firstItem="1Qd-la-X0I" firstAttribute="centerX" secondItem="Pmn-r8-SFI" secondAttribute="centerX" id="LBS-ru-djW"/>
                             <constraint firstItem="6Iz-PJ-DBS" firstAttribute="top" secondItem="dW9-zY-4RH" secondAttribute="bottom" constant="15" id="NVA-DR-7Os"/>
                             <constraint firstItem="dW9-zY-4RH" firstAttribute="leading" secondItem="Uce-TM-352" secondAttribute="leading" constant="58" id="PvW-4N-yBL"/>
                             <constraint firstItem="sJe-17-dmo" firstAttribute="bottom" secondItem="Uce-TM-352" secondAttribute="bottom" id="TCZ-My-Ipj"/>
@@ -538,6 +546,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Enter Your Password" id="FiH-E1-EFh"/>
                     <connections>
+                        <outlet property="incorrectPasswordMessage" destination="1Qd-la-X0I" id="9bk-l0-7PL"/>
                         <outlet property="passwordField" destination="j3M-KL-kvj" id="Kvw-v6-Dn5"/>
                         <segue destination="3QG-I5-Lx7" kind="presentation" identifier="passwordToMain" id="en7-In-sCA"/>
                     </connections>
@@ -617,6 +626,12 @@
                                     <constraint firstAttribute="height" constant="25" id="wNK-lS-MNl"/>
                                 </constraints>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passwords must be at least six characters." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfG-Jw-dYf">
+                                <rect key="frame" x="25" y="273" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -630,12 +645,14 @@
                             <constraint firstItem="cjx-vt-KyJ" firstAttribute="leading" secondItem="oa6-DJ-bOH" secondAttribute="leading" id="Jka-nD-O5o"/>
                             <constraint firstItem="P8D-QI-6vX" firstAttribute="centerY" secondItem="oa6-DJ-bOH" secondAttribute="centerY" id="K9J-Px-pJX"/>
                             <constraint firstItem="8PO-l8-X8R" firstAttribute="top" secondItem="uqS-Lw-nb7" secondAttribute="bottom" constant="15" id="MCp-5i-Jhw"/>
+                            <constraint firstItem="P8D-QI-6vX" firstAttribute="top" secondItem="MfG-Jw-dYf" secondAttribute="bottom" constant="19" id="Mz0-zD-bvU"/>
                             <constraint firstItem="cjx-vt-KyJ" firstAttribute="centerX" secondItem="8PO-l8-X8R" secondAttribute="centerX" id="UmL-7M-vYR"/>
                             <constraint firstItem="8PO-l8-X8R" firstAttribute="centerX" secondItem="oa6-DJ-bOH" secondAttribute="centerX" id="fic-Yw-u0c"/>
                             <constraint firstItem="8PO-l8-X8R" firstAttribute="centerX" secondItem="P8D-QI-6vX" secondAttribute="centerX" constant="-20" id="fkz-Bx-ZvY"/>
                             <constraint firstItem="P8D-QI-6vX" firstAttribute="leading" secondItem="GSn-cx-9oL" secondAttribute="trailing" id="hqR-eR-Oqo"/>
                             <constraint firstItem="8PO-l8-X8R" firstAttribute="width" secondItem="P8D-QI-6vX" secondAttribute="width" constant="40" id="i8g-B4-2r7"/>
                             <constraint firstItem="P8D-QI-6vX" firstAttribute="leading" secondItem="uqS-Lw-nb7" secondAttribute="trailing" constant="7" id="jKp-lm-BzJ"/>
+                            <constraint firstItem="MfG-Jw-dYf" firstAttribute="centerX" secondItem="oa6-DJ-bOH" secondAttribute="centerX" id="k3C-q7-iu9"/>
                             <constraint firstItem="GSn-cx-9oL" firstAttribute="leading" secondItem="8PO-l8-X8R" secondAttribute="leading" id="kbh-fN-pPJ"/>
                             <constraint firstItem="GSn-cx-9oL" firstAttribute="centerY" secondItem="cjx-vt-KyJ" secondAttribute="centerY" id="p6q-0R-hZ4"/>
                             <constraint firstItem="cjx-vt-KyJ" firstAttribute="bottom" secondItem="uE3-zd-tvc" secondAttribute="bottom" id="tWA-EX-Vxi"/>
@@ -644,6 +661,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Create A Password" id="abL-1J-yjQ"/>
                     <connections>
+                        <outlet property="invalidPasswordMessage" destination="MfG-Jw-dYf" id="t3Y-Sm-OLI"/>
                         <outlet property="passwordField" destination="P8D-QI-6vX" id="aiK-Vo-EdC"/>
                         <segue destination="Wi5-JZ-gB4" kind="show" identifier="newPasswordToName" id="A3d-du-3Wm">
                             <nil key="action"/>
@@ -662,6 +680,6 @@
         <image name="lockIcon" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BId-QM-fKl"/>
+        <segue reference="en7-In-sCA"/>
     </inferredMetricsTieBreakers>
 </document>
