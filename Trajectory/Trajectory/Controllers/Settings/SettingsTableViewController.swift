@@ -84,7 +84,6 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         //Open photo library (https://turbofuture.com/cell-phones/Access-Photo-Camera-and-Library-in-Swift)
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
-            self.croppingStyle = .circular
             imagePicker.modalPresentationStyle = .popover
             //imagePicker.preferredContentSize = CGSize(width: 320, height: 568)
             imagePicker.delegate = self

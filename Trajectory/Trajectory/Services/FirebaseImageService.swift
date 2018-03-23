@@ -38,7 +38,18 @@ class FirebaseImageService: ImageService {
     
     func bindProfileImage(for uid: String, to imageView: UIImageView) {
         let ref = Storage.storage().reference(withPath: StorageValues.profileImages + "/" + uid)
-        imageView.sd_setImage(with: ref, placeholderImage: defaultImg)
+        let img = SDImageCache.shared().imageFromCache(forKey: ref.fullPath) ?? defaultImg
+        
+        imageView.image = img
+        
+        ref.downloadURL { (url, error) in
+            if let url = url {
+                imageView.sd_setImage(with: url, placeholderImage: img, options: SDWebImageOptions.scaleDownLargeImages, completed: { (image, error, cacheType, url) in
+                    SDImageCache.shared().store(image, forKey: ref.fullPath, completion: nil)
+                })
+            }
+        }
+        
     }
     
     func saveProfileImage(_ image: UIImage, completion: ((ImageServiceError?) -> Void)?) {
