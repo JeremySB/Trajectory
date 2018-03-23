@@ -718,10 +718,10 @@
             </objects>
             <point key="canvasLocation" x="8402" y="1406"/>
         </scene>
-        <!--My Mentee-->
+        <!--Mentee-->
         <scene sceneID="6az-cq-VYl">
             <objects>
-                <viewController storyboardIdentifier="MyMenteeCalendar" title="My Mentee" id="26a-tm-cnJ" customClass="MyMenteeCalendarViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyMenteeCalendar" title="Mentee" id="26a-tm-cnJ" customClass="MyMenteeCalendarViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VKp-cB-b7r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -838,10 +838,10 @@
             </objects>
             <point key="canvasLocation" x="8420" y="2089"/>
         </scene>
-        <!--My Mentor-->
+        <!--Mentor-->
         <scene sceneID="PJ0-S2-8vR">
             <objects>
-                <viewController storyboardIdentifier="MyMentorCheckin" title="My Mentor" id="lS1-f0-5VY" customClass="MyMentorCheckinViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyMentorCheckin" title="Mentor" id="lS1-f0-5VY" customClass="MyMentorCheckinViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="64e-xb-ANH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -918,10 +918,10 @@
             </objects>
             <point key="canvasLocation" x="9100" y="2089.2053973013494"/>
         </scene>
-        <!--My Mentor-->
+        <!--Mentor-->
         <scene sceneID="EaH-zS-G9w">
             <objects>
-                <tableViewController storyboardIdentifier="MyMentorOptions" title="My Mentor" id="Oc4-t1-Jhm" customClass="MyMentorOptionsTableViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MyMentorOptions" title="Mentor" id="Oc4-t1-Jhm" customClass="MyMentorOptionsTableViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hks-MQ-QjZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1046,10 +1046,10 @@
             </objects>
             <point key="canvasLocation" x="9776.7999999999993" y="2087.4062968515746"/>
         </scene>
-        <!--My Mentee-->
+        <!--Mentee-->
         <scene sceneID="k1o-uv-YSY">
             <objects>
-                <tableViewController storyboardIdentifier="MyMenteeOptions" title="My Mentee" id="5PS-6y-Y6m" customClass="MyMenteeOptionsTableViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MyMenteeOptions" title="Mentee" id="5PS-6y-Y6m" customClass="MyMenteeOptionsTableViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DC9-y3-Zc1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1193,10 +1193,10 @@
             </objects>
             <point key="canvasLocation" x="9776.7999999999993" y="1405.5472263868066"/>
         </scene>
-        <!--My Mentees-->
+        <!--Mentees-->
         <scene sceneID="QVa-qx-dfJ">
             <objects>
-                <viewController storyboardIdentifier="CommMentee" title="My Mentees" id="NM9-48-Kon" customClass="CommMenteeViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommMentee" title="Mentees" id="NM9-48-Kon" customClass="CommMenteeViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1pY-AZ-Q2N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1265,10 +1265,10 @@
             </objects>
             <point key="canvasLocation" x="9100" y="669.71514242878561"/>
         </scene>
-        <!--My Mentors-->
+        <!--Mentors-->
         <scene sceneID="oV7-he-dBn">
             <objects>
-                <viewController storyboardIdentifier="CommMentor" title="My Mentors" id="Et3-zS-Hw4" customClass="CommMentorViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommMentor" title="Mentors" id="Et3-zS-Hw4" customClass="CommMentorViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vgo-be-yTr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
