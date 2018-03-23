@@ -338,6 +338,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter in a valid email address." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAh-9a-CtO">
+                                <rect key="frame" x="47" y="329" width="280.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -356,18 +362,21 @@
                             <constraint firstItem="W2g-YQ-Bfe" firstAttribute="top" secondItem="5e2-xE-33d" secondAttribute="top" id="ait-35-oqK"/>
                             <constraint firstItem="74a-Ag-4pX" firstAttribute="leading" secondItem="qRh-7z-D99" secondAttribute="trailing" constant="6" id="btf-OT-z55"/>
                             <constraint firstItem="wgT-Ow-K7G" firstAttribute="bottom" secondItem="5e2-xE-33d" secondAttribute="bottom" id="dp4-uF-eN5"/>
+                            <constraint firstItem="pnV-F7-jJO" firstAttribute="top" secondItem="lAh-9a-CtO" secondAttribute="bottom" constant="14" id="hmS-Fm-FTb"/>
                             <constraint firstItem="KWY-QM-1L7" firstAttribute="top" secondItem="pnV-F7-jJO" secondAttribute="bottom" constant="8" id="jMP-K2-7Go"/>
                             <constraint firstItem="5e2-xE-33d" firstAttribute="trailing" secondItem="KWY-QM-1L7" secondAttribute="trailing" constant="49" id="mfG-0y-u42"/>
                             <constraint firstItem="wgT-Ow-K7G" firstAttribute="width" secondItem="8cE-gt-khd" secondAttribute="width" id="tS5-Fa-uZd"/>
                             <constraint firstItem="LZ4-M6-YWz" firstAttribute="top" secondItem="KWY-QM-1L7" secondAttribute="bottom" constant="70" id="tXC-oc-2ir"/>
                             <constraint firstItem="8cE-gt-khd" firstAttribute="bottom" secondItem="5e2-xE-33d" secondAttribute="bottom" id="w6Q-Bk-uWD"/>
                             <constraint firstItem="pnV-F7-jJO" firstAttribute="leading" secondItem="5e2-xE-33d" secondAttribute="leading" constant="49" id="wQx-Aj-0hr"/>
+                            <constraint firstItem="lAh-9a-CtO" firstAttribute="centerX" secondItem="Yzp-jF-sUv" secondAttribute="centerX" id="yt5-RW-tB6"/>
                             <constraint firstItem="KWY-QM-1L7" firstAttribute="leading" secondItem="5e2-xE-33d" secondAttribute="leading" constant="49" id="zf4-3X-K5s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5e2-xE-33d"/>
                     </view>
                     <navigationItem key="navigationItem" id="VmU-vU-z6g"/>
                     <connections>
+                        <outlet property="emailErrorMessage" destination="lAh-9a-CtO" id="59q-R6-Pyv"/>
                         <outlet property="emailField" destination="74a-Ag-4pX" id="2Xu-pk-68k"/>
                         <segue destination="VQ3-6V-3DZ" kind="show" identifier="passwordLogin" id="YqC-0J-z3O">
                             <nil key="action"/>
@@ -653,6 +662,6 @@
         <image name="lockIcon" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uZL-WI-USN"/>
+        <segue reference="BId-QM-fKl"/>
     </inferredMetricsTieBreakers>
 </document>

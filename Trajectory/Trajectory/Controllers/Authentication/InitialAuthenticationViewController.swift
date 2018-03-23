@@ -15,9 +15,13 @@ class InitialAuthenticationViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
     
+    @IBOutlet weak var emailErrorMessage: UILabel!
+    
     @IBAction func continueButtonPrimaryActionTriggered(_ sender: Any) {
         guard validateEmail(enteredEmail: (emailField?.text)!) else {
             self.emailField.text = ""
+            emailErrorMessage.isHidden = false
+            self.emailField.becomeFirstResponder()
             return
         }
         
