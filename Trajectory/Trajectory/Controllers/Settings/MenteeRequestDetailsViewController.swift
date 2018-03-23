@@ -30,6 +30,9 @@ class MenteeRequestDetailsViewController: UIViewController {
         if let uid = menteeRequest?.mentee.id {
             imageService.bindProfileImage(for: uid, to: self.profileImage)
         }
+        
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+        self.profileImage.clipsToBounds = true;
     }
 
     override func didReceiveMemoryWarning() {

@@ -37,6 +37,9 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         imageView.frame = self.tableView.frame
         self.tableView.backgroundView = imageView
         
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+        self.profileImage.clipsToBounds = true;
+        
     // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
