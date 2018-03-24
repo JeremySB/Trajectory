@@ -18,14 +18,23 @@ class MenteeRequestDetailsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        nameLabel.text = menteeRequest?.mentee.name
+        nameLabel.text = menteeRequest?.mentee.name ?? "Error: No Name Found"
+        if nameLabel.text == "" {nameLabel.text = "Error: No Name Found"}
         //organizationlabel.text = menteeRequest?.mentee.organization
-        userHobbies.text = menteeRequest?.mentee.hobbies
-        userProfessionalInterests.text = menteeRequest?.mentee.professionalInterests
-        userDenomination.text = menteeRequest?.mentee.denomination
-        userObjectives.text = menteeRequest?.mentee.objectives
-        userEmailAddress.text = menteeRequest?.mentee.emailAddress
-        userPhoneNumber.text = menteeRequest?.mentee.phoneNumber
+        if organizationlabel.text == "" {organizationlabel.text = "No Organizations Listed"}
+        userHobbies.text = menteeRequest?.mentee.hobbies ?? "No Hobbies Listed"
+        if userHobbies.text == "" {userHobbies.text = "No Hobbies Listed"}
+        userProfessionalInterests.text = menteeRequest?.mentee.professionalInterests ?? "No Professional Interests Listed"
+        if userProfessionalInterests.text == "" {userProfessionalInterests.text = "No Professional Interests Listed"}
+        userDenomination.text = menteeRequest?.mentee.denomination ?? "No Denomination Listed"
+        if userDenomination.text == "" {userDenomination.text = "No Denomination Found"}
+        userObjectives.text = menteeRequest?.mentee.objectives ?? "Error: No Objectives Found"
+        if userObjectives.text == "" {userObjectives.text = "Error: No Objectives Found"}
+        userEmailAddress.text = menteeRequest?.mentee.emailAddress ?? "Error: No Email Address Found"
+        if userEmailAddress.text == "" {userEmailAddress.text = "Error: No Email Address Found"}
+        userPhoneNumber.text = menteeRequest?.mentee.phoneNumber ?? "Error: No Phone Number Found"
+        if userPhoneNumber.text == "" {userPhoneNumber.text = "Error: No Phone Number Found"}
+
         
         if let uid = menteeRequest?.mentee.id {
             imageService.bindProfileImage(for: uid, to: self.profileImage)
