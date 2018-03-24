@@ -1776,7 +1776,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKI-oy-57W">
                                 <rect key="frame" x="53" y="608" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Set End Date"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Set End Date">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="setEndDate:" destination="IPk-DS-Qtw" eventType="touchUpInside" id="U64-KZ-H6F"/>
                                     <segue destination="gVc-ag-QMw" kind="show" id="EWP-WK-jWt"/>
@@ -1898,9 +1901,11 @@
                         <viewLayoutGuide key="safeArea" id="p3c-aN-gU0"/>
                     </view>
                     <connections>
+                        <outlet property="declineBtn" destination="vh0-PV-ZXU" id="d1i-dr-eCr"/>
                         <outlet property="nameLabel" destination="w2d-vd-Lf1" id="xaj-zd-LOd"/>
                         <outlet property="organizationlabel" destination="afS-kS-6bR" id="oZh-zf-M8c"/>
                         <outlet property="profileImage" destination="nWz-vZ-zCg" id="jyK-mt-BX8"/>
+                        <outlet property="setEndDateBtn" destination="GKI-oy-57W" id="oBA-X8-ND9"/>
                         <outlet property="userDenomination" destination="ALb-FE-vfa" id="uvu-lk-ArL"/>
                         <outlet property="userEmailAddress" destination="9Oe-CK-eCK" id="RgH-SZ-g81"/>
                         <outlet property="userHobbies" destination="LeH-NO-Ffx" id="A8f-Uv-Jna"/>

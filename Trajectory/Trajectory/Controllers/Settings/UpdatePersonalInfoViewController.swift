@@ -45,6 +45,7 @@ class UpdatePersonalInfoViewController: UIViewController {
     @IBOutlet weak var phoneNumberErrorMessage: UILabel!
     
     @IBAction func doneButton(_ sender: Any) {
+        displayPasswordModal()
         let user = User()
         let dispatch = DispatchGroup()
         //Variable that indicates whether screen should dismiss or not after running error checks
@@ -101,7 +102,27 @@ class UpdatePersonalInfoViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    func displayPasswordModal() {
+        //https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/
+        let alert = UIAlertController(title: "Password Needed", message: "Please enter your account password", preferredStyle: .alert)
+        
+        //https://stackoverflow.com/questions/24190277/writing-handler-for-uialertaction
+        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { [weak alert] (_) in
+            let password = alert?.textFields![0].text ?? ""
+            print("PASSWORD: \(password)")
+            //TODO: use password to make Firebase work
+        }))
+            
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addTextField { (textField) in
+            textField.isSecureTextEntry = true
+            textField.placeholder = "Password"
+        }
 
+        self.present(alert, animated: true)
+        
+    }
+    
     /*
     // MARK: - Navigation
 
