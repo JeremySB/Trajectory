@@ -16,14 +16,21 @@ class PasswordAuthenticationViewController: UIViewController {
     var authService: AuthenticationService = FirebaseAuthenticationService()
 
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var nextBtn: UIButton!
     
     @IBOutlet weak var incorrectPasswordMessage: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         passwordField.attributedPlaceholder = NSAttributedString(string: "Password",
                                                               attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        
+        nextBtn.layer.borderColor = UIColor.lightGray.cgColor
+        nextBtn.layer.borderWidth = 2
+        nextBtn.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
     }

@@ -13,14 +13,34 @@ import CodableFirebase
 
 class HobbiesInterestsViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var nextBtn: UIButton!
     //Character limit
     let limitLength = 250
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hobbies.delegate = self
+        professionalInterests.delegate = self
+        
+        hobbies.text = "What are your hobbies?"
+        hobbies.textColor = UIColor.lightGray
+        
+        professionalInterests.text = "What are your professional interests?"
+        professionalInterests.textColor = UIColor.lightGray
+        
+        nextBtn.layer.borderColor = UIColor.lightGray.cgColor
+        nextBtn.layer.borderWidth = 2
+        nextBtn.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.white
+        }
     }
 
     override func didReceiveMemoryWarning() {

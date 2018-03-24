@@ -18,14 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="z4c-5S-08E">
-                                <rect key="frame" x="-18" y="22" width="410" height="624"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="z4c-5S-08E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.016653390601277351" green="0.0012010012287646532" blue="0.00056467531248927116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="z4c-5S-08E" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="n4Y-Ke-JTA"/>
-                            <constraint firstItem="z4c-5S-08E" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="z2u-x5-Wx3"/>
+                            <constraint firstAttribute="trailing" secondItem="z4c-5S-08E" secondAttribute="trailing" id="ZUZ-cR-AhX"/>
+                            <constraint firstAttribute="bottom" secondItem="z4c-5S-08E" secondAttribute="bottom" id="sxT-dd-u94"/>
+                            <constraint firstItem="z4c-5S-08E" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wVU-GJ-sWj"/>
+                            <constraint firstItem="z4c-5S-08E" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="wog-hI-fxc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -36,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SplashScreen" width="410" height="624"/>
+        <image name="SplashScreen" width="1024" height="1366"/>
     </resources>
 </document>

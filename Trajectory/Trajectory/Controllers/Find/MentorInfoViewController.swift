@@ -15,8 +15,14 @@ class MentorInfoViewController: UIViewController {
     
     var user: User?
     
+    @IBOutlet weak var requestMentorshipBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        requestMentorshipBtn.layer.borderWidth = 2
+        requestMentorshipBtn.layer.borderColor = UIColor.lightGray.cgColor
+        requestMentorshipBtn.layer.cornerRadius = 5
 
         //Load mentor information
         MentorName.text = user?.name ?? "No Name"

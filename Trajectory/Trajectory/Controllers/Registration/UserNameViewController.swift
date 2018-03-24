@@ -12,11 +12,18 @@ import CodableFirebase
 
 class UserNameViewController: UIViewController {
 
+    
+    @IBOutlet weak var nextBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
         navigationItem.hidesBackButton = true
+        
+        nextBtn.layer.borderColor = UIColor.lightGray.cgColor
+        nextBtn.layer.borderWidth = 2
+        nextBtn.layer.cornerRadius = 5
         
         userName.attributedPlaceholder = NSAttributedString(string: "  Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
     }

@@ -11,7 +11,8 @@ import UIKit
 class InitialAuthenticationViewController: UIViewController {
     
     var destinationVC: UIViewController?
-
+    
+    @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var emailField: UITextField!
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
     
@@ -45,11 +46,14 @@ class InitialAuthenticationViewController: UIViewController {
         emailField.attributedPlaceholder = NSAttributedString(string: "Email Address",
                                                               attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         
+        continueBtn.layer.borderColor = UIColor.lightGray.cgColor
+        continueBtn.layer.cornerRadius = 5
+        
         // https://stackoverflow.com/questions/25845855/transparent-navigation-bar-ios
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
+        //self.navigationController?.navigationBar.isTranslucent = true
+        //self.navigationController?.view.backgroundColor = .clear
         
         // Do any additional setup after loading the view.
     }

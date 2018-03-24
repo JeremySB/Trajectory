@@ -14,9 +14,14 @@ class NewPasswordViewController: UIViewController {
     var userEmail: String?
 
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var createAccountBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createAccountBtn.layer.borderColor = UIColor.lightGray.cgColor
+        createAccountBtn.layer.borderWidth = 2
+        createAccountBtn.layer.cornerRadius = 5
         
         passwordField.attributedPlaceholder = NSAttributedString(string: "Password",
                                                                  attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])

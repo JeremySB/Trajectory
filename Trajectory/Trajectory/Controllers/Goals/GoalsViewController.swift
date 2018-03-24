@@ -37,6 +37,12 @@ class GoalsViewController: UITableViewController {
             self.tableView.reloadData()
         }
         
+        // https://stackoverflow.com/questions/25845855/transparent-navigation-bar-ios
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //self.navigationController?.navigationBar.isTranslucent = true
+        //self.navigationController?.view.backgroundColor = .clear
+        
         refreshControl = UIRefreshControl()
         
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")

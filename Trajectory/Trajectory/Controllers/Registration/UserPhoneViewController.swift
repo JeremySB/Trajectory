@@ -12,11 +12,17 @@ import CodableFirebase
 
 class UserPhoneViewController: UIViewController {
     
+    @IBOutlet weak var nextBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         phoneNumber.attributedPlaceholder = NSAttributedString(string: "Phone Number", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
 
+        nextBtn.layer.borderColor = UIColor.lightGray.cgColor
+        nextBtn.layer.borderWidth = 2
+        nextBtn.layer.cornerRadius = 5
+        
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
     }
