@@ -38,12 +38,6 @@
                                     <action selector="formatInput:" destination="oZw-pd-5Hd" eventType="editingChanged" id="NoX-Mh-UD4"/>
                                 </connections>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a valid phone number." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MU-7c-mY3">
-                                <rect key="frame" x="53" y="252.5" width="285" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.21638563120000001" blue="0.2031473238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wB2-hO-Qju">
                                 <rect key="frame" x="53" y="329.5" width="275" height="40"/>
                                 <constraints>
@@ -57,10 +51,16 @@
                                     <action selector="didTapNext:" destination="oZw-pd-5Hd" eventType="primaryActionTriggered" id="zFW-AU-dyD"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a valid ten digit phone number." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MU-7c-mY3">
+                                <rect key="frame" x="12" y="252" width="357" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.21638563120000001" blue="0.2031473238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2MU-7c-mY3" firstAttribute="leading" secondItem="VDQ-Qb-mCP" secondAttribute="leading" id="9dq-yP-llQ"/>
+                            <constraint firstItem="2MU-7c-mY3" firstAttribute="leading" secondItem="VDQ-Qb-mCP" secondAttribute="leading" constant="-41" id="9dq-yP-llQ"/>
                             <constraint firstItem="wB2-hO-Qju" firstAttribute="leading" secondItem="VDQ-Qb-mCP" secondAttribute="leading" id="FIr-Vl-oTo"/>
                             <constraint firstItem="tD3-A1-esG" firstAttribute="bottom" secondItem="6bU-IU-IuO" secondAttribute="bottom" id="Oo0-FM-E2d"/>
                             <constraint firstItem="VDQ-Qb-mCP" firstAttribute="leading" secondItem="6bU-IU-IuO" secondAttribute="leading" constant="53" id="P6K-UX-jbm"/>

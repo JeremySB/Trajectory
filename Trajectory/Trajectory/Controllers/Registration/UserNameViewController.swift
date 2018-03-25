@@ -45,19 +45,24 @@ class UserNameViewController: UIViewController {
     @IBAction func didTapNext(_ sender: Any) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.displayName = userName.text
-        changeRequest?.commitChanges { (error) in
-            if error == nil {
-                self.performSegue(withIdentifier: "nameToPhoneAndEmail", sender: self)
+        //check data before continuing
+        if userName.text != nil && !(userName.text?.trimmingCharacters(in: CharacterSet.whitespaces).isEmpty)! && (userName.text?.contains(" "))! {
+            nameErrorMessage.isHidden = true
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = userName.text
+            changeRequest?.commitChanges { (error) in
+                if error == nil {
+                    self.performSegue(withIdentifier: "nameToPhoneAndEmail", sender: self)
+                }
             }
+            
+            let user = User()
+            user.name = userName.text
+            let userEncoded = try! FirestoreEncoder().encode(user)
+            Firestore.firestore().collection("users").document(uid).setData(userEncoded, options: SetOptions.merge())
+        } else {
+            nameErrorMessage.isHidden = false
         }
-        
-        let user = User()
-        user.name = userName.text
-        let userEncoded = try! FirestoreEncoder().encode(user)
-        Firestore.firestore().collection("users").document(uid).setData(userEncoded, options: SetOptions.merge())
-        
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

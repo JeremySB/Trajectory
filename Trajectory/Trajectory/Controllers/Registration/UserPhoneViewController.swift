@@ -11,7 +11,7 @@ import Firebase
 import CodableFirebase
 
 class UserPhoneViewController: UIViewController {
-    
+
     @IBOutlet weak var nextBtn: UIButton!
     
     override func viewDidLoad() {
@@ -25,6 +25,7 @@ class UserPhoneViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,27 +38,40 @@ class UserPhoneViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
     
-    
     @IBAction func formatInput(_ sender: Any) {
-        let length = phoneNumber.text?.count
+        let newLength = phoneNumber.text?.count ?? 0
 
-        //When area code has been entered...
-        if length == 3 {
-            phoneNumber.text = "(" + phoneNumber.text! + ")-"
+        //Only trigger when entire phone number is entered
+        let num = Int((phoneNumber.text ?? nil)!)
+        if newLength == 10 && num != nil {
+            
         }
-        //When next three digits have been entered...
-        else if length == 9 {
-            phoneNumber.text = phoneNumber.text! + "-"
+        else {
+            
         }
-        //When last three digits have been entered...
-        else if length == 14 {
-            phoneNumber.resignFirstResponder()
+        /*if newLength > length {
+            //When area code has been entered...
+            if newLength == 3 {
+                phoneNumber.text = "(" + phoneNumber.text! + ")-"
+                newLength = newLength + 3
+            }
+            //When next three digits have been entered...
+            else if newLength == 9 {
+                phoneNumber.text = phoneNumber.text! + "-"
+                newLength = newLength + 1
+            }
+            //When last three digits have been entered...
+            else if newLength == 14 {
+                phoneNumber.resignFirstResponder()
+            }
+            //If phone number is invalid
+            else if newLength == 15 {
+                errorMessage.isHidden = false
+            }
         }
-        //If phone number is invalid
-        else if length == 15 {
-            errorMessage.isHidden = false
-            print("INVALID PHONE NUMBER ENTERED")
-        }
+        else {
+            if newLength =
+        }*/
     }
     
     @IBOutlet weak var phoneNumber: UITextField!
@@ -70,16 +84,24 @@ class UserPhoneViewController: UIViewController {
             return
         }
         
-        let user = User()
-        user.phoneNumber = phoneNumber.text
-        let userEncoded = try! FirestoreEncoder().encode(user)
-        db.collection("users").document(uid).setData(userEncoded, options: SetOptions.merge()) { (error) in
-            if let error = error {
-                print(error.localizedDescription)
+        //Error check before continuing
+        let num = Int((phoneNumber.text ?? nil)!)
+        let length = phoneNumber.text?.count ?? 0
+        if(length == 10 && num != nil) {
+            errorMessage.isHidden = true
+            let user = User()
+            user.phoneNumber = phoneNumber.text
+            let userEncoded = try! FirestoreEncoder().encode(user)
+            db.collection("users").document(uid).setData(userEncoded, options: SetOptions.merge()) { (error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+                else {
+                    self.performSegue(withIdentifier: "phoneToHobbiesAndInterests", sender: self)
+                }
             }
-            else {
-                self.performSegue(withIdentifier: "phoneToHobbiesAndInterests", sender: self)
-            }
+        } else {
+            errorMessage.isHidden = false
         }
     }
 
