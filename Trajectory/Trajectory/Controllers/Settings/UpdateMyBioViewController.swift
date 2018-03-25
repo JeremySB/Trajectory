@@ -44,14 +44,22 @@ class UpdateMyBioViewController: UIViewController {
     @IBOutlet weak var userDenomination: UITextField!
     @IBOutlet weak var userObjectiveStatement: UITextView!
     
+    @IBOutlet weak var objectivesErrorMessage: UILabel!
+    
+    
     @IBAction func doneButton(_ sender: Any) {
-        let user = User()
-        user.hobbies = userHobbies.text
-        user.professionalInterests = userProfessionalInterests.text
-        user.denomination = userDenomination.text
-        user.objectives = userObjectiveStatement.text
-        userService.saveCurrentUser(user, completion: nil)
-        dismiss(animated: true, completion: nil)
+        //Check required field
+        if userObjectiveStatement.text != "" && userObjectiveStatement.text != " " {
+            let user = User()
+            user.hobbies = userHobbies.text
+            user.professionalInterests = userProfessionalInterests.text
+            user.denomination = userDenomination.text
+            user.objectives = userObjectiveStatement.text
+            userService.saveCurrentUser(user, completion: nil)
+            dismiss(animated: true, completion: nil)
+        } else {
+            objectivesErrorMessage.isHidden = false
+        }
     }
     
     @IBAction func cancelButton(_ sender: Any) {

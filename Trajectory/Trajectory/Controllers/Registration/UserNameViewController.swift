@@ -14,6 +14,8 @@ class UserNameViewController: UIViewController {
 
     
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var nameErrorMessage: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,6 +13,9 @@ import CodableFirebase
 class DenominationAndProfileGoalsViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var finishBtn: UIButton!
     
+    @IBOutlet weak var objectivesErrorMessage: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,21 +69,26 @@ class DenominationAndProfileGoalsViewController: UIViewController, UITextViewDel
             return
         }
         
-        let user = User()
-        user.denomination = denomination.text
-        user.objectives = objectivesStatement.text
-        let userEncoded = try! FirestoreEncoder().encode(user)
-        
-        db.collection("users").document(uid)
-            .setData(userEncoded,
-                     options: SetOptions.merge())
-            { (error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                else {
-                    self.performSegue(withIdentifier: "denominationAndProfileToMain", sender: self)
-                }
+        //Check for required field
+        if objectivesStatement.text != "" && objectivesStatement.text != "What would you like to work on with a mentor?" && objectivesStatement.text != " " {
+            let user = User()
+            user.denomination = denomination.text
+            user.objectives = objectivesStatement.text
+            let userEncoded = try! FirestoreEncoder().encode(user)
+            
+            db.collection("users").document(uid)
+                .setData(userEncoded,
+                         options: SetOptions.merge())
+                { (error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }
+                    else {
+                        self.performSegue(withIdentifier: "denominationAndProfileToMain", sender: self)
+                    }
+            }
+        } else {
+            objectivesErrorMessage.isHidden = false
         }
     }
     

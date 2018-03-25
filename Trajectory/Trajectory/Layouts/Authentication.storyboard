@@ -216,6 +216,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your objective is a required field." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCg-nc-TJk">
+                                <rect key="frame" x="54" y="101" width="267" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.21638563120000001" blue="0.2031473238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -238,6 +245,7 @@
                     <connections>
                         <outlet property="denomination" destination="7d6-g4-Yrj" id="cbx-xh-l57"/>
                         <outlet property="finishBtn" destination="FVP-Ws-aK2" id="hDt-Oc-h1s"/>
+                        <outlet property="objectivesErrorMessage" destination="zCg-nc-TJk" id="jL3-C4-6i0"/>
                         <outlet property="objectivesStatement" destination="Yv7-fd-HzM" id="aW3-Qf-Uue"/>
                         <segue destination="3QG-I5-Lx7" kind="presentation" identifier="denominationAndProfileToMain" id="uZL-WI-USN"/>
                     </connections>
@@ -431,6 +439,13 @@
                                     <action selector="didTapNext:" destination="Wi5-JZ-gB4" eventType="primaryActionTriggered" id="qDC-ze-C2f"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your first and last name." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZ5-mi-CLY">
+                                <rect key="frame" x="27" y="252" width="304" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.21638563120000001" blue="0.2031473238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -449,6 +464,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Name" id="Mx0-0z-U30"/>
                     <connections>
+                        <outlet property="nameErrorMessage" destination="QZ5-mi-CLY" id="uIU-V3-cjb"/>
                         <outlet property="nextBtn" destination="HVK-ms-2kK" id="Ywn-eo-wZC"/>
                         <outlet property="userName" destination="cq1-vC-GsZ" id="YgH-zM-dbE"/>
                         <segue destination="oZw-pd-5Hd" kind="show" identifier="nameToPhoneAndEmail" id="63S-Ov-DVh">
@@ -682,6 +698,6 @@
         <image name="lockIcon" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BId-QM-fKl"/>
+        <segue reference="uZL-WI-USN"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1663,7 +1663,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to work on with a mentor?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lc-gS-CQt">
-                                <rect key="frame" x="15" y="319" width="355" height="47"/>
+                                <rect key="frame" x="15" y="313" width="355" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1703,6 +1703,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a required field." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcR-aP-64n">
+                                <rect key="frame" x="24" y="345" width="324" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1713,6 +1720,7 @@
                         <viewLayoutGuide key="safeArea" id="7zT-XC-IJS"/>
                     </view>
                     <connections>
+                        <outlet property="objectivesErrorMessage" destination="NcR-aP-64n" id="jMl-2y-RzI"/>
                         <outlet property="userDenomination" destination="OoM-z3-mrE" id="4oj-5t-IQE"/>
                         <outlet property="userHobbies" destination="x0V-NG-Ram" id="DqK-5d-dE8"/>
                         <outlet property="userObjectiveStatement" destination="aeF-Hj-yf5" id="jtt-fk-TsN"/>
