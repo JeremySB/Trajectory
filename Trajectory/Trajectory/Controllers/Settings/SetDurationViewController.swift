@@ -11,6 +11,8 @@ import UIKit
 class SetDurationViewController: UIViewController {
     
     lazy var connService: ConnectionService = FirebaseConnectionService()
+    lazy var imageService: ImageService = FirebaseImageService()
+
     
     var menteeRequest: MenteeRequest?
 
@@ -18,10 +20,19 @@ class SetDurationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        nameLabel.text = menteeRequest?.mentee.name
-        organizationLabel.text = ""
+        nameLabel.text = menteeRequest?.mentee.name ?? "Error: No Name Found"
+        if nameLabel.text == "" {nameLabel.text = "Error: No Name Found"}
+        //organizationLabel.text = menteeRequest?.mentee.organization ?? "No Organizations Listed"
+        if organizationLabel.text == "" {organizationLabel.text = "No Organizations Listed"}
         endDate.minimumDate = Date()
         endDate.setValue(UIColor.white, forKey: "textColor")
+        
+        if let uid = menteeRequest?.mentee.id {
+            imageService.bindProfileImage(for: uid, to: self.userImage)
+        }
+        
+        self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2;
+        self.userImage.clipsToBounds = true;
     }
 
     override func didReceiveMemoryWarning() {
