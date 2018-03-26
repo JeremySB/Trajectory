@@ -63,7 +63,10 @@ class FirebaseUserService: UserService {
                 return completion(nil, UserServiceError.Misc(error.localizedDescription))
             }
             guard let data = doc?.data() else {
-                completion(nil, UserServiceError.NoUserData)
+                // empty user
+                let user = User()
+                user.id = doc?.documentID
+                completion(user, nil)
                 return
             }
             if let user = try? FirestoreDecoder().decode(User.self, from: data) {

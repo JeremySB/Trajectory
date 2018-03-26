@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class NewPasswordViewController: UIViewController {
     
+    lazy var userService: UserService = FirebaseUserService()
     var userEmail: String?
 
     @IBOutlet weak var passwordField: UITextField!
@@ -57,6 +58,13 @@ class NewPasswordViewController: UIViewController {
                 self.passwordField.becomeFirstResponder()
                 return
             }
+            
+            self.userService.getCurrentUser({ (user, error) in
+                if let user = user {
+                    user.emailAddress = self.userEmail
+                    self.userService.saveCurrentUser(user, completion: nil)
+                }
+            })
             
             // created account
             self.performSegue(withIdentifier: "newPasswordToName", sender: self)
