@@ -17,9 +17,13 @@ protocol AuthenticationService {
     func signIn(withEmail email: String, password: String, completion: ((Error) -> Void)?)
     
     func updateEmail(_ email: String, completion: @escaping (AuthenticationError?) -> Void)
+    
+    func reauthenticateWith(password: String, completion: @escaping (AuthenticationError?) -> Void)
 }
 
 enum AuthenticationError: Error {
     case MiscError(String)
+    case NotLoggedIn
+    case ReauthenticationRequired
     case InvalidEmail(String?)
 }

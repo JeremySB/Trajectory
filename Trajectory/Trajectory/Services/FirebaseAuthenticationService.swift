@@ -52,10 +52,51 @@ class FirebaseAuthenticationService: AuthenticationService {
     func updateEmail(_ email: String, completion: @escaping (AuthenticationError?) -> Void) {
         Auth.auth().currentUser?.updateEmail(to: email, completion: { (error) in
             if let error = error {
-                completion(.InvalidEmail(error.localizedDescription))
+                if let authError = AuthErrorCode(rawValue: error._code) {
+                    switch authError {
+                    case .requiresRecentLogin:
+                        completion(.ReauthenticationRequired)
+                    default:
+                        completion(.InvalidEmail(error.localizedDescription))
+                    }
+                }
+                else {
+                    completion(.InvalidEmail(error.localizedDescription))
+                }
+                
             } else {
                 completion(nil)
             }
         })
+    }
+    
+    func reauthenticateWith(password: String, completion: @escaping (AuthenticationError?) -> Void) {
+        guard let user = Auth.auth().currentUser, let email = user.email else {
+            completion(.NotLoggedIn)
+            return
+        }
+        
+        fetchProviders(forEmail: email) { (providers, error) in
+            if let providers = providers, providers.contains("password") {
+                let cred = EmailAuthProvider.credential(withEmail: email, password: password)
+                
+                user.reauthenticate(with: cred) { (error) in
+                    if let error = error {
+                        completion(.MiscError(error.localizedDescription))
+                    }
+                    else {
+                        completion(nil)
+                    }
+                }
+            }
+            else {
+                // uses some other form of auth, so force sign out
+                if self.signOut() {
+                    return
+                }
+            }
+        }
+        
+        
     }
 }

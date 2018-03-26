@@ -44,7 +44,7 @@ class FirebaseImageService: ImageService {
         
         ref.downloadURL { (url, error) in
             if let url = url {
-                imageView.sd_setImage(with: url, placeholderImage: img, options: SDWebImageOptions.scaleDownLargeImages, completed: { (image, error, cacheType, url) in
+                imageView.sd_setImage(with: url, placeholderImage: nil, options: SDWebImageOptions.scaleDownLargeImages, completed: { (image, error, cacheType, url) in
                     SDImageCache.shared().store(image, forKey: ref.fullPath, completion: nil)
                 })
             }
