@@ -44,6 +44,19 @@ class UpdatePersonalInfoViewController: UIViewController {
     @IBOutlet weak var emailErrorMessage: UILabel!
     @IBOutlet weak var phoneNumberErrorMessage: UILabel!
     
+    func formatInput() -> String {
+        let rawNumber = usersPhoneNumber.text!
+        
+        let digits = rawNumber.flatMap{Int(String($0))}
+        let areaCode = "\(digits[0])\(digits[1])\(digits[2])"
+        let secondSet = "\(digits[3])\(digits[4])\(digits[5])"
+        let thirdSet = "\(digits[6])\(digits[7])\(digits[8])\(digits[9])"
+        
+        let formattedNumber = "(\(areaCode))-\(secondSet)-\(thirdSet)"
+        print(formattedNumber)
+        return formattedNumber
+    }
+    
     @IBAction func doneButton(_ sender: Any) {
         displayPasswordModal()
         let user = User()
@@ -84,8 +97,17 @@ class UpdatePersonalInfoViewController: UIViewController {
             
         }
         
-        //TODO: error check phone number
-        user.phoneNumber = usersPhoneNumber.text
+        //Error check phone number
+        let num = Int((usersPhoneNumber.text ?? nil)!)
+        let length = usersPhoneNumber.text?.count ?? 0
+        if(length == 10 && num != nil) || (length == 14) || (length == 12) {
+            phoneNumberErrorMessage.isHidden = true
+            let formattedPhoneNumber = formatInput()
+            user.phoneNumber = formattedPhoneNumber
+        } else {
+            toDismiss = false
+            phoneNumberErrorMessage.isHidden = false
+        }
         
         //Save data and dismiss if all checks passed
         dispatch.notify(queue: .main) {
