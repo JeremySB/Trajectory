@@ -12,6 +12,7 @@ class UpdatePersonalInfoViewController: UIViewController {
 
     lazy var userService: UserService = FirebaseUserService()
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
+    var user: User? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class UpdatePersonalInfoViewController: UIViewController {
         userService.getCurrentUser { (user, error) in
             self.userService.getCurrentUser { (user, error) in
                 guard let user = user else { return }
+                self.user = user
                 self.usersName.text = user.name
                 self.usersEmailAddress.text = user.emailAddress
                 self.usersPhoneNumber.text = user.phoneNumber
@@ -58,7 +60,7 @@ class UpdatePersonalInfoViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
-        let user = User()
+        let user = self.user ?? User()
         let dispatch = DispatchGroup()
         //Variable that indicates whether screen should dismiss or not after running error checks
         var toDismiss = true
@@ -66,6 +68,7 @@ class UpdatePersonalInfoViewController: UIViewController {
         if usersName.text != nil && !(usersName.text?.trimmingCharacters(in: CharacterSet.whitespaces).isEmpty)! && (usersName.text?.contains(" "))! {
             user.name = usersName.text
             nameErrorMessage.isHidden = true
+            
         } else {
             //Display error message if name is invalid
             nameErrorMessage.isHidden = false
@@ -75,30 +78,32 @@ class UpdatePersonalInfoViewController: UIViewController {
         
         //Error check for valid email address
         guard let newEmail = usersEmailAddress.text else { return }
-        user.emailAddress = newEmail
-        dispatch.enter()
-        authService.updateEmail(newEmail) { (error) in
-            if let error = error {
-                if case .ReauthenticationRequired = error {
-                    self.displayPasswordModal()
+        // only go through this if email changed
+        if newEmail != user.emailAddress {
+            user.emailAddress = newEmail
+            dispatch.enter()
+            authService.updateEmail(newEmail) { (error) in
+                if let error = error {
+                    if case .ReauthenticationRequired = error {
+                        self.displayPasswordModal()
+                    }
+                    else {
+                        // issue with email or connectivity
+                        self.emailErrorMessage.isHidden = false
+                    }
+                    toDismiss = false
+                    if !self.usersName.isFirstResponder {
+                        self.usersEmailAddress.becomeFirstResponder()
+                    }
                 }
                 else {
-                    // issue with email or connectivity
-                    self.emailErrorMessage.isHidden = false
+                    //make sure error message is hidden
+                    self.emailErrorMessage.isHidden = true
+                    // also save within user document
+                    user.emailAddress = self.usersEmailAddress.text
                 }
-                toDismiss = false
-                if !self.usersName.isFirstResponder {
-                    self.usersEmailAddress.becomeFirstResponder()
-                }
+                dispatch.leave()
             }
-            else {
-                //make sure error message is hidden
-                self.emailErrorMessage.isHidden = true
-                // also save within user document
-                user.emailAddress = self.usersEmailAddress.text
-            }
-            dispatch.leave()
-            
         }
         
         //Error check phone number
