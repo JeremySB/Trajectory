@@ -21,6 +21,7 @@ class SetDurationViewController: UIViewController {
         nameLabel.text = menteeRequest?.mentee.name
         organizationLabel.text = ""
         endDate.minimumDate = Date()
+        endDate.setValue(UIColor.white, forKey: "textColor")
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyOrganizationsTableViewController: UITableViewController {
+class MyOrganizationsTableViewController: UITableViewController { //, MGSwipeTableCellDelegate {
     
     //An array of the user's organizations
     var userOrganizations = [Organization]()
@@ -49,14 +49,6 @@ class MyOrganizationsTableViewController: UITableViewController {
         super.touchesBegan(touches, with: event)
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .delete {
-            let orgToDelete = [indexPath.row]
-            print("DELETING ORG AT")
-            print(orgToDelete)
-        }
-    }
-    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -85,7 +77,7 @@ class MyOrganizationsTableViewController: UITableViewController {
         }
         //If in the second section...
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath) //as! MGSwipeTableCell
             cell.textLabel?.text = userOrganizations[indexPath[1]].name
             cell.textLabel?.textColor = UIColor.white
             return cell
