@@ -28,12 +28,12 @@ class MenteeRequestDetailsViewController: UIViewController {
         if userProfessionalInterests.text == "" {userProfessionalInterests.text = "No Professional Interests Listed"}
         userDenomination.text = menteeRequest?.mentee.denomination ?? "No Denomination Listed"
         if userDenomination.text == "" {userDenomination.text = "No Denomination Found"}
-        userObjectives.text = menteeRequest?.mentee.objectives ?? "Error: No Objectives Found"
-        if userObjectives.text == "" {userObjectives.text = "Error: No Objectives Found"}
-        userEmailAddress.text = "Email Address: \(menteeRequest?.mentee.emailAddress ?? "Error: No Email Address Found")"
-        if userEmailAddress.text == "Email Address: " {userEmailAddress.text = "Error: No Email Address Found"}
-        userPhoneNumber.text = "Phone Number: \(menteeRequest?.mentee.phoneNumber ?? "Error: No Phone Number Found")"
-        if userPhoneNumber.text == "Phone Number: " {userPhoneNumber.text = "Error: No Phone Number Found"}
+        userObjectives.text = menteeRequest?.mentee.objectives ?? "No Objectives Found"
+        if userObjectives.text == "" {userObjectives.text = "No Objectives Found"}
+        userEmailAddress.text = "Email Address: \(menteeRequest?.mentee.emailAddress ?? "No Email Address Found")"
+        if userEmailAddress.text == "Email Address: " {userEmailAddress.text = "No Email Address Found"}
+        userPhoneNumber.text = "Phone Number: \(menteeRequest?.mentee.phoneNumber ?? "No Phone Number Found")"
+        if userPhoneNumber.text == "Phone Number: " {userPhoneNumber.text = "No Phone Number Found"}
 
         
         if let uid = menteeRequest?.mentee.id {

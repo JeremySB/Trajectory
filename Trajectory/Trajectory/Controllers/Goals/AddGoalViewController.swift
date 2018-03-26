@@ -28,6 +28,8 @@ class AddGoalViewController: UIViewController {
         // Do any additional setup after loading the view.
         //Set end date minimum to today's date
         endDatePicker.minimumDate = Date()
+        endDatePicker.setValue(UIColor.white, forKey: "textColor")
+
     }
 
     override func didReceiveMemoryWarning() {
