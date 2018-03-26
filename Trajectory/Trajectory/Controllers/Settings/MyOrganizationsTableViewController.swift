@@ -82,9 +82,9 @@ class MyOrganizationsTableViewController: UITableViewController {
             cell.textLabel?.text = userOrganizations[indexPath[1]].name
             cell.textLabel?.textColor = UIColor.white
             //configure right buttons
-            cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: .red),
+            /*cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: .red),
                                  MGSwipeButton(title: "More",backgroundColor: .lightGray)]
-            cell.rightSwipeSettings.transition = .rotate3D
+            cell.rightSwipeSettings.transition = .rotate3D*/
             return cell
         }
     }
