@@ -20,6 +20,8 @@ target 'Trajectory' do
   
   pod 'CropViewController'
   
+  pod 'MGSwipeTableCell'
+  
   pod 'CodableFirebase', :git => 'https://github.com/alickbass/CodableFirebase.git'
   
   pod 'AppCenter'

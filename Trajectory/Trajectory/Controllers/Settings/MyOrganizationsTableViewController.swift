@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MGSwipeTableCell
 
-class MyOrganizationsTableViewController: UITableViewController { //, MGSwipeTableCellDelegate {
+class MyOrganizationsTableViewController: UITableViewController {
     
     //An array of the user's organizations
     var userOrganizations = [Organization]()
@@ -77,9 +78,13 @@ class MyOrganizationsTableViewController: UITableViewController { //, MGSwipeTab
         }
         //If in the second section...
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath) //as! MGSwipeTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath) as! MGSwipeTableCell
             cell.textLabel?.text = userOrganizations[indexPath[1]].name
             cell.textLabel?.textColor = UIColor.white
+            //configure right buttons
+            cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: .red),
+                                 MGSwipeButton(title: "More",backgroundColor: .lightGray)]
+            cell.rightSwipeSettings.transition = .rotate3D
             return cell
         }
     }
