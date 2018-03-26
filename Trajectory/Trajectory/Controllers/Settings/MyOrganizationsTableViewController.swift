@@ -78,7 +78,7 @@ class MyOrganizationsTableViewController: UITableViewController {
         }
         //If in the second section...
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath) as! MGSwipeTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath)
             cell.textLabel?.text = userOrganizations[indexPath[1]].name
             cell.textLabel?.textColor = UIColor.white
             //configure right buttons
