@@ -34,9 +34,6 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" smartDashesType="yes" textContentType="tel"/>
-                                <connections>
-                                    <action selector="formatInput:" destination="oZw-pd-5Hd" eventType="editingChanged" id="NoX-Mh-UD4"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wB2-hO-Qju">
                                 <rect key="frame" x="53" y="329.5" width="275" height="40"/>
