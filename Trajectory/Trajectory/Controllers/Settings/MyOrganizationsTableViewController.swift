@@ -26,18 +26,21 @@ class MyOrganizationsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        orgService.getCurrentOrganizations { (orgs, error) in
-            if let orgs = orgs {
-                self.userOrganizations = orgs
-                self.tableView.reloadData()
-            }
-        }
         
         //Set background
         let imageView = UIImageView(image: UIImage(named: "TrajectoryBackground"))
         imageView.frame = self.tableView.frame
         self.tableView.backgroundView = imageView
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        orgService.getCurrentOrganizations { (orgs, error) in
+            if let orgs = orgs {
+                self.userOrganizations = orgs
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

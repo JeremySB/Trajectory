@@ -33,16 +33,18 @@ class AddOrganizationViewController: UIViewController {
             let code = Int(firstThreeCharacters.text! + lastThreeCharacters.text!) {
             print(code)
             orgService.joinOrganization(code: code, completion: { (error) in
-                if error != nil {
+                if error == nil {
                     self.dismiss(animated: true, completion: nil)
+                } else {
+                    self.invalidCodeErrorMessage.isHidden = false
+                    self.firstThreeCharacters.text = ""
+                    self.lastThreeCharacters.text = ""
+                    self.lastThreeCharacters.resignFirstResponder()
                 }
             })
         }
         else {
-            invalidCodeErrorMessage.isHidden = false
-            firstThreeCharacters.text = ""
-            lastThreeCharacters.text = ""
-            lastThreeCharacters.resignFirstResponder()
+            
         }
     }
     
