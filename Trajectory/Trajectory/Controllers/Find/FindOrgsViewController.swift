@@ -37,13 +37,10 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchController.searchBar.sizeToFit()
         
         searchController.searchBar.becomeFirstResponder()
-        
-        // TODO: remove. only for testing
-        orgService.joinOrganization("Test Org", completion: nil)
+        populateOrgsAndUsers()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        populateOrgsAndUsers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,6 +89,7 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
                     })
                 }
                 dispatch.notify(queue: .main, execute: {
+                    self.searchForMatches(searchString: "")
                     self.collectionView.reloadData()
                 })
             }
@@ -114,7 +112,8 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         //Setup searchResults array with user's organizations
         for item in self.usersPerOrganization {
             let userResultsInOrg: [String: [User]] = [item.key.name ?? "" : item.value.filter({ (user) -> Bool in
-                user.name?.lowercased().contains(searchString.lowercased()) ?? false
+                if searchString == "" { return true }
+                else { return user.name?.lowercased().contains(searchString.lowercased()) ?? false }
             })]
             
             searchResults.append(userResultsInOrg)
