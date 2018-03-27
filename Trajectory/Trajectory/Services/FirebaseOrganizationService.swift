@@ -148,7 +148,14 @@ class FirebaseOrganizationService: OrganizationService {
     
     func leaveOrganization(_ id: String, completion: ((OrganizationServiceError?) -> Void)?) {
         if let uid = Auth.auth().currentUser?.uid {
-            db.collection(FirestoreValues.membershipCollection).document(uid+" "+id).delete()
+            db.collection(FirestoreValues.membershipCollection).document(uid+" "+id).delete(completion: { (error) in
+                if let error = error {
+                    completion?(.Misc(error.localizedDescription))
+                }
+                else {
+                    completion?(nil)
+                }
+            })
         }
         else {
             completion?(.NotLoggedIn)
