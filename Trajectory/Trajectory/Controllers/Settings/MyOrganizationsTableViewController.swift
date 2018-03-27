@@ -92,6 +92,22 @@ class MyOrganizationsTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //TODO finish implemenation of saving change in user's organizations on the backend
+            orgService.leaveOrganization(userOrganizations[indexPath.row].id ?? "", completion: { (error) in
+                if error == nil {
+                    self.tableView.deleteRows(at: [indexPath], with: .fade)
+                    self.userOrganizations.remove(at: indexPath.row)
+                }
+            })
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
+    }
+
+    
+    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
