@@ -47,6 +47,10 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadUser()
+    }
+    
     func loadUser() {
         userService.getCurrentUser { (user, error) in
             guard let user = user else { return }
