@@ -865,6 +865,9 @@
                                 <state key="normal" title="Doing Well">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="doingWellCheckIn:" destination="lS1-f0-5VY" eventType="touchUpInside" id="lLL-Zk-1cU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ot7-Sx-FTk">
                                 <rect key="frame" x="137" y="376" width="100" height="40"/>
@@ -873,6 +876,9 @@
                                 <state key="normal" title="Alright">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="alrightCheckIn:" destination="lS1-f0-5VY" eventType="touchUpInside" id="4XI-XE-uCm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVe-nW-hxC">
                                 <rect key="frame" x="137" y="482" width="100" height="40"/>
@@ -882,6 +888,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.93059724569320679" green="0.27452105283737183" blue="0.18561512231826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="notGoodCheckIn:" destination="lS1-f0-5VY" eventType="touchUpInside" id="LEk-Hr-kFe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check-In:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWA-Jg-vDp">
                                 <rect key="frame" x="137" y="200" width="100" height="21"/>
@@ -921,7 +930,10 @@
                         <viewLayoutGuide key="safeArea" id="ZaF-8K-tou"/>
                     </view>
                     <connections>
+                        <outlet property="alrightButton" destination="Ot7-Sx-FTk" id="Yq7-HZ-uv8"/>
+                        <outlet property="doingWellButton" destination="3a8-1O-WzJ" id="Mah-Gz-P1N"/>
                         <outlet property="mentorName" destination="pH2-eO-Bwx" id="c0z-eq-dQv"/>
+                        <outlet property="notGoodButton" destination="PVe-nW-hxC" id="sKC-JZ-UOW"/>
                         <outlet property="organizations" destination="mNN-VJ-PUX" id="ncT-tu-tYG"/>
                         <outlet property="profileImage" destination="RBG-1E-Fqt" id="pMi-Iz-Rcd"/>
                     </connections>

@@ -19,6 +19,11 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var mentorName: UILabel!
     @IBOutlet weak var organizations: UILabel!
+    
+    @IBOutlet weak var doingWellButton: UIButton!
+    @IBOutlet weak var alrightButton: UIButton!
+    @IBOutlet weak var notGoodButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mentorName.text = user?.name ?? ""
@@ -32,6 +37,29 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
         if UIApplication.shared.canOpenURL(URL(string:"calshow://")!) {
             UIApplication.shared.open(URL(string:"calshow://")!, options: [:], completionHandler: nil)
         }
+    }
+    
+    //Function that checks latest check-ins and enables/disables buttons appropriately
+    func setCheckInButtons() {
+        
+    }
+
+    @IBAction func doingWellCheckIn(_ sender: Any) {
+        let dateStamp = Date()
+        print(dateStamp)
+        //TODO: save status to backend with a date stamp and send notification to mentor
+    }
+    
+    @IBAction func alrightCheckIn(_ sender: Any) {
+        let dateStamp = Date()
+        print(dateStamp)
+        //TODO: save status to backend with a date stamp and send notification to mentor
+    }
+    
+    @IBAction func notGoodCheckIn(_ sender: Any) {
+        let dateStamp = Date()
+        print(dateStamp)
+        //TODO: save status to backend with a date stamp and send notification to mentor
     }
     
     override func viewDidAppear(_ animated: Bool) {
