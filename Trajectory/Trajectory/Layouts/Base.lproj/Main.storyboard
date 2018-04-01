@@ -859,7 +859,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3a8-1O-WzJ">
-                                <rect key="frame" x="137" y="268" width="100" height="40"/>
+                                <rect key="frame" x="115" y="268" width="145" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.46220868825912476" green="0.9423871636390686" blue="0.076337583363056183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Doing Well">
@@ -870,7 +870,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ot7-Sx-FTk">
-                                <rect key="frame" x="137" y="376" width="100" height="40"/>
+                                <rect key="frame" x="115" y="376" width="145" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9983641505241394" green="0.91026431322097778" blue="0.20300933718681335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Alright">
@@ -878,18 +878,6 @@
                                 </state>
                                 <connections>
                                     <action selector="alrightCheckIn:" destination="lS1-f0-5VY" eventType="touchUpInside" id="4XI-XE-uCm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVe-nW-hxC">
-                                <rect key="frame" x="137" y="482" width="100" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93059724569320679" green="0.27452105283737183" blue="0.18561512231826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Not Good">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.93059724569320679" green="0.27452105283737183" blue="0.18561512231826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="notGoodCheckIn:" destination="lS1-f0-5VY" eventType="touchUpInside" id="LEk-Hr-kFe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check-In:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWA-Jg-vDp">
@@ -923,6 +911,18 @@
                                 <state key="normal" title="Calendar"/>
                                 <connections>
                                     <action selector="sendToCalendar:" destination="lS1-f0-5VY" eventType="touchUpInside" id="FIF-DR-Iv4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVe-nW-hxC">
+                                <rect key="frame" x="115" y="483" width="145" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93059724569320679" green="0.27452105283737183" blue="0.18561512231826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Not Good">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.93059724569320679" green="0.27452105283737183" blue="0.18561512231826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="notGoodCheckIn:" destination="lS1-f0-5VY" eventType="touchUpInside" id="LEk-Hr-kFe"/>
                                 </connections>
                             </button>
                         </subviews>
