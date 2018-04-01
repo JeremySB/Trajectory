@@ -18,6 +18,9 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
     
     //Variable that holds current check-in
     var currentCheckIn : String? = nil
+    
+    //Variable used for haptic feedback
+    let impact = UIImpactFeedbackGenerator()
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var mentorName: UILabel!
@@ -65,51 +68,91 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
 
     @IBAction func doingWellCheckIn(_ sender: Any) {
         if currentCheckIn != "doingWell" {
+            //Set titles
             doingWellButton.setTitle("Check-In Confirmed", for: .normal)
-            //TODO: figure out color //doingWellButton.backgroundColor = UIColor.green
+            alrightButton.setTitle("Alright", for: .normal)
+            notGoodButton.setTitle("Not Good", for: .normal)
+
+            //TODO: set colors
+            doingWellButton.backgroundColor = UIColor.green
+            alrightButton.backgroundColor = UIColor.yellow
+            notGoodButton.backgroundColor = UIColor.red
             
             //Enable/disable buttons appropriately
             doingWellButton.isEnabled = false
             alrightButton.isEnabled = true
             notGoodButton.isEnabled = true
             
-            //TODO: save status to backend with a date stamp and send notification to mentor
+            //TODO: save status to backend with a date stamp
+            currentCheckIn = "doingWell"
             let dateStamp = Date()
             print(dateStamp)
             
+            //Give haptic feedback
+            impact.impactOccurred()
+            
+            //TODO: send notification to mentor
+
         }
     }
     
     @IBAction func alrightCheckIn(_ sender: Any) {
         if currentCheckIn != "alright" {
+            //Set titles
+            doingWellButton.setTitle("Doing Well", for: .normal)
             alrightButton.setTitle("Check-In Confirmed", for: .normal)
-            //TODO: figure out color //alrightButton.backgroundColor = UIColor.yellow
+            notGoodButton.setTitle("Not Good", for: .normal)
+
+            //TODO: Set colors
+            doingWellButton.backgroundColor = UIColor.green
+            alrightButton.backgroundColor = UIColor.yellow
+            notGoodButton.backgroundColor = UIColor.red
             
             //Enable/disable buttons appropriately
             doingWellButton.isEnabled = true
             alrightButton.isEnabled = false
             notGoodButton.isEnabled = true
             
-            //TODO: save status to backend with a date stamp and send notification to mentor
+            //TODO: save status to backend with a date stamp
+            currentCheckIn = "alright"
             let dateStamp = Date()
             print(dateStamp)
             
+            //Give haptic feedback
+            impact.impactOccurred()
+            
+            //TODO: send notification to mentor
+
         }
     }
     
     @IBAction func notGoodCheckIn(_ sender: Any) {
         if currentCheckIn != "notGood" {
+            //Set titles
+            doingWellButton.setTitle("Doing Well", for: .normal)
+            alrightButton.setTitle("Alright", for: .normal)
             notGoodButton.setTitle("Check-In Confirmed", for: .normal)
-            //TODO: figure out color //notGoodButton.backgroundColor = UIColor.red
+            
+            //TODO: Set colors
+            doingWellButton.backgroundColor = UIColor.green
+            alrightButton.backgroundColor = UIColor.yellow
+            notGoodButton.backgroundColor = UIColor.red
             
             //Enable/disable buttons appropriately
             doingWellButton.isEnabled = true
             alrightButton.isEnabled = true
             notGoodButton.isEnabled = false
             
-            //TODO: save status to backend with a date stamp and send notification to mentor
+            //TODO: save status to backend with a date stamp
+            currentCheckIn = "notGood"
             let dateStamp = Date()
             print(dateStamp)
+            
+            //Give haptic feedback
+            impact.impactOccurred()
+            
+            //TODO: send notification to mentor
+            
         }
     }
     
