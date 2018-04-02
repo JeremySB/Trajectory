@@ -1007,6 +1007,9 @@
                                                     <state key="normal" title="Contact Mentor">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="contactMentor:" destination="Oc4-t1-Jhm" eventType="touchUpInside" id="14o-1l-ZjC"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1028,7 +1031,6 @@
                                                     <connections>
                                                         <action selector="MembershipCancellation:" destination="Oc4-t1-Jhm" eventType="touchUpInside" id="bqO-22-0Ja"/>
                                                         <action selector="cancelMentorship:" destination="Khk-fD-qSH" eventType="touchUpInside" id="7ad-ID-053"/>
-                                                        <action selector="contactMentor:" destination="Oc4-t1-Jhm" eventType="touchUpInside" id="wSc-ya-kIq"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
