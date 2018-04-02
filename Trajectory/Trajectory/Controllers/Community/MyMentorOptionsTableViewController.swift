@@ -79,6 +79,18 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
         }
     }
     
+    //Opens message app and creates a new message when user taps this option
+    @IBAction func contactMentor(_ sender: Any) {
+        //TODO: send user to messages app
+        print("WILL OPEN MESSAGE APP")
+    }
+    
+    //Sends notification to mentor that mentee is requesting a new end date
+    @IBAction func requestNewEndDate(_ sender: Any) {
+        print("WILL REQUEST NEW END DATE")
+    }
+    
+    
     @IBAction func sendToCalendar(_ sender: Any) {
         if UIApplication.shared.canOpenURL(URL(string:"calshow://")!) {
             UIApplication.shared.open(URL(string:"calshow://")!, options: [:], completionHandler: nil)

@@ -17,7 +17,7 @@ class MyMentorOptionsViewController: UIViewController, UserChild {
     @IBOutlet weak var organizations: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        mentorName.text = user?.name ?? "Nothing"
+        mentorName.text = user?.name ?? "Error: No Name"
         // Do any additional setup after loading the view.
     }
 

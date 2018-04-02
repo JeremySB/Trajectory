@@ -34,8 +34,9 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
         super.viewDidLoad()
         mentorName.text = user?.name ?? ""
         if let uid = user?.id {
-            imageService.bindProfileImage(for: uid, to: profileImage)
+            imageService.bindProfileImage(for: uid, to: self.profileImage)
         }
+        
         // Do any additional setup after loading the view.
         getAndSetCheckInButtons()
     }
