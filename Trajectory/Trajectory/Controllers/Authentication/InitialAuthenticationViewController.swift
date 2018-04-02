@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-class InitialAuthenticationViewController: UIViewController {
+class InitialAuthenticationViewController: UIViewController, GIDSignInUIDelegate {
     
     var destinationVC: UIViewController?
     
     @IBOutlet weak var continueBtn: UIButton!
+    
     @IBOutlet weak var emailField: UITextField!
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
     
@@ -55,7 +57,7 @@ class InitialAuthenticationViewController: UIViewController {
         //self.navigationController?.navigationBar.isTranslucent = true
         //self.navigationController?.view.backgroundColor = .clear
         
-        // Do any additional setup after loading the view.
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,7 +82,14 @@ class InitialAuthenticationViewController: UIViewController {
         return emailPredicate.evaluate(with: enteredEmail)
     }
     
-
+    @IBAction func didTapGoogleSignin(_ sender: Any) {
+        
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    @IBAction func didTapFacebookSignin(_ sender: Any) {
+        
+    }
     
     // MARK: - Navigation
 
