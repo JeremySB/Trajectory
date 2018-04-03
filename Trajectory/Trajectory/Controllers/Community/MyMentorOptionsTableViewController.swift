@@ -33,6 +33,10 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "TrajectoryBackground")
+        self.view.insertSubview(backgroundImage, at: 0)
     }
 
     override func didReceiveMemoryWarning() {

@@ -41,17 +41,17 @@ class FindUITests: XCTestCase {
     // --People Find Screen Tests--
     func testPeopleSearchBarValidText() {
         app.tabBars.buttons["Find"].tap()
-        let searchForPeopleSearchField = app.searchFields["Search for people"]
+        let searchForPeopleSearchField = app.searchFields["Search for available mentors"]
         searchForPeopleSearchField.tap()
         searchForPeopleSearchField.typeText("Andrew")
         app.collectionViews.children(matching: .cell).element(boundBy: 0).otherElements.containing(.image, identifier:"profileImg").element.tap()
-        app.buttons["Contact Mentor"].tap()
+        app.buttons["Request Mentorship"].tap()
         app.sheets["Please confirm that you want to send this mentee request"].buttons["Confirm"].tap()
     }
     
     func testPeopleSearchBarInvalidText() {
         app.tabBars.buttons["Find"].tap()
-        let searchForPeopleSearchField = app.searchFields["Search for people"]
+        let searchForPeopleSearchField = app.searchFields["Search for available mentors"]
         searchForPeopleSearchField.tap()
         searchForPeopleSearchField.typeText("adfsklj;asdf")
         XCTAssertFalse(app.collectionViews.children(matching: .cell).element(boundBy: 0).otherElements.containing(.image, identifier:"profileImg").element.exists)
@@ -59,25 +59,16 @@ class FindUITests: XCTestCase {
     
     func testPeopleSearchBarNoText() {
         app.tabBars.buttons["Find"].tap()
-        let searchForPeopleSearchField = app.searchFields["Search for people"]
+        let searchForPeopleSearchField = app.searchFields["Search for available mentors"]
         searchForPeopleSearchField.tap()
         searchForPeopleSearchField.typeText("")
-        XCTAssertFalse(app.collectionViews.children(matching: .cell).element(boundBy: 0).otherElements.containing(.image, identifier:"profileImg").element.exists)
-    }
-    
-    func testPeopleSearchBarCancelButton() {
-        app.tabBars.buttons["Find"].tap()
-        let searchForPeopleSearchField = app.searchFields["Search for people"]
-        searchForPeopleSearchField.tap()
-        searchForPeopleSearchField.typeText("Andrew")
-        app.buttons["Cancel"].tap()
         XCTAssertFalse(app.collectionViews.children(matching: .cell).element(boundBy: 0).otherElements.containing(.image, identifier:"profileImg").element.exists)
     }
     
     func testPeopleSwipeToLeft() {
         app.tabBars.buttons["Find"].tap()
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element.swipeLeft()
-        XCTAssert(app.searchFields["Search for people"].exists)
+        XCTAssert(app.searchFields["Search within your organizations"].exists)
     }
     
     // --Organization Find Screen Tests--
