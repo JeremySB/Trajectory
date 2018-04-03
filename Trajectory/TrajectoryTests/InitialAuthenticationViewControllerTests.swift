@@ -11,6 +11,10 @@ import XCTest
 @testable import Trajectory
 
 class MockAuthentication: AuthenticationService {
+    func reauthenticateWith(password: String, completion: @escaping (AuthenticationError?) -> Void) {
+        
+    }
+    
     func updateEmail(_ email: String, completion: @escaping (AuthenticationError?) -> Void) {
         
     }

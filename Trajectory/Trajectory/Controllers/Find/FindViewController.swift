@@ -10,28 +10,24 @@ import UIKit
 
 class FindViewController: ScrollController {
         
-    required init?(coder: NSCoder){
+    /*required init?(coder: NSCoder){
         super.init(coder: coder)
         addViewControllers(views: "FindPeople", "FindOrgs")
         //addViewControllers(views: "FindOrgs")
-    }
-    override init(){
+    }*/
+    /*override init(){
         super.init()
         addViewControllers(views: "FindPeople", "FindOrgs")
         //addViewControllers(views: "FindOrgs")
-    }
+    }*/
 
     override func viewDidLoad() {
+        addViewControllers(views: "FindPeople", "FindOrgs")
         super.viewDidLoad()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "TrajectoryBackground")
         self.view.insertSubview(backgroundImage, at: 0)
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {

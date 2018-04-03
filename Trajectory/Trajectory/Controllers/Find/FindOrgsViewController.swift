@@ -42,11 +42,6 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidAppear(_ animated: Bool) {
         populateOrgsAndUsers()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return searchResults.count
@@ -68,7 +63,6 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         return cell
     }
-    
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: FindCollectionView!
@@ -143,13 +137,6 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     //User clicks search bar
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        updateSearchResults(for: searchController)
-        searchBar.resignFirstResponder()
-    }
-    
-    //User taps cancel button
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
         updateSearchResults(for: searchController)
         searchBar.resignFirstResponder()
     }

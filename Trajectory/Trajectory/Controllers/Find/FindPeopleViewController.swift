@@ -32,11 +32,6 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         
         searchController.searchBar.becomeFirstResponder()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return searchResults.count
@@ -101,14 +96,6 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         updateSearchResults(for: searchController)
         searchBar.resignFirstResponder()
     }
-    
-    //User taps cancel button
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        updateSearchResults(for: searchController)
-        searchBar.resignFirstResponder()
-    }
-    
     
     // MARK: - Navigation
 
