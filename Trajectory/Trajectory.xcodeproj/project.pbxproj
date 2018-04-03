@@ -183,6 +183,7 @@
 		3FE145091FF9778B00F3CF18 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3FE1450B1FF9779200F3CF18 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		3FEAB565204EFA2E00829E16 /* EditGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalViewController.swift; sourceTree = "<group>"; };
+		3FFE54B520731800009BEECF /* Trajectory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trajectory.entitlements; sourceTree = "<group>"; };
 		46E941484BBFAB7A0D1BF538 /* Pods-TrajectoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryUITests/Pods-TrajectoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4DF7FD52FC853F2F06806828 /* Pods-TrajectoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryTests/Pods-TrajectoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E6E35BB023B4C23312729CF /* Pods-TrajectoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryTests/Pods-TrajectoryTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -426,6 +427,7 @@
 		3FC53D881FF03BA6000B82E3 /* Trajectory */ = {
 			isa = PBXGroup;
 			children = (
+				3FFE54B520731800009BEECF /* Trajectory.entitlements */,
 				3F190321202CAD570002B74B /* Services */,
 				3F19031A202BB1470002B74B /* Protocols */,
 				3F19031120237DDA0002B74B /* Models */,
@@ -565,6 +567,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					3FC53D9B1FF03BA7000B82E3 = {
 						CreatedOnToolsVersion = 9.2;
@@ -1094,12 +1101,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Trajectory/Trajectory.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 74YMV2J9D7;
 				INFOPLIST_FILE = Trajectory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RecHaz.Trajectory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gettrajectory.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1113,11 +1121,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Trajectory/Trajectory.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74YMV2J9D7;
 				INFOPLIST_FILE = Trajectory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RecHaz.Trajectory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gettrajectory.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

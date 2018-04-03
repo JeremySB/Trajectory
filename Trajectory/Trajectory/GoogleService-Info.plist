@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>25869122766-mhjbfbs2ea8dlnvq5ddnhh7fqqk32crl.apps.googleusercontent.com</string>
+	<string>25869122766-97j7tig9c73tbr7cfmcumfu1j0fog01r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.25869122766-mhjbfbs2ea8dlnvq5ddnhh7fqqk32crl</string>
+	<string>com.googleusercontent.apps.25869122766-97j7tig9c73tbr7cfmcumfu1j0fog01r</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDOJKDCg4NfXDQMQLDeaM6He0RAwtXMhhk</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>RecHaz.Trajectory</string>
+	<string>com.gettrajectory.ios</string>
 	<key>PROJECT_ID</key>
 	<string>trajectory-app</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:25869122766:ios:a7a1c092d6d4a010</string>
+	<string>1:25869122766:ios:06b6809be853716c</string>
 	<key>DATABASE_URL</key>
 	<string>https://trajectory-app.firebaseio.com</string>
 </dict>
