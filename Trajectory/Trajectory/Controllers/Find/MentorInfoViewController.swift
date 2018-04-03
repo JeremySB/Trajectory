@@ -37,11 +37,6 @@ class MentorInfoViewController: UIViewController {
         
         setupImageView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBOutlet weak var MentorImage: UIImageView!
     @IBOutlet weak var MentorName: UILabel!

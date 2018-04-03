@@ -71,6 +71,14 @@ class FindUITests: XCTestCase {
         XCTAssert(app.searchFields["Search within your organizations"].exists)
     }
     
+    func testPeopleSearchBarButton() {
+        app.tabBars.buttons["Find"].tap()
+        let searchForAvailableMentorsSearchField = app.searchFields["Search for available mentors"]
+        searchForAvailableMentorsSearchField.tap()
+        searchForAvailableMentorsSearchField.typeText("Andrew")
+        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    }
+    
     // --Organization Find Screen Tests--
     func testOrganizationSearchBarValidText() {
         app.tabBars.buttons["Find"].tap()
