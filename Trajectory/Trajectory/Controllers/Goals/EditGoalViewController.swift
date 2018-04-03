@@ -50,11 +50,10 @@ class EditGoalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.title = "Edit"
         self.navigationItem.title = "Edit Goal"
-        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: done, action: )
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(Done(_:)))
-        //self.navigationItem
+        
         Name.text = goal.title ?? ""
         EndDate.date = goal.endDate ?? Date()
         
