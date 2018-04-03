@@ -13,7 +13,14 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
     weak var _user: User!
     weak var user: User! {
         get{return self._user}
-        set{ mentorName?.text = newValue.name; self._user = newValue; viewDidAppear(false)}
+        set {
+            mentorName?.text = newValue.name
+            self._user = newValue
+            if let uid = _user.id {
+                imageService.bindProfileImage(for: uid, to: self.profileImage)
+            }
+            viewDidAppear(false)
+        }
     }
     
     //Variable that holds current check-in
@@ -33,10 +40,9 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
     override func viewDidLoad() {
         super.viewDidLoad()
         mentorName.text = user?.name ?? ""
-        if let uid = user?.id {
-            imageService.bindProfileImage(for: uid, to: self.profileImage)
-        }
         
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+        self.profileImage.clipsToBounds = true;
         // Do any additional setup after loading the view.
         getAndSetCheckInButtons()
     }

@@ -97,8 +97,8 @@ class MyOrganizationsTableViewController: UITableViewController {
             //TODO finish implemenation of saving change in user's organizations on the backend
             orgService.leaveOrganization(userOrganizations[indexPath.row].id ?? "", completion: { (error) in
                 if error == nil {
-                    self.tableView.deleteRows(at: [indexPath], with: .fade)
                     self.userOrganizations.remove(at: indexPath.row)
+                    self.tableView.reloadData()
                 }
             })
         } else if editingStyle == .insert {

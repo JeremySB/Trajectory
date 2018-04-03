@@ -17,6 +17,10 @@ class MyMentorOptionsViewController: UIViewController, UserChild {
     @IBOutlet weak var organizations: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+        self.profileImage.clipsToBounds = true;
+        
         mentorName.text = user?.name ?? "Error: No Name"
         // Do any additional setup after loading the view.
     }

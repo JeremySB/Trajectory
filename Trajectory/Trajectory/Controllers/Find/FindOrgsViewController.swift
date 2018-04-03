@@ -37,10 +37,10 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchController.searchBar.sizeToFit()
         
         searchController.searchBar.becomeFirstResponder()
-        populateOrgsAndUsers()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        populateOrgsAndUsers()
     }
 
     override func didReceiveMemoryWarning() {

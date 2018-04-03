@@ -34,6 +34,8 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
         if let uid = user?.id {
             imageService.bindProfileImage(for: uid, to: profileImage)
         }
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+        self.profileImage.clipsToBounds = true;
         // Do any additional setup after loading the view.
     }
     
