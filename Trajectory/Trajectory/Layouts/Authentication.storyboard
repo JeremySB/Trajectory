@@ -100,7 +100,7 @@
                                 <rect key="frame" x="-325" y="0.0" width="1024" height="1366"/>
                                 <color key="backgroundColor" red="0.016653390600000002" green="0.0012010012290000001" blue="0.00056467531249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gCh-Y2-Bnz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gCh-Y2-Bnz" customClass="textViewWithPlaceholderUITextView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="50" y="50" width="275" height="120"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.25420884683098594" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -111,7 +111,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-hw-cDX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-hw-cDX" customClass="textViewWithPlaceholderUITextView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="50" y="178" width="275" height="120"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.24510343309859156" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -177,7 +177,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.016653390600000002" green="0.0012010012290000001" blue="0.00056467531249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yv7-fd-HzM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yv7-fd-HzM" customClass="textViewWithPlaceholderUITextView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="50" y="178" width="275" height="120"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.24862455985915494" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -701,6 +701,6 @@
         <image name="lockIcon" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BId-QM-fKl"/>
+        <segue reference="uZL-WI-USN"/>
     </inferredMetricsTieBreakers>
 </document>

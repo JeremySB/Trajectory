@@ -19,10 +19,8 @@ class DenominationAndProfileGoalsViewController: UIViewController, UITextViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        objectivesStatement.delegate = self
-        
-        objectivesStatement.text = "What would you like to work on with a mentor?"
-        objectivesStatement.textColor = UIColor.lightGray
+        objectivesStatement.viewDidLoad()
+        objectivesStatement.setMessage("What would you like to work on with a mentor?")
         
         finishBtn.layer.borderColor = UIColor.lightGray.cgColor
         finishBtn.layer.borderWidth = 2
@@ -32,20 +30,6 @@ class DenominationAndProfileGoalsViewController: UIViewController, UITextViewDel
 
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
-    }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.white
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = "What would you like to work on with a mentor?"
-            textView.textColor = UIColor.lightGray
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +43,7 @@ class DenominationAndProfileGoalsViewController: UIViewController, UITextViewDel
     }
     
     @IBOutlet weak var denomination: UITextField!
-    @IBOutlet weak var objectivesStatement: UITextView!
+    @IBOutlet weak var objectivesStatement: textViewWithPlaceholderUITextView!
     
     // MARK: - Navigation
 

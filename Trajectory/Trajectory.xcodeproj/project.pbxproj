@@ -68,6 +68,7 @@
 		3FE1450A1FF9778B00F3CF18 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE145091FF9778B00F3CF18 /* Social.framework */; };
 		3FE1450C1FF9779200F3CF18 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1450B1FF9779200F3CF18 /* Accounts.framework */; };
 		3FEAB566204EFA2E00829E16 /* EditGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEAB565204EFA2E00829E16 /* EditGoalViewController.swift */; };
+		3FF4D7492073D96100171621 /* textViewWithPlaceholderUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4D7482073D96100171621 /* textViewWithPlaceholderUITextView.swift */; };
 		65022D8E26F9AFC2625E8B6F /* Pods_TrajectoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9DA7EB9BD27F812C0D5223 /* Pods_TrajectoryUITests.framework */; };
 		A25155D5F0AE9B4E670FADF7 /* Pods_TrajectoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061C7FB5B4777D6194505592 /* Pods_TrajectoryTests.framework */; };
 		D60C7CC8201AD4BF00184F8A /* UpdateMyBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7CC7201AD4BF00184F8A /* UpdateMyBioViewController.swift */; };
@@ -183,6 +184,7 @@
 		3FE145091FF9778B00F3CF18 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3FE1450B1FF9779200F3CF18 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		3FEAB565204EFA2E00829E16 /* EditGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalViewController.swift; sourceTree = "<group>"; };
+		3FF4D7482073D96100171621 /* textViewWithPlaceholderUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textViewWithPlaceholderUITextView.swift; sourceTree = "<group>"; };
 		3FFE54B520731800009BEECF /* Trajectory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trajectory.entitlements; sourceTree = "<group>"; };
 		46E941484BBFAB7A0D1BF538 /* Pods-TrajectoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryUITests/Pods-TrajectoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4DF7FD52FC853F2F06806828 /* Pods-TrajectoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrajectoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrajectoryTests/Pods-TrajectoryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				3F3B26F2201F8624009C51B2 /* Registration */,
 				3FBC3C58201EF83A006FA1AB /* Authentication */,
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
+				3FF4D7482073D96100171621 /* textViewWithPlaceholderUITextView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -884,6 +887,7 @@
 				D60C7CCE201AD64800184F8A /* MyOrganizationsTableViewController.swift in Sources */,
 				3FB92CFF203BA03700AA2893 /* OrganizationService.swift in Sources */,
 				3FB4375220313B7D00821A91 /* MyMentorCheckinViewController.swift in Sources */,
+				3FF4D7492073D96100171621 /* textViewWithPlaceholderUITextView.swift in Sources */,
 				D6A1D7302018EB1E00D38F08 /* UserNameViewController.swift in Sources */,
 				D60C7CCA201AD52300184F8A /* AddOrganizationViewController.swift in Sources */,
 				D6DC06C720476CE5001CB874 /* SectionHeaderCollectionReusableView.swift in Sources */,

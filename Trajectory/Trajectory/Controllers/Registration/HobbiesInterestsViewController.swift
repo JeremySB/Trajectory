@@ -19,14 +19,12 @@ class HobbiesInterestsViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hobbies.delegate = self
-        professionalInterests.delegate = self
         
-        hobbies.text = "What are your hobbies?"
-        hobbies.textColor = UIColor.lightGray
+        hobbies.viewDidLoad()
+        professionalInterests.viewDidLoad()
         
-        professionalInterests.text = "What are your professional interests?"
-        professionalInterests.textColor = UIColor.lightGray
+        hobbies.setMessage("What are your hobbies?")
+        professionalInterests.setMessage("What are your professional interests?")
         
         nextBtn.layer.borderColor = UIColor.lightGray.cgColor
         nextBtn.layer.borderWidth = 2
@@ -34,13 +32,6 @@ class HobbiesInterestsViewController: UIViewController, UITextViewDelegate {
 
         // Do any additional setup after loading the view.
         navigationItem.title = "Profile Setup"
-    }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.white
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,8 +51,8 @@ class HobbiesInterestsViewController: UIViewController, UITextViewDelegate {
         super.touchesBegan(touches, with: event)
     }
     
-    @IBOutlet weak var hobbies: UITextView!
-    @IBOutlet weak var professionalInterests: UITextView!
+    @IBOutlet weak var hobbies: textViewWithPlaceholderUITextView!
+    @IBOutlet weak var professionalInterests: textViewWithPlaceholderUITextView!
     
     // MARK: - Navigation
 
