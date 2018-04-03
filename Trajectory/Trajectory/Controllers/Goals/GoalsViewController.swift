@@ -16,7 +16,9 @@ class GoalsViewController: UITableViewController {
     var goals: [Goal] = [Goal]()
     var row: Int = 0
     var section: Int = 0
+    //var section: Int = 0
     var expandedRow: Int = -1
+    var expandedSection: Int = -1
     
     lazy var goalsService: GoalsService = FirebaseGoalsService()
     
@@ -67,35 +69,41 @@ class GoalsViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1//0
+        return goals.count//1//0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return goals.count
+        return 1//goals.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // where it  breaks
         var cell: GoalsTableViewCell!
         
-        if (indexPath.row == expandedRow){
+        //if (indexPath.row == expandedRow){
+        if (indexPath.section == expandedSection){
             cell = tableView.dequeueReusableCell(withIdentifier: "goalCellExpanded", for: indexPath) as! GoalsTableViewCell
         }else{
             cell = tableView.dequeueReusableCell(withIdentifier: "goalCellClosed", for: indexPath) as! GoalsTableViewCell
         }
         
         cell.parent = self
-        cell.cellNum = indexPath.row
-        cell.goal = goals[indexPath.row]
-        cell.Title.text = goals[indexPath.row].title
+        //cell.cellNum = indexPath.row
+        cell.cellNum = indexPath.section
+        //cell.goal = goals[indexPath.row]
+        cell.goal = goals[indexPath.section]
+        //cell.Title.text = goals[indexPath.row].title
+        cell.Title.text = goals[indexPath.section].title
 
         
-        guard let curProgress = goals[indexPath.row].currentProgress else {
+        //guard let curProgress = goals[indexPath.row].currentProgress else {
+        guard let curProgress = goals[indexPath.section].currentProgress else {
             cell.Progress.progress = 0
             return cell as! UITableViewCell
         }
-        guard let toProgress = goals[indexPath.row].totalProgress else {
+        //guard let toProgress = goals[indexPath.row].totalProgress else {
+        guard let toProgress = goals[indexPath.section].totalProgress else {
             cell.Progress.progress = 0
             return cell as! UITableViewCell
         }
@@ -112,23 +120,38 @@ class GoalsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
+        if let cell = self.tableView.cellForRow(at: indexPath) as? GoalTableViewCellClosed {
+            //cell.Expand();
+            setExpandedRow(row: cell.cellNum)
+        } else if let cell = self.tableView.cellForRow(at: indexPath) as? GoalTableViewCellExpanded {
+            //cell.Expand();
+            setExpandedRow(row: cell.cellNum)
+        }
     }
 
     public func setExpandedRow(row: Int){
         var reload: [IndexPath] = [IndexPath]()
         
-        if (expandedRow == row){
-            if (expandedRow != -1){
-                reload.append(IndexPath(row: expandedRow, section: 0))
+        if (expandedSection == section){//expandedRow == row){
+            //if (expandedRow != -1){
+            if (expandedSection != -1){
+                //reload.append(IndexPath(row: expandedRow, section: 0))
+            reload.append(IndexPath(row: 0, section: expandedSection))
             }
-            expandedRow = -1
+            //expandedRow = -1
+            expandedSection = -1
         } else{
-            if (expandedRow != -1){
-                reload.append(IndexPath(row: expandedRow, section: 0))
+            //if (expandedRow != -1){
+            if (expandedSection != -1){
+                //reload.append(IndexPath(row: expandedRow, section: 0))
+                reload.append(IndexPath(row:0, section: expandedSection))
             }
-            expandedRow = row
-            if (expandedRow != -1){
-                reload.append(IndexPath(row: expandedRow, section: 0))
+            //expandedRow = row
+            expandedSection = row
+            //if (expandedRow != -1){
+            if (expandedSection != -1){
+                //reload.append(IndexPath(row: expandedRow, section: 0))
+                reload.append(IndexPath(row: 0, section: expandedSection))
             }
         }
         self.tableView.reloadRows(at: reload, with: UITableViewRowAnimation.none)
@@ -136,7 +159,8 @@ class GoalsViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath.row == expandedRow){
+        if (indexPath.section == expandedSection){
+        //if (indexPath.row == expandedRow){
             return 100
         }
         else {
@@ -146,8 +170,9 @@ class GoalsViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! EditGoalViewController
-        destinationVC.goal = goals[expandedRow]
-        expandedRow = -1
+        destinationVC.goal = goals[expandedSection]//expandedRow]
+        //expandedRow = -1
+        expandedSection = -1
     }
     
     

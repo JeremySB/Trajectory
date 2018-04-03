@@ -20,9 +20,9 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
     @IBOutlet weak var Progress: UIProgressView!
     
     @IBOutlet weak var AdjustAmount: UITextField!
-    @IBAction func Expand(_ sender: Any) {
+    /*func Expand() {
         parent.setExpandedRow(row: cellNum)
-    }
+    }*/
     
     
     @IBAction func RemoveGoal(_ sender: Any) {

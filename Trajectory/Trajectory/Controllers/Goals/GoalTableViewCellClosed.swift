@@ -17,7 +17,7 @@ class GoalTableViewCellClosed: UITableViewCell, GoalsTableViewCell{
     var cellNum: Int = -1
     @IBOutlet weak var Title: UILabel!
     @IBOutlet weak var Progress: UIProgressView!
-    @IBAction func Expand(_ sender: Any) {
+    func Expand() {
         parent.setExpandedRow(row: cellNum)
     }
     /*
