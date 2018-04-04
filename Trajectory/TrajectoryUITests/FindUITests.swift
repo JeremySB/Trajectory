@@ -82,12 +82,13 @@ class FindUITests: XCTestCase {
     // --Organization Find Screen Tests--
     func testOrganizationSearchBarValidText() {
         app.tabBars.buttons["Find"].tap()
-        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element.swipeLeft()
-        let searchForPeopleSearchField = app.searchFields["Search within your organizations"]
-        searchForPeopleSearchField.tap()
-        searchForPeopleSearchField.typeText("Andrew")
-        app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
-        app.buttons["Contact Mentor"].tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element/*@START_MENU_TOKEN@*/.swipeLeft()/*[[".swipeUp()",".swipeLeft()"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        
+        let searchWithinYourOrganizationsSearchField = app.searchFields["Search within your organizations"]
+        searchWithinYourOrganizationsSearchField.tap()
+        searchWithinYourOrganizationsSearchField.typeText("Daniel")
+        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"Daniel Toney ").element.tap()
+        app.buttons["Request Mentorship"].tap()
         app.sheets["Please confirm that you want to send this mentee request"].buttons["Confirm"].tap()
     }
     
@@ -107,6 +108,16 @@ class FindUITests: XCTestCase {
         searchForPeopleSearchField.tap()
         searchForPeopleSearchField.typeText("")
         XCTAssertFalse(app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.exists)
+    }
+    
+    func testOrganizationSearchBarButton() {
+        app.tabBars.buttons["Find"].tap()
+        let collectionView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element
+        collectionView.swipeLeft()
+        let searchWithinYourOrganizationsSearchField = app.searchFields["Search within your organizations"]
+        searchWithinYourOrganizationsSearchField.tap()
+        searchWithinYourOrganizationsSearchField.typeText("andrew")
+        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
     
     func testOrganizationSwipeToRight() {
