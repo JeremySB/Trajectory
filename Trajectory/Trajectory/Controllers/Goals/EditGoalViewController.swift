@@ -47,6 +47,10 @@ class EditGoalViewController: UIViewController {
         }
     }
     
+    // Set status bar to white text
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +66,13 @@ class EditGoalViewController: UIViewController {
         
         //Set end date minimum to today's date
         EndDate.minimumDate = Date()
+        
+        
+        Name.attributedPlaceholder = NSAttributedString(string:"Goal Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.green])
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "TrajectoryBackground")
+        self.view.insertSubview(backgroundImage, at: 0)
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,17 +10,17 @@ import UIKit
 import Firebase
 import CodableFirebase
 
-class AddGoalViewController: UIViewController {
+class AddGoalViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     lazy var goalsService: GoalsService = FirebaseGoalsService()
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var progressAmount: UITextField!
-    @IBOutlet weak var segmentedControlPeriod: UISegmentedControl!
     @IBOutlet weak var progressAmountWarning: UILabel!
     @IBOutlet weak var goalNameWarning: UILabel!
-    
+    @IBOutlet weak var recurancePicker: UIPickerView!
+    var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,24 @@ class AddGoalViewController: UIViewController {
         //Set end date minimum to today's date
         endDatePicker.minimumDate = Date()
         endDatePicker.setValue(UIColor.white, forKey: "textColor")
-
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "TrajectoryBackground")
+        self.view.insertSubview(backgroundImage, at: 0)
+        
+        pickerData = ["Total", "Daily", "Weekly", "Monthly"]
+        
+        var placeHolder = NSMutableAttributedString()
+        let Name  = "Goal Name"
+        
+        // Set the Font
+        placeHolder = NSMutableAttributedString(string:Name, attributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)])
+        
+        // Set the color
+        placeHolder.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.lightGray, range:NSRange(location:0,length:Name.count))
+        
+        // Add attribute
+        nameField.attributedPlaceholder = placeHolder
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,6 +93,37 @@ class AddGoalViewController: UIViewController {
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    // Set status bar to white text
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = pickerData[row]
+        pickerLabel?.textColor = UIColor.white
+        
+        return pickerLabel!
+    }
+    
     /*
     // MARK: - Navigation
 
