@@ -16,6 +16,7 @@ class User: Codable {
     var objectives: String?
     var phoneNumber: String?
     var emailAddress: String?
+    //var notificationTokens: [
     
     var id: String? = nil
     
