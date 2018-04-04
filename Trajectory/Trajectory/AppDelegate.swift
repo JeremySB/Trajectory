@@ -231,7 +231,9 @@ extension AppDelegate : MessagingDelegate {
             userService.getCurrentUser { (prevUser, error) in
                 if let prevUser = prevUser {
                     let user = User()
-                    //user.
+                    user.notificationTokens = prevUser.notificationTokens ?? [String: Bool]()
+                    user.notificationTokens![fcmToken] = true
+                    userService.saveCurrentUser(user, completion: nil)
                 }
             }
         }

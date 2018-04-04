@@ -16,11 +16,11 @@ class User: Codable {
     var objectives: String?
     var phoneNumber: String?
     var emailAddress: String?
-    //var notificationTokens: [
+    var notificationTokens: [String: Bool]?
     
     var id: String? = nil
     
     enum CodingKeys: String, CodingKey {
-        case name, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress
+        case name, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress, notificationTokens
     }
 }
