@@ -164,5 +164,6 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
                 vc.user = Array(searchResults[indexPath[0][0]])[0].value[indexPath[0][1]] //self.searchResults[indexPath[0][1]]
             }
         }
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }

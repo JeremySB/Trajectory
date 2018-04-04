@@ -59,6 +59,11 @@ class MenteeRequestListTableViewController: UITableViewController {
         return rows
     }
     
+    // Set status bar to white text
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -124,6 +129,7 @@ class MenteeRequestListTableViewController: UITableViewController {
         // Create an instance of destination view controller and pass the variable
         let destinationVC = segue.destination as! MenteeRequestDetailsViewController
         destinationVC.menteeRequest = selectedMentee
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
 

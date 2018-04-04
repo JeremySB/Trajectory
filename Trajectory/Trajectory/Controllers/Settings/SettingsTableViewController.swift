@@ -21,6 +21,11 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     private var croppedAngle = 0
     
     var user: User?
+    
+    // make status bar white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,7 +146,7 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
 }

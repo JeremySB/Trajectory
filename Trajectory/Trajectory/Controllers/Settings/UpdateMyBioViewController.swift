@@ -66,6 +66,11 @@ class UpdateMyBioViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // Set status bar to white text
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     /*
      // MARK: - Navigation
 

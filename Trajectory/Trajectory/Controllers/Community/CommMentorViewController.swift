@@ -40,6 +40,7 @@ class CommMentorViewController: UIViewController {
             let vc = segue.destination as! CommSwipeMentorViewController
             vc.user = mentor
         }
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
     /*

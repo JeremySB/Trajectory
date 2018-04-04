@@ -40,6 +40,7 @@ class CommMenteeViewController: UIViewController {
             let vc = segue.destination as! CommSwipeMenteeViewController
             vc.user = mentee
         }
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
     /*

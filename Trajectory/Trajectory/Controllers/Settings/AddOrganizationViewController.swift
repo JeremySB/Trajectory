@@ -80,6 +80,10 @@ class AddOrganizationViewController: UIViewController {
         lastThreeCharacters.resignFirstResponder()
     }
     
+    // Set status bar to white text
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     /*
     // MARK: - Navigation

@@ -52,6 +52,10 @@ class SetDurationViewController: UIViewController {
     
     @IBOutlet weak var organizationLabel: UILabel!
     
+    // Set status bar to white text
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     @IBOutlet weak var userImage: UIImageView!
     

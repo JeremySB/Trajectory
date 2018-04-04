@@ -109,6 +109,7 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
                 vc.user = self.searchResults[indexPath[0][1]]
             }
         }
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
 }

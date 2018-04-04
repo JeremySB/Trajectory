@@ -54,6 +54,11 @@ class MenteeRequestDetailsViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
     
+    // Set status bar to white text
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func setEndDate(_ sender: Any) {
     }
     
@@ -94,6 +99,7 @@ class MenteeRequestDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
         let destinationVC = segue.destination as! SetDurationViewController
         destinationVC.menteeRequest = menteeRequest
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
 

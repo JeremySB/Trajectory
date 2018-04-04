@@ -114,7 +114,10 @@ class MyOrganizationsTableViewController: UITableViewController {
         }
     }
 
-    
+    // Set status bar to white text
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)

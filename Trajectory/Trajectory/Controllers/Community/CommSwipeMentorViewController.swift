@@ -48,6 +48,7 @@ class CommSwipeMentorViewController: ScrollController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var vc = segue.destination as! UserChild
         vc.user = user
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     /*

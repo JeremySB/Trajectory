@@ -133,6 +133,11 @@ class UpdatePersonalInfoViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // Set status bar to white text
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func displayPasswordModal() {
         //https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/
         let alert = UIAlertController(title: "Reenter Password", message: "Please enter your account password", preferredStyle: .alert)

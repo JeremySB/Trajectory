@@ -173,6 +173,7 @@ class GoalsViewController: UITableViewController {
         destinationVC.goal = goals[expandedSection]//expandedRow]
         //expandedRow = -1
         expandedSection = -1
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     

@@ -55,7 +55,7 @@ class PasswordAuthenticationViewController: UIViewController {
                 self.passwordField.becomeFirstResponder()
                 return
             }
-            
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             // logged in
             self.performSegue(withIdentifier: "passwordToMain", sender: self)
         }
