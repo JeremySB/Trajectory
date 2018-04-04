@@ -39,11 +39,6 @@ class CommSwipeMentorViewController: ScrollController {
         backgroundImage.image = UIImage(named: "TrajectoryBackground")
         self.view.insertSubview(backgroundImage, at: 0)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var vc = segue.destination as! UserChild

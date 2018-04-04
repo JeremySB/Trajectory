@@ -24,11 +24,6 @@ class MyMentorOptionsViewController: UIViewController, UserChild {
         mentorName.text = user?.name ?? "Error: No Name"
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func CancelMentorshipConfirmation(_ sender: Any) {
         //https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/

@@ -60,7 +60,6 @@ class PasswordAuthenticationViewController: UIViewController {
             self.performSegue(withIdentifier: "passwordToMain", sender: self)
         }
     }
-    
 
     /*
     // MARK: - Navigation

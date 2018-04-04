@@ -30,11 +30,6 @@ class UserNameViewController: UIViewController {
         userName.attributedPlaceholder = NSAttributedString(string: "  Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         super.touchesBegan(touches, with: event)

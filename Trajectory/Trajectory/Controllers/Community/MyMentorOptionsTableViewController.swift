@@ -38,12 +38,7 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
         backgroundImage.image = UIImage(named: "TrajectoryBackground")
         self.view.insertSubview(backgroundImage, at: 0)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

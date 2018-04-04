@@ -34,12 +34,6 @@ class CommSwipeMenteeViewController: ScrollController {
         self.view.insertSubview(backgroundImage, at: 0)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
     /*
     // MARK: - Navigation
 

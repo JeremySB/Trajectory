@@ -57,11 +57,6 @@ class GoalsViewController: UITableViewController {
         tableView.reloadData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func Refresh(_ sender: Any?){
         tableView.reloadData()
         refreshControl?.endRefreshing()

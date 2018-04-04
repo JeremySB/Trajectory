@@ -34,11 +34,6 @@ class SetDurationViewController: UIViewController {
         self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2;
         self.userImage.clipsToBounds = true;
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

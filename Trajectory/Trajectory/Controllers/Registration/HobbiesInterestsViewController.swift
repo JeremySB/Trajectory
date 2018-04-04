@@ -34,11 +34,6 @@ class HobbiesInterestsViewController: UIViewController, UITextViewDelegate {
         navigationItem.title = "Profile Setup"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     /*func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let currentText = "" //textView.text ?? ""
         guard let stringRange = Range(range, in: currentText) else { return false }
