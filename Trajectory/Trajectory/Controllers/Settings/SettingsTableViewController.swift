@@ -45,6 +45,10 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true;
         
+        logoutButton.layer.borderColor = UIColor.lightGray.cgColor
+        logoutButton.layer.borderWidth = 2
+        logoutButton.layer.cornerRadius = 5
+        
     // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -86,6 +90,7 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         }
     }
     
+    @IBOutlet weak var logoutButton: UIButton!
     
     //Function to photo library to update image when tapped (https://stackoverflow.com/questions/27880607/how-to-assign-an-action-for-uiimageview-object-in-swift)
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)

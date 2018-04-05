@@ -36,6 +36,8 @@ class MentorInfoViewController: UIViewController {
         }
         
         setupImageView()
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "TESTING", style: .plain, target: nil, action: nil)
     }
     
     @IBOutlet weak var MentorImage: UIImageView!
