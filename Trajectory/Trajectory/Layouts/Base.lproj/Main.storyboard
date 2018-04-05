@@ -43,19 +43,27 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="piT-Bi-iNR">
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="piT-Bi-iNR" customClass="GoalsProgressView" customModule="Trajectory" customModuleProvider="target">
                                             <rect key="frame" x="14" y="30.5" width="345" height="3"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                             <rect key="contentStretch" x="0.0" y="1" width="1" height="0.0"/>
                                             <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </progressView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmy-2H-u8f">
+                                            <rect key="frame" x="23" y="22" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.25035761439999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="Progress" destination="piT-Bi-iNR" id="Wwr-Uy-h3p"/>
+                                    <outlet property="ProgressLabel" destination="hmy-2H-u8f" id="5Vu-pY-Hd3"/>
                                     <outlet property="Title" destination="aU7-Qz-3i8" id="bt5-QB-80c"/>
                                 </connections>
                             </tableViewCell>
@@ -66,22 +74,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlL-J4-7Qf">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlL-J4-7Qf">
                                             <rect key="frame" x="16" y="0.0" width="306" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KAg-UI-1ME">
-                                            <rect key="frame" x="14" y="31" width="345" height="2.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KAg-UI-1ME" customClass="GoalsProgressView" customModule="Trajectory" customModuleProvider="target">
+                                            <rect key="frame" x="14" y="24" width="345" height="15"/>
                                             <rect key="contentStretch" x="0.0" y="1" width="1" height="0.0"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="e5x-AO-aje"/>
+                                            </constraints>
                                             <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </progressView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgj-i5-4Sh">
-                                            <rect key="frame" x="202" y="55" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgj-i5-4Sh">
+                                            <rect key="frame" x="218" y="55" width="30" height="30"/>
                                             <state key="normal" title="+">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -89,17 +97,18 @@
                                                 <action selector="Plus:" destination="Zjs-yN-Ude" eventType="touchUpInside" id="cbv-iL-1Tq"/>
                                             </connections>
                                         </button>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2RQ-lj-AQx">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2RQ-lj-AQx">
                                             <rect key="frame" x="145" y="55" width="49" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.33333333333333331" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTd-eW-zKx">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTd-eW-zKx">
                                             <rect key="frame" x="313" y="55" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="uT3-Iz-w0k"/>
+                                            </constraints>
                                             <state key="normal" title="Edit">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -107,9 +116,11 @@
                                                 <segue destination="5qc-nw-ixh" kind="show" id="kdF-vV-r1n"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNk-hD-GRK">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNk-hD-GRK">
                                             <rect key="frame" x="91" y="55" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="z1R-0J-myu"/>
+                                            </constraints>
                                             <state key="normal" title="-">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -117,9 +128,8 @@
                                                 <action selector="Minus:" destination="Zjs-yN-Ude" eventType="touchUpInside" id="fqX-tn-ceh"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7q-cT-Tlx">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7q-cT-Tlx">
                                             <rect key="frame" x="16" y="55" width="56" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Remove">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -127,13 +137,46 @@
                                                 <action selector="RemoveGoal:" destination="Zjs-yN-Ude" eventType="touchUpInside" id="3AN-Ku-scd"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqd-WI-Gui">
+                                            <rect key="frame" x="20" y="21" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="zJ7-v5-tmk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="dTd-eW-zKx" firstAttribute="baseline" secondItem="LNk-hD-GRK" secondAttribute="baseline" id="0Xs-gx-vwg"/>
+                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="trailing" secondItem="OqC-Ba-DzI" secondAttribute="trailingMargin" id="4eb-9I-973"/>
+                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="trailing" secondItem="dTd-eW-zKx" secondAttribute="trailing" id="5os-bv-84v"/>
+                                        <constraint firstItem="dlL-J4-7Qf" firstAttribute="leading" secondItem="U7q-cT-Tlx" secondAttribute="leading" id="AKE-og-w8e"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dlL-J4-7Qf" secondAttribute="trailing" constant="37" id="Aly-aF-jhf"/>
+                                        <constraint firstItem="Vgj-i5-4Sh" firstAttribute="top" secondItem="KAg-UI-1ME" secondAttribute="bottom" constant="16" id="B3a-Fy-amQ"/>
+                                        <constraint firstItem="dTd-eW-zKx" firstAttribute="top" secondItem="2RQ-lj-AQx" secondAttribute="top" id="E9j-zl-Cpi"/>
+                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="top" secondItem="dlL-J4-7Qf" secondAttribute="bottom" constant="3" id="Hoh-xr-efx"/>
+                                        <constraint firstItem="U7q-cT-Tlx" firstAttribute="top" secondItem="dqd-WI-Gui" secondAttribute="bottom" constant="13" id="KqB-dc-tH8"/>
+                                        <constraint firstItem="dqd-WI-Gui" firstAttribute="top" secondItem="dlL-J4-7Qf" secondAttribute="bottom" id="Naw-sP-5Ih"/>
+                                        <constraint firstItem="LNk-hD-GRK" firstAttribute="leading" secondItem="OqC-Ba-DzI" secondAttribute="leading" constant="91" id="UCt-We-cfr"/>
+                                        <constraint firstItem="dTd-eW-zKx" firstAttribute="leading" secondItem="Vgj-i5-4Sh" secondAttribute="trailing" constant="65" id="WYO-2I-Opk"/>
+                                        <constraint firstItem="dlL-J4-7Qf" firstAttribute="centerX" secondItem="2RQ-lj-AQx" secondAttribute="centerX" id="Z4F-O8-AH5"/>
+                                        <constraint firstItem="dqd-WI-Gui" firstAttribute="leading" secondItem="OqC-Ba-DzI" secondAttribute="leadingMargin" constant="4" id="bUL-cn-ucu"/>
+                                        <constraint firstItem="dqd-WI-Gui" firstAttribute="centerX" secondItem="U7q-cT-Tlx" secondAttribute="centerX" constant="-3" id="bbZ-Nf-ZZv"/>
+                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="leading" secondItem="OqC-Ba-DzI" secondAttribute="leadingMargin" constant="-2" id="csh-Yx-p4O"/>
+                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="top" secondItem="OqC-Ba-DzI" secondAttribute="top" constant="24" id="hcw-PS-fQV"/>
+                                        <constraint firstItem="LNk-hD-GRK" firstAttribute="leading" secondItem="U7q-cT-Tlx" secondAttribute="trailing" constant="19" id="kO2-8k-pmd"/>
+                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="centerY" secondItem="dqd-WI-Gui" secondAttribute="centerY" id="nQG-fD-sVI"/>
+                                        <constraint firstItem="dTd-eW-zKx" firstAttribute="baseline" secondItem="Vgj-i5-4Sh" secondAttribute="baseline" id="qM6-T6-a1r"/>
+                                        <constraint firstItem="2RQ-lj-AQx" firstAttribute="leading" secondItem="LNk-hD-GRK" secondAttribute="trailing" constant="8" symbolic="YES" id="z6k-KT-b0h"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.25035761439999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="AdjustAmount" destination="2RQ-lj-AQx" id="wYp-4D-xc5"/>
                                     <outlet property="Progress" destination="KAg-UI-1ME" id="gkC-gn-rAF"/>
+                                    <outlet property="ProgressLabel" destination="dqd-WI-Gui" id="frb-Tv-mpH"/>
                                     <outlet property="Title" destination="dlL-J4-7Qf" id="Lht-ai-rSw"/>
                                 </connections>
                             </tableViewCell>
@@ -2315,7 +2358,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Goal Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKm-Fl-Q0u">
                                 <rect key="frame" x="54" y="112" width="265" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -2336,7 +2379,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7PG-0D-ABz">
                                 <rect key="frame" x="139" y="249" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

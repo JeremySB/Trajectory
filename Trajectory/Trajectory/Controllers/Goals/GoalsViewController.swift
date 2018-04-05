@@ -26,6 +26,12 @@ class GoalsViewController: UITableViewController {
         }
     }
     
+    struct CellData {
+        static let ProgressHeight: CGFloat = 5
+        static let ProgressRoundedCorners: CGFloat = 6
+        static let DeadSpaceHeight: CGFloat = 50
+    }
+    
     var row: Int = 0
     var section: Int = 0
     //var section: Int = 0
@@ -38,10 +44,6 @@ class GoalsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //var i: Int
-//        for _ in 0..<5{
-//            goals.append(Goal())
-//        }
         
         goalsService.addGoalsListener { (receivedGoals, error) in
             if let error = error {
@@ -118,10 +120,14 @@ class GoalsViewController: UITableViewController {
         //if (indexPath.row == expandedRow){
         if (indexPath.row == 1){
             return tableView.dequeueReusableCell(withIdentifier: "goalCellDeadspace", for: indexPath)
-        }else if (indexPath.section == expandedSection){
+        }/*else if (indexPath.section == expandedSection){
             cell = tableView.dequeueReusableCell(withIdentifier: "goalCellExpanded", for: indexPath) as! GoalsTableViewCell
         }else{
             cell = tableView.dequeueReusableCell(withIdentifier: "goalCellClosed", for: indexPath) as! GoalsTableViewCell
+        }*/
+        else{
+            cell = tableView.dequeueReusableCell(withIdentifier: "goalCellExpanded", for: indexPath) as! GoalsTableViewCell
+
         }
         
         cell.parent = self
@@ -145,8 +151,12 @@ class GoalsViewController: UITableViewController {
         }
         let prog = Float(curProgress) / Float(toProgress);
         cell.Progress.setProgress(prog, animated: cell.updated)
+        cell.Progress.setup(ySize: CellData.ProgressHeight, cornerRadius: CellData.ProgressRoundedCorners)
+        
+        cell.ProgressLabel.text = String(curProgress) + "/" + String(toProgress)
+        
         if (cell.updated) {
-            cell.updated = false;
+            cell.updated = false
         }
         return cell as! UITableViewCell
     }
@@ -159,12 +169,16 @@ class GoalsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
-        if let cell = self.tableView.cellForRow(at: indexPath) as? GoalTableViewCellClosed {
+        /*if let cell = self.tableView.cellForRow(at: indexPath) as? GoalTableViewCellClosed {
             //cell.Expand();
             setExpandedRow(row: cell.cellNum)
         } else if let cell = self.tableView.cellForRow(at: indexPath) as? GoalTableViewCellExpanded {
             //cell.Expand();
             setExpandedRow(row: cell.cellNum)
+        }*/
+        let cell = self.tableView.cellForRow(at: indexPath) as? GoalsTableViewCell
+        if (cell != nil){
+            setExpandedRow(row: (cell?.cellNum)!)
         }
     }
 
@@ -199,7 +213,7 @@ class GoalsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (indexPath.row == 1){
-          return 50
+            return CellData.DeadSpaceHeight;
         }
         else if (indexPath.section == expandedSection){
         //if (indexPath.row == expandedRow){

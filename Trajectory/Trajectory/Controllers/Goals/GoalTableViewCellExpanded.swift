@@ -18,7 +18,8 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
     var cellNum: Int = -1
     var updated: Bool = false
     @IBOutlet weak var Title: UILabel!
-    @IBOutlet weak var Progress: UIProgressView!
+    @IBOutlet weak var Progress: GoalsProgressView!
+    @IBOutlet weak var ProgressLabel: UILabel!
     
     @IBOutlet weak var AdjustAmount: UITextField!
     /*func Expand() {
@@ -52,7 +53,9 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
         //updated = false
         parent = nil
         goal = nil
-        AdjustAmount.text = "1"
+        //AdjustAmount.text = "1"
+        //Progress.setup(ySize: 5.0, cornerRadius: 3)
+
     }
     /*
     override func awakeFromNib() {

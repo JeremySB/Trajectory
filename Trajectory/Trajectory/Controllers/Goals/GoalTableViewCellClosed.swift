@@ -17,9 +17,14 @@ class GoalTableViewCellClosed: UITableViewCell, GoalsTableViewCell{
     var cellNum: Int = -1
     var updated: Bool = true
     @IBOutlet weak var Title: UILabel!
-    @IBOutlet weak var Progress: UIProgressView!
+    @IBOutlet weak var Progress: GoalsProgressView!
+    @IBOutlet weak var ProgressLabel: UILabel!
     func Expand() {
         parent.setExpandedRow(row: cellNum)
+    }
+    
+    override func prepareForReuse() {
+        //Progress.setup(ySize: 5.0, cornerRadius: 3)
     }
     /*
     override func awakeFromNib() {

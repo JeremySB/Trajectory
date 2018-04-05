@@ -29,6 +29,7 @@
 		3F2F6B35202CB59800214772 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */; };
 		3F39A1AD20615C6E004ACB76 /* GoalsTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39A1AC20615C6E004ACB76 /* GoalsTableViewTests.swift */; };
 		3F4666AB20237BC400C35818 /* GoalTableViewCellClosed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCellClosed.swift */; };
+		3F51D5992076824C00EF2821 /* GoalsProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51D5982076824C00EF2821 /* GoalsProgressView.swift */; };
 		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
 		3F6969412040884A004CCE5D /* GoalTableViewCellExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */; };
 		3F69694320408CCE004CCE5D /* GoalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69694220408CCE004CCE5D /* GoalsTableViewCell.swift */; };
@@ -140,6 +141,7 @@
 		3F2F6B34202CB59800214772 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F39A1AC20615C6E004ACB76 /* GoalsTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewTests.swift; sourceTree = "<group>"; };
 		3F4666AA20237BC400C35818 /* GoalTableViewCellClosed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCellClosed.swift; sourceTree = "<group>"; };
+		3F51D5982076824C00EF2821 /* GoalsProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsProgressView.swift; sourceTree = "<group>"; };
 		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCellExpanded.swift; sourceTree = "<group>"; };
 		3F69694220408CCE004CCE5D /* GoalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewCell.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 				3FBC3C58201EF83A006FA1AB /* Authentication */,
 				3FE0F472201A434500F3CD18 /* ScrollController.swift */,
 				3FF4D7482073D96100171621 /* textViewWithPlaceholderUITextView.swift */,
+				3F51D5982076824C00EF2821 /* GoalsProgressView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				D6A1D72C20181C3900D38F08 /* HobbiesInterestsViewController.swift in Sources */,
 				3FDF5B17202A0D670095D095 /* Goal.swift in Sources */,
 				3F03585F2045EE9900BECAB2 /* FirebaseConnectionService.swift in Sources */,
+				3F51D5992076824C00EF2821 /* GoalsProgressView.swift in Sources */,
 				D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */,
 				3FB4375020313A1D00821A91 /* CommSwipeMentorViewController.swift in Sources */,
 				D6AAA307201ED6F700789BB6 /* MenteeRequestDetailsViewController.swift in Sources */,
