@@ -35,6 +35,12 @@ class MenteeRequestDetailsViewController: UIViewController {
         userPhoneNumber.text = "Phone Number: \(menteeRequest?.mentee.phoneNumber ?? "No Phone Number Found")"
         if userPhoneNumber.text == "Phone Number: " {userPhoneNumber.text = "No Phone Number Found"}
 
+        setEndDateBtn.layer.borderColor = UIColor.lightGray.cgColor
+        setEndDateBtn.layer.borderWidth = 2
+        setEndDateBtn.layer.cornerRadius = 5
+        declineBtn.layer.borderColor = UIColor.lightGray.cgColor
+        declineBtn.layer.borderWidth = 2
+        declineBtn.layer.cornerRadius = 5
         
         if let uid = menteeRequest?.mentee.id {
             imageService.bindProfileImage(for: uid, to: self.profileImage)

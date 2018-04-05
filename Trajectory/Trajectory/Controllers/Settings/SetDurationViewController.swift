@@ -33,6 +33,10 @@ class SetDurationViewController: UIViewController {
         
         self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2;
         self.userImage.clipsToBounds = true;
+        
+        acceptBtn.layer.borderColor = UIColor.lightGray.cgColor
+        acceptBtn.layer.borderWidth = 2
+        acceptBtn.layer.cornerRadius = 5
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -51,6 +55,7 @@ class SetDurationViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    @IBOutlet weak var acceptBtn: UIButton!
     
     @IBOutlet weak var userImage: UIImageView!
     
