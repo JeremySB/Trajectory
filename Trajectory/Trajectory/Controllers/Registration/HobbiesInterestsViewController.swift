@@ -57,6 +57,13 @@ class HobbiesInterestsViewController: UIViewController, UITextViewDelegate {
             return
         }
         
+        if hobbies.text == "What are your hobbies?" {
+            hobbies.text = ""
+        }
+        if professionalInterests.text == "What are your professional interests?" {
+            professionalInterests.text = ""
+        }
+        
         let user = User()
         user.hobbies = hobbies.text
         user.professionalInterests = professionalInterests.text

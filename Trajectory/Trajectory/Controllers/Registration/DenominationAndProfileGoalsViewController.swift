@@ -51,6 +51,9 @@ class DenominationAndProfileGoalsViewController: UIViewController, UITextViewDel
         //Check for required field
         if objectivesStatement.text != "" && objectivesStatement.text != "What would you like to work on with a mentor?" && objectivesStatement.text != " " {
             let user = User()
+            if denomination.text == "Denomination" {
+                denomination.text = "No Denomination"
+            }
             user.denomination = denomination.text
             user.objectives = objectivesStatement.text
             let userEncoded = try! FirestoreEncoder().encode(user)
