@@ -19,6 +19,8 @@ class User: Codable {
     var notificationTokens: [String: Bool]?
     
     var id: String? = nil
+    // set to true if user doc does not exist on server, but created locally
+    var isNew: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case name, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress, notificationTokens

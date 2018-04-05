@@ -152,23 +152,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor googleUser: GIDGoogleUser!, withError error: Error?) {
         // ...
         if let _ = error {
             
             return
         }
         
-        guard let authentication = user.authentication else { return }
+        guard let authentication = googleUser.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
-        Auth.auth().signIn(with: credential) { (user, error) in
+        Auth.auth().signIn(with: credential) { (authUser, error) in
             if let _ = error {
                 
             }
-            else {
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-                UIApplication.shared.keyWindow?.rootViewController = vc
+            else if let authUser = authUser {
+                let userService = FirebaseUserService()
+                userService.getUser(uid: authUser.uid, completion: { (userData, error) in
+                    if let userData = userData {
+                        if userData.isNew {
+                            userData.emailAddress = googleUser.profile.email
+                            userData.name = googleUser.profile.name
+                            userService.saveCurrentUser(userData, completion: { (error) in
+                                if error == nil {
+                                    // go to registration process, because this is a new user
+                                    let vc = UIStoryboard(name: "Authentication", bundle: nil).instantiateViewController(withIdentifier: "UserPhoneViewController")
+                                    UIApplication.shared.keyWindow?.rootViewController = vc
+                                }
+                            })
+                        }
+                        else {
+                            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+                            UIApplication.shared.keyWindow?.rootViewController = vc
+                        }
+                    }
+                })
             }
         }
     }

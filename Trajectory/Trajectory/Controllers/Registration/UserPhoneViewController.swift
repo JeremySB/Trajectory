@@ -36,7 +36,7 @@ class UserPhoneViewController: UIViewController {
     func formatInput() -> String {
         let rawNumber = phoneNumber.text!
         
-        let digits = rawNumber.flatMap{Int(String($0))}
+        let digits = rawNumber.compactMap{Int(String($0))}
         let areaCode = "\(digits[0])\(digits[1])\(digits[2])"
         let secondSet = "\(digits[3])\(digits[4])\(digits[5])"
         let thirdSet = "\(digits[6])\(digits[7])\(digits[8])\(digits[9])"

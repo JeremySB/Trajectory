@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XkK-at-vL0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XkK-at-vL0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--User Phone View Controller-->
         <scene sceneID="6Rn-wk-uL4">
             <objects>
-                <viewController title="User Phone View Controller" id="oZw-pd-5Hd" customClass="UserPhoneViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserPhoneViewController" title="User Phone View Controller" id="oZw-pd-5Hd" customClass="UserPhoneViewController" customModule="Trajectory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fyC-zN-c9e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,9 +79,7 @@
                         <outlet property="errorMessage" destination="2MU-7c-mY3" id="ww0-db-UuO"/>
                         <outlet property="nextBtn" destination="wB2-hO-Qju" id="dvC-L1-zn5"/>
                         <outlet property="phoneNumber" destination="VDQ-Qb-mCP" id="NnL-dl-B1D"/>
-                        <segue destination="ilW-vQ-Z5O" kind="show" identifier="phoneToHobbiesAndInterests" id="pYa-sO-SJO">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="ilW-vQ-Z5O" kind="show" identifier="phoneToHobbiesAndInterests" id="pYa-sO-SJO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6T2-bN-Uuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,9 +154,7 @@
                         <outlet property="hobbies" destination="gCh-Y2-Bnz" id="NP1-au-4Ve"/>
                         <outlet property="nextBtn" destination="FvW-Ph-jsA" id="9yt-4U-8e6"/>
                         <outlet property="professionalInterests" destination="PVV-hw-cDX" id="dTo-Jv-wBW"/>
-                        <segue destination="2qh-6m-hqa" kind="show" identifier="hobbiesAndInterestsToDenominationAndGoals" id="W0F-aP-ruy">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="2qh-6m-hqa" kind="show" identifier="hobbiesAndInterestsToDenominationAndGoals" id="W0F-aP-ruy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hru-Fc-okD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -392,12 +388,8 @@
                         <outlet property="continueBtn" destination="KWY-QM-1L7" id="dKX-it-xNn"/>
                         <outlet property="emailErrorMessage" destination="lAh-9a-CtO" id="59q-R6-Pyv"/>
                         <outlet property="emailField" destination="74a-Ag-4pX" id="2Xu-pk-68k"/>
-                        <segue destination="VQ3-6V-3DZ" kind="show" identifier="passwordLogin" id="YqC-0J-z3O">
-                            <nil key="action"/>
-                        </segue>
-                        <segue destination="Esd-JF-kBs" kind="show" identifier="passwordRegister" id="jOy-E9-rG0">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="VQ3-6V-3DZ" kind="show" identifier="passwordLogin" id="YqC-0J-z3O"/>
+                        <segue destination="Esd-JF-kBs" kind="show" identifier="passwordRegister" id="jOy-E9-rG0"/>
                         <segue destination="3QG-I5-Lx7" kind="presentation" identifier="initialToMain" id="BId-QM-fKl"/>
                     </connections>
                 </viewController>
@@ -470,9 +462,7 @@
                         <outlet property="nameErrorMessage" destination="QZ5-mi-CLY" id="uIU-V3-cjb"/>
                         <outlet property="nextBtn" destination="HVK-ms-2kK" id="Ywn-eo-wZC"/>
                         <outlet property="userName" destination="cq1-vC-GsZ" id="YgH-zM-dbE"/>
-                        <segue destination="oZw-pd-5Hd" kind="show" identifier="nameToPhoneAndEmail" id="63S-Ov-DVh">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="oZw-pd-5Hd" kind="show" identifier="nameToPhoneAndEmail" id="63S-Ov-DVh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pK-vs-pRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -684,9 +674,7 @@
                         <outlet property="createAccountBtn" destination="8PO-l8-X8R" id="GDc-ND-XBe"/>
                         <outlet property="invalidPasswordMessage" destination="MfG-Jw-dYf" id="t3Y-Sm-OLI"/>
                         <outlet property="passwordField" destination="P8D-QI-6vX" id="aiK-Vo-EdC"/>
-                        <segue destination="Wi5-JZ-gB4" kind="show" identifier="newPasswordToName" id="A3d-du-3Wm">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="Wi5-JZ-gB4" kind="show" identifier="newPasswordToName" id="A3d-du-3Wm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHF-jP-BhH" userLabel="First Responder" sceneMemberID="firstResponder"/>

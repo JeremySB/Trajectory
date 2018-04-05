@@ -65,7 +65,8 @@ class FirebaseUserService: UserService {
             guard let data = doc?.data() else {
                 // empty user
                 let user = User()
-                user.id = doc?.documentID
+                user.isNew = true
+                user.id = uid
                 completion(user, nil)
                 return
             }

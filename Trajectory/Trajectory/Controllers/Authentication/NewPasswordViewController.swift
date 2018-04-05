@@ -61,6 +61,10 @@ class NewPasswordViewController: UIViewController {
                 }
             })
             
+            Auth.auth().currentUser?.sendEmailVerification { (error) in
+                
+            }
+            
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             // created account
             self.performSegue(withIdentifier: "newPasswordToName", sender: self)
