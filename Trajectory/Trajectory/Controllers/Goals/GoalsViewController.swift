@@ -48,6 +48,9 @@ class GoalsViewController: UITableViewController {
             self.tableView.reloadData()
             if self.goals.count > 0 {
                 self.resetTableViewContentInset()
+            } else {
+                self.updateTableViewContentInset()
+                self.initialLoginMessage.isHidden = false
             }
         }
         
@@ -64,6 +67,7 @@ class GoalsViewController: UITableViewController {
         // Do any additional setup after loading the view.
         
         updateTableViewContentInset()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -91,7 +95,6 @@ class GoalsViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        //Show login message if applicable before returning
         return goals.count//1//0
     }
     
