@@ -19,6 +19,9 @@ class GoalsViewController: UITableViewController {
             if goals.count != 0 {
                 initialLoginMessage.isHidden = true
                 resetTableViewContentInset()
+            } else if updated == false {
+                updateTableViewContentInset()
+                print("HIT")
             }
         }
     }
@@ -28,6 +31,8 @@ class GoalsViewController: UITableViewController {
     //var section: Int = 0
     var expandedRow: Int = -1
     var expandedSection: Int = -1
+    var updated: Bool = false
+    var firstTimeToUpdate: Bool = true
     
     lazy var goalsService: GoalsService = FirebaseGoalsService()
     
@@ -49,7 +54,6 @@ class GoalsViewController: UITableViewController {
             if self.goals.count > 0 {
                 self.resetTableViewContentInset()
             } else {
-                self.updateTableViewContentInset()
                 self.initialLoginMessage.isHidden = false
             }
         }
@@ -65,9 +69,11 @@ class GoalsViewController: UITableViewController {
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl?.addTarget(self, action: #selector(Refresh(_:)), for: UIControlEvents.valueChanged)
         // Do any additional setup after loading the view.
-        
-        updateTableViewContentInset()
-        
+
+        if firstTimeToUpdate == true {
+            updateTableViewContentInset()
+            firstTimeToUpdate = false
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,10 +93,12 @@ class GoalsViewController: UITableViewController {
         let tableViewContentHeight: CGFloat = tableView.contentSize.height
         let marginHeight: CGFloat = (viewHeight - tableViewContentHeight) / 2.0
         self.tableView.contentInset = UIEdgeInsets(top: marginHeight - 100, left: 0, bottom:  -marginHeight + 100, right: 0)
+        updated = true
     }
     
     func resetTableViewContentInset() {
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        updated = false
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
