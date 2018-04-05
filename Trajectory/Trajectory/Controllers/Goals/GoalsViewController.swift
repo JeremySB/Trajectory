@@ -18,6 +18,7 @@ class GoalsViewController: UITableViewController {
             //Hide initial login message if applicable
             if goals.count != 0 {
                 initialLoginMessage.isHidden = true
+                resetTableViewContentInset()
             }
         }
     }
@@ -45,6 +46,9 @@ class GoalsViewController: UITableViewController {
             guard let receivedGoals = receivedGoals else { return }
             self.goals = receivedGoals
             self.tableView.reloadData()
+            if self.goals.count > 0 {
+                self.resetTableViewContentInset()
+            }
         }
         
         // https://stackoverflow.com/questions/25845855/transparent-navigation-bar-ios
@@ -58,6 +62,8 @@ class GoalsViewController: UITableViewController {
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl?.addTarget(self, action: #selector(Refresh(_:)), for: UIControlEvents.valueChanged)
         // Do any additional setup after loading the view.
+        
+        updateTableViewContentInset()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,6 +76,17 @@ class GoalsViewController: UITableViewController {
     @IBAction func Refresh(_ sender: Any?){
         tableView.reloadData()
         refreshControl?.endRefreshing()
+    }
+    
+    func updateTableViewContentInset() {
+        let viewHeight: CGFloat = view.frame.size.height
+        let tableViewContentHeight: CGFloat = tableView.contentSize.height
+        let marginHeight: CGFloat = (viewHeight - tableViewContentHeight) / 2.0
+        self.tableView.contentInset = UIEdgeInsets(top: marginHeight - 100, left: 0, bottom:  -marginHeight + 100, right: 0)
+    }
+    
+    func resetTableViewContentInset() {
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
