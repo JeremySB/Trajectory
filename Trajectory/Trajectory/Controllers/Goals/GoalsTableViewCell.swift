@@ -13,6 +13,7 @@ protocol GoalsTableViewCell {
     weak var parent: GoalsViewController! {get set}
     var cellNum: Int {get set}
     weak var Title: UILabel! {get set}
-    weak var Progress: UIProgressView! {get set}
+    weak var Progress: GoalsProgressView! {get set}
+    weak var ProgressLabel: UILabel! {get set}
     var updated: Bool {get set}
 }
