@@ -13,7 +13,15 @@ import UIKit
 
 class GoalsViewController: UITableViewController {
 
-    var goals: [Goal] = [Goal]()
+    var goals: [Goal] = [Goal]() {
+        didSet {
+            //Hide initial login message if applicable
+            if goals.count != 0 {
+                initialLoginMessage.isHidden = true
+            }
+        }
+    }
+    
     var row: Int = 0
     var section: Int = 0
     //var section: Int = 0
@@ -56,7 +64,9 @@ class GoalsViewController: UITableViewController {
         super.viewDidAppear(animated)
         tableView.reloadData()
     }
-
+    
+    @IBOutlet weak var initialLoginMessage: UILabel!
+    
     @IBAction func Refresh(_ sender: Any?){
         tableView.reloadData()
         refreshControl?.endRefreshing()
@@ -64,6 +74,7 @@ class GoalsViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        //Show login message if applicable before returning
         return goals.count//1//0
     }
     

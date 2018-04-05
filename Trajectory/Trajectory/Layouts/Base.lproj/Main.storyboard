@@ -21,6 +21,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a goal by tapping + to get started." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VmR-gz-wOO">
+                            <rect key="frame" x="0.0" y="278" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="goalCellClosed" rowHeight="50" id="Nhg-yF-co6" customClass="GoalTableViewCellClosed" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="50"/>
@@ -146,6 +153,9 @@
                             <outlet property="delegate" destination="8Lj-K3-l3W" id="RfV-3D-hX5"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="initialLoginMessage" destination="VmR-gz-wOO" id="ao5-Cg-1ay"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrs-3a-8MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

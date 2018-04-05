@@ -64,12 +64,12 @@ class SettingsUITests: XCTestCase {
         textField/*@START_MENU_TOKEN@*/.press(forDuration: 1.0);/*[[".tap()",".press(forDuration: 1.0);"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         app/*@START_MENU_TOKEN@*/.menuItems["Select All"]/*[[".menus.menuItems[\"Select All\"]",".menuItems[\"Select All\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app/*@START_MENU_TOKEN@*/.menuItems["Cut"]/*[[".menus.menuItems[\"Cut\"]",".menuItems[\"Cut\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        textField.typeText("test")
+        textField.typeText("uitest")
         
         let doneButton = app.navigationBars["Update Information"].buttons["Done"]
         doneButton.tap()
         textField.tap()
-        textField.typeText("@test.com")
+        textField.typeText("@gettrajectory.com")
         doneButton.tap()
     }
     
@@ -132,38 +132,32 @@ class SettingsUITests: XCTestCase {
     }
     
     func testUpdateMyBioDoneButton() {
-        // Use recording to get started writing UI tests.
         app.tabBars.buttons["Settings"].tap()
-
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Bio"]/*[[".cells.staticTexts[\"Bio\"]",".staticTexts[\"Bio\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
         let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element(boundBy: 2)
-        textView/*@START_MENU_TOKEN@*/.press(forDuration: 1.0);/*[[".tap()",".press(forDuration: 1.0);"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        /*app/*@START_MENU_TOKEN@*/.menuItems["Select All"]/*[[".menus.menuItems[\"Select All\"]",".menuItems[\"Select All\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        textView.tap()
+        textView/*@START_MENU_TOKEN@*/.press(forDuration: 1.1);/*[[".tap()",".press(forDuration: 1.1);"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        app/*@START_MENU_TOKEN@*/.menuItems["Select All"]/*[[".menus.menuItems[\"Select All\"]",".menuItems[\"Select All\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app/*@START_MENU_TOKEN@*/.menuItems["Cut"]/*[[".menus.menuItems[\"Cut\"]",".menuItems[\"Cut\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
         let doneButton = app.navigationBars["Bio"].buttons["Done"]
         doneButton.tap()
+        textView.tap()
         textView.typeText("Bible reading")
-        doneButton.tap()*/
+        doneButton.tap()
     }
     
     func testUpdateMyBioCancelButton() {
         // Use recording to get started writing UI tests.
-        
-        
-        app.tabBars.buttons["Settings"].tap()
-        app.tables.staticTexts["My Bio"].tap()
-        app.navigationBars["My Bio"].buttons["Cancel"].tap()
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Settings"].tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Bio"]/*[[".cells.staticTexts[\"Bio\"]",".staticTexts[\"Bio\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Bio"].buttons["Cancel"].tap()
     }
     
     func testMyMenteeRequestsBackButton() {
         // Use recording to get started writing UI tests.
-        
-        
         app.tabBars.buttons["Settings"].tap()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.navigationBars["Mentee Requests"].buttons["Back"].tap()
@@ -174,24 +168,22 @@ class SettingsUITests: XCTestCase {
     
     func testMyMenteeRequestsSetEndDateButtonAndSetDateAndAccept() {
         // Use recording to get started writing UI tests.
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Find"].tap()
         
+        let searchForAvailableMentorsSearchField = app.searchFields["Search for available mentors"]
+        searchForAvailableMentorsSearchField.tap()
+        searchForAvailableMentorsSearchField.typeText("ui ")
+        app.collectionViews.children(matching: .cell).element(boundBy: 0).otherElements.containing(.image, identifier:"profileImg").element.tap()
+        app.buttons["Request Mentorship"].tap()
+        app.sheets["Please confirm that you want to send this mentee request"].buttons["Confirm"].tap()
+        tabBarsQuery.buttons["Settings"].tap()
         
-        app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["First Last"]/*[[".cells.staticTexts[\"First Last\"]",".staticTexts[\"First Last\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["UI Test"]/*[[".cells.staticTexts[\"UI Test\"]",".staticTexts[\"UI Test\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.buttons["Set End Date"].tap()
-        
-        let dateFormatter = DateFormatter()
-        let today = Date()
-        dateFormatter.dateFormat = "dd"
-        let date = dateFormatter.string(from: today)
-        
-        app.datePickers.pickerWheels[date].swipeUp()
-        app.buttons["Set Date and Accept"].tap()
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        
+        app.buttons["Set Date and Accept"].tap()        
     }
     
     func testMyMenteeRequestsSetEndDateButtonAndGoBack() {
