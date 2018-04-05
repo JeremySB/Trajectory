@@ -12,10 +12,20 @@ class CommMenteeViewController: UIViewController {
     
     lazy var connService: ConnectionService = FirebaseConnectionService()
     
-    var mentees = [User]()
+    var mentees = [User]() {
+        didSet {
+            if mentees.count == 0 {
+                noMenteeMessage.isHidden = false
+            } else {
+                noMenteeMessage.isHidden = true
+            }
+        }
+    }
     
     @IBOutlet weak var childView: UICollectionView!
-
+    
+    @IBOutlet weak var noMenteeMessage: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +37,17 @@ class CommMenteeViewController: UIViewController {
                 self.childView.reloadData()
             }
         }
+        
+        noMenteeMessage.contentHorizontalAlignment = .center
+        noMenteeMessage.contentVerticalAlignment = .center
+        noMenteeMessage.setTitleColor(UIColor.white, for: .normal)
     }
+    
+    @IBAction func noMenteesMessage(_ sender: Any) {
+        print("Send user to Settings screen")
+        
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = childView.indexPathsForSelectedItems {
@@ -47,7 +67,7 @@ class CommMenteeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
 
 extension CommMenteeViewController: UICollectionViewDataSource {

@@ -21,7 +21,6 @@ class GoalsViewController: UITableViewController {
                 resetTableViewContentInset()
             } else if updated == false {
                 updateTableViewContentInset()
-                print("HIT")
             }
         }
     }
