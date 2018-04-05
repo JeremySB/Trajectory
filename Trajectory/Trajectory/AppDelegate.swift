@@ -232,7 +232,7 @@ extension AppDelegate : MessagingDelegate {
                 if let prevUser = prevUser {
                     let user = User()
                     user.notificationTokens = prevUser.notificationTokens ?? [String: Bool]()
-                    user.notificationTokens![fcmToken] = true
+                    user.notificationTokens?[fcmToken] = true
                     userService.saveCurrentUser(user, completion: nil)
                 }
             }

@@ -75,7 +75,6 @@ class UpdatePersonalInfoViewController: UIViewController {
         guard let newEmail = usersEmailAddress.text else { return }
         // only go through this if email changed
         if newEmail != user.emailAddress {
-            user.emailAddress = newEmail
             dispatch.enter()
             authService.updateEmail(newEmail) { (error) in
                 if let error = error {
@@ -95,7 +94,7 @@ class UpdatePersonalInfoViewController: UIViewController {
                     //make sure error message is hidden
                     self.emailErrorMessage.isHidden = true
                     // also save within user document
-                    user.emailAddress = self.usersEmailAddress.text
+                    user.emailAddress = newEmail
                 }
                 dispatch.leave()
             }
