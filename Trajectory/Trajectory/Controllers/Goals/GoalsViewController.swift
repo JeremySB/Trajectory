@@ -69,7 +69,7 @@ class GoalsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1//goals.count
+        return 2//1//goals.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,7 +77,9 @@ class GoalsViewController: UITableViewController {
         var cell: GoalsTableViewCell!
         
         //if (indexPath.row == expandedRow){
-        if (indexPath.section == expandedSection){
+        if (indexPath.row == 1){
+            return tableView.dequeueReusableCell(withIdentifier: "goalCellDeadspace", for: indexPath)
+        }else if (indexPath.section == expandedSection){
             cell = tableView.dequeueReusableCell(withIdentifier: "goalCellExpanded", for: indexPath) as! GoalsTableViewCell
         }else{
             cell = tableView.dequeueReusableCell(withIdentifier: "goalCellClosed", for: indexPath) as! GoalsTableViewCell
@@ -154,7 +156,10 @@ class GoalsViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath.section == expandedSection){
+        if (indexPath.row == 1){
+          return 50
+        }
+        else if (indexPath.section == expandedSection){
         //if (indexPath.row == expandedRow){
             return 100
         }

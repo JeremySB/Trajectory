@@ -47,6 +47,7 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
         Progress = nil*/
         parent = nil
         goal = nil
+        AdjustAmount.text = "1"
     }
     /*
     override func awakeFromNib() {
