@@ -105,7 +105,10 @@ class GoalsViewController: UITableViewController {
             return cell as! UITableViewCell
         }
         let prog = Float(curProgress) / Float(toProgress);
-        cell.Progress.setProgress(prog, animated: true)
+        cell.Progress.setProgress(prog, animated: cell.updated)
+        if (cell.updated) {
+            cell.updated = false;
+        }
         return cell as! UITableViewCell
     }
     

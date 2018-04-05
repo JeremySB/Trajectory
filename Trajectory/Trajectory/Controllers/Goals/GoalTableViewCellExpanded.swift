@@ -16,6 +16,7 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
     
     public weak var parent: GoalsViewController!
     var cellNum: Int = -1
+    var updated: Bool = false
     @IBOutlet weak var Title: UILabel!
     @IBOutlet weak var Progress: UIProgressView!
     
@@ -34,10 +35,12 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
     }
     
     @IBAction func Plus(_ sender: Any) {
+        updated = true
         goal.currentProgress = min((goal.currentProgress ?? 0) + (Int(AdjustAmount.text ?? "") ?? 0), goal.totalProgress ?? 0)
         goalsService.editGoal(goal, completion: nil)
     }
     @IBAction func Minus(_ sender: Any) {
+        updated = true
         goal.currentProgress = max((goal.currentProgress ?? 0) - (Int(AdjustAmount.text ?? "") ?? 0), 0)
         goalsService.editGoal(goal, completion: nil)
     }
@@ -45,6 +48,7 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
         cellNum = -1
         /*Title = nil
         Progress = nil*/
+        //updated = false
         parent = nil
         goal = nil
         AdjustAmount.text = "1"

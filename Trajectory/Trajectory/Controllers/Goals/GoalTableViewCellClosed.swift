@@ -15,6 +15,7 @@ class GoalTableViewCellClosed: UITableViewCell, GoalsTableViewCell{
     
     weak var parent: GoalsViewController!
     var cellNum: Int = -1
+    var updated: Bool = true
     @IBOutlet weak var Title: UILabel!
     @IBOutlet weak var Progress: UIProgressView!
     func Expand() {

@@ -14,4 +14,5 @@ protocol GoalsTableViewCell {
     var cellNum: Int {get set}
     weak var Title: UILabel! {get set}
     weak var Progress: UIProgressView! {get set}
+    var updated: Bool {get set}
 }
