@@ -33,10 +33,6 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "TrajectoryBackground")
-        self.view.insertSubview(backgroundImage, at: 0)
     }
     
     // MARK: - Table view data source
@@ -46,6 +42,13 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
         return 2
     }
 
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if(section == 0){

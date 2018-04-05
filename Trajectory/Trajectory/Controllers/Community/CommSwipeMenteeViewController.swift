@@ -29,9 +29,9 @@ class CommSwipeMenteeViewController: ScrollController {
             var tmp = view as! UserChild
             tmp.user = self.user
         }
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        /*let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "TrajectoryBackground")
-        self.view.insertSubview(backgroundImage, at: 0)
+        self.view.insertSubview(backgroundImage, at: 0)*/
     }
 
     /*

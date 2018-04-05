@@ -78,6 +78,7 @@
 		D6216AEB205EED4B005626BD /* AddGoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6216AEA205EED4B005626BD /* AddGoalUITests.swift */; };
 		D652AD262031EAA000E0AC65 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD252031EAA000E0AC65 /* TestExtensions.swift */; };
 		D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652AD272031EAD800E0AC65 /* SettingsUITests.swift */; };
+		D6602366207558A60037070C /* MyMentorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6602365207558A60037070C /* MyMentorsUITests.swift */; };
 		D68FB11420645FAB00E73F5D /* UpdatePersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68FB11320645FAB00E73F5D /* UpdatePersonalInfoViewController.swift */; };
 		D6A1D7262018193600D38F08 /* InitialAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */; };
 		D6A1D72A2018197D00D38F08 /* UserPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */; };
@@ -197,6 +198,7 @@
 		D6216AEA205EED4B005626BD /* AddGoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalUITests.swift; sourceTree = "<group>"; };
 		D652AD252031EAA000E0AC65 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		D652AD272031EAD800E0AC65 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
+		D6602365207558A60037070C /* MyMentorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMentorsUITests.swift; sourceTree = "<group>"; };
 		D68FB11320645FAB00E73F5D /* UpdatePersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePersonalInfoViewController.swift; sourceTree = "<group>"; };
 		D6A1D7252018193600D38F08 /* InitialAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAuthenticationViewController.swift; sourceTree = "<group>"; };
 		D6A1D7292018197D00D38F08 /* UserPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoneViewController.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 		3FC53DAA1FF03BA7000B82E3 /* TrajectoryUITests */ = {
 			isa = PBXGroup;
 			children = (
+				D6602365207558A60037070C /* MyMentorsUITests.swift */,
 				3F39A1AC20615C6E004ACB76 /* GoalsTableViewTests.swift */,
 				D6216AEA205EED4B005626BD /* AddGoalUITests.swift */,
 				D6DE11882055A731000F31EE /* FindUITests.swift */,
@@ -951,6 +954,7 @@
 				3F39A1AD20615C6E004ACB76 /* GoalsTableViewTests.swift in Sources */,
 				D6216AEB205EED4B005626BD /* AddGoalUITests.swift in Sources */,
 				3FB92CFB2036322A00AA2893 /* RegistrationTests.swift in Sources */,
+				D6602366207558A60037070C /* MyMentorsUITests.swift in Sources */,
 				3FB92CF92035F6AD00AA2893 /* LoginTests.swift in Sources */,
 				D6DE11892055A731000F31EE /* FindUITests.swift in Sources */,
 				D652AD282031EAD800E0AC65 /* SettingsUITests.swift in Sources */,
