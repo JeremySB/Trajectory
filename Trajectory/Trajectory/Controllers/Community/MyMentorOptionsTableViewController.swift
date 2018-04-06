@@ -28,6 +28,10 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
         if let uid = user.id {
             imageService.bindProfileImage(for: uid, to: self.profileImage)
         }
+        
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+        self.profileImage.clipsToBounds = true;
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
