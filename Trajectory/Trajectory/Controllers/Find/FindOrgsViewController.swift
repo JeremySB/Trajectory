@@ -17,7 +17,6 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     let initialSearchTerm : String = ""
     let searchController = UISearchController(searchResultsController: nil)
     
-    //TODO - Temporary user's organization array until actually implemented
     var userOrganizations = [Organization]()
     
     lazy var userService: UserService = FirebaseUserService()
@@ -71,6 +70,7 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         orgService.getCurrentOrganizations { (orgs, error) in
             if let orgs = orgs {
                 self.userOrganizations = orgs
+                self.usersPerOrganization.removeAll()
                 
                 let dispatch = DispatchGroup()
                 

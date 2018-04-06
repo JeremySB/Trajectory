@@ -14,10 +14,11 @@ class Checkin: Codable {
     }
     
     var status: Status?
+    var sentDate: Date?
     
     var id: String? = nil
     
     enum CodingKeys: String, CodingKey {
-        case status
+        case status, sentDate
     }
 }

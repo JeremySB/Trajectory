@@ -21,6 +21,13 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     private var croppedAngle = 0
     
     var user: User?
+    var uidForProfileImage: String? {
+        didSet {
+            if let uid = uidForProfileImage {
+                self.imageService.bindProfileImage(for: uid, to: self.profileImage)
+            }
+        }
+    }
     
     // make status bar white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -69,7 +76,9 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
             //self.userOrganization.text = user.organization ?? "No Organization"
             
             guard let uid = user.id else { return }
-            self.imageService.bindProfileImage(for: uid, to: self.profileImage)
+            if uid != self.uidForProfileImage {
+                self.uidForProfileImage = uid
+            }
         }
     }
     
