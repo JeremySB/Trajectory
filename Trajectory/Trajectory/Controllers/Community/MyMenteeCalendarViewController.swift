@@ -37,6 +37,8 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true;
         // Do any additional setup after loading the view.
+        menteeName.textColor = UIColor.white
+        organizations.textColor = UIColor.white
     }
     
     override func viewDidAppear(_ animated: Bool) {
