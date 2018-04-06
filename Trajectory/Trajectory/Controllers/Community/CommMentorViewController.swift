@@ -16,14 +16,23 @@ class CommMentorViewController: UIViewController {
     
     @IBOutlet weak var childView: UICollectionView!
 
+    @IBOutlet weak var getStartedMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getStartedMessage.textColor = UIColor.white
 
         // Do any additional setup after loading the view.
         connService.addMentorsListener { (mentors, error) in
             if let mentors = mentors {
                 self.mentors = mentors
                 print(mentors)
+                if mentors.count == 0 {
+                    self.getStartedMessage.isHidden = false
+                } else {
+                    self.getStartedMessage.isHidden = true
+                }
                 self.childView.reloadData()
             }
         }

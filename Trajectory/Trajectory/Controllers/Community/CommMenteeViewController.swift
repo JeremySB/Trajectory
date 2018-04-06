@@ -12,6 +12,8 @@ class CommMenteeViewController: UIViewController {
     
     lazy var connService: ConnectionService = FirebaseConnectionService()
     
+    @IBOutlet weak var noMenteeMessage: UILabel!
+    
     var mentees = [User]() {
         didSet {
             if mentees.count == 0 {
@@ -24,10 +26,10 @@ class CommMenteeViewController: UIViewController {
     
     @IBOutlet weak var childView: UICollectionView!
     
-    @IBOutlet weak var noMenteeMessage: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        noMenteeMessage.textColor = UIColor.white
 
         // Do any additional setup after loading the view.
         connService.addMenteesListener { (mentees, error) in
@@ -37,14 +39,6 @@ class CommMenteeViewController: UIViewController {
                 self.childView.reloadData()
             }
         }
-        
-        noMenteeMessage.contentHorizontalAlignment = .center
-        noMenteeMessage.contentVerticalAlignment = .center
-        noMenteeMessage.setTitleColor(UIColor.white, for: .normal)
-    }
-    
-    @IBAction func noMenteesMessage(_ sender: Any) {
-        print("Send user to Settings screen")
         
     }
     
