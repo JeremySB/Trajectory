@@ -26,7 +26,10 @@ class FirebaseGoalsService: GoalsService {
             update(nil, .NotLoggedIn)
             return
         }
-        
+        addGoalsListener(uid, update: update)
+    }
+    
+    func addGoalsListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void){
         let listener = db.collection(FirestoreValues.goalCollection).whereField("owner", isEqualTo: uid).addSnapshotListener { (snapshot, error) in
             if let error = error {
                 return update(nil, .Misc(error.localizedDescription))
@@ -50,6 +53,7 @@ class FirebaseGoalsService: GoalsService {
         }
         
         listeners.append(listener)
+        
     }
     
     func addGoal(_ goal: Goal, completion: ((GoalsServiceError?) -> Void)?) {
@@ -118,6 +122,10 @@ class FirebaseGoalsService: GoalsService {
             completion(nil, .NotLoggedIn)
             return
         }
+        getGoals(uid, completion: completion)
+    }
+    
+    func getGoals(_ uid: String, completion: @escaping ([Goal]?, GoalsServiceError?) -> Void){
         db.collection(FirestoreValues.goalCollection).whereField("owner", isEqualTo: uid).getDocuments { (snapshot, error) in
             if let error = error {
                 return completion(nil, .Misc(error.localizedDescription))

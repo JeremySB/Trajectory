@@ -20,7 +20,7 @@ class GoalTableViewCellClosed: UITableViewCell, GoalsTableViewCell{
     @IBOutlet weak var Progress: GoalsProgressView!
     @IBOutlet weak var ProgressLabel: UILabel!
     func Expand() {
-        parent.setExpandedRow(row: cellNum)
+        parent.setExpandedSection(section: cellNum)
     }
     
     override func prepareForReuse() {

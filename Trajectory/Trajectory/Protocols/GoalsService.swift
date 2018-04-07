@@ -11,7 +11,10 @@ protocol GoalsService {
     
     func getGoals(completion: @escaping ([Goal]?, GoalsServiceError?) -> Void)
     
+    func getGoals(_ uid: String, completion: @escaping ([Goal]?, GoalsServiceError?) -> Void)
+    
     func addGoalsListener(_: @escaping ([Goal]?, GoalsServiceError?) -> Void)
+    func addGoalsListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void)
     
     func removeGoal(_ : Goal, completion: ((GoalsServiceError?) -> Void)?)
     

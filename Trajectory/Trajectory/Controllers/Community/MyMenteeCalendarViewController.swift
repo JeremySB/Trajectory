@@ -20,6 +20,7 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var menteeName: UILabel!
     @IBOutlet weak var organizations: UILabel!
+    @IBOutlet weak var goalsList: GoalsTableView!
     
     
     @IBAction func sendToCalendar(_ sender: Any) {
@@ -30,6 +31,8 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        goalsList.uid = _user?.id ?? ""
+        goalsList.viewDidLoad()
         menteeName?.text = user?.name ?? ""
         if let uid = user?.id {
             imageService.bindProfileImage(for: uid, to: profileImage)
@@ -44,6 +47,7 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         menteeName?.text = user?.name ?? ""
+        goalsList.viewDidAppear()
     }
     
 

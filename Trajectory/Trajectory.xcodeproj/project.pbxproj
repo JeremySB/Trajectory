@@ -30,6 +30,7 @@
 		3F39A1AD20615C6E004ACB76 /* GoalsTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39A1AC20615C6E004ACB76 /* GoalsTableViewTests.swift */; };
 		3F4666AB20237BC400C35818 /* GoalTableViewCellClosed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4666AA20237BC400C35818 /* GoalTableViewCellClosed.swift */; };
 		3F51D5992076824C00EF2821 /* GoalsProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51D5982076824C00EF2821 /* GoalsProgressView.swift */; };
+		3F51D59B2077F1AB00EF2821 /* GoalsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51D59A2077F1AB00EF2821 /* GoalsTableView.swift */; };
 		3F609D192024D8BC00E13E79 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609D182024D8BC00E13E79 /* FindViewController.swift */; };
 		3F6969412040884A004CCE5D /* GoalTableViewCellExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */; };
 		3F69694320408CCE004CCE5D /* GoalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69694220408CCE004CCE5D /* GoalsTableViewCell.swift */; };
@@ -142,6 +143,7 @@
 		3F39A1AC20615C6E004ACB76 /* GoalsTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewTests.swift; sourceTree = "<group>"; };
 		3F4666AA20237BC400C35818 /* GoalTableViewCellClosed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCellClosed.swift; sourceTree = "<group>"; };
 		3F51D5982076824C00EF2821 /* GoalsProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsProgressView.swift; sourceTree = "<group>"; };
+		3F51D59A2077F1AB00EF2821 /* GoalsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableView.swift; sourceTree = "<group>"; };
 		3F609D182024D8BC00E13E79 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		3F6969402040884A004CCE5D /* GoalTableViewCellExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCellExpanded.swift; sourceTree = "<group>"; };
 		3F69694220408CCE004CCE5D /* GoalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewCell.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				3F1CF2D320562A4800CE9260 /* CommUserCollectionViewCell.swift */,
 				3FD722BE20582D8B005D6601 /* MyMenteeOptionsTableViewController.swift */,
 				3FD722C0205AC5EA005D6601 /* MyMentorOptionsTableViewController.swift */,
+				3F51D59A2077F1AB00EF2821 /* GoalsTableView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F51D59B2077F1AB00EF2821 /* GoalsTableView.swift in Sources */,
 				3F190323202CADBB0002B74B /* FirebaseUserService.swift in Sources */,
 				3FE0F473201A434500F3CD18 /* ScrollController.swift in Sources */,
 				3F4666AB20237BC400C35818 /* GoalTableViewCellClosed.swift in Sources */,

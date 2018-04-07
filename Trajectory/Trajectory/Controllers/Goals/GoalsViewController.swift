@@ -27,14 +27,13 @@ class GoalsViewController: UITableViewController {
     
     struct CellData {
         static let ProgressHeight: CGFloat = 5
-        static let ProgressRoundedCorners: CGFloat = 6
+         static let ProgressRoundedCorners: CGFloat = 6
         static let DeadSpaceHeight: CGFloat = 50
     }
     
-    var row: Int = 0
-    var section: Int = 0
+    //var row: Int = 0
     //var section: Int = 0
-    var expandedRow: Int = -1
+    //var expandedRow: Int = -1
     var expandedSection: Int = -1
     var updated: Bool = false
     var firstTimeToUpdate: Bool = true
@@ -62,8 +61,6 @@ class GoalsViewController: UITableViewController {
         // https://stackoverflow.com/questions/25845855/transparent-navigation-bar-ios
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        //self.navigationController?.navigationBar.isTranslucent = true
-        //self.navigationController?.view.backgroundColor = .clear
         
         refreshControl = UIRefreshControl()
         
@@ -103,47 +100,38 @@ class GoalsViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return goals.count//1//0
+        return goals.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 2//1//goals.count
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // where it  breaks
+
         var cell: GoalsTableViewCell!
         
-        //if (indexPath.row == expandedRow){
         if (indexPath.row == 1){
             return tableView.dequeueReusableCell(withIdentifier: "goalCellDeadspace", for: indexPath)
-        }/*else if (indexPath.section == expandedSection){
-            cell = tableView.dequeueReusableCell(withIdentifier: "goalCellExpanded", for: indexPath) as! GoalsTableViewCell
-        }else{
-            cell = tableView.dequeueReusableCell(withIdentifier: "goalCellClosed", for: indexPath) as! GoalsTableViewCell
-        }*/
+        }
         else{
             cell = tableView.dequeueReusableCell(withIdentifier: "goalCellExpanded", for: indexPath) as! GoalsTableViewCell
 
         }
         
         cell.parent = self
-        //cell.cellNum = indexPath.row
+        
         cell.cellNum = indexPath.section
-        //cell.goal = goals[indexPath.row]
+        
         cell.goal = goals[indexPath.section]
-        //cell.Title.text = goals[indexPath.row].title
+        
         cell.Title.text = goals[indexPath.section].title
 
         
-        //guard let curProgress = goals[indexPath.row].currentProgress else {
         guard let curProgress = goals[indexPath.section].currentProgress else {
             cell.Progress.progress = 0
             return cell as! UITableViewCell
         }
-        //guard let toProgress = goals[indexPath.row].totalProgress else {
         guard let toProgress = goals[indexPath.section].totalProgress else {
             cell.Progress.progress = 0
             return cell as! UITableViewCell
@@ -160,49 +148,34 @@ class GoalsViewController: UITableViewController {
         return cell as! UITableViewCell
     }
     
-    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    /*override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         row = indexPath.row
         section = indexPath.section
         return indexPath
-    }
+    }*/
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
-        /*if let cell = self.tableView.cellForRow(at: indexPath) as? GoalTableViewCellClosed {
-            //cell.Expand();
-            setExpandedRow(row: cell.cellNum)
-        } else if let cell = self.tableView.cellForRow(at: indexPath) as? GoalTableViewCellExpanded {
-            //cell.Expand();
-            setExpandedRow(row: cell.cellNum)
-        }*/
         let cell = self.tableView.cellForRow(at: indexPath) as? GoalsTableViewCell
         if (cell != nil){
-            setExpandedRow(row: (cell?.cellNum)!)
+            setExpandedSection(section: (cell?.cellNum)!)
         }
     }
 
-    public func setExpandedRow(row: Int){
+    public func setExpandedSection(section: Int){
         var reload: [IndexPath] = [IndexPath]()
         
-        if (expandedSection == section){//expandedRow == row){
-            //if (expandedRow != -1){
+        if (expandedSection == section){
             if (expandedSection != -1){
-                //reload.append(IndexPath(row: expandedRow, section: 0))
-            reload.append(IndexPath(row: 0, section: expandedSection))
+                reload.append(IndexPath(row: 0, section: expandedSection))
             }
-            //expandedRow = -1
             expandedSection = -1
         } else{
-            //if (expandedRow != -1){
             if (expandedSection != -1){
-                //reload.append(IndexPath(row: expandedRow, section: 0))
                 reload.append(IndexPath(row:0, section: expandedSection))
             }
-            //expandedRow = row
-            expandedSection = row
-            //if (expandedRow != -1){
+            expandedSection = section
             if (expandedSection != -1){
-                //reload.append(IndexPath(row: expandedRow, section: 0))
                 reload.append(IndexPath(row: 0, section: expandedSection))
             }
         }
@@ -215,7 +188,6 @@ class GoalsViewController: UITableViewController {
             return CellData.DeadSpaceHeight;
         }
         else if (indexPath.section == expandedSection){
-        //if (indexPath.row == expandedRow){
             return 100
         }
         else {
@@ -225,8 +197,7 @@ class GoalsViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! EditGoalViewController
-        destinationVC.goal = goals[expandedSection]//expandedRow]
-        //expandedRow = -1
+        destinationVC.goal = goals[expandedSection]
         expandedSection = -1
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
