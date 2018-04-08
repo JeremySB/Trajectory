@@ -36,6 +36,9 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchController.searchBar.sizeToFit()
         
         searchController.searchBar.becomeFirstResponder()
+        
+       /* let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)*/
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -123,6 +126,12 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
             counter = counter + 1
         }
     }
+    
+    //Calls this function when the tap is recognized.
+   /* @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }*/
     
     //User begins typing in search bar
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {

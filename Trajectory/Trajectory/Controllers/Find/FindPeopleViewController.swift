@@ -31,6 +31,9 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         searchController.searchBar.sizeToFit()
         
         searchController.searchBar.becomeFirstResponder()
+        
+        /*let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: collectionView, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)*/
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -48,6 +51,12 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         
         return cell
     }
+    
+    //Calls this function when the tap is recognized.
+    /*@objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }*/
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!

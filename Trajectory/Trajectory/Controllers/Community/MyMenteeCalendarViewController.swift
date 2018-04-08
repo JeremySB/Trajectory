@@ -16,7 +16,14 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
     weak var _user: User!
     weak var user: User! {
         get{return self._user}
-        set{ menteeName?.text = newValue.name; self._user = newValue; viewDidAppear(false)}
+        set{
+            menteeName?.text = newValue.name
+            self._user = newValue
+            if let uid = user?.id {
+                imageService.bindProfileImage(for: uid, to: profileImage)
+            }
+            viewDidAppear(false)
+        }
     }
     
     @IBOutlet weak var profileImage: UIImageView!
@@ -38,9 +45,7 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
         goalsList.uid = _user?.id ?? ""
         goalsList.viewDidLoad()
         menteeName?.text = user?.name ?? ""
-        if let uid = user?.id {
-            imageService.bindProfileImage(for: uid, to: profileImage)
-        }
+
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true;
         // Do any additional setup after loading the view.
