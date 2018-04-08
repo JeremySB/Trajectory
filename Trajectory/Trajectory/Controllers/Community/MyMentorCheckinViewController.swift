@@ -10,6 +10,7 @@ import UIKit
 
 class MyMentorCheckinViewController: UIViewController, UserChild {
     lazy var imageService: ImageService = FirebaseImageService()
+    lazy var connService: ConnectionService = FirebaseConnectionService()
     weak var _user: User!
     weak var user: User! {
         get{return self._user}
@@ -90,10 +91,10 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
             alrightButton.isEnabled = true
             notGoodButton.isEnabled = true
             
-            //TODO: save status to backend with a date stamp
+            
             currentCheckIn = "doingWell"
-            let dateStamp = Date()
-            print(dateStamp)
+            connService.addCheckin(Checkin(status: .fine), with: user) { (error) in
+            }
             
             //Give haptic feedback
             impact.impactOccurred()
@@ -122,8 +123,8 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
             
             //TODO: save status to backend with a date stamp
             currentCheckIn = "alright"
-            let dateStamp = Date()
-            print(dateStamp)
+            connService.addCheckin(Checkin(status: .good), with: user) { (error) in
+            }
             
             //Give haptic feedback
             impact.impactOccurred()
@@ -152,8 +153,8 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
             
             //TODO: save status to backend with a date stamp
             currentCheckIn = "notGood"
-            let dateStamp = Date()
-            print(dateStamp)
+            connService.addCheckin(Checkin(status: .poor), with: user) { (error) in
+            }
             
             //Give haptic feedback
             impact.impactOccurred()

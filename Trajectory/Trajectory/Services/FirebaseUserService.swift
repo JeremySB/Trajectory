@@ -13,7 +13,8 @@ import CodableFirebase
 class FirebaseUserService: UserService {
     
     func getAllUsers(completion: @escaping ([User]?, UserServiceError?) -> Void) {
-        Firestore.firestore().collection(FirestoreValues.userCollection).getDocuments { (docs, error) in
+        Firestore.firestore().collection(FirestoreValues.userCollection)
+            .limit(to: 100).getDocuments { (docs, error) in
             if let error = error {
                 return completion(nil, UserServiceError.Misc(error.localizedDescription))
             }

@@ -14,11 +14,16 @@ class Checkin: Codable {
     }
     
     var status: Status?
-    var sentDate: Date?
     
+    // set by service
+    var dateCreated: Date?
     var id: String? = nil
     
+    init(status: Status) {
+        self.status = status
+    }
+    
     enum CodingKeys: String, CodingKey {
-        case status, sentDate
+        case status, dateCreated
     }
 }

@@ -17,6 +17,7 @@ protocol ConnectionService {
     func addMentorsListener(_ update: @escaping ([User]?, ConnectionServiceError?) -> Void)
     func addCheckin(_ checkin: Checkin, with mentor: User, completion: ((ConnectionServiceError?) -> Void)?)
     func addCheckinsListener(from menteeId: String, to mentorId: String, update: @escaping ([Checkin]?, ConnectionServiceError?) -> Void)
+    func addLatestCheckinListener(from menteeId: String, to mentorId: String, update: @escaping (Checkin?, ConnectionServiceError?) -> Void)
     
     func getConnection(_ id: String, completion: @escaping (Connection?, ConnectionServiceError?) -> Void)
     func getConnectionBetween(mentee menteeId: String, mentor mentorId: String, completion: @escaping (Connection?, ConnectionServiceError?) -> Void)

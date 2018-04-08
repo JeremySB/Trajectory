@@ -30,7 +30,7 @@ class FirebaseGoalsService: GoalsService {
     }
     
     func addGoalsListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void){
-        let listener = db.collection(FirestoreValues.goalCollection).whereField("owner", isEqualTo: uid).addSnapshotListener { (snapshot, error) in
+        let listener = db.collection(FirestoreValues.goalCollection).whereField(Goal.CodingKeys.owner.rawValue, isEqualTo: uid).addSnapshotListener { (snapshot, error) in
             if let error = error {
                 return update(nil, .Misc(error.localizedDescription))
             }

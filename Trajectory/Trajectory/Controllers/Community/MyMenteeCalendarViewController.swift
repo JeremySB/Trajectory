@@ -11,6 +11,8 @@ import UIKit
 class MyMenteeCalendarViewController: UIViewController, UserChild {
     
     lazy var imageService: ImageService = FirebaseImageService()
+    lazy var connectionService: ConnectionService = FirebaseConnectionService()
+    lazy var authService: AuthenticationService = FirebaseAuthenticationService()
     weak var _user: User!
     weak var user: User! {
         get{return self._user}
@@ -20,6 +22,7 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var menteeName: UILabel!
     @IBOutlet weak var organizations: UILabel!
+    @IBOutlet weak var lastCheckin: UILabel!
     @IBOutlet weak var goalsList: GoalsTableView!
     
     
@@ -31,6 +34,7 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lastCheckin.text = ""
         goalsList.uid = _user?.id ?? ""
         goalsList.viewDidLoad()
         menteeName?.text = user?.name ?? ""
@@ -42,6 +46,23 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
         // Do any additional setup after loading the view.
         menteeName.textColor = UIColor.white
         organizations.textColor = UIColor.white
+        
+        if let ourUid = authService.currentUID, let theirUid = user?.id {
+            connectionService.addLatestCheckinListener(from: theirUid, to: ourUid) { (checkin, error) in
+                guard let checkin = checkin, let status = checkin.status, let date = checkin.dateCreated else { return }
+                var msg = "Last Check-in: "
+                switch(status) {
+                case .good:
+                    msg += "Doing Well"
+                case .fine:
+                    msg += "Alright"
+                case .poor:
+                    msg += "Not Good"
+                }
+                let cal = Calendar(identifier: .gregorian)
+                msg += " (\(cal.component(.month, from: date))/\(cal.component(.day, from: date)))"
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

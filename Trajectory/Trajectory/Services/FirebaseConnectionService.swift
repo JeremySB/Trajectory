@@ -227,7 +227,8 @@ class FirebaseConnectionService : ConnectionService {
             completion?(.InvalidInputData)
             return
         }
-        checkinEncoded[FirestoreValues.checkinDateCreated] = FieldValue.serverTimestamp()
+        
+        checkinEncoded[Checkin.CodingKeys.dateCreated.rawValue] = FieldValue.serverTimestamp()
         
         getConnectionBetween(mentee: uid, mentor: mentorId) { (connection, error) in
             guard let connectionId = connection?.id else {
@@ -237,7 +238,9 @@ class FirebaseConnectionService : ConnectionService {
             Firestore.firestore().collection(FirestoreValues.connectionCollection)
                 .document(connectionId)
                 .collection(FirestoreValues.connectionCheckinCollection)
-                .addDocument(data: checkinEncoded)
+                .addDocument(data: checkinEncoded, completion: { (error) in
+                    print(error)
+                })
         }
     }
     
@@ -268,5 +271,28 @@ class FirebaseConnectionService : ConnectionService {
         }
     }
     
-    
+    func addLatestCheckinListener(from menteeId: String, to mentorId: String, update: @escaping (Checkin?, ConnectionServiceError?) -> Void) {
+        getConnectionBetween(mentee: menteeId, mentor: mentorId) { (connection, error) in
+            if let connectionId = connection?.id {
+                let listener = Firestore.firestore().collection(FirestoreValues.connectionCollection)
+                    .document(connectionId)
+                    .collection(FirestoreValues.connectionCheckinCollection)
+                    .order(by: Checkin.CodingKeys.dateCreated.rawValue, descending: true)
+                    .limit(to: 1)
+                    .addSnapshotListener({ (snapshot, error) in
+                        guard let checkinDoc = snapshot?.documents.first else {
+                            update(nil, .Misc(error?.localizedDescription ?? ""))
+                            return
+                        }
+                        if let checkin = try? FirestoreDecoder().decode(Checkin.self, from: checkinDoc.data()) {
+                            update(checkin, nil)
+                        }
+                    })
+                self.listeners.append(listener)
+            }
+            else {
+                update(nil, .InvalidServerData)
+            }
+        }
+    }
 }

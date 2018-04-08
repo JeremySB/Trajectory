@@ -26,7 +26,7 @@ class GoalsTableView: UITableView {
     
     func viewDidLoad() {
         self.dataSource = self
-        goalsService.addGoalsListener { (receivedGoals, error) in
+        goalsService.addGoalsListener(uid) { (receivedGoals, error) in
             if let error = error {
                 print(error.localizedDescription)
                 return
@@ -111,10 +111,10 @@ extension GoalsTableView: UITableViewDelegate, UITableViewDataSource {
         var cell: GoalsTableViewCell!
      
         if (indexPath.row == 1){
-                return dequeueReusableCell(withIdentifier: "goalCellDeadspaceC", for: indexPath)
+            return dequeueReusableCell(withIdentifier: "goalCellDeadspaceC", for: indexPath)
         }
         else{
-                cell = dequeueReusableCell(withIdentifier: "goalCellExpandedC", for: indexPath) as! GoalsTableViewCell
+            cell = dequeueReusableCell(withIdentifier: "goalCellExpandedC", for: indexPath) as! GoalsTableViewCell
         }
      
         //cell.parent = self
