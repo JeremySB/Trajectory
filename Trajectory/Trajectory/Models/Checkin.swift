@@ -23,6 +23,9 @@ class Checkin: Codable {
         self.status = status
     }
     
+    init() {}
+    
+    
     enum CodingKeys: String, CodingKey {
         case status, dateCreated
     }
