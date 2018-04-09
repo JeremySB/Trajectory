@@ -239,7 +239,7 @@ class FirebaseConnectionService : ConnectionService {
                 .document(connectionId)
                 .collection(FirestoreValues.connectionCheckinCollection)
                 .addDocument(data: checkinEncoded, completion: { (error) in
-                    print(error)
+                    
                 })
         }
     }

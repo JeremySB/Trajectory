@@ -24,7 +24,7 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
                 imageService.bindProfileImage(for: uid, to: profileImage)
             }
             
-            if let ourUid = authService.currentUID, let theirUid = user?.id {
+            if let ourUid = authService.currentUID, let theirUid = user.id {
                 connectionService.addLatestCheckinListener(from: theirUid, to: ourUid) { (checkin, error) in
                     guard let checkin = checkin, let status = checkin.status, let date = checkin.dateCreated else { return }
                     var msg = "Last Check-in: "
