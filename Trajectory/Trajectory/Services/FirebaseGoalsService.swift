@@ -53,7 +53,35 @@ class FirebaseGoalsService: GoalsService {
         }
         
         listeners.append(listener)
+    }
+    
+    func addActiveGoalListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void) {
+        let listener = db.collection(FirestoreValues.goalCollection)
+            .whereField(Goal.CodingKeys.owner.rawValue, isEqualTo: uid)
+            .whereField(Goal.CodingKeys.endDate.rawValue, isLessThan: Date())
+            .addSnapshotListener { (snapshot, error) in
+            if let error = error {
+                return update(nil, .Misc(error.localizedDescription))
+            }
+            guard let snapshot = snapshot else {
+                return
+            }
+            var goals = [Goal]()
+            for goal in snapshot.documents {
+                do {
+                    let goalDecoded = try FirestoreDecoder().decode(Goal.self, from: goal.data())
+                    goalDecoded.id = goal.documentID
+                    goals.append(goalDecoded)
+                }
+                catch let error {
+                    print("Failed to decode: ", error, goal.data())
+                }
+            }
+            
+            update(goals, nil)
+        }
         
+        listeners.append(listener)
     }
     
     func addGoal(_ goal: Goal, completion: ((GoalsServiceError?) -> Void)?) {

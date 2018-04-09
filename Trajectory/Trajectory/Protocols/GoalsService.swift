@@ -16,6 +16,8 @@ protocol GoalsService {
     func addGoalsListener(_: @escaping ([Goal]?, GoalsServiceError?) -> Void)
     func addGoalsListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void)
     
+    func addActiveGoalListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void)
+    
     func removeGoal(_ : Goal, completion: ((GoalsServiceError?) -> Void)?)
     
     func editGoal(_ goal: Goal, completion: ((GoalsServiceError?) -> Void)?)
