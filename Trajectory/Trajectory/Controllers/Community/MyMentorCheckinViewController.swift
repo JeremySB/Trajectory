@@ -11,18 +11,7 @@ import UIKit
 class MyMentorCheckinViewController: UIViewController, UserChild {
     lazy var imageService: ImageService = FirebaseImageService()
     lazy var connService: ConnectionService = FirebaseConnectionService()
-    weak var _user: User!
-    weak var user: User! {
-        get{return self._user}
-        set {
-            mentorName?.text = newValue.name
-            self._user = newValue
-            if let uid = _user.id {
-                imageService.bindProfileImage(for: uid, to: self.profileImage)
-            }
-            viewDidAppear(false)
-        }
-    }
+    weak var user: User!
     
     //Variable that holds current check-in
     var currentCheckIn : String? = nil
@@ -37,15 +26,29 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
     @IBOutlet weak var doingWellButton: UIButton!
     @IBOutlet weak var alrightButton: UIButton!
     @IBOutlet weak var notGoodButton: UIButton!
+
+    func writeUserData(){
+        mentorName.text = user?.name ?? ""
+        
+        if let uid = user?.id {
+            imageService.bindProfileImage(for: uid, to: profileImage)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mentorName.text = user?.name ?? ""
+        
+        writeUserData()
         
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true;
         // Do any additional setup after loading the view.
         getAndSetCheckInButtons()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        writeUserData()
     }
     
     @IBAction func sendToCalendar(_ sender: Any) {
@@ -164,10 +167,7 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        mentorName.text = user?.name ?? ""
-    }
+
 
     /*
     // MARK: - Navigation

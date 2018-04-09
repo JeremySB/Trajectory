@@ -13,38 +13,7 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
     lazy var imageService: ImageService = FirebaseImageService()
     lazy var connectionService: ConnectionService = FirebaseConnectionService()
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
-    weak var _user: User!
-    weak var user: User! {
-        get{return self._user}
-        set{
-            menteeName?.text = newValue.name
-            self._user = newValue
-            
-            if let uid = user?.id {
-                imageService.bindProfileImage(for: uid, to: profileImage)
-            }
-            
-            if let ourUid = authService.currentUID, let theirUid = user.id {
-                connectionService.addLatestCheckinListener(from: theirUid, to: ourUid) { (checkin, error) in
-                    guard let checkin = checkin, let status = checkin.status, let date = checkin.dateCreated else { return }
-                    var msg = "Last Check-in: "
-                    switch(status) {
-                    case .good:
-                        msg += "Doing Well"
-                    case .fine:
-                        msg += "Alright"
-                    case .poor:
-                        msg += "Not Good"
-                    }
-                    let cal = Calendar(identifier: .gregorian)
-                    msg += " (\(cal.component(.month, from: date))/\(cal.component(.day, from: date)))"
-                    self.lastCheckin.text = msg
-                }
-            }
-            
-            viewDidAppear(false)
-        }
-    }
+    weak var user: User!
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var menteeName: UILabel!
@@ -62,9 +31,10 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
     override func viewDidLoad() {
         super.viewDidLoad()
         lastCheckin.text = ""
-        goalsList.uid = _user?.id ?? ""
+        goalsList.uid = user?.id ?? ""
         goalsList.viewDidLoad()
-        menteeName?.text = user?.name ?? ""
+        
+        writeUserData()
 
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true;
@@ -72,16 +42,37 @@ class MyMenteeCalendarViewController: UIViewController, UserChild {
         menteeName.textColor = UIColor.white
         organizations.textColor = UIColor.white
         lastCheckin.textColor = UIColor.white
-    
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        menteeName?.text = user?.name ?? ""
+        writeUserData()
         goalsList.viewDidAppear()
     }
     
-
+    func writeUserData(){
+        menteeName?.text = user?.name ?? ""
+        if let uid = user?.id {
+            imageService.bindProfileImage(for: uid, to: profileImage)
+        }
+        if let ourUid = authService.currentUID, let theirUid = user?.id {
+            connectionService.addLatestCheckinListener(from: theirUid, to: ourUid) { (checkin, error) in
+                guard let checkin = checkin, let status = checkin.status, let date = checkin.dateCreated else { return }
+                var msg = "Last Check-in: "
+                switch(status) {
+                case .good:
+                    msg += "Doing Well"
+                case .fine:
+                    msg += "Alright"
+                case .poor:
+                    msg += "Not Good"
+                }
+                let cal = Calendar(identifier: .gregorian)
+                msg += " (\(cal.component(.month, from: date))/\(cal.component(.day, from: date)))"
+                self.lastCheckin.text = msg
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

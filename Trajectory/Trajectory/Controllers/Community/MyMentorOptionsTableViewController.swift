@@ -9,11 +9,7 @@
 import UIKit
 
 class MyMentorOptionsTableViewController: UITableViewController, UserChild {
-    weak var _user: User!
-    weak var user: User! {
-        get{return self._user}
-        set{ mentorName?.text = newValue.name; self._user = newValue; viewDidAppear(false)}
-    }
+    weak var user: User!
     
     lazy var imageService: ImageService = FirebaseImageService()
     lazy var connectionService: ConnectionService = FirebaseConnectionService()
@@ -22,12 +18,18 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var mentorName: UILabel!
     @IBOutlet weak var organizations: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        mentorName?.text = user.name
+    
+    func writeUserData(){
+        mentorName?.text = user?.name ?? ""
         if let uid = user.id {
             imageService.bindProfileImage(for: uid, to: self.profileImage)
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        writeUserData()
         
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true;
@@ -37,6 +39,11 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        writeUserData()
     }
     
     // MARK: - Table view data source

@@ -11,24 +11,17 @@ import UIKit
 class CommSwipeMenteeViewController: ScrollController {
     weak var user: User!
     
-    required init?(coder: NSCoder){
-        super.init(coder: coder)
-        addViewControllers(views: "MyMenteeCalendar", "MyMenteeOptions")
-        //addViewControllers(views: "FindOrgs")
-    }
-    override init(){
-        super.init()
-        addViewControllers(views: "MyMenteeCalendar", "MyMenteeOptions")
-        //addViewControllers(views: "FindOrgs")
-    }
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        addViewControllers(views: "MyMenteeCalendar", "MyMenteeOptions")
+        
         for view in orderedViewControllers {
             var tmp = view as! UserChild
             tmp.user = self.user
         }
+        
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "TrajectoryBackground")
         self.view.insertSubview(backgroundImage, at: 0)

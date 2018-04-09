@@ -9,15 +9,8 @@
 import UIKit
 
 class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
-    weak var _user: User!
-    weak var user: User! {
-        get{return self._user}
-        set{
-            menteeName?.text = newValue.name;
-            self._user = newValue;
-            viewDidAppear(false)}
-    }
-    
+    weak var user: User!
+
     lazy var imageService: ImageService = FirebaseImageService()
     lazy var connectionService: ConnectionService = FirebaseConnectionService()
     lazy var authService: AuthenticationService = FirebaseAuthenticationService()
@@ -26,17 +19,30 @@ class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
     @IBOutlet weak var menteeName: UILabel!
     @IBOutlet weak var organizations: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func writeUserData(){
         menteeName?.text = user.name
         if let uid = user.id {
             imageService.bindProfileImage(for: uid, to: self.profileImage)
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        writeUserData()
+        
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2
+        self.profileImage.clipsToBounds = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        writeUserData()
     }
 
     // MARK: - Table view data source

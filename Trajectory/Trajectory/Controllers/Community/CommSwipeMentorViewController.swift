@@ -16,25 +16,16 @@ class CommSwipeMentorViewController: ScrollController {
 
     weak var user: User!
     
-    required init?(coder: NSCoder){
-        super.init(coder: coder)
-        addViewControllers(views: "MyMentorCheckin", "MyMentorOptions")
-        //addViewControllers(views: "FindOrgs")
-    }
-    override init(){
-        super.init()
-        addViewControllers(views: "MyMentorCheckin", "MyMentorOptions")
-        //addViewControllers(views: "FindOrgs")
-    }
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        addViewControllers(views: "MyMentorCheckin", "MyMentorOptions")
+        
         for view in orderedViewControllers {
             var tmp = view as! UserChild
             tmp.user = self.user
         }
+        
+        super.viewDidLoad()
+        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "TrajectoryBackground")
         self.view.insertSubview(backgroundImage, at: 0)
