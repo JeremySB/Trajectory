@@ -179,8 +179,12 @@ class FirebaseConnectionService : ConnectionService {
         let listener = Firestore.firestore().collection(FirestoreValues.connectionCollection)
             .whereField(FirestoreValues.connectionMentor, isEqualTo: uid)
             .whereField(FirestoreValues.connectionMentorStatus, isEqualTo: Connection.Status.accepted.rawValue)
+            .whereField(Connection.CodingKeys.mentorshipEndDate.rawValue, isGreaterThan: Date())
             .addSnapshotListener({ (snapshot, error) in
-                guard let snapshot = snapshot else { return }
+                guard let snapshot = snapshot else {
+                    update([User](), nil)
+                    return
+                }
                 var menteeIds = [String]()
                 for connection in snapshot.documents {
                     guard let connectionDecoded = try? FirestoreDecoder().decode(Connection.self, from: connection.data()) else { continue }
@@ -202,8 +206,12 @@ class FirebaseConnectionService : ConnectionService {
         let listener = Firestore.firestore().collection(FirestoreValues.connectionCollection)
             .whereField(FirestoreValues.connectionMentee, isEqualTo: uid)
             .whereField(FirestoreValues.connectionMentorStatus, isEqualTo: Connection.Status.accepted.rawValue)
+            .whereField(Connection.CodingKeys.mentorshipEndDate.rawValue, isGreaterThan: Date())
             .addSnapshotListener({ (snapshot, error) in
-                guard let snapshot = snapshot else { return }
+                guard let snapshot = snapshot else {
+                    update([User](), nil)
+                    return
+                }
                 var mentorIds = [String]()
                 for connection in snapshot.documents {
                     guard let connectionDecoded = try? FirestoreDecoder().decode(Connection.self, from: connection.data()) else { continue }
