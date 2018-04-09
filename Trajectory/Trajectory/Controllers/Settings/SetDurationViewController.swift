@@ -24,7 +24,11 @@ class SetDurationViewController: UIViewController {
         if nameLabel.text == "" {nameLabel.text = "Error: No Name Found"}
         //organizationLabel.text = menteeRequest?.mentee.organization ?? "No Organizations Listed"
         if organizationLabel.text == "" {organizationLabel.text = "No Organizations Listed"}
+        
+        let offSetDays = 90
+        let defaultDate = Date().addingTimeInterval(TimeInterval(60 * 60 * 24 * offSetDays))
         endDate.minimumDate = Date()
+        endDate.setDate(defaultDate, animated: true)
         endDate.setValue(UIColor.white, forKey: "textColor")
         
         if let uid = menteeRequest?.mentee.id {
