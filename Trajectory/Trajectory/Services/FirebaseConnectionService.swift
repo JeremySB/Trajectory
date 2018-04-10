@@ -60,6 +60,31 @@ class FirebaseConnectionService : ConnectionService {
         }
     }
     
+    func set(endDate: Date, with mentee: User, completion: ((ConnectionServiceError?) -> Void)?) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            completion?(.NotLoggedIn)
+            return
+        }
+        
+        guard let menteeId = mentee.id else {
+            completion?(.InvalidInputData)
+            return
+        }
+        
+        getConnectionBetween(mentee: menteeId, mentor: uid) { (connection, error) in
+            if let connection = connection {
+                connection.mentorStatus = .accepted
+                connection.mentorshipEndDate = endDate
+                self.saveConnection(connection, completion: { (error2) in
+                    completion?(error2)
+                })
+            }
+            else {
+                completion?(error)
+            }
+        }
+    }
+    
     func saveConnection(_ connection: Connection, completion: ((ConnectionServiceError?) -> Void)?) {
         guard let id = connection.id, let connEncoded = try? FirestoreEncoder().encode(connection) else {
             completion?(.InvalidInputData)
@@ -177,8 +202,8 @@ class FirebaseConnectionService : ConnectionService {
             return
         }
         let listener = Firestore.firestore().collection(FirestoreValues.connectionCollection)
-            .whereField(FirestoreValues.connectionMentor, isEqualTo: uid)
-            .whereField(FirestoreValues.connectionMentorStatus, isEqualTo: Connection.Status.accepted.rawValue)
+            .whereField(Connection.CodingKeys.mentor.rawValue, isEqualTo: uid)
+            .whereField(Connection.CodingKeys.mentorStatus.rawValue, isEqualTo: Connection.Status.accepted.rawValue)
             .whereField(Connection.CodingKeys.mentorshipEndDate.rawValue, isGreaterThan: Date())
             .addSnapshotListener({ (snapshot, error) in
                 guard let snapshot = snapshot else {
@@ -204,7 +229,7 @@ class FirebaseConnectionService : ConnectionService {
             return
         }
         let listener = Firestore.firestore().collection(FirestoreValues.connectionCollection)
-            .whereField(FirestoreValues.connectionMentee, isEqualTo: uid)
+            .whereField(Connection.CodingKeys.mentee.rawValue, isEqualTo: uid)
             .whereField(FirestoreValues.connectionMentorStatus, isEqualTo: Connection.Status.accepted.rawValue)
             .whereField(Connection.CodingKeys.mentorshipEndDate.rawValue, isGreaterThan: Date())
             .addSnapshotListener({ (snapshot, error) in
