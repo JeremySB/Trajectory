@@ -32,6 +32,7 @@ class FirebaseGoalsService: GoalsService {
     func addGoalsListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void){
         let listener = db.collection(FirestoreValues.goalCollection).whereField(Goal.CodingKeys.owner.rawValue, isEqualTo: uid).addSnapshotListener { (snapshot, error) in
             if let error = error {
+                print("\(error)")
                 return update(nil, .Misc(error.localizedDescription))
             }
             guard let snapshot = snapshot else {
@@ -61,6 +62,7 @@ class FirebaseGoalsService: GoalsService {
             .whereField(Goal.CodingKeys.endDate.rawValue, isLessThan: Date())
             .addSnapshotListener { (snapshot, error) in
             if let error = error {
+                print("\(error)")
                 return update(nil, .Misc(error.localizedDescription))
             }
             guard let snapshot = snapshot else {
@@ -156,6 +158,7 @@ class FirebaseGoalsService: GoalsService {
     func getGoals(_ uid: String, completion: @escaping ([Goal]?, GoalsServiceError?) -> Void){
         db.collection(FirestoreValues.goalCollection).whereField("owner", isEqualTo: uid).getDocuments { (snapshot, error) in
             if let error = error {
+                print("\(error)")
                 return completion(nil, .Misc(error.localizedDescription))
             }
             guard let snapshot = snapshot else {

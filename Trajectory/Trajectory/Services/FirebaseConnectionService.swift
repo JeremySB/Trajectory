@@ -103,6 +103,7 @@ class FirebaseConnectionService : ConnectionService {
     func getConnection(_ id: String, completion: @escaping (Connection?, ConnectionServiceError?) -> Void) {
         Firestore.firestore().collection(FirestoreValues.connectionCollection).document(id).getDocument { (snapshot, error) in
             if let error = error {
+                print("\(error)")
                 completion(nil, .Misc(error.localizedDescription))
             }
             else if let data = snapshot?.data() {
@@ -124,6 +125,7 @@ class FirebaseConnectionService : ConnectionService {
             .limit(to: 1)
             .getDocuments { (snapshot, error) in
                 if let error = error {
+                    print("\(error)")
                     completion(nil, .Misc(error.localizedDescription))
                     return
                 }
@@ -168,9 +170,11 @@ class FirebaseConnectionService : ConnectionService {
         }
         
         listeners.append(Firestore.firestore().collection(FirestoreValues.connectionCollection)
-            .whereField(FirestoreValues.connectionMentor, isEqualTo: uid).whereField(FirestoreValues.connectionMentorStatus, isEqualTo: Connection.Status.pending.rawValue)
+            .whereField(FirestoreValues.connectionMentor, isEqualTo: uid)
+            .whereField(FirestoreValues.connectionMentorStatus, isEqualTo: Connection.Status.pending.rawValue)
             .addSnapshotListener { (snapshot, error) in
                 if let error = error {
+                    print("\(error)")
                     return update(nil, .Misc(error.localizedDescription))
                 }
                 guard let snapshot = snapshot else { return }
@@ -206,6 +210,9 @@ class FirebaseConnectionService : ConnectionService {
             .whereField(Connection.CodingKeys.mentorStatus.rawValue, isEqualTo: Connection.Status.accepted.rawValue)
             .whereField(Connection.CodingKeys.mentorshipEndDate.rawValue, isGreaterThan: Date())
             .addSnapshotListener({ (snapshot, error) in
+                if let error = error {
+                    print("\(error)")
+                }
                 guard let snapshot = snapshot else {
                     update([User](), nil)
                     return
@@ -233,6 +240,9 @@ class FirebaseConnectionService : ConnectionService {
             .whereField(FirestoreValues.connectionMentorStatus, isEqualTo: Connection.Status.accepted.rawValue)
             .whereField(Connection.CodingKeys.mentorshipEndDate.rawValue, isGreaterThan: Date())
             .addSnapshotListener({ (snapshot, error) in
+                if let error = error {
+                    print("\(error)")
+                }
                 guard let snapshot = snapshot else {
                     update([User](), nil)
                     return

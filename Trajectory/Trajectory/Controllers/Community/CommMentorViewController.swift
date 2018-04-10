@@ -27,7 +27,6 @@ class CommMentorViewController: UIViewController {
         connService.addMentorsListener { (mentors, error) in
             if let mentors = mentors {
                 self.mentors = mentors
-                print(mentors)
                 if mentors.count == 0 {
                     self.getStartedMessage.isHidden = false
                 } else {
@@ -75,9 +74,6 @@ extension CommMentorViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-
-
 }
 
 extension CommMentorViewController: UICollectionViewDelegate {
