@@ -34,6 +34,7 @@ class UpdateEndDateViewController: UIViewController {
    
     @IBAction func setDateAndAcceptBtn(_ sender: Any) {
         //TODO: update end date on backend
+        print("WILL SAVE NEW END DATE")
     }
     
 

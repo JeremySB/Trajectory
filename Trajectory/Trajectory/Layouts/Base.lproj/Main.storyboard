@@ -1286,7 +1286,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usb-7L-Ksy">
-                                                    <rect key="frame" x="112" y="25" width="73" height="21"/>
+                                                    <rect key="frame" x="112" y="25" width="154" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2661,6 +2661,7 @@
                                 <state key="normal" title="Set Date and Accept"/>
                                 <connections>
                                     <action selector="setDateAndAcceptBtn:" destination="jxe-1C-Vc2" eventType="touchUpInside" id="lUd-dJ-rPl"/>
+                                    <segue destination="arK-Dn-sLp" kind="unwind" unwindAction="unwindToOptionsWithSegue:" id="FRV-9h-RT3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Update the end date for this mentorship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-xc-TDE">
@@ -2685,6 +2686,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9w-IV-P7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="arK-Dn-sLp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="10652" y="1406"/>
         </scene>
