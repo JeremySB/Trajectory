@@ -99,6 +99,16 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         }
     }
     
+    @IBAction func notificationsSwitch(_ sender: Any) {
+        print("Notifcations Switch Changed")
+        //TODO: save status on backend
+    }
+    
+    @IBAction func willingToMentorSwitch(_ sender: Any) {
+        print("Willing To Mentor Switch Changed")
+        //TODO: save status on backend
+    }
+    
     @IBOutlet weak var logoutButton: UIButton!
     
     //Function to photo library to update image when tapped (https://stackoverflow.com/questions/27880607/how-to-assign-an-action-for-uiimageview-object-in-swift)
