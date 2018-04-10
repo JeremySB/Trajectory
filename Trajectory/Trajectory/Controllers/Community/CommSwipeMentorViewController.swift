@@ -9,7 +9,7 @@
 import UIKit
 
 protocol UserChild {
-    weak var user: User! {get set}
+    var user: User! {get set}
 }
 
 class CommSwipeMentorViewController: ScrollController {

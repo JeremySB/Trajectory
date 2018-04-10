@@ -13,7 +13,7 @@ class GoalTableViewCellClosed: UITableViewCell, GoalsTableViewCell{
     
     lazy var goalsService: GoalsService = FirebaseGoalsService()
     
-    weak var parent: GoalsViewController!
+    weak var parent: GoalsTableViewController!
     var cellNum: Int = -1
     var updated: Bool = true
     @IBOutlet weak var Title: UILabel!

@@ -26,15 +26,6 @@ class GoalsTableView: UITableView {
     
     func viewDidLoad() {
         self.dataSource = self
-        goalsService.addGoalsListener(uid) { (receivedGoals, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            guard let receivedGoals = receivedGoals else { return }
-            self.goals = receivedGoals
-            self.reloadData()
-        }
         
         refreshControl = UIRefreshControl()
         

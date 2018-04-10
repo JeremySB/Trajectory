@@ -14,7 +14,7 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
     lazy var goalsService: GoalsService = FirebaseGoalsService()
 
     
-    public weak var parent: GoalsViewController!
+    public weak var parent: GoalsTableViewController!
     var cellNum: Int = -1
     var updated: Bool = false
     @IBOutlet weak var Title: UILabel!
@@ -46,6 +46,7 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
         goal.currentProgress = max((goal.currentProgress ?? 0) - (Int(AdjustAmount.text ?? "") ?? 0), 0)
         goalsService.editGoal(goal, completion: nil)
     }
+    
     override func prepareForReuse() {
         cellNum = -1
         /*Title = nil

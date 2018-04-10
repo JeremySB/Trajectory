@@ -56,7 +56,15 @@ class FirebaseGoalsService: GoalsService {
         listeners.append(listener)
     }
     
-    func addActiveGoalListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void) {
+    func addActiveGoalsListener(_ update: @escaping ([Goal]?, GoalsServiceError?) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            update(nil, .NotLoggedIn)
+            return
+        }
+        addActiveGoalsListener(uid, update: update)
+    }
+    
+    func addActiveGoalsListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void) {
         let listener = db.collection(FirestoreValues.goalCollection)
             .whereField(Goal.CodingKeys.owner.rawValue, isEqualTo: uid)
             .whereField(Goal.CodingKeys.endDate.rawValue, isLessThan: Date())
