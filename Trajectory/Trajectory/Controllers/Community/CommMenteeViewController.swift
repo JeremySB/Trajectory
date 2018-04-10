@@ -41,7 +41,6 @@ class CommMenteeViewController: UIViewController {
         
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = childView.indexPathsForSelectedItems {
             let mentee = self.mentees[indexPath[0][1]]

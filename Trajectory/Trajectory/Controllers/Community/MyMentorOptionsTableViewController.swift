@@ -81,6 +81,7 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
     }
     
     func cancelMentorship(alert: UIAlertAction!) {
+        self.navigationController?.popViewController(animated: true)
         guard let uid = authService.currentUID, let mentorId = user.id else { return }
         connectionService.getConnectionBetween(mentee: uid, mentor: mentorId) { (conn, error) in
             if let conn = conn {
