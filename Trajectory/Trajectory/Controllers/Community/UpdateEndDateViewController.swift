@@ -15,6 +15,9 @@ class UpdateEndDateViewController: UIViewController {
     
     @IBOutlet weak var acceptBtn: UIButton!
     
+    @IBOutlet weak var cancelBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +30,9 @@ class UpdateEndDateViewController: UIViewController {
         acceptBtn.layer.borderColor = UIColor.lightGray.cgColor
         acceptBtn.layer.borderWidth = 2
         acceptBtn.layer.cornerRadius = 5
-        
+        cancelBtn.layer.borderColor = UIColor.lightGray.cgColor
+        cancelBtn.layer.borderWidth = 2
+        cancelBtn.layer.cornerRadius = 5
     }
     
 
@@ -35,6 +40,11 @@ class UpdateEndDateViewController: UIViewController {
     @IBAction func setDateAndAcceptBtn(_ sender: Any) {
         //TODO: update end date on backend
         print("WILL SAVE NEW END DATE")
+    }
+    
+    
+    @IBAction func cancelUpdate(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 
