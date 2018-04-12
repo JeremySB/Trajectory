@@ -18,7 +18,7 @@ class FindCollectionView: UICollectionView {
     }
     */
     
-    weak var parent : UIViewController!
+    var parent : UIViewController!
     
     //Calls this function when the tap is recognized.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

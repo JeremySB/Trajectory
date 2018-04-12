@@ -10,7 +10,7 @@ import UIKit
 
 class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
 
-    weak var scrollController: FindViewController!
+    var scrollController: FindViewController!
     var searchResults = [[String : [User]]]()
     var usersPerOrganization = [Organization : [User]]()
     var mentors : [User] = []

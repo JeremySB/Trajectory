@@ -9,7 +9,9 @@
 import UIKit
 
 class UpdateEndDateViewController: UIViewController {
+    var user: User!
     
+    lazy var connectionService: ConnectionService = FirebaseConnectionService()
     
     @IBOutlet weak var endDate: UIDatePicker!
     
@@ -38,8 +40,10 @@ class UpdateEndDateViewController: UIViewController {
 
    
     @IBAction func setDateAndAcceptBtn(_ sender: Any) {
-        //TODO: update end date on backend
-        print("WILL SAVE NEW END DATE")
+        connectionService.set(endDate: endDate.date, with: user) { (error) in
+            
+        }
+        dismiss(animated: true, completion: nil)
     }
     
     

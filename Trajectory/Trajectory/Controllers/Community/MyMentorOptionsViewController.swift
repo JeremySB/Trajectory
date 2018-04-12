@@ -10,7 +10,7 @@ import UIKit
 
 class MyMentorOptionsViewController: UIViewController, UserChild {
     
-    weak var user: User!
+    var user: User!
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var mentorName: UILabel!

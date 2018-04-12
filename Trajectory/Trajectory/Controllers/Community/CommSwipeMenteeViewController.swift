@@ -9,7 +9,7 @@
 import UIKit
 
 class CommSwipeMenteeViewController: ScrollController {
-    weak var user: User!
+    var user: User!
     
     override func viewDidLoad() {
         addViewControllers(views: "MyMenteeCalendar", "MyMenteeOptions")

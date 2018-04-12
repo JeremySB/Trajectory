@@ -9,11 +9,11 @@
 import UIKit
 
 protocol GoalsTableViewCell {
-    weak var goal: Goal! {get set}
-    weak var parent: GoalsTableViewController! {get set}
+    var goal: Goal! {get set}
+    var parent: GoalsTableViewController! {get set}
     var cellNum: Int {get set}
-    weak var Title: UILabel! {get set}
-    weak var Progress: GoalsProgressView! {get set}
-    weak var ProgressLabel: UILabel! {get set}
+    var Title: UILabel! {get set}
+    var Progress: GoalsProgressView! {get set}
+    var ProgressLabel: UILabel! {get set}
     var updated: Bool {get set}
 }

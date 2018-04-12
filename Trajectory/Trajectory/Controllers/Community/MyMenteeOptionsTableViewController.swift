@@ -9,7 +9,7 @@
 import UIKit
 
 class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
-    weak var user: User!
+    var user: User!
 
     lazy var imageService: ImageService = FirebaseImageService()
     lazy var connectionService: ConnectionService = FirebaseConnectionService()
@@ -106,6 +106,12 @@ class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
     @IBAction func sendToCalendar(_ sender: Any) {
         if UIApplication.shared.canOpenURL(URL(string:"calshow://")!) {
             UIApplication.shared.open(URL(string:"calshow://")!, options: [:], completionHandler: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? UpdateEndDateViewController {
+            vc.user = user
         }
     }
 }

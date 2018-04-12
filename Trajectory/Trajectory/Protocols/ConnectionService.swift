@@ -13,6 +13,7 @@ protocol ConnectionService {
     func addOpenMenteeRequestsListener(_ update: @escaping ([MenteeRequest]?, ConnectionServiceError?) -> Void)
     func accept(menteeRequest: MenteeRequest, until endDate: Date, completion: ((ConnectionServiceError?) -> Void)?)
     func decline(menteeRequest: MenteeRequest, completion: ((ConnectionServiceError?) -> Void)?)
+    func set(endDate: Date, with mentee: User, completion: ((ConnectionServiceError?) -> Void)?)
     func addMenteesListener(_ update: @escaping ([User]?, ConnectionServiceError?) -> Void)
     func addMentorsListener(_ update: @escaping ([User]?, ConnectionServiceError?) -> Void)
     func addCheckin(_ checkin: Checkin, with mentor: User, completion: ((ConnectionServiceError?) -> Void)?)

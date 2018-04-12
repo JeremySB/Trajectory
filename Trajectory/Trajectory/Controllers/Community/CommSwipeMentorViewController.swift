@@ -14,7 +14,7 @@ protocol UserChild {
 
 class CommSwipeMentorViewController: ScrollController {
 
-    weak var user: User!
+    var user: User!
     
     override func viewDidLoad() {
         addViewControllers(views: "MyMentorCheckin", "MyMentorOptions")

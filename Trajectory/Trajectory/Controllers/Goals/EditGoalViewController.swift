@@ -9,7 +9,7 @@
 import UIKit
 
 class EditGoalViewController: UIViewController {
-    weak var goal: Goal!
+    var goal: Goal!
     
     lazy var goalsService: GoalsService = FirebaseGoalsService()
     
