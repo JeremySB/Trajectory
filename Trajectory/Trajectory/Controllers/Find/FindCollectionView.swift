@@ -18,6 +18,12 @@ class FindCollectionView: UICollectionView {
     }
     */
     
+    weak var parent : UIViewController!
     
+    //Calls this function when the tap is recognized.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.parent.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
 
 }

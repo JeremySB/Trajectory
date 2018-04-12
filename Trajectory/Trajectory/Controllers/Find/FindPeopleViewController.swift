@@ -20,6 +20,8 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.parent = self
+        
         // Do any additional setup after loading the view.
         
         self.searchController.searchResultsUpdater = self
@@ -31,9 +33,7 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
         searchController.searchBar.sizeToFit()
         
         searchController.searchBar.becomeFirstResponder()
-        
-        /*let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: collectionView, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)*/
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,13 +53,12 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     //Calls this function when the tap is recognized.
-    /*@objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }*/
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: FindCollectionView!
     
     //MARK: Search Bar
     
@@ -118,7 +117,7 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
                 vc.user = self.searchResults[indexPath[0][1]]
             }
         }
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "TESTING", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
 }

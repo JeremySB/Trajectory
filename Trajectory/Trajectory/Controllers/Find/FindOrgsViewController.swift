@@ -25,6 +25,8 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
 
+         collectionView.parent = self
+        
         // Do any additional setup after loading the view.
         
         self.searchController.searchResultsUpdater = self
@@ -64,6 +66,11 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.displayContent(uid: uid, name: name ?? "Error")
         
         return cell
+    }
+    
+    //Calls this function when the tap is recognized.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -173,6 +180,6 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
                 vc.user = Array(searchResults[indexPath[0][0]])[0].value[indexPath[0][1]] //self.searchResults[indexPath[0][1]]
             }
         }
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "TESTING", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
