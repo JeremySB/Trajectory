@@ -124,6 +124,17 @@ class FirebaseOrganizationService: OrganizationService {
                     completion?(.Misc(error.localizedDescription))
                 } else {
                     completion?(nil)
+                    
+                    // update user document
+                    self.getOrganization(with: id, completion: { (org, error) in
+                        guard let org = org else { return }
+                        let userService = FirebaseUserService()
+                        userService.getCurrentUser({ (user, error) in
+                            guard let user = user else { return }
+                            user.lastOrganizationName = org.name
+                            userService.saveCurrentUser(user, completion: nil)
+                        })
+                    })
                 }
             })
         }
