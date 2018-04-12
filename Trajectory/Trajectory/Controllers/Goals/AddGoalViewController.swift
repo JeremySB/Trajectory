@@ -47,6 +47,24 @@ class AddGoalViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         // Add attribute
         nameField.attributedPlaceholder = placeHolder
+        
+        let progressAmountborder = CALayer()
+        let progressAmountwidth = CGFloat(2.0)
+        progressAmountborder.borderColor = UIColor.darkGray.cgColor
+        progressAmountborder.frame = CGRect(x: 0, y: progressAmount.frame.size.height - progressAmountwidth, width:  progressAmount.frame.size.width, height: progressAmount.frame.size.height)
+        
+        progressAmountborder.borderWidth = progressAmountwidth
+        progressAmount.layer.addSublayer(progressAmountborder)
+        progressAmount.layer.masksToBounds = true
+        
+        let nameFieldborder = CALayer()
+        let nameFieldwidth = CGFloat(2.0)
+        nameFieldborder.borderColor = UIColor.darkGray.cgColor
+        nameFieldborder.frame = CGRect(x: 0, y: nameField.frame.size.height - nameFieldwidth, width:  nameField.frame.size.width, height: nameField.frame.size.height)
+        
+        nameFieldborder.borderWidth = nameFieldwidth
+        nameField.layer.addSublayer(nameFieldborder)
+        nameField.layer.masksToBounds = true
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -111,7 +129,7 @@ class AddGoalViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         if pickerLabel == nil {
             pickerLabel = UILabel()
             pickerLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)
-            pickerLabel?.textAlignment = .center
+            pickerLabel?.textAlignment = .left
         }
         pickerLabel?.text = pickerData[row]
         pickerLabel?.textColor = UIColor.white

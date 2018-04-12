@@ -12,7 +12,13 @@
 import UIKit
 
 class GoalsViewController: UITableViewController {
-
+    
+    struct CellData {
+        static let ProgressHeight: CGFloat = 5
+        static let ProgressRoundedCorners: CGFloat = 6
+        static let DeadSpaceHeight: CGFloat = 20
+    }
+    
     var goals: [Goal] = [Goal]() {
         didSet {
             //Hide initial login message if applicable
@@ -23,12 +29,6 @@ class GoalsViewController: UITableViewController {
                 updateTableViewContentInset()
             }
         }
-    }
-    
-    struct CellData {
-        static let ProgressHeight: CGFloat = 5
-         static let ProgressRoundedCorners: CGFloat = 6
-        static let DeadSpaceHeight: CGFloat = 50
     }
     
     //var row: Int = 0
