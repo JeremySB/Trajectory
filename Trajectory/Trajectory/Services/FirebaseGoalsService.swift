@@ -67,7 +67,7 @@ class FirebaseGoalsService: GoalsService {
     func addActiveGoalsListener(_ uid: String, update: @escaping ([Goal]?, GoalsServiceError?) -> Void) {
         let listener = db.collection(FirestoreValues.goalCollection)
             .whereField(Goal.CodingKeys.owner.rawValue, isEqualTo: uid)
-            .whereField(Goal.CodingKeys.endDate.rawValue, isLessThan: Date())
+            .whereField(Goal.CodingKeys.endDate.rawValue, isGreaterThan: Date())
             .addSnapshotListener { (snapshot, error) in
             if let error = error {
                 print("\(error)")
