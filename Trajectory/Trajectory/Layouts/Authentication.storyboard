@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -269,7 +268,7 @@
                                 <color key="backgroundColor" red="0.016653390601277351" green="0.0012010012287646532" blue="0.00056467531248927116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cE-gt-khd">
-                                <rect key="frame" x="190" y="543" width="185" height="60"/>
+                                <rect key="frame" x="0.0" y="543" width="375" height="60"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="vc1-VM-66Z"/>
@@ -278,15 +277,6 @@
                                 <state key="normal" title="Google Signin"/>
                                 <connections>
                                     <action selector="didTapGoogleSignin:" destination="tHz-UU-KzI" eventType="primaryActionTriggered" id="KSi-qR-Qu2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgT-Ow-K7G">
-                                <rect key="frame" x="0.0" y="543" width="185" height="60"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Facebook Signin"/>
-                                <connections>
-                                    <action selector="didTapFacebookSignin:" destination="tHz-UU-KzI" eventType="primaryActionTriggered" id="DYH-ou-lcp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWY-QM-1L7">
@@ -359,28 +349,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8cE-gt-khd" firstAttribute="leading" secondItem="wgT-Ow-K7G" secondAttribute="trailing" constant="5" id="8jI-Jn-IJL"/>
                             <constraint firstItem="5e2-xE-33d" firstAttribute="trailing" secondItem="8cE-gt-khd" secondAttribute="trailing" id="9DP-sn-qlU"/>
                             <constraint firstItem="5e2-xE-33d" firstAttribute="trailing" secondItem="74a-Ag-4pX" secondAttribute="trailing" constant="49" id="9lF-C5-Oap"/>
                             <constraint firstItem="74a-Ag-4pX" firstAttribute="leading" secondItem="pnV-F7-jJO" secondAttribute="trailing" id="AlY-mT-xbR"/>
                             <constraint firstItem="LZ4-M6-YWz" firstAttribute="centerX" secondItem="Yzp-jF-sUv" secondAttribute="centerX" id="Fay-1v-ulQ"/>
                             <constraint firstItem="8cE-gt-khd" firstAttribute="top" secondItem="LZ4-M6-YWz" secondAttribute="bottom" constant="75" id="Gku-XD-RWE"/>
                             <constraint firstItem="KWY-QM-1L7" firstAttribute="top" secondItem="74a-Ag-4pX" secondAttribute="bottom" constant="8" id="HIc-tt-jNB"/>
-                            <constraint firstItem="wgT-Ow-K7G" firstAttribute="height" secondItem="8cE-gt-khd" secondAttribute="height" id="JMT-cr-682"/>
-                            <constraint firstItem="8cE-gt-khd" firstAttribute="width" secondItem="wgT-Ow-K7G" secondAttribute="height" multiplier="37:12" id="NV9-01-Qbr"/>
-                            <constraint firstItem="wgT-Ow-K7G" firstAttribute="leading" secondItem="5e2-xE-33d" secondAttribute="leading" id="PDH-M2-zhv"/>
                             <constraint firstItem="KWY-QM-1L7" firstAttribute="top" secondItem="qRh-7z-D99" secondAttribute="bottom" constant="15" id="Rr4-Hl-c0y"/>
                             <constraint firstItem="W2g-YQ-Bfe" firstAttribute="centerX" secondItem="Yzp-jF-sUv" secondAttribute="centerX" id="Wxl-Fn-y7F"/>
                             <constraint firstItem="W2g-YQ-Bfe" firstAttribute="top" secondItem="5e2-xE-33d" secondAttribute="top" id="ait-35-oqK"/>
                             <constraint firstItem="74a-Ag-4pX" firstAttribute="leading" secondItem="qRh-7z-D99" secondAttribute="trailing" constant="6" id="btf-OT-z55"/>
-                            <constraint firstItem="wgT-Ow-K7G" firstAttribute="bottom" secondItem="5e2-xE-33d" secondAttribute="bottom" id="dp4-uF-eN5"/>
                             <constraint firstItem="pnV-F7-jJO" firstAttribute="top" secondItem="lAh-9a-CtO" secondAttribute="bottom" constant="14" id="hmS-Fm-FTb"/>
                             <constraint firstItem="KWY-QM-1L7" firstAttribute="top" secondItem="pnV-F7-jJO" secondAttribute="bottom" constant="8" id="jMP-K2-7Go"/>
                             <constraint firstItem="5e2-xE-33d" firstAttribute="trailing" secondItem="KWY-QM-1L7" secondAttribute="trailing" constant="49" id="mfG-0y-u42"/>
-                            <constraint firstItem="wgT-Ow-K7G" firstAttribute="width" secondItem="8cE-gt-khd" secondAttribute="width" id="tS5-Fa-uZd"/>
                             <constraint firstItem="LZ4-M6-YWz" firstAttribute="top" secondItem="KWY-QM-1L7" secondAttribute="bottom" constant="80" id="tXC-oc-2ir"/>
                             <constraint firstItem="8cE-gt-khd" firstAttribute="bottom" secondItem="5e2-xE-33d" secondAttribute="bottom" id="w6Q-Bk-uWD"/>
                             <constraint firstItem="pnV-F7-jJO" firstAttribute="leading" secondItem="5e2-xE-33d" secondAttribute="leading" constant="49" id="wQx-Aj-0hr"/>
+                            <constraint firstItem="8cE-gt-khd" firstAttribute="centerX" secondItem="Yzp-jF-sUv" secondAttribute="centerX" id="ydU-aQ-Nc8"/>
                             <constraint firstItem="lAh-9a-CtO" firstAttribute="centerX" secondItem="Yzp-jF-sUv" secondAttribute="centerX" id="yt5-RW-tB6"/>
                             <constraint firstItem="KWY-QM-1L7" firstAttribute="leading" secondItem="5e2-xE-33d" secondAttribute="leading" constant="49" id="zf4-3X-K5s"/>
                         </constraints>
