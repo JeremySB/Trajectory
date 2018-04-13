@@ -23,9 +23,9 @@ class EditGoalViewController: UIViewController {
     @IBOutlet weak var goalNameWarning: UILabel!
     @IBOutlet weak var progressAmountWarning: UILabel!
     
-    @IBAction func Cancel(_ sender: Any) {
+    /*@IBAction func Cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-    }
+    }*/
     
     @IBAction func Done(_ sender: Any) {
         guard let safeGoal = goal else{
@@ -46,8 +46,8 @@ class EditGoalViewController: UIViewController {
                     debugPrint("Error")
                 }
             })
-            self.dismiss(animated: true, completion: nil)
-            //navigationController?.popViewController(animated: true)
+            //self.dismiss(animated: true, completion: nil)
+            navigationController?.popViewController(animated: true)
         }
     }
     
