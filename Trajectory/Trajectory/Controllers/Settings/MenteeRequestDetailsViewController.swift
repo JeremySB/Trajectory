@@ -20,7 +20,7 @@ class MenteeRequestDetailsViewController: UIViewController {
         
         nameLabel.text = menteeRequest?.mentee.name ?? "Error: No Name Found"
         if nameLabel.text == "" {nameLabel.text = "Error: No Name Found"}
-        //organizationlabel.text = menteeRequest?.mentee.organization
+        organizationlabel.text = menteeRequest?.mentee.lastOrganizationName ?? "No Organization"
         if organizationlabel.text == "" {organizationlabel.text = "No Organizations Listed"}
         userHobbies.text = menteeRequest?.mentee.hobbies ?? "No Hobbies Listed"
         if userHobbies.text == "" {userHobbies.text = "No Hobbies Listed"}

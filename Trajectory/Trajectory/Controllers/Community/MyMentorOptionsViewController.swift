@@ -22,6 +22,7 @@ class MyMentorOptionsViewController: UIViewController, UserChild {
         self.profileImage.clipsToBounds = true;
         
         mentorName.text = user?.name ?? "Error: No Name"
+        organizations.text = user?.lastOrganizationName ?? "No Organization"
         // Do any additional setup after loading the view.
     }
     

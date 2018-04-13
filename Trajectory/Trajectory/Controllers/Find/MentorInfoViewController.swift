@@ -26,7 +26,7 @@ class MentorInfoViewController: UIViewController {
 
         //Load mentor information
         MentorName.text = user?.name ?? "No Name"
-        //MentorOrg.text = user?.organization ?? "No Organization"
+        MentorOrg.text = user?.lastOrganizationName ?? "No Organization"
         MentorHobbies.text = user?.hobbies ?? "No Hobbies"
         MentorProfessionalInterests.text = user?.professionalInterests ?? "No Professional Interests"
         MentorDenomination.text = user?.denomination ?? "No Denomination"
@@ -37,7 +37,7 @@ class MentorInfoViewController: UIViewController {
         
         setupImageView()
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "TESTING", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     @IBOutlet weak var MentorImage: UIImageView!

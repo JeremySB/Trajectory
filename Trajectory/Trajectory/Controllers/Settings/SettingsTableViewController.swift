@@ -73,7 +73,7 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
             self.user = user
             
             self.userName.text = user.name
-            //self.userOrganization.text = user.organization ?? "No Organization"
+            self.userOrganization.text = user.lastOrganizationName ?? "No Organization"
             
             guard let uid = user.id else { return }
             if uid != self.uidForProfileImage {

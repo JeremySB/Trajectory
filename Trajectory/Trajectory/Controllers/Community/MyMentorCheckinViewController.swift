@@ -29,6 +29,7 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
 
     func writeUserData(){
         mentorName.text = user?.name ?? ""
+        organizations.text = user?.lastOrganizationName ?? "No Organization"
         
         if let uid = user?.id {
             imageService.bindProfileImage(for: uid, to: profileImage)
