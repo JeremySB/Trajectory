@@ -39,11 +39,10 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         searchController.searchBar.becomeFirstResponder()
         
-       /* let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)*/
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        placeHolderText()
         populateOrgsAndUsers()
     }
     
@@ -98,6 +97,23 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
                 })
             }
         }
+    }
+    
+    func placeHolderText() {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 400, height: 21))
+        label.layer.position = CGPoint(x: UIScreen.main.bounds.width/2, y: 285)
+        label.layer.zPosition = 1
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.text = "You haven't joined any organizations yet"
+        orgService.getCurrentOrganizations({ (orgs, error) in
+            if orgs == nil || orgs?.isEmpty ?? true {
+                self.view.addSubview(label)
+            } else {
+                label.isHidden = true
+            }
+        })
+       // self.view.addSubview(label)
     }
     
     //Update search results
