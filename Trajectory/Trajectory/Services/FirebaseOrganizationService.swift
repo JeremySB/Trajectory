@@ -127,13 +127,12 @@ class FirebaseOrganizationService: OrganizationService {
                     
                     // update user document
                     self.getOrganization(with: id, completion: { (org, error) in
-                        guard let org = org else { return }
+                        guard let orgName = org?.name else { return }
                         let userService = FirebaseUserService()
-                        userService.getCurrentUser({ (user, error) in
-                            guard let user = user else { return }
-                            user.lastOrganizationName = org.name
-                            userService.saveCurrentUser(user, completion: nil)
-                        })
+                        let user = User()
+                        user.id = uid
+                        user.lastOrganizationName = orgName
+                        userService.saveCurrentUser(user, completion: nil)
                     })
                 }
             })
@@ -165,6 +164,16 @@ class FirebaseOrganizationService: OrganizationService {
                 }
                 else {
                     completion?(nil)
+                    
+                    // update user document
+                    self.getCurrentOrganizations({ (orgs, error) in
+                        guard let orgName = orgs?.first?.name else { return }
+                        let userService = FirebaseUserService()
+                        let user = User()
+                        user.id = uid
+                        user.lastOrganizationName = orgName
+                        userService.saveCurrentUser(user, completion: nil)
+                    })
                 }
             })
         }
