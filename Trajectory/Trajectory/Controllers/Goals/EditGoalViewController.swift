@@ -72,6 +72,7 @@ class EditGoalViewController: UIViewController {
         
         //Set end date minimum to today's date
         EndDate.minimumDate = Date()
+        EndDate.setValue(UIColor.white, forKey: "textColor")
         
         
         Name.attributedPlaceholder = NSAttributedString(string:"Goal Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.green])
