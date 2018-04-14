@@ -39,7 +39,7 @@ class AddOrganizationViewController: UIViewController {
             })
         }
         else {
-            
+            self.invalidCodeErrorMessage.isHidden = false
         }
     }
     
