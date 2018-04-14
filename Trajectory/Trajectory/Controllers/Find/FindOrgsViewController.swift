@@ -39,11 +39,22 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         searchController.searchBar.becomeFirstResponder()
         
+        placeHolderText()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        placeHolderText()
         populateOrgsAndUsers()
+        orgService.getCurrentOrganizations({ (orgs, error) in
+            if orgs == nil || orgs?.isEmpty ?? true {
+                if self.view.subviews.count >= 4 {
+                    self.view.subviews[3].isHidden = false
+                }
+            } else {
+                if self.view.subviews.count >= 4 {
+                    self.view.subviews[3].isHidden = true
+                }
+            }
+        })
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -106,14 +117,8 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
         label.textAlignment = .center
         label.textColor = UIColor.white
         label.text = "You haven't joined any organizations yet"
-        orgService.getCurrentOrganizations({ (orgs, error) in
-            if orgs == nil || orgs?.isEmpty ?? true {
-                self.view.addSubview(label)
-            } else {
-                label.isHidden = true
-            }
-        })
-       // self.view.addSubview(label)
+        label.isHidden = true
+        self.view.addSubview(label)
     }
     
     //Update search results
