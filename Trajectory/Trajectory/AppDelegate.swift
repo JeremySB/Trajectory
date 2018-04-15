@@ -105,7 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
+            print("Message ID (didReceive): \(messageID)")
         }
         
         // Print full message.
@@ -123,7 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
+            print("Message ID (didReceive fetchCompletionHandler): \(messageID)")
         }
         
         // Print full message.
@@ -218,14 +218,14 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
+            print("Message ID (willPresent notif): \(messageID)")
         }
         
         // Print full message.
         print(userInfo)
         
         // Change this to your preferred presentation option
-        completionHandler([])
+        completionHandler([UNNotificationPresentationOptions.alert])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
@@ -234,7 +234,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         let userInfo = response.notification.request.content.userInfo
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
+            print("Message ID (didReceive response): \(messageID)")
         }
         
         // Print full message.
