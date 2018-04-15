@@ -27,4 +27,9 @@ class User: Codable {
     enum CodingKeys: String, CodingKey {
         case name, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress, notificationTokens, willingToMentor, lastOrganizationName
     }
+    
+    enum SettingsKey: String, Codable {
+        case receiveNotifications
+        case willingToMentor
+    }
 }
