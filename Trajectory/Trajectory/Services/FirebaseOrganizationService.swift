@@ -167,11 +167,14 @@ class FirebaseOrganizationService: OrganizationService {
                     
                     // update user document
                     self.getCurrentOrganizations({ (orgs, error) in
-                        guard let orgName = orgs?.first?.name else { return }
-                        let userService = FirebaseUserService()
                         let user = User()
                         user.id = uid
-                        user.lastOrganizationName = orgName
+                        if let orgName = orgs?.first?.name {
+                            user.lastOrganizationName = orgName
+                        } else {
+                            user.lastOrganizationName = ""
+                        }
+                        let userService = FirebaseUserService()
                         userService.saveCurrentUser(user, completion: nil)
                     })
                 }
