@@ -98,6 +98,22 @@ class MyMenteeOptionsTableViewController: UITableViewController, UserChild {
         }
     }
     
+    @IBAction func requestCheckin(_ sender: Any) {
+        //https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/
+        let alert = UIAlertController(title: "Please confirm that you want to request a check-in", message: "", preferredStyle: .actionSheet)
+        
+        //https://stackoverflow.com/questions/24190277/writing-handler-for-uialertaction
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: sendRequestCheckinNotification))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func sendRequestCheckinNotification(alert: UIAlertAction!) {
+        connectionService.requestCheckin(from: user, completion: nil)
+    }
+    
+    
     @IBAction func contactMentee(_ sender: Any) {
         if UIApplication.shared.canOpenURL(URL(string:"sms:")!) {
             UIApplication.shared.open(URL(string:"sms:")!, options: [:], completionHandler: nil)
