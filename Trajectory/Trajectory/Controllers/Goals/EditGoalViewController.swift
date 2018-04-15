@@ -28,7 +28,7 @@ class EditGoalViewController: UIViewController {
     }*/
     
     @IBAction func Done(_ sender: Any) {
-        guard let safeGoal = goal else{
+        guard let safeGoal = goal else {
             navigationController?.popViewController(animated: true)
             return
         }
