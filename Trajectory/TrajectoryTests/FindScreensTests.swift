@@ -56,6 +56,10 @@ class FindScreensTests: XCTestCase {
     }
     
     class MockUserService: UserService {
+        func addCurrentUserListener(_ update: @escaping (User?, UserServiceError?) -> Void) {
+            
+        }
+        
         func getUser(uid: String, completion: @escaping (User?, UserServiceError?) -> Void) {
             
         }
