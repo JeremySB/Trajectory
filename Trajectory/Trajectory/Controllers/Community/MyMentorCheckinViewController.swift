@@ -97,7 +97,7 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
             
             
             currentCheckIn = "doingWell"
-            connService.addCheckin(Checkin(status: .fine), with: user) { (error) in
+            connService.addCheckin(Checkin(status: .good), with: user) { (error) in
             }
             
             //Give haptic feedback
@@ -127,7 +127,7 @@ class MyMentorCheckinViewController: UIViewController, UserChild {
             
             //TODO: save status to backend with a date stamp
             currentCheckIn = "alright"
-            connService.addCheckin(Checkin(status: .good), with: user) { (error) in
+            connService.addCheckin(Checkin(status: .fine), with: user) { (error) in
             }
             
             //Give haptic feedback
