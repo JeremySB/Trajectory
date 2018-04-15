@@ -72,6 +72,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         application.registerForRemoteNotifications()
         
+        // Configure to receive dates instead of timestamps. This setting will soon be deprecated.
+        let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = false
+        db.settings = settings
+        
         return true
     }
     

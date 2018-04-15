@@ -42,7 +42,20 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
         profileImage.isUserInteractionEnabled = true
         profileImage.addGestureRecognizer(tapGestureRecognizer)
         
-        loadUser()
+        userService.addCurrentUserListener { (user, error) in
+            guard let user = user else { return }
+            self.user = user
+            
+            self.userName.text = user.name
+            self.userOrganization.text = user.lastOrganizationName ?? "No Organization"
+            self.willingToMentorSwitch.setOn(user.willingToMentor ?? false, animated: false)
+            self.notificationsSwitch.setOn(user.receiveNotifications ?? true, animated: false)
+            
+            guard let uid = user.id else { return }
+            if uid != self.uidForProfileImage {
+                self.uidForProfileImage = uid
+            }
+        }
         
         //Set background
         let imageView = UIImageView(image: UIImage(named: "TrajectoryBackground"))
@@ -61,27 +74,6 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        loadUser()
-    }
-    
-    func loadUser() {
-        userService.getCurrentUser { (user, error) in
-            guard let user = user else { return }
-            self.user = user
-            
-            self.userName.text = user.name
-            self.userOrganization.text = user.lastOrganizationName ?? "No Organization"
-            self.willingToMentorSwitch.setOn(user.willingToMentor ?? false, animated: false)
-            self.notificationsSwitch.setOn(user.receiveNotifications ?? true, animated: false)
-            
-            guard let uid = user.id else { return }
-            if uid != self.uidForProfileImage {
-                self.uidForProfileImage = uid
-            }
-        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -12,6 +12,14 @@ import CodableFirebase
 
 class FirebaseUserService: UserService {
     
+    var listeners = [ListenerRegistration]()
+    
+    deinit {
+        for listener in listeners {
+            listener.remove()
+        }
+    }
+    
     func getAllUsers(completion: @escaping ([User]?, UserServiceError?) -> Void) {
         Firestore.firestore().collection(FirestoreValues.userCollection)
             .limit(to: 5000).getDocuments { (docs, error) in
@@ -97,5 +105,36 @@ class FirebaseUserService: UserService {
         dispatch.notify(queue: .main) {
             completion(users, nil)
         }
+    }
+    
+    func addCurrentUserListener(_ update: @escaping (User?, UserServiceError?) -> Void) {
+        if let uid = Auth.auth().currentUser?.uid {
+            addUserListener(uid: uid, update: update)
+        }
+        else {
+            update(nil, .NotLoggedIn)
+        }
+    }
+    
+    func addUserListener(uid: String, update: @escaping (User?, UserServiceError?) -> Void) {
+        let listener = Firestore.firestore().collection(FirestoreValues.userCollection).document(uid)
+            .addSnapshotListener { (doc, error) in
+            if let error = error {
+                return update(nil, UserServiceError.Misc(error.localizedDescription))
+            }
+            guard let data = doc?.data() else {
+                update(nil, .NoUserData)
+                return
+            }
+            if let user = try? FirestoreDecoder().decode(User.self, from: data) {
+                // success
+                user.id = doc?.documentID
+                update(user, nil)
+            }
+            else {
+                update(nil, UserServiceError.InvalidUserData)
+            }
+        }
+        listeners.append(listener)
     }
 }
