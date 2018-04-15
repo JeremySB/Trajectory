@@ -2179,21 +2179,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrajectoryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Vsj-1O-qdu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TrajectoryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Vsj-1O-qdu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1366"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKI-oy-57W">
-                                <rect key="frame" x="42" y="546" width="90" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Set End Date">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="setEndDate:" destination="IPk-DS-Qtw" eventType="touchUpInside" id="U64-KZ-H6F"/>
-                                    <segue destination="gVc-ag-QMw" kind="show" id="EWP-WK-jWt"/>
-                                </connections>
-                            </button>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="emE-DC-Ifj">
+                                <rect key="frame" x="50" y="557" width="130" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pmg-kj-xvU">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eza-Ct-GSN">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2d-vd-Lf1">
                                 <rect key="frame" x="133" y="20" width="210" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2267,14 +2270,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh0-PV-ZXU">
-                                <rect key="frame" x="247" y="555" width="52" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Decline"/>
-                                <connections>
-                                    <action selector="decline:" destination="IPk-DS-Qtw" eventType="touchUpInside" id="tbi-SZ-bBj"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Oe-CK-eCK">
                                 <rect key="frame" x="28" y="497" width="329" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2300,12 +2295,41 @@
                                 <rect key="frame" x="14" y="11" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh0-PV-ZXU">
+                                <rect key="frame" x="212.5" y="557" width="146.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="cq5-BD-xhg"/>
+                                    <constraint firstAttribute="height" constant="30" id="y9I-u8-Ste"/>
+                                </constraints>
+                                <state key="normal" title="Decline"/>
+                                <connections>
+                                    <action selector="decline:" destination="IPk-DS-Qtw" eventType="touchUpInside" id="tbi-SZ-bBj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKI-oy-57W">
+                                <rect key="frame" x="16" y="557" width="146.5" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QLL-Cn-v4s"/>
+                                    <constraint firstAttribute="width" constant="130" id="SsP-7S-AIQ"/>
+                                </constraints>
+                                <state key="normal" title="Set End Date">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="setEndDate:" destination="IPk-DS-Qtw" eventType="touchUpInside" id="U64-KZ-H6F"/>
+                                    <segue destination="gVc-ag-QMw" kind="show" id="EWP-WK-jWt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Vsj-1O-qdu" firstAttribute="trailing" secondItem="p3c-aN-gU0" secondAttribute="trailing" id="FA6-RY-eiR"/>
-                            <constraint firstItem="Vsj-1O-qdu" firstAttribute="top" secondItem="YhU-RI-U9u" secondAttribute="top" id="adM-Oz-NoH"/>
-                            <constraint firstItem="Vsj-1O-qdu" firstAttribute="leading" secondItem="p3c-aN-gU0" secondAttribute="leading" id="xat-q7-tnK"/>
+                            <constraint firstItem="p3c-aN-gU0" firstAttribute="bottom" secondItem="vh0-PV-ZXU" secondAttribute="bottom" constant="16" id="5ey-0c-iQm"/>
+                            <constraint firstItem="p3c-aN-gU0" firstAttribute="bottom" secondItem="GKI-oy-57W" secondAttribute="bottom" constant="16" id="6nO-3D-Mcy"/>
+                            <constraint firstItem="p3c-aN-gU0" firstAttribute="trailing" secondItem="vh0-PV-ZXU" secondAttribute="trailing" constant="16" id="iBL-Pr-wQY"/>
+                            <constraint firstItem="GKI-oy-57W" firstAttribute="width" secondItem="vh0-PV-ZXU" secondAttribute="width" id="qyi-f2-QNo"/>
+                            <constraint firstItem="GKI-oy-57W" firstAttribute="leading" secondItem="p3c-aN-gU0" secondAttribute="leading" constant="16" id="xeb-FZ-FVx"/>
+                            <constraint firstItem="vh0-PV-ZXU" firstAttribute="leading" secondItem="GKI-oy-57W" secondAttribute="trailing" constant="50" id="ygY-vC-hxt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p3c-aN-gU0"/>
                     </view>
@@ -2833,18 +2857,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cx-iI-pWN">
-                                <rect key="frame" x="47" y="467" width="141" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cx-iI-pWN">
+                                <rect key="frame" x="47" y="467" width="157" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="p25-QI-Oop"/>
+                                </constraints>
                                 <state key="normal" title="Set Date and Accept"/>
                                 <connections>
                                     <action selector="setDateAndAcceptBtn:" destination="jxe-1C-Vc2" eventType="touchUpInside" id="lUd-dJ-rPl"/>
                                     <segue destination="arK-Dn-sLp" kind="unwind" unwindAction="unwindToOptionsWithSegue:" id="FRV-9h-RT3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edP-lt-TC9">
-                                <rect key="frame" x="250" y="467" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edP-lt-TC9">
+                                <rect key="frame" x="250" y="467" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zZq-aF-bFl"/>
+                                </constraints>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelUpdate:" destination="jxe-1C-Vc2" eventType="touchUpInside" id="BIv-oy-43d"/>
