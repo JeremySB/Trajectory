@@ -33,41 +33,34 @@ class MyMentorsUITests: XCTestCase {
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        /*app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.swipeLeft()
+        app.tables/*@START_MENU_TOKEN@*/.buttons["Cancel Mentorship"]/*[[".cells.buttons[\"Cancel Mentorship\"]",".buttons[\"Cancel Mentorship\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.sheets["Please confirm that you want to cancel this mentorship"].buttons["Confirm"].tap()*/
         super.tearDown()
         app.terminate()
     }
     
-    func testCheckInButtons() {
+    func testCheckInButtonsAndCalendarButtonOne() {
         app.tabBars.buttons["Community"].tap()
         app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
         app.buttons["Doing Well"].tap()
-        
-        let checkInConfirmedButton = app.buttons["Check-In Confirmed"]
-        checkInConfirmedButton.tap()
         app.buttons["Alright"].tap()
-        checkInConfirmedButton.tap()
         app.buttons["Not Good"].tap()
-        checkInConfirmedButton.tap()
+        app.buttons["calendarIcon"].tap()
     }
     
-    func testCalendarButton() {
+    func testCalendarButtonTwo() {
         app.tabBars.buttons["Community"].tap()
         app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
-        app.buttons["Calendar"].tap()
-    }
-    
-    func testMentorCancelMentorship() {
-        app.tabBars.buttons["Community"].tap()
-        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"Andy McGee").element.tap()
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.swipeLeft()
-        app.tables/*@START_MENU_TOKEN@*/.buttons["Cancel Mentorship"]/*[[".cells.buttons[\"Cancel Mentorship\"]",".buttons[\"Cancel Mentorship\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.sheets["Please confirm that you want to cancel this mentorship"].buttons["Confirm"].tap()        
+        app.tables/*@START_MENU_TOKEN@*/.buttons["calendarIcon"]/*[[".cells.buttons[\"calendarIcon\"]",".buttons[\"calendarIcon\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
     
     func testContactMentor() {
         app.tabBars.buttons["Community"].tap()
         app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
-        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element/*@START_MENU_TOKEN@*/.swipeLeft()/*[[".swipeUp()",".swipeLeft()"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.swipeLeft()
         app.tables/*@START_MENU_TOKEN@*/.buttons["Contact Mentor"]/*[[".cells.buttons[\"Contact Mentor\"]",".buttons[\"Contact Mentor\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
     
@@ -77,31 +70,65 @@ class MyMentorsUITests: XCTestCase {
         app.navigationBars["Mentor"].buttons["Mentors"].tap()
     }
     
-    func testContactMentee() {
+    func testMentorSetNewEndDate() {
         app.tabBars.buttons["Community"].tap()
-        
-        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
-        element.children(matching: .collectionView).element.swipeLeft()
-        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"Andy McGee").element.tap()
-        element.swipeLeft()
-        app.tables/*@START_MENU_TOKEN@*/.buttons["Contact Mentee"]/*[[".cells.buttons[\"Contact Mentee\"]",".buttons[\"Contact Mentee\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.swipeLeft()
+        app.tables/*@START_MENU_TOKEN@*/.buttons["Request New End Date"]/*[[".cells.buttons[\"Request New End Date\"]",".buttons[\"Request New End Date\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
     
-    func testMenteeCancelMentorship() {
+    func testContactMentee() {
         app.tabBars.buttons["Community"].tap()
-        
         let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
         element.children(matching: .collectionView).element.swipeLeft()
-        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"Andy McGee").element.tap()
+        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"UI Test").element.tap()
         element.swipeLeft()
-        app.tables/*@START_MENU_TOKEN@*/.buttons["Cancel Mentorship"]/*[[".cells.buttons[\"Cancel Mentorship\"]",".buttons[\"Cancel Mentorship\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.sheets["Please confirm that you want to cancel this mentorship"].buttons["Confirm"].tap()
+        app.tables/*@START_MENU_TOKEN@*/.buttons["Contact Mentee"]/*[[".cells.buttons[\"Contact Mentee\"]",".buttons[\"Contact Mentee\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
     
     func testMenteeBackButton() {
         app.tabBars.buttons["Community"].tap()
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element.swipeLeft()
-        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"Andrew Vogel").element.tap()
+        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"UI Test").element.tap()
         app.navigationBars["Mentee"].buttons["Mentees"].tap()
+    }
+    
+    func testMenteeSetNewEndDate() {
+        app.tabBars.buttons["Community"].tap()
+        
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        element.swipeLeft()
+        app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
+        element.children(matching: .table).element.swipeLeft()
+        app.tables/*@START_MENU_TOKEN@*/.buttons["Set New End Date"]/*[[".cells.buttons[\"Set New End Date\"]",".buttons[\"Set New End Date\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["Set Date and Accept"].tap()
+    }
+    
+    func testMenteeSetNewEndDateCancel() {
+        app.tabBars.buttons["Community"].tap()
+        
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        element.children(matching: .collectionView).element.swipeLeft()
+        app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
+        element.children(matching: .table).element.swipeLeft()
+        app.tables/*@START_MENU_TOKEN@*/.buttons["Set New End Date"]/*[[".cells.buttons[\"Set New End Date\"]",".buttons[\"Set New End Date\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["Cancel"].tap()
+    }
+    
+    func testMenteeCalendarButtonOne() {
+        app.tabBars.buttons["Community"].tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element.swipeLeft()
+        app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
+        app.buttons["calendarIcon"].tap()
+    }
+    
+    func testMenteeCalendarButtonTwo() {
+        app.tabBars.buttons["Community"].tap()
+        
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        element.children(matching: .collectionView).element.swipeLeft()
+        app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
+        element.children(matching: .table).element.swipeLeft()
+        app.tables/*@START_MENU_TOKEN@*/.buttons["calendarIcon"]/*[[".cells.buttons[\"calendarIcon\"]",".buttons[\"calendarIcon\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
 }

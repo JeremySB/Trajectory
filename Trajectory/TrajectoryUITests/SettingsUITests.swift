@@ -57,7 +57,7 @@ class SettingsUITests: XCTestCase {
     
     func testUpdatePersonalInfoEmail() {
         app.tabBars.buttons["Settings"].tap()
-        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Organization"]/*[[".cells.staticTexts[\"Organization\"]",".staticTexts[\"Organization\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Test Org With Code"]/*[[".cells.staticTexts[\"Test Org With Code\"]",".staticTexts[\"Test Org With Code\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
         let textField = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 1)
         textField.tap()
@@ -91,7 +91,7 @@ class SettingsUITests: XCTestCase {
     func testUpdatePersonalInfoCancelButton() {
         // Use recording to get started writing UI tests.
         app.tabBars.buttons["Settings"].tap()
-        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Organization"]/*[[".cells.staticTexts[\"Organization\"]",".staticTexts[\"Organization\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Test Org With Code"]/*[[".cells.staticTexts[\"Test Org With Code\"]",".staticTexts[\"Test Org With Code\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.navigationBars["Update Information"].buttons["Cancel"].tap()
     }
     
@@ -163,27 +163,11 @@ class SettingsUITests: XCTestCase {
         app.navigationBars["Mentee Requests"].buttons["Back"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        
     }
     
     func testMyMenteeRequestsSetEndDateButtonAndSetDateAndAccept() {
         // Use recording to get started writing UI tests.
-        let tabBarsQuery = app.tabBars
-        tabBarsQuery.buttons["Find"].tap()
-        
-        let searchForAvailableMentorsSearchField = app.searchFields["Search for available mentors"]
-        searchForAvailableMentorsSearchField.tap()
-        searchForAvailableMentorsSearchField.typeText("ui ")
-        app.collectionViews.children(matching: .cell).element(boundBy: 0).otherElements.containing(.image, identifier:"profileImg").element.tap()
-        app.buttons["Request Mentorship"].tap()
-        app.sheets["Please confirm that you want to send this mentee request"].buttons["Confirm"].tap()
-        tabBarsQuery.buttons["Settings"].tap()
-        
-        let tablesQuery = app.tables
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["UI Test"]/*[[".cells.staticTexts[\"UI Test\"]",".staticTexts[\"UI Test\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.buttons["Set End Date"].tap()
-        app.buttons["Set Date and Accept"].tap()        
+      
     }
     
     func testMyMenteeRequestsSetEndDateButtonAndGoBack() {
@@ -260,9 +244,15 @@ class SettingsUITests: XCTestCase {
         
     }
     
+    func testWillingToMentorSwitch() {
+        app.tabBars.buttons["Settings"].tap()
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
+        let mentorSwitch = tablesQuery.switches["Willing to Mentor"]
+        mentorSwitch.tap()
+    }
+    
     func testLogoutButton() {
-        
-        
         app.tabBars.buttons["Settings"].tap()
        // app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .table).element/*@START_MENU_TOKEN@*/.swipeRight()/*[[".swipeUp()",".swipeRight()"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .table).element.swipeUp()
