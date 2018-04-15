@@ -17,19 +17,17 @@ class User: Codable {
     var phoneNumber: String?
     var emailAddress: String?
     var notificationTokens: [String: Bool]?
-    var willingToMentor: Bool?
     var lastOrganizationName: String?
+    
+    // settings
+    var receiveNotifications: Bool?
+    var willingToMentor: Bool?
     
     var id: String? = nil
     // set to true if user doc does not exist on server, but created locally
     var isNew: Bool = false
     
     enum CodingKeys: String, CodingKey {
-        case name, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress, notificationTokens, willingToMentor, lastOrganizationName
-    }
-    
-    enum SettingsKey: String, Codable {
-        case receiveNotifications
-        case willingToMentor
+        case name, hobbies, professionalInterests, denomination, objectives, phoneNumber, emailAddress, notificationTokens, lastOrganizationName, receiveNotifications, willingToMentor
     }
 }

@@ -74,6 +74,8 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
             
             self.userName.text = user.name
             self.userOrganization.text = user.lastOrganizationName ?? "No Organization"
+            self.willingToMentorSwitch.setOn(user.willingToMentor ?? false, animated: false)
+            self.notificationsSwitch.setOn(user.receiveNotifications ?? true, animated: false)
             
             guard let uid = user.id else { return }
             if uid != self.uidForProfileImage {
@@ -93,6 +95,9 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     
     @IBOutlet weak var profileImage: UIImageView!
     
+    @IBOutlet weak var notificationsSwitch: UISwitch!
+    @IBOutlet weak var willingToMentorSwitch: UISwitch!
+    
     @IBAction func logoutButton(_ sender: Any) {
         if (!authService.signOut()){
             print("signOut Failed!")
@@ -101,12 +106,16 @@ UINavigationControllerDelegate, CropViewControllerDelegate {
     
     @IBAction func notificationsSwitch(_ sender: Any) {
         print("Notifcations Switch Changed")
-        //TODO: save status on backend
+        let user = User()
+        user.receiveNotifications = self.notificationsSwitch.isOn
+        userService.saveCurrentUser(user, completion: nil)
     }
     
     @IBAction func willingToMentorSwitch(_ sender: Any) {
         print("Willing To Mentor Switch Changed")
-        //TODO: save status on backend
+        let user = User()
+        user.willingToMentor = self.willingToMentorSwitch.isOn
+        userService.saveCurrentUser(user, completion: nil)
     }
     
     @IBOutlet weak var logoutButton: UIButton!

@@ -2664,10 +2664,12 @@
                     <navigationItem key="navigationItem" title="Settings" id="Q8Z-k7-lHi"/>
                     <connections>
                         <outlet property="logoutButton" destination="CaX-zq-UBf" id="3TK-sw-1Ik"/>
+                        <outlet property="notificationsSwitch" destination="Nk9-bZ-HEj" id="fEb-UC-277"/>
                         <outlet property="profileImage" destination="4gV-Ir-rAd" id="A20-6n-7cn"/>
                         <outlet property="tableView" destination="my4-6d-4YY" id="T0W-gB-OzX"/>
                         <outlet property="userName" destination="bKV-kc-jUe" id="7aS-Iy-nlL"/>
                         <outlet property="userOrganization" destination="dAb-ZN-Kyx" id="7tH-Qa-iEE"/>
+                        <outlet property="willingToMentorSwitch" destination="RAq-6n-aCT" id="Z9f-ac-gBS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvO-KI-UM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
