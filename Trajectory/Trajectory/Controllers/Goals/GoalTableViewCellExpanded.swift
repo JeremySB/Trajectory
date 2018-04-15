@@ -26,17 +26,8 @@ class GoalTableViewCellExpanded: UITableViewCell, GoalsTableViewCell {
         parent.setExpandedRow(row: cellNum)
     }*/
     
-    /*
-    let AdjustAmountborder = CALayer()
-    let AdjustAmountwidth = CGFloat(2.0)
-    AdjustAmountborder.borderColor = UIColor.darkGray.cgColor
-    AdjustAmountborder.frame = CGRect(x: 0, y: AdjustAmount.frame.size.height - AdjustAmountwidth, width:  AdjustAmount.frame.size.width, height: AdjustAmount.frame.size.height)
     
-    AdjustAmountborder.borderWidth = AdjustAmountwidth
-    AdjustAmount.layer.addSublayer(progressAmountborder)
-    AdjustAmount.layer.masksToBounds = true
-    */
- 
+    
     @IBAction func RemoveGoal(_ sender: Any) {
         self.parent?.setExpandedSection(section: -1)
         goalsService.removeGoal(goal) { (error) in
