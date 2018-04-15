@@ -57,7 +57,7 @@ class LoginTests: XCTestCase {
         XCTAssertTrue(emailTextField.exists)
         emailTextField.tap()
         emailTextField.typeText("test")
-        app.otherElements.containing(.navigationBar, identifier:"Trajectory").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        //app.otherElements.containing(.navigationBar, identifier:"Trajectory").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
         continueButton.tap()
         XCTAssertTrue(emailTextField.exists)
         emailTextField.tap()

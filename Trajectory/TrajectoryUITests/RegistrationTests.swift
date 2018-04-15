@@ -32,7 +32,7 @@ class RegistrationTests: XCTestCase {
         let num = Int(arc4random_uniform(500000)) + 1000
         let email: String = "uitestnumber\(num)@gettrajectory.com"
         
-        let emailTextField = app.textFields["Email"]
+        let emailTextField = app.textFields["Email Address"]
         emailTextField.tap()
         emailTextField.typeText(email)
         app.buttons["Continue"].tap()
@@ -43,7 +43,7 @@ class RegistrationTests: XCTestCase {
         app.otherElements.containing(.navigationBar, identifier:"Create A Password").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
         app.buttons["Create Account"].tap()
         
-        let pleaseEnterYourNameTextField = app.textFields["Please enter your name"]
+        let pleaseEnterYourNameTextField = app.textFields["  Name"]
         pleaseEnterYourNameTextField.tap()
         pleaseEnterYourNameTextField.typeText("name name")
         
@@ -51,7 +51,7 @@ class RegistrationTests: XCTestCase {
         element.tap()
         
         let nextButton = app.buttons["Next"]
-        //nextButton.tap()
+        nextButton.tap()
         
         let phonenumberTextField = app/*@START_MENU_TOKEN@*/.textFields["phoneNumber"]/*[[".textFields[\"Phone Number\"]",".textFields[\"phoneNumber\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         phonenumberTextField.tap()
@@ -72,7 +72,7 @@ class RegistrationTests: XCTestCase {
         
         let textField = element2.children(matching: .textField).element
         textField.tap()
-        textField.typeText("Denomination")
+        textField.typeText("  Denomination")
         
         let textView3 = element2.children(matching: .textView).element
         textView3.tap()
@@ -81,13 +81,14 @@ class RegistrationTests: XCTestCase {
         app.buttons["Finish"].tap()
         
         
+
     }
     
     func testNextAndBackButtons() {
         let num = Int(arc4random_uniform(500000)) + 1000
         let email: String = "uitestnumber\(num)@gettrajectory.com"
         
-        let emailTextField = app.textFields["Email"]
+        let emailTextField = app.textFields["Email Address"]
         emailTextField.tap()
         emailTextField.typeText(email)
         app.buttons["Continue"].tap()
@@ -97,16 +98,16 @@ class RegistrationTests: XCTestCase {
         passwordSecureTextField.typeText("password")
         app.buttons["Create Account"].tap()
         
-        let pleaseEnterYourNameTextField = app.textFields["Please enter your name"]
+        let pleaseEnterYourNameTextField = app.textFields["  Name"]
         pleaseEnterYourNameTextField.tap()
-        pleaseEnterYourNameTextField.typeText("Tester")
+        pleaseEnterYourNameTextField.typeText("UI Tester")
         
         let nextButton = app.buttons["Next"]
         nextButton.tap()
         
         let phonenumberTextField = app/*@START_MENU_TOKEN@*/.textFields["phoneNumber"]/*[[".textFields[\"Phone Number\"]",".textFields[\"phoneNumber\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         phonenumberTextField.tap()
-        phonenumberTextField.typeText("888-888-8888")
+        phonenumberTextField.typeText("8888888888")
         nextButton.tap()
         
         let element2 = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element

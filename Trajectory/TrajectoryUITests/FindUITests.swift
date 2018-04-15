@@ -87,7 +87,7 @@ class FindUITests: XCTestCase {
         let searchWithinYourOrganizationsSearchField = app.searchFields["Search within your organizations"]
         searchWithinYourOrganizationsSearchField.tap()
         searchWithinYourOrganizationsSearchField.typeText("Daniel")
-        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"Daniel Toney ").element.tap()
+        app.collectionViews.cells.firstMatch.otherElements.containing(.staticText, identifier:"Daniel Toney ").element.tap()
         app.buttons["Request Mentorship"].tap()
         app.sheets["Please confirm that you want to send this mentee request"].buttons["Confirm"].tap()
     }

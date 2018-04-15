@@ -64,9 +64,8 @@ class GoalsTableViewTests: XCTestCase {
         }
         let tablesQuery = app.tables
         tablesQuery.otherElements["Progress"].firstMatch.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["+"]/*[[".cells.buttons[\"+\"]",".buttons[\"+\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.buttons["+"].firstMatch.tap()
         //tablesQuery/*@START_MENU_TOKEN@*/.buttons["Retract"]/*[[".cells.buttons[\"Retract\"]",".buttons[\"Retract\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
-
     }
     func testDefaultDecrement() {
         let app = XCUIApplication();
@@ -76,7 +75,7 @@ class GoalsTableViewTests: XCTestCase {
         }
         let tablesQuery = app.tables
         tablesQuery.otherElements["Progress"].firstMatch.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["-"]/*[[".cells.buttons[\"-\"]",".buttons[\"-\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["-"]/*[[".cells.buttons[\"-\"]",".buttons[\"-\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         //tablesQuery/*@START_MENU_TOKEN@*/.buttons["Retract"]/*[[".cells.buttons[\"Retract\"]",".buttons[\"Retract\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         
     }
@@ -90,14 +89,14 @@ class GoalsTableViewTests: XCTestCase {
         let tablesQuery = app.tables
         tablesQuery.otherElements["Progress"].firstMatch.tap()
         
-        let textField = tablesQuery.cells.children(matching: .textField).element
+        let textField = tablesQuery.cells.firstMatch.children(matching: .textField).element
         textField.tap()
         
         //let deleteKey = app/*@START_MENU_TOKEN@*/.keyboards.keys["Delete"]/*[[".keyboards.keys[\"Delete\"]",".keys[\"Delete\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
         //deleteKey.tap()
         //deleteKey.tap()
         textField.typeText("5")
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["+"]/*[[".cells.buttons[\"+\"]",".buttons[\"+\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["+"]/*[[".cells.buttons[\"+\"]",".buttons[\"+\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         tablesQuery.otherElements["Progress"].firstMatch.tap()
     }
     func testCustomDecrement() {
@@ -111,14 +110,14 @@ class GoalsTableViewTests: XCTestCase {
         let tablesQuery = tablesQuery2
         tablesQuery.otherElements["Progress"].firstMatch.tap()
         
-        let textField = tablesQuery2.cells.children(matching: .textField).element
+        let textField = tablesQuery2.cells.firstMatch.children(matching: .textField).element
         textField.tap()
         
         /*let deleteKey = app/*@START_MENU_TOKEN@*/.keys["Delete"]/*[[".keyboards.keys[\"Delete\"]",".keys[\"Delete\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         deleteKey.tap()
         deleteKey.tap()*/
         textField.typeText("5")
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["-"]/*[[".cells.buttons[\"-\"]",".buttons[\"-\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["-"]/*[[".cells.buttons[\"-\"]",".buttons[\"-\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         tablesQuery.otherElements["Progress"].firstMatch.tap()
         
     }
@@ -130,23 +129,23 @@ class GoalsTableViewTests: XCTestCase {
         }
         let tablesQuery = app.tables
         tablesQuery.otherElements["Progress"].firstMatch.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Edit"]/*[[".cells.buttons[\"Edit\"]",".buttons[\"Edit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Edit"]/*[[".cells.buttons[\"Edit\"]",".buttons[\"Edit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         
-        let goalNameTextField = app/*@START_MENU_TOKEN@*/.textFields["Goal Name"]/*[[".otherElements[\"Add Goal\"].textFields[\"Goal Name\"]",".textFields[\"Goal Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let goalNameTextField = app/*@START_MENU_TOKEN@*/.textFields["Goal Name"]/*[[".otherElements[\"Add Goal\"].textFields[\"Goal Name\"]",".textFields[\"Goal Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch
         goalNameTextField.tap()
     
-        let textField = app.otherElements["Add Goal"].children(matching: .textField).element(boundBy: 1)
+        let textField = app.otherElements["Add Goal"].firstMatch.children(matching: .textField).element(boundBy: 1)
         textField.tap()
         textField.tap()
         
         let editGoalNavigationBar = app.navigationBars["Edit Goal"]
         let doneButton = editGoalNavigationBar.buttons["Done"]
         doneButton.tap()
-        tablesQuery.otherElements["Progress"].tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Edit"]/*[[".cells.buttons[\"Edit\"]",".buttons[\"Edit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        editGoalNavigationBar.buttons["Goals"].tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.otherElements["Progress"]/*[[".cells.otherElements[\"Progress\"]",".otherElements[\"Progress\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Edit"]/*[[".cells.buttons[\"Edit\"]",".buttons[\"Edit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.otherElements["Progress"].firstMatch.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Edit"]/*[[".cells.buttons[\"Edit\"]",".buttons[\"Edit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        editGoalNavigationBar.buttons["Goals"].firstMatch.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.otherElements["Progress"]/*[[".cells.otherElements[\"Progress\"]",".otherElements[\"Progress\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Edit"]/*[[".cells.buttons[\"Edit\"]",".buttons[\"Edit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         goalNameTextField.tap()
         goalNameTextField.tap()
         textField.tap()
@@ -162,7 +161,7 @@ class GoalsTableViewTests: XCTestCase {
         }
         let oldCount = tablesQuery.cells.count;
         tablesQuery.otherElements["Progress"].firstMatch.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["trashIcon"]/*[[".cells.buttons[\"trashIcon\"]",".buttons[\"trashIcon\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["trashIcon"]/*[[".cells.buttons[\"trashIcon\"]",".buttons[\"trashIcon\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         assert(tablesQuery.cells.count < oldCount);        
     }
     

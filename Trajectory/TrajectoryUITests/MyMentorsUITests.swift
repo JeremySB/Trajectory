@@ -100,8 +100,8 @@ class MyMentorsUITests: XCTestCase {
         element.swipeLeft()
         app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element.tap()
         element.children(matching: .table).element.swipeLeft()
-        app.tables/*@START_MENU_TOKEN@*/.buttons["Set New End Date"]/*[[".cells.buttons[\"Set New End Date\"]",".buttons[\"Set New End Date\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.buttons["Set Date and Accept"].tap()
+        app.tables.buttons["Set New End Date"].tap()
+        app.buttons["Set Date"].tap()
     }
     
     func testMenteeSetNewEndDateCancel() {
