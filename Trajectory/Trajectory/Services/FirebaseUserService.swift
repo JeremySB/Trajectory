@@ -22,6 +22,7 @@ class FirebaseUserService: UserService {
     
     func getAllUsers(completion: @escaping ([User]?, UserServiceError?) -> Void) {
         Firestore.firestore().collection(FirestoreValues.userCollection)
+            .whereField(User.CodingKeys.willingToMentor.rawValue, isEqualTo: true)
             .limit(to: 5000).getDocuments { (docs, error) in
             if let error = error {
                 return completion(nil, UserServiceError.Misc(error.localizedDescription))
