@@ -7,11 +7,13 @@
 //
 
 import Firebase
+import FirebaseFunctions
 import CodableFirebase
 
 class FirebaseConnectionService : ConnectionService {
     
     lazy var userService = FirebaseUserService()
+    lazy var functions = Functions.functions()
     
     var listeners = [ListenerRegistration]()
     
@@ -335,6 +337,24 @@ class FirebaseConnectionService : ConnectionService {
             }
             else {
                 update(nil, .InvalidServerData)
+            }
+        }
+    }
+    
+    func requestCheckin(from mentee: User, completion: ((ConnectionServiceError?) -> Void)? = nil) {
+        guard let menteeId = mentee.id else { return }
+        functions.httpsCallable("requestMenteeCheckin").call(["menteeId": menteeId]) { (result, error) in
+            if let error = error as NSError? {
+                print(error)
+                completion?(.Misc(error.localizedDescription))
+                if error.domain == FunctionsErrorDomain {
+                    let _ = FIRFunctionsErrorCode(rawValue: error.code)
+                    let _ = error.localizedDescription
+                    let _ = error.userInfo[FunctionsErrorDetailsKey]
+                }
+            }
+            else {
+                completion?(nil)
             }
         }
     }

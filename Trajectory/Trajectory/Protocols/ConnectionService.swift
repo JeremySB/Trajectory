@@ -23,6 +23,8 @@ protocol ConnectionService {
     func getConnection(_ id: String, completion: @escaping (Connection?, ConnectionServiceError?) -> Void)
     func getConnectionBetween(mentee menteeId: String, mentor mentorId: String, completion: @escaping (Connection?, ConnectionServiceError?) -> Void)
     func saveConnection(_ connection: Connection, completion: ((ConnectionServiceError?) -> Void)?)
+    
+    func requestCheckin(from mentee: User, completion: ((ConnectionServiceError?) -> Void)?)
 }
 
 enum ConnectionServiceError: Error {
