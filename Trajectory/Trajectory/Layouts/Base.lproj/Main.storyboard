@@ -96,7 +96,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KAg-UI-1ME" customClass="GoalsProgressView" customModule="Trajectory" customModuleProvider="target">
-                                            <rect key="frame" x="14" y="24" width="345" height="15"/>
+                                            <rect key="frame" x="14" y="24" width="295" height="15"/>
                                             <rect key="contentStretch" x="0.0" y="1" width="1" height="0.0"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="15" id="e5x-AO-aje"/>
@@ -141,7 +141,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7q-cT-Tlx">
-                                            <rect key="frame" x="16" y="53" width="32" height="32"/>
+                                            <rect key="frame" x="16" y="50" width="32" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="32" id="5rC-vR-xRT"/>
                                                 <constraint firstAttribute="height" constant="32" id="Y6E-64-rn4"/>
@@ -153,12 +153,6 @@
                                                 <action selector="RemoveGoal:" destination="Zjs-yN-Ude" eventType="touchUpInside" id="3AN-Ku-scd"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqd-WI-Gui">
-                                            <rect key="frame" x="20" y="21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipsisIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8Om-u6-zfh">
                                             <rect key="frame" x="329" y="-5" width="30" height="30"/>
                                             <constraints>
@@ -166,12 +160,19 @@
                                                 <constraint firstAttribute="height" constant="30" id="kRm-HL-obp"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqd-WI-Gui">
+                                            <rect key="frame" x="327" y="22" width="35.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="dTd-eW-zKx" firstAttribute="baseline" secondItem="LNk-hD-GRK" secondAttribute="baseline" id="0Xs-gx-vwg"/>
-                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="trailing" secondItem="OqC-Ba-DzI" secondAttribute="trailingMargin" id="4eb-9I-973"/>
-                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="trailing" secondItem="dTd-eW-zKx" secondAttribute="trailing" id="5os-bv-84v"/>
+                                        <constraint firstItem="dqd-WI-Gui" firstAttribute="top" secondItem="OqC-Ba-DzI" secondAttribute="top" constant="22" id="3un-yp-uc4"/>
+                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="trailing" secondItem="OqC-Ba-DzI" secondAttribute="trailingMargin" constant="-50" id="4eb-9I-973"/>
+                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="trailing" secondItem="dTd-eW-zKx" secondAttribute="trailing" constant="-50" id="5os-bv-84v"/>
                                         <constraint firstItem="8Om-u6-zfh" firstAttribute="centerY" secondItem="dlL-J4-7Qf" secondAttribute="centerY" id="8wZ-MY-hTx"/>
                                         <constraint firstItem="dlL-J4-7Qf" firstAttribute="leading" secondItem="U7q-cT-Tlx" secondAttribute="leading" id="AKE-og-w8e"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="dlL-J4-7Qf" secondAttribute="trailing" constant="37" id="Aly-aF-jhf"/>
@@ -179,17 +180,14 @@
                                         <constraint firstItem="dTd-eW-zKx" firstAttribute="top" secondItem="2RQ-lj-AQx" secondAttribute="top" id="E9j-zl-Cpi"/>
                                         <constraint firstItem="KAg-UI-1ME" firstAttribute="top" secondItem="dlL-J4-7Qf" secondAttribute="bottom" constant="3" id="Hoh-xr-efx"/>
                                         <constraint firstItem="U7q-cT-Tlx" firstAttribute="top" secondItem="dqd-WI-Gui" secondAttribute="bottom" constant="11" id="KqB-dc-tH8"/>
-                                        <constraint firstItem="8Om-u6-zfh" firstAttribute="trailing" secondItem="KAg-UI-1ME" secondAttribute="trailing" id="LjG-ku-1QK"/>
-                                        <constraint firstItem="dqd-WI-Gui" firstAttribute="top" secondItem="dlL-J4-7Qf" secondAttribute="bottom" id="Naw-sP-5Ih"/>
+                                        <constraint firstItem="8Om-u6-zfh" firstAttribute="trailing" secondItem="KAg-UI-1ME" secondAttribute="trailing" constant="50" id="LjG-ku-1QK"/>
+                                        <constraint firstAttribute="trailing" secondItem="dqd-WI-Gui" secondAttribute="trailing" constant="12.5" id="SWG-ze-Pvt"/>
                                         <constraint firstItem="LNk-hD-GRK" firstAttribute="leading" secondItem="OqC-Ba-DzI" secondAttribute="leading" constant="91" id="UCt-We-cfr"/>
                                         <constraint firstItem="dTd-eW-zKx" firstAttribute="leading" secondItem="Vgj-i5-4Sh" secondAttribute="trailing" constant="65" id="WYO-2I-Opk"/>
                                         <constraint firstItem="dlL-J4-7Qf" firstAttribute="centerX" secondItem="2RQ-lj-AQx" secondAttribute="centerX" id="Z4F-O8-AH5"/>
-                                        <constraint firstItem="dqd-WI-Gui" firstAttribute="leading" secondItem="OqC-Ba-DzI" secondAttribute="leadingMargin" constant="4" id="bUL-cn-ucu"/>
-                                        <constraint firstItem="dqd-WI-Gui" firstAttribute="centerX" secondItem="U7q-cT-Tlx" secondAttribute="centerX" constant="9" id="bbZ-Nf-ZZv"/>
                                         <constraint firstItem="KAg-UI-1ME" firstAttribute="leading" secondItem="OqC-Ba-DzI" secondAttribute="leadingMargin" constant="-2" id="csh-Yx-p4O"/>
                                         <constraint firstItem="KAg-UI-1ME" firstAttribute="top" secondItem="OqC-Ba-DzI" secondAttribute="top" constant="24" id="hcw-PS-fQV"/>
                                         <constraint firstItem="LNk-hD-GRK" firstAttribute="leading" secondItem="U7q-cT-Tlx" secondAttribute="trailing" constant="43" id="kO2-8k-pmd"/>
-                                        <constraint firstItem="KAg-UI-1ME" firstAttribute="centerY" secondItem="dqd-WI-Gui" secondAttribute="centerY" id="nQG-fD-sVI"/>
                                         <constraint firstItem="dTd-eW-zKx" firstAttribute="baseline" secondItem="Vgj-i5-4Sh" secondAttribute="baseline" id="qM6-T6-a1r"/>
                                         <constraint firstItem="2RQ-lj-AQx" firstAttribute="leading" secondItem="LNk-hD-GRK" secondAttribute="trailing" constant="8" symbolic="YES" id="z6k-KT-b0h"/>
                                     </constraints>

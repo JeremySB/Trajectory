@@ -133,7 +133,7 @@ class GoalsTableViewController: UITableViewController {
             return cell as! UITableViewCell
         }
         
-        cell.ProgressLabel.text = "/" + String(toProgress)
+        cell.ProgressLabel.text = " of " + String(toProgress)
         
         guard let curProgress = goals[indexPath.section].currentProgress else {
             cell.Progress.progress = 0
