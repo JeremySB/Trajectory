@@ -29,10 +29,9 @@ class LoginTests: XCTestCase {
     }
     
     func testEmailLogin() {
+        XCTAssertTrue(app.textFields["Email Address"].exists)
         
-        XCTAssertTrue(app.textFields["Email"].exists)
-        
-        let emailTextField = app.textFields["Email"]
+        let emailTextField = app.textFields["Email Address"]
         emailTextField.tap()
         emailTextField.typeText("uitest@gettrajectory.com")
         app.buttons["Continue"].tap()
@@ -49,8 +48,7 @@ class LoginTests: XCTestCase {
     }
     
     func testInvalidCredentials() {
-        
-        let emailTextField = app.textFields["Email"]
+        let emailTextField = app.textFields["Email Address"]
         XCTAssertTrue(emailTextField.exists)
         emailTextField.tap()
         

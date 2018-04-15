@@ -68,9 +68,6 @@ class AddGoalUITests: XCTestCase {
         datePickersQuery.pickerWheels[date].swipeUp()
         datePickersQuery.pickerWheels[year].swipeUp()
         
-        app/*@START_MENU_TOKEN@*/.buttons["Daily"]/*[[".otherElements.matching(identifier: \"Add Goal\")",".segmentedControls.buttons[\"Daily\"]",".buttons[\"Daily\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Weekly"]/*[[".otherElements.matching(identifier: \"Add Goal\")",".segmentedControls.buttons[\"Weekly\"]",".buttons[\"Weekly\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Monthly"]/*[[".otherElements.matching(identifier: \"Add Goal\")",".segmentedControls.buttons[\"Monthly\"]",".buttons[\"Monthly\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
         app/*@START_MENU_TOKEN@*/.navigationBars["Add Goal"]/*[[".otherElements.matching(identifier: \"Add Goal\").navigationBars[\"Add Goal\"]",".navigationBars[\"Add Goal\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.buttons["Done"].tap()
         
         app.navigationBars["Goals"].buttons["Add"].tap()

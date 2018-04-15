@@ -42,19 +42,20 @@ class GoalsTableViewTests: XCTestCase {
         if (app.tables.count < 1){
             goalMakerHelper(app: app)
         }
-        app.tables/*@START_MENU_TOKEN@*/.buttons["Expand"]/*[[".cells.buttons[\"Expand\"]",".buttons[\"Expand\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        app.tables.otherElements["Progress"].firstMatch.tap()
         //app.tables.cells
-        
     }
+    
     func testCollapseCell() {
         let app = XCUIApplication();
         
         if (app.tables.count < 1){
             goalMakerHelper(app: app)
         }
-        app.tables/*@START_MENU_TOKEN@*/.buttons["Expand"]/*[[".cells.buttons[\"Expand\"]",".buttons[\"Expand\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
-        app.tables/*@START_MENU_TOKEN@*/.buttons["Retract"]/*[[".cells.buttons[\"Retract\"]",".buttons[\"Retract\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        app.tables.otherElements["Progress"].firstMatch.tap()
+        app.tables.otherElements["Progress"].firstMatch.tap()
     }
+    
     func testDefaultIncrement() {
         let app = XCUIApplication();
         
@@ -62,7 +63,7 @@ class GoalsTableViewTests: XCTestCase {
             goalMakerHelper(app: app)
         }
         let tablesQuery = app.tables
-        tablesQuery/*@START_MENU_TOKEN@*/.cells.buttons["Expand"]/*[[".cells.buttons[\"Expand\"]",".buttons[\"Expand\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        tablesQuery.otherElements["Progress"].firstMatch.tap()
         tablesQuery/*@START_MENU_TOKEN@*/.buttons["+"]/*[[".cells.buttons[\"+\"]",".buttons[\"+\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         //tablesQuery/*@START_MENU_TOKEN@*/.buttons["Retract"]/*[[".cells.buttons[\"Retract\"]",".buttons[\"Retract\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
 
@@ -74,7 +75,7 @@ class GoalsTableViewTests: XCTestCase {
             goalMakerHelper(app: app)
         }
         let tablesQuery = app.tables
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Expand"]/*[[".cells.buttons[\"Expand\"]",".buttons[\"Expand\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        tablesQuery.otherElements["Progress"].firstMatch.tap()
         tablesQuery/*@START_MENU_TOKEN@*/.buttons["-"]/*[[".cells.buttons[\"-\"]",".buttons[\"-\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         //tablesQuery/*@START_MENU_TOKEN@*/.buttons["Retract"]/*[[".cells.buttons[\"Retract\"]",".buttons[\"Retract\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         
@@ -87,7 +88,7 @@ class GoalsTableViewTests: XCTestCase {
             goalMakerHelper(app: app)
         }
         let tablesQuery = app.tables
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Expand"]/*[[".cells.buttons[\"Expand\"]",".buttons[\"Expand\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        tablesQuery.otherElements["Progress"].firstMatch.tap()
         
         let textField = tablesQuery.cells.children(matching: .textField).element
         textField.tap()
@@ -97,7 +98,7 @@ class GoalsTableViewTests: XCTestCase {
         //deleteKey.tap()
         textField.typeText("5")
         tablesQuery/*@START_MENU_TOKEN@*/.buttons["+"]/*[[".cells.buttons[\"+\"]",".buttons[\"+\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Retract"]/*[[".cells.buttons[\"Retract\"]",".buttons[\"Retract\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        tablesQuery.otherElements["Progress"].firstMatch.tap()
     }
     func testCustomDecrement() {
         
@@ -108,7 +109,7 @@ class GoalsTableViewTests: XCTestCase {
         }
         let tablesQuery2 = app.tables
         let tablesQuery = tablesQuery2
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Expand"]/*[[".cells.buttons[\"Expand\"]",".buttons[\"Expand\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        tablesQuery.otherElements["Progress"].firstMatch.tap()
         
         let textField = tablesQuery2.cells.children(matching: .textField).element
         textField.tap()
@@ -118,7 +119,7 @@ class GoalsTableViewTests: XCTestCase {
         deleteKey.tap()*/
         textField.typeText("5")
         tablesQuery/*@START_MENU_TOKEN@*/.buttons["-"]/*[[".cells.buttons[\"-\"]",".buttons[\"-\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Retract"]/*[[".cells.buttons[\"Retract\"]",".buttons[\"Retract\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        tablesQuery.otherElements["Progress"].firstMatch.tap()
         
     }
     func testEditButton() {
@@ -128,9 +129,29 @@ class GoalsTableViewTests: XCTestCase {
             goalMakerHelper(app: app)
         }
         let tablesQuery = app.tables
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Expand"]/*[[".cells.buttons[\"Expand\"]",".buttons[\"Expand\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        tablesQuery.otherElements["Progress"].firstMatch.tap()
         tablesQuery/*@START_MENU_TOKEN@*/.buttons["Edit"]/*[[".cells.buttons[\"Edit\"]",".buttons[\"Edit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
+        let goalNameTextField = app/*@START_MENU_TOKEN@*/.textFields["Goal Name"]/*[[".otherElements[\"Add Goal\"].textFields[\"Goal Name\"]",".textFields[\"Goal Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        goalNameTextField.tap()
+    
+        let textField = app.otherElements["Add Goal"].children(matching: .textField).element(boundBy: 1)
+        textField.tap()
+        textField.tap()
+        
+        let editGoalNavigationBar = app.navigationBars["Edit Goal"]
+        let doneButton = editGoalNavigationBar.buttons["Done"]
+        doneButton.tap()
+        tablesQuery.otherElements["Progress"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Edit"]/*[[".cells.buttons[\"Edit\"]",".buttons[\"Edit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        editGoalNavigationBar.buttons["Goals"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.otherElements["Progress"]/*[[".cells.otherElements[\"Progress\"]",".otherElements[\"Progress\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Edit"]/*[[".cells.buttons[\"Edit\"]",".buttons[\"Edit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        goalNameTextField.tap()
+        goalNameTextField.tap()
+        textField.tap()
+        textField.tap()
+        doneButton.tap()
     }
     func testRemoveButton() {
         
@@ -140,10 +161,9 @@ class GoalsTableViewTests: XCTestCase {
             goalMakerHelper(app: app)
         }
         let oldCount = tablesQuery.cells.count;
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Expand"]/*[[".cells.buttons[\"Expand\"]",".buttons[\"Expand\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Remove"]/*[[".cells.buttons[\"Remove\"]",".buttons[\"Remove\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        assert(tablesQuery.cells.count < oldCount);
-
+        tablesQuery.otherElements["Progress"].firstMatch.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["trashIcon"]/*[[".cells.buttons[\"trashIcon\"]",".buttons[\"trashIcon\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        assert(tablesQuery.cells.count < oldCount);        
     }
     
     func goalMakerHelper( app:XCUIApplication){
