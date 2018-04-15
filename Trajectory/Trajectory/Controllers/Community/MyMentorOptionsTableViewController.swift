@@ -104,8 +104,20 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
     
     //Sends notification to mentor that mentee is requesting a new end date
     @IBAction func requestNewEndDate(_ sender: Any) {
-        print("WILL REQUEST NEW END DATE")
+        //https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/
+        let alert = UIAlertController(title: "Please confirm that you want to request a new end date", message: "", preferredStyle: .actionSheet)
+        
+        //https://stackoverflow.com/questions/24190277/writing-handler-for-uialertaction
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: sendNewEndDateNotification))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
     }
+
+func sendNewEndDateNotification(alert: UIAlertAction!) {
+    print("WILL SEND NOTIFICATION")
+    //TODO: send request/notification
+}
     
     
     @IBAction func sendToCalendar(_ sender: Any) {
