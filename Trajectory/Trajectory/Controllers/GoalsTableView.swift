@@ -116,20 +116,28 @@ extension GoalsTableView: UITableViewDelegate, UITableViewDataSource {
      
         cell.Title.text = goals[indexPath.section].title
      
-     
-        guard let curProgress = goals[indexPath.section].currentProgress else {
-            cell.Progress.progress = 0
-            return cell as! UITableViewCell
-        }
+        cell.ProgressLabel.text = " of "
+
         guard let toProgress = goals[indexPath.section].totalProgress else {
             cell.Progress.progress = 0
+            cell.ProgressLabel.text = ""
             return cell as! UITableViewCell
         }
+        
+        cell.ProgressLabel.text = cell.ProgressLabel.text! + String(toProgress)
+        
+        guard let curProgress = goals[indexPath.section].currentProgress else {
+            cell.Progress.progress = 0
+            cell.ProgressLabel.text = "0" + cell.ProgressLabel.text!
+            return cell as! UITableViewCell
+        }
+        
+        cell.ProgressLabel.text = String(curProgress) + cell.ProgressLabel.text!
+        
         let prog = Float(curProgress) / Float(toProgress);
+        
         cell.Progress.setProgress(prog, animated: cell.updated)
         cell.Progress.setup(ySize: CellData.ProgressHeight, cornerRadius: CellData.ProgressRoundedCorners)
-     
-        cell.ProgressLabel.text = String(curProgress) + "/" + String(toProgress)
      
         if (cell.updated) {
             cell.updated = false
