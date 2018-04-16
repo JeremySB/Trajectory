@@ -41,7 +41,7 @@ class SettingsUITests: XCTestCase {
     
     func testUpdatePersonalInfoName() {
         app.tabBars.buttons["Settings"].tap()
-        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Organization"]/*[[".cells.staticTexts[\"Organization\"]",".staticTexts[\"Organization\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.tables.staticTexts["Test Org With Code"].tap()
         
         let textField = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 0)
         textField.tap()
@@ -75,7 +75,7 @@ class SettingsUITests: XCTestCase {
     
     func testUpdatePersonalInfoPhoneNumber() {
         app.tabBars.buttons["Settings"].tap()
-        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Organization"]/*[[".cells.staticTexts[\"Organization\"]",".staticTexts[\"Organization\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.tables.staticTexts["Test Org With Code"].tap()
         let textField = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 2)
         textField.tap()
         textField/*@START_MENU_TOKEN@*/.press(forDuration: 0.8);/*[[".tap()",".press(forDuration: 0.8);"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
@@ -167,7 +167,28 @@ class SettingsUITests: XCTestCase {
     
     func testMyMenteeRequestsSetEndDateButtonAndSetDateAndAccept() {
         // Use recording to get started writing UI tests.
-      
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Find"].tap()
+        app.searchFields["Search for available mentors"].tap()
+        
+        let profileimgElement = app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element
+        profileimgElement.tap()
+        app.buttons["Request Mentorship"].tap()
+        app.sheets["Please confirm that you want to send this mentee request"].buttons["Confirm"].tap()
+        tabBarsQuery.buttons["Settings"].tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["UI Test"]/*[[".cells.staticTexts[\"UI Test\"]",".staticTexts[\"UI Test\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["Set End Date"].tap()
+        app.buttons["Set Date and Accept"].tap()
+        app.navigationBars["Mentee Requests"].buttons["Back"].tap()
+        tabBarsQuery.buttons["Find Mentor - People"].tap()
+        tabBarsQuery.buttons["Community"].tap()
+        profileimgElement.tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.swipeLeft()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Cancel Mentorship"]/*[[".cells.buttons[\"Cancel Mentorship\"]",".buttons[\"Cancel Mentorship\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.sheets["Please confirm that you want to cancel this mentorship"].buttons["Confirm"].tap()
     }
     
     func testMyMenteeRequestsSetEndDateButtonAndGoBack() {
