@@ -78,6 +78,7 @@ class AddGoalViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         let goal = Goal()
         goal.title = nameField.text
+        goal.startDate = Date()
         goal.endDate = endDatePicker.date
         goal.totalProgress = Int(progressAmount.text ?? "")
         // goal.progressPeriod = segmentedControlPeriod.
