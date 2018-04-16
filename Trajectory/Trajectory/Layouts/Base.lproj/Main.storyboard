@@ -801,9 +801,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="94g-PB-HSa" customClass="HistoryTableView" customModule="Trajectory" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="94g-PB-HSa" customClass="HistoryTableView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -933,6 +932,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="94g-PB-HSa" firstAttribute="leading" secondItem="9CX-zX-Rtp" secondAttribute="leading" id="JRH-nI-D51"/>
+                            <constraint firstItem="94g-PB-HSa" firstAttribute="trailing" secondItem="9CX-zX-Rtp" secondAttribute="trailing" id="KJF-r6-SsY"/>
+                            <constraint firstItem="94g-PB-HSa" firstAttribute="top" secondItem="9CX-zX-Rtp" secondAttribute="top" id="KZo-fg-A7W"/>
+                            <constraint firstItem="94g-PB-HSa" firstAttribute="bottom" secondItem="9CX-zX-Rtp" secondAttribute="bottom" id="lFk-UU-zpz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9CX-zX-Rtp"/>
                     </view>
                     <connections>
@@ -1014,15 +1019,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Last Check-In: Doing Well" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPE-7g-jEl">
-                                <rect key="frame" x="89" y="126" width="197" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Last Check-In: Doing Well" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPE-7g-jEl">
+                                <rect key="frame" x="89" y="126" width="197" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-7M-gqw" customClass="MyMenteeTableView" customModule="Trajectory" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="162" width="375" height="505"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-7M-gqw" customClass="MyMenteeTableView" customModule="Trajectory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="146.5" width="375" height="520.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1161,14 +1165,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2Jk-7M-gqw" firstAttribute="leading" secondItem="xSX-BW-oXK" secondAttribute="leading" id="4Lt-GU-b4k"/>
                             <constraint firstItem="LfZ-vH-chB" firstAttribute="leading" secondItem="VKp-cB-b7r" secondAttribute="leadingMargin" id="6yq-W1-GVR"/>
                             <constraint firstItem="gfX-FH-D9a" firstAttribute="top" secondItem="Yds-tC-jYV" secondAttribute="bottom" constant="8" symbolic="YES" id="9eQ-GZ-fdi"/>
+                            <constraint firstItem="2Jk-7M-gqw" firstAttribute="top" secondItem="kPE-7g-jEl" secondAttribute="bottom" id="T5d-z1-UgT"/>
                             <constraint firstItem="Yds-tC-jYV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gfX-FH-D9a" secondAttribute="leading" id="WP4-Vy-q82"/>
                             <constraint firstAttribute="trailing" secondItem="gfX-FH-D9a" secondAttribute="trailing" constant="97" id="by2-eQ-1TI"/>
                             <constraint firstItem="Yds-tC-jYV" firstAttribute="top" secondItem="xSX-BW-oXK" secondAttribute="top" constant="25" id="cgh-6j-EDN"/>
                             <constraint firstItem="kPE-7g-jEl" firstAttribute="top" secondItem="LfZ-vH-chB" secondAttribute="bottom" constant="8" symbolic="YES" id="ky1-f8-2k4"/>
+                            <constraint firstItem="2Jk-7M-gqw" firstAttribute="trailing" secondItem="xSX-BW-oXK" secondAttribute="trailing" id="lie-t3-2ud"/>
                             <constraint firstItem="LfZ-vH-chB" firstAttribute="top" secondItem="xSX-BW-oXK" secondAttribute="top" constant="10" id="oMZ-wm-hlf"/>
                             <constraint firstItem="Yds-tC-jYV" firstAttribute="leading" secondItem="LfZ-vH-chB" secondAttribute="trailing" constant="20" id="oRR-NR-9fx"/>
+                            <constraint firstItem="2Jk-7M-gqw" firstAttribute="bottom" secondItem="xSX-BW-oXK" secondAttribute="bottom" id="pQO-zQ-KfK"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yds-tC-jYV" secondAttribute="trailing" constant="20" symbolic="YES" id="pdG-7D-cEp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xSX-BW-oXK"/>
