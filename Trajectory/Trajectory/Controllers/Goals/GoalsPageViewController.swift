@@ -13,7 +13,7 @@ import Foundation
 
 class GoalsPageViewController: ScrollController {
     override func viewDidLoad() {
-        addViewControllers(views: "History", "GoalsList", startIndex: 1)
+        addViewControllers(views: "GoalsList", "History")
         //var image = UIImage(named: "TrajectoryBackground")
         //self.view.backgroundColor = UIColor(patternImage: (UIImage(named: "TrajectoryBackground"))!)
             

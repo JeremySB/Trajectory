@@ -39,7 +39,7 @@ class HistoryTableView: GoalsTableView {
         let tmp = super.tableView(tableView, cellForRowAt: indexPath)
         if let cell = tmp as? GoalsTableViewCell {
             let formatter: DateFormatter = DateFormatter();
-            formatter.dateFormat = "MM/dd/yyyy"
+            formatter.dateFormat = "MM/dd/yy"
             guard let oldText = cell.Title.text else {
                 return tmp
             }

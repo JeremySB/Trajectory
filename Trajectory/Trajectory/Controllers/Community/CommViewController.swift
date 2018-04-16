@@ -9,19 +9,9 @@
 import UIKit
 
 class CommViewController: ScrollController {
-    
-    required init?(coder: NSCoder){
-        super.init(coder: coder)
-        addViewControllers(views: "CommMentor", "CommMentee")
-        //addViewControllers(views: "FindOrgs")
-    }
-    override init(){
-        super.init()
-        addViewControllers(views: "CommMentor", "CommMentee")
-        //addViewControllers(views: "FindOrgs")
-    }
 
     override func viewDidLoad() {
+        addViewControllers(views: "CommMentor", "CommMentee")
         super.viewDidLoad()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "TrajectoryBackground")
