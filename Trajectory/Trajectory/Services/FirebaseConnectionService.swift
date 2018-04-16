@@ -358,4 +358,22 @@ class FirebaseConnectionService : ConnectionService {
             }
         }
     }
+    
+    func requestNewEndDate(from mentor: User, completion: ((ConnectionServiceError?) -> Void)? = nil) {
+        guard let mentorId = mentor.id else { return }
+        functions.httpsCallable("requestNewMentorshipEndDate").call(["mentorId": mentorId]) { (result, error) in
+            if let error = error as NSError? {
+                print(error)
+                completion?(.Misc(error.localizedDescription))
+                if error.domain == FunctionsErrorDomain {
+                    let _ = FIRFunctionsErrorCode(rawValue: error.code)
+                    let _ = error.localizedDescription
+                    let _ = error.userInfo[FunctionsErrorDetailsKey]
+                }
+            }
+            else {
+                completion?(nil)
+            }
+        }
+    }
 }

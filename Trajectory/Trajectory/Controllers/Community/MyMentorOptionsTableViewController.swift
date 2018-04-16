@@ -114,11 +114,9 @@ class MyMentorOptionsTableViewController: UITableViewController, UserChild {
         self.present(alert, animated: true)
     }
 
-func sendNewEndDateNotification(alert: UIAlertAction!) {
-    print("WILL SEND NOTIFICATION")
-    //TODO: send request/notification
-}
-    
+    func sendNewEndDateNotification(alert: UIAlertAction!) {
+        connectionService.requestNewEndDate(from: user, completion: nil)
+    }
     
     @IBAction func sendToCalendar(_ sender: Any) {
         if UIApplication.shared.canOpenURL(URL(string:"calshow://")!) {
