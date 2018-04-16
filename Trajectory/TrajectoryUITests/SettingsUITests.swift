@@ -170,11 +170,13 @@ class SettingsUITests: XCTestCase {
         let tabBarsQuery = app.tabBars
         tabBarsQuery.buttons["Find"].tap()
         app.searchFields["Search for available mentors"].tap()
-        
+        app.searchFields["Search for available mentors"].typeText("UI Test")
         let profileimgElement = app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element
         profileimgElement.tap()
         app.buttons["Request Mentorship"].tap()
         app.sheets["Please confirm that you want to send this mentee request"].buttons["Confirm"].tap()
+        
+        tabBarsQuery.buttons["Settings"].tap()
         tabBarsQuery.buttons["Settings"].tap()
         
         let tablesQuery = app.tables
@@ -183,7 +185,7 @@ class SettingsUITests: XCTestCase {
         app.buttons["Set End Date"].tap()
         app.buttons["Set Date and Accept"].tap()
         app.navigationBars["Mentee Requests"].buttons["Back"].tap()
-        tabBarsQuery.buttons["Find Mentor - People"].tap()
+        
         tabBarsQuery.buttons["Community"].tap()
         profileimgElement.tap()
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.swipeLeft()
@@ -191,64 +193,32 @@ class SettingsUITests: XCTestCase {
         app.sheets["Please confirm that you want to cancel this mentorship"].buttons["Confirm"].tap()
     }
     
-    func testMyMenteeRequestsSetEndDateButtonAndGoBack() {
-        // Use recording to get started writing UI tests.
-        
-        
-        app.tabBars.buttons["Settings"].tap()
-        let tablesQuery = app.tables
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["First Last"]/*[[".cells.staticTexts[\"First Last\"]",".staticTexts[\"First Last\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.buttons["Set End Date"].tap()
-        app.navigationBars["Set Duration"].buttons["Mentee"].tap()
-        app.navigationBars["Mentee"].buttons["Mentee Requests"].tap()
-        app.navigationBars["Mentee Requests"].buttons["Back"].tap()
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        
-    }
-    
     func testMyMenteeRequestsDeclineButton() {
         // Use recording to get started writing UI tests.
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Find"].tap()
+        app.searchFields["Search for available mentors"].tap()
+        app.searchFields["Search for available mentors"].typeText("UI Test")
+        let profileimgElement = app.collectionViews.cells.otherElements.containing(.image, identifier:"profileImg").element
+        profileimgElement.tap()
+        app.buttons["Request Mentorship"].tap()
+        app.sheets["Please confirm that you want to send this mentee request"].buttons["Confirm"].tap()
         
+        tabBarsQuery.buttons["Settings"].tap()
+        tabBarsQuery.buttons["Settings"].tap()
         
-        app.tabBars.buttons["Settings"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["First Last"]/*[[".cells.staticTexts[\"First Last\"]",".staticTexts[\"First Last\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["UI Test"]/*[[".cells.staticTexts[\"UI Test\"]",".staticTexts[\"UI Test\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.buttons["Decline"].tap()
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        
-    }
-    
-    func testMyMenteeRequestsBackButtons() {
-        
-        
-        
-        app.tabBars.buttons["Settings"].tap()
-        let tablesQuery = app.tables
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Mentee Requests"]/*[[".cells.staticTexts[\"Mentee Requests\"]",".staticTexts[\"Mentee Requests\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["First Last"]/*[[".cells.staticTexts[\"First Last\"]",".staticTexts[\"First Last\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.buttons["Set End Date"].tap()
-        app.navigationBars["Set Duration"].buttons["Mentee"].tap()
-        app.navigationBars["Mentee"].buttons["Mentee Requests"].tap()
+        /*app.buttons["Decline"].tap()
         app.navigationBars["Mentee Requests"].buttons["Back"].tap()
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
         
-    }
-    
-    func testChangeImageFeatureWithCancel() {
-        
-        
-        
-        app.tabBars.buttons["Settings"].tap()
-        app.tables/*@START_MENU_TOKEN@*/.buttons["profileImg"]/*[[".cells.buttons[\"profileImg\"]",".buttons[\"profileImg\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.navigationBars["Photos"].buttons["Cancel"].tap()
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //XCTAssertTrue(self.getTopViewController()?.title == "Settings")
-        
+        tabBarsQuery.buttons["Community"].tap()
+        profileimgElement.tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.swipeLeft()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Cancel Mentorship"]/*[[".cells.buttons[\"Cancel Mentorship\"]",".buttons[\"Cancel Mentorship\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.sheets["Please confirm that you want to cancel this mentorship"].buttons["Confirm"].tap()*/
     }
     
     func testNotificaitonsSwitch() {

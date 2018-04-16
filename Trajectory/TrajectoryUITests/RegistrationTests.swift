@@ -132,7 +132,7 @@ class RegistrationTests: XCTestCase {
         
         let profileSetupNavigationBarsQuery = app.navigationBars.matching(identifier: "Profile Setup")
         profileSetupNavigationBarsQuery.buttons["Profile Setup"].tap()
-        profileSetupNavigationBarsQuery.buttons["Phone"].tap()
+        profileSetupNavigationBarsQuery.buttons["Profile Setup"].tap()
         app.navigationBars["Profile Setup"].buttons["Profile Setup"].tap()
         nextButton.tap()
         nextButton.tap()
