@@ -37,6 +37,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wB2-hO-Qju">
                                 <rect key="frame" x="53" y="329.5" width="275" height="40"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nextButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="qG4-IN-4eN"/>
                                 </constraints>
@@ -98,6 +99,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gCh-Y2-Bnz" customClass="textViewWithPlaceholderUITextView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="50" y="50" width="275" height="120"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.25420884683098594" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="hobbiesField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="lf5-zh-xiF"/>
                                     <constraint firstAttribute="height" constant="120" id="zlc-mZ-8Ky"/>
@@ -109,6 +111,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-hw-cDX" customClass="textViewWithPlaceholderUITextView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="50" y="178" width="275" height="120"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.24510343309859156" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="interestsField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="mSd-cf-Tar"/>
                                     <constraint firstAttribute="height" constant="120" id="tmv-u2-45G"/>
@@ -119,6 +122,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvW-Ph-jsA">
                                 <rect key="frame" x="50" y="306" width="275" height="40"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nextButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="z9Q-eK-vEG"/>
                                 </constraints>
@@ -172,6 +176,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yv7-fd-HzM" customClass="textViewWithPlaceholderUITextView" customModule="Trajectory" customModuleProvider="target">
                                 <rect key="frame" x="50" y="178" width="275" height="120"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.24862455985915494" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="objectivesField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="FUV-Ct-0sw"/>
                                     <constraint firstAttribute="width" constant="275" id="yuW-JG-ZvN"/>
@@ -182,6 +187,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVP-Ws-aK2">
                                 <rect key="frame" x="50" y="306" width="275" height="40"/>
+                                <accessibility key="accessibilityConfiguration" identifier="finishButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="AkL-oV-GyO"/>
                                     <constraint firstAttribute="width" constant="275" id="Scx-6C-hMI"/>
@@ -197,6 +203,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What is your denomination?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7d6-g4-Yrj">
                                 <rect key="frame" x="50" y="130" width="275" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.24840448943661972" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="denomField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Pzv-AP-xjX"/>
                                     <constraint firstAttribute="width" constant="275" id="jxD-4Q-zhz"/>
@@ -274,6 +281,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWY-QM-1L7">
                                 <rect key="frame" x="49" y="328" width="277" height="40"/>
+                                <accessibility key="accessibilityConfiguration" identifier="continueButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mv9-6u-S5h"/>
                                 </constraints>
@@ -321,17 +329,18 @@
                                     <constraint firstAttribute="width" constant="200" id="y3f-4l-TFs"/>
                                 </constraints>
                             </imageView>
-                            <textField contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74a-Ag-4pX">
+                            <textField contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74a-Ag-4pX">
                                 <rect key="frame" x="89" y="280" width="237" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.24953235035211269" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="emailField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="auy-Au-PR7"/>
                                     <constraint firstAttribute="width" constant="237" id="hCM-Rw-K04"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter in a valid email address." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAh-9a-CtO">
                                 <rect key="frame" x="47" y="245" width="280.5" height="21"/>
@@ -394,6 +403,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="userName" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cq1-vC-GsZ">
                                 <rect key="frame" x="41" y="281.5" width="275" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.25022007042253519" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nameField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8C8-ks-Yf1"/>
                                     <constraint firstAttribute="width" constant="275" id="8GG-eZ-95q"/>
@@ -404,6 +414,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVK-ms-2kK">
                                 <rect key="frame" x="41" y="329.5" width="275" height="40"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nextButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0br-SU-Jzv"/>
                                     <constraint firstAttribute="width" constant="275" id="BUi-EX-ZEK"/>
@@ -576,11 +587,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.016653390600000002" green="0.0012010012290000001" blue="0.00056467531249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="backgroundImage">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P8D-QI-6vX">
                                 <rect key="frame" x="90" y="281" width="235" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.25016505281690143" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordField">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -588,6 +605,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PO-l8-X8R">
                                 <rect key="frame" x="50" y="329" width="275" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="createAccountButton"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Create Account"/>
                                 <connections>
@@ -608,6 +626,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uqS-Lw-nb7">
                                 <rect key="frame" x="58" y="289" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwords must be at least six characters." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfG-Jw-dYf">
                                 <rect key="frame" x="25" y="241" width="325" height="21"/>
@@ -618,6 +639,9 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="viewBackground">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <viewLayoutGuide key="safeArea" id="uE3-zd-tvc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create A Password" id="abL-1J-yjQ"/>
@@ -640,7 +664,7 @@
         <image name="lockIcon" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="en7-In-sCA"/>
+        <segue reference="uZL-WI-USN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
