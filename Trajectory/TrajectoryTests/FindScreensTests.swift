@@ -25,7 +25,7 @@ class FindScreensTests: XCTestCase {
             
         }
         
-        func getMembers(of organizationIds: [String], completion: @escaping ([User]?, OrganizationServiceError?) -> Void) {
+        func getAvailableMentors(in organizationIds: [String], completion: @escaping ([User]?, OrganizationServiceError?) -> Void) {
             let testUserOne = User()
             let testUserTwo = User()
             let testUserThree = User()
@@ -72,7 +72,7 @@ class FindScreensTests: XCTestCase {
             
         }
         
-        func getAllUsers(completion: @escaping ([User]?, UserServiceError?) -> Void) {
+        func getAllAvailableMentors(completion: @escaping ([User]?, UserServiceError?) -> Void) {
             let testUserOne = User()
             let testUserTwo = User()
             let testUserThree = User()

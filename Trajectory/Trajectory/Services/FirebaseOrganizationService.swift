@@ -12,13 +12,15 @@ import CodableFirebase
 class FirebaseOrganizationService: OrganizationService {
     lazy var db = Firestore.firestore()
     
-    func getMembers(of organizationIds: [String], completion: @escaping ([User]?, OrganizationServiceError?) -> Void) {
+    func getAvailableMentors(in organizationIds: [String], completion: @escaping ([User]?, OrganizationServiceError?) -> Void) {
         var memberIds = Set<String>()
         let dispatch = DispatchGroup()
         
         for orgId in organizationIds {
             dispatch.enter()
-            db.collection(FirestoreValues.membershipCollection).whereField(FirestoreValues.membershipOrgId, isEqualTo: orgId).getDocuments(completion: { (snapshot, error) in
+            db.collection(FirestoreValues.membershipCollection)
+                .whereField(FirestoreValues.membershipOrgId, isEqualTo: orgId)
+                .getDocuments(completion: { (snapshot, error) in
                 if let snapshot = snapshot {
                     for document in snapshot.documents {
                         if let memUid = document.get(FirestoreValues.membershipUid) as? String {
@@ -38,7 +40,7 @@ class FirebaseOrganizationService: OrganizationService {
             for memberId in memberIds {
                 userDispatch.enter()
                 userService.getUser(uid: memberId, completion: { (user, error) in
-                    if let user = user {
+                    if let user = user, user.willingToMentor == true {
                         users.append(user)
                     }
                     userDispatch.leave()

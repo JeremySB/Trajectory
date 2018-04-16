@@ -97,7 +97,7 @@ class FindOrgsViewController: UIViewController, UICollectionViewDelegate, UIColl
                 for org in orgs {
                     guard let orgId = org.id else { continue }
                     dispatch.enter()
-                    self.orgService.getMembers(of: [orgId], completion: { (users, errors) in
+                    self.orgService.getAvailableMentors(in: [orgId], completion: { (users, errors) in
                         self.usersPerOrganization[org] = users
                         dispatch.leave()
                     })

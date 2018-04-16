@@ -69,7 +69,7 @@ class FindPeopleViewController: UIViewController, UICollectionViewDelegate, UICo
 
         //Get filtered results based on search string
         
-        userService.getAllUsers { (users, error) in
+        userService.getAllAvailableMentors { (users, error) in
             if let users = users {
                 self.mentors = users
                 self.searchForMatches(searchString: searchString ?? "")

@@ -13,7 +13,7 @@ protocol OrganizationService {
     
     func getOrganizations(for uid: String, completion: @escaping ([Organization]?, OrganizationServiceError?) -> Void)
     
-    func getMembers(of organizationIds: [String], completion: @escaping ([User]?, OrganizationServiceError?) -> Void)
+    func getAvailableMentors(in organizationIds: [String], completion: @escaping ([User]?, OrganizationServiceError?) -> Void)
     
     func getCurrentOrganizations(_ completion: @escaping ([Organization]?, OrganizationServiceError?) -> Void)
     
